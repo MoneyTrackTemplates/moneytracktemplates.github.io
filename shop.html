@@ -6,341 +6,542 @@
 
     <title>Shop | MoneyTrackTemplates</title>
 
-    <meta name="description" content="Shop practical digital money trackers, planners, spreadsheets, and organization templates from MoneyTrackTemplates.">
+    <meta name="description" content="Shop digital money trackers, planners, spreadsheets, and organization templates from MoneyTrackTemplates.">
 
     <style>
+
         * {
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #2f6fae;
+            --blue-dark: #153f68;
+            --blue-deep: #102f4d;
+
+            --ivory: #faf7f1;
+            --ivory-soft: #f4f0e8;
+
+            --white: #ffffff;
+
+            --blue-light: #e7f0f8;
+            --blue-border: #c9dbea;
+
+            --text-blue: #244c70;
+            --muted-blue: #5f7890;
         }
 
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f6f1ea;
-            color: #433126;
-            line-height: 1.6;
+            background: var(--ivory);
+            color: var(--text-blue);
+            line-height: 1.65;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
-            background: #5f4636;
+            background: var(--blue);
             color: white;
             text-align: center;
-            padding: 35px 20px 25px;
+            padding: 58px 20px 48px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
             letter-spacing: 1px;
+            color: white;
         }
 
         header p {
-            margin: 8px 0 0;
-            font-size: 1.1rem;
+            margin: 12px 0 0;
+            font-size: 1.15rem;
+            color: white;
         }
 
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
-            background: #433126;
+            background: var(--blue-dark);
             text-align: center;
-            padding: 14px 10px;
+            padding: 17px 12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(16, 47, 77, 0.16);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
+            margin: 0 13px;
             font-size: 0.95rem;
+            font-weight: 700;
+            transition: 0.2s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #c9e2f7;
         }
 
-        .hero {
+        /* =========================
+           SHOP INTRO
+        ========================= */
+
+        .shop-intro {
+            background: var(--ivory);
             text-align: center;
-            padding: 55px 20px 35px;
-            max-width: 900px;
-            margin: auto;
+            padding: 76px 20px 48px;
         }
 
-        .hero h2 {
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-            color: #5f4636;
+        .shop-intro h2 {
+            color: var(--blue-dark);
+            font-size: 2.55rem;
+            margin: 0 0 18px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: auto;
+        .shop-intro p {
+            max-width: 790px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+            color: var(--text-blue);
         }
 
-        .shop-grid {
+        /* =========================
+           PRODUCT SECTION
+        ========================= */
+
+        .products-section {
+            background: var(--ivory);
+            padding: 25px 20px 80px;
+        }
+
+        .product-grid {
             max-width: 1100px;
-            margin: 10px auto 60px;
-            padding: 0 20px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
+            gap: 26px;
         }
 
         .product-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(67, 49, 38, 0.12);
-            border: 1px solid #e4d8ca;
+            background: var(--white);
+            border: 1px solid var(--blue-border);
+            border-radius: 15px;
+            padding: 32px;
+            box-shadow: 0 6px 18px rgba(36, 76, 112, 0.07);
             display: flex;
             flex-direction: column;
+            transition: all 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 11px 25px rgba(36, 76, 112, 0.12);
         }
 
         .product-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 2.8rem;
+            margin-bottom: 12px;
         }
 
         .product-card h3 {
-            color: #5f4636;
-            font-size: 1.45rem;
-            margin: 0 0 10px;
+            color: var(--blue-dark);
+            font-size: 1.35rem;
+            margin: 0 0 12px;
         }
 
         .product-card p {
-            margin: 8px 0;
+            color: var(--text-blue);
+            margin: 0 0 20px;
         }
 
         .price {
-            font-size: 1.5rem;
+            color: var(--blue);
+            font-size: 1.45rem;
             font-weight: bold;
-            color: #7b4f35;
-            margin: 18px 0;
+            margin-bottom: 22px;
         }
 
-        .button {
-            display: inline-block;
-            background: #5f4636;
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 7px;
-            font-weight: bold;
+        .product-button {
+            display: block;
             text-align: center;
+            text-decoration: none;
+            background: var(--blue);
+            color: white;
+            padding: 13px 18px;
+            border-radius: 8px;
+            font-weight: 700;
             margin-top: auto;
+            transition: all 0.2s ease;
         }
 
-        .button:hover {
-            background: #433126;
+        .product-button:hover {
+            background: var(--blue-dark);
         }
+
+        /* =========================
+           STORE CTA
+        ========================= */
 
         .store-section {
-            background: #eadfd1;
+            background: var(--blue-light);
             text-align: center;
-            padding: 50px 20px;
-            margin-top: 20px;
+            padding: 78px 20px;
+            border-top: 1px solid var(--blue-border);
         }
 
-        .store-section h2 {
-            color: #5f4636;
+        .store-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 48px 30px;
+            box-shadow: 0 7px 20px rgba(36, 76, 112, 0.07);
+        }
+
+        .store-box h2 {
+            color: var(--blue-dark);
+            font-size: 2rem;
             margin-top: 0;
         }
 
-        .store-section p {
-            max-width: 650px;
-            margin: 0 auto 25px;
+        .store-box p {
+            max-width: 700px;
+            margin: 0 auto 26px;
         }
 
         .store-button {
             display: inline-block;
-            background: #433126;
+            background: var(--blue);
             color: white;
             text-decoration: none;
             padding: 14px 28px;
-            border-radius: 7px;
-            font-weight: bold;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.2s ease;
         }
 
         .store-button:hover {
-            background: #5f4636;
+            background: var(--blue-dark);
+            transform: translateY(-2px);
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
-            background: #433126;
+            background: var(--blue-deep);
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 20px;
         }
 
         footer p {
-            margin: 5px 0;
+            margin: 6px 0;
         }
 
-        @media (max-width: 750px) {
+        footer strong {
+            font-size: 1.15rem;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            .shop-intro h2 {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 45px 18px 40px;
+            }
 
             header h1 {
                 font-size: 2rem;
             }
 
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
+            header p {
+                font-size: 1rem;
             }
 
-            .hero h2 {
-                font-size: 1.8rem;
+            .shop-intro {
+                padding: 58px 18px 38px;
             }
 
-            .shop-grid {
-                grid-template-columns: 1fr;
+            .shop-intro h2 {
+                font-size: 1.75rem;
+            }
+
+            .products-section {
+                padding: 15px 18px 60px;
+            }
+
+            .product-card {
+                padding: 26px 22px;
+            }
+
+            .store-section {
+                padding: 60px 18px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
     <h1>MoneyTrackTemplates</h1>
-    <p>Plan Better. Track Smarter. Live More Organized.</p>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="money-templates.html">Money Templates</a>
-    <a href="free-downloads.html">Free Downloads</a>
-    <a href="shop.html">Shop</a>
-</nav>
-
-<section class="hero">
-    <h2>MoneyTrackTemplates Shop</h2>
 
     <p>
-        Practical digital planners, money trackers, spreadsheets, and
-        organization tools designed to help you manage your money,
-        plan your life, and stay organized.
+        Plan Better. Track Smarter. Live More Organized.
     </p>
-</section>
 
-<section class="shop-grid">
-
-    <!-- PRODUCT 1 -->
-    <div class="product-card">
-        <div class="product-icon">💳</div>
-
-        <h3>Debt Payoff Calculator — Excel</h3>
-
-        <p>
-            Take control of your debt with an easy-to-use Excel workbook
-            designed to help you organize debts, compare payoff strategies,
-            calculate interest, and create a clear payoff plan.
-        </p>
-
-        <div class="price">$7.99</div>
-
-        <a
-            href="#"
-            class="button"
-            onclick="window.location.href='https://'+'payhip.com/b/DdU7B'; return false;">
-            View Product
-        </a>
-    </div>
+</header>
 
 
-    <!-- PRODUCT 2 -->
-    <div class="product-card">
-        <div class="product-icon">💰</div>
+<!-- NAVIGATION -->
 
-        <h3>Premium Savings Goal Tracker — Excel</h3>
+<nav>
 
-        <p>
-            Set savings goals, track your progress, monitor contributions,
-            and see how much remains to reach each goal with this reusable
-            Excel savings tracker.
-        </p>
+    <a href="index.html">Home</a>
 
-        <div class="price">$5.99</div>
+    <a href="about.html">About</a>
 
-        <a
-            href="#"
-            class="button"
-            onclick="window.location.href='https://'+'payhip.com/b/tgLIn'; return false;">
-            View Product
-        </a>
-    </div>
+    <a href="money-templates.html">Money Templates</a>
+
+    <a href="planners.html">Planners</a>
+
+    <a href="free-downloads.html">Free Downloads</a>
+
+    <a href="shop.html">Shop</a>
+
+</nav>
 
 
-    <!-- PRODUCT 3 -->
-    <div class="product-card">
-        <div class="product-icon">📱</div>
+<!-- SHOP INTRO -->
 
-        <h3>Premium Subscription Tracker</h3>
+<section class="shop-intro">
 
-        <p>
-            Keep track of recurring subscriptions, billing dates, monthly
-            and annual costs, renewal dates, payment history, and overall
-            subscription spending.
-        </p>
+    <h2>
+        MoneyTrackTemplates Shop
+    </h2>
 
-        <div class="price">$4.99</div>
-
-        <a
-            href="#"
-            class="button"
-            onclick="window.location.href='https://'+'payhip.com/b/McOYb'; return false;">
-            View Product
-        </a>
-    </div>
-
-
-    <!-- PRODUCT 4 -->
-    <div class="product-card">
-        <div class="product-icon">🎉</div>
-
-        <h3>Labor Day Planner &amp; Money Tracker</h3>
-
-        <p>
-            Plan your Labor Day celebration while keeping your spending
-            organized. Includes event planning, budgeting, guest lists,
-            shopping, packing, and money tracking tools.
-        </p>
-
-        <div class="price">$3.99</div>
-
-        <a
-            href="#"
-            class="button"
-            onclick="window.location.href='https://'+'payhip.com/b/yokKl'; return false;">
-            View Product
-        </a>
-    </div>
+    <p>
+        Discover practical digital planners, money trackers,
+        spreadsheets, and organization tools designed to help
+        you manage your money, plan ahead, and stay organized.
+    </p>
 
 </section>
 
+
+<!-- PRODUCTS -->
+
+<section class="products-section">
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">💳</div>
+
+            <h3>
+                Debt Payoff Calculator — Excel
+            </h3>
+
+            <p>
+                Organize your debts, compare payoff strategies,
+                calculate interest, and create a clear payoff plan
+                with a reusable Excel workbook.
+            </p>
+
+            <div class="price">
+                $7.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/DdU7B"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">💰</div>
+
+            <h3>
+                Premium Savings Goal Tracker — Excel
+            </h3>
+
+            <p>
+                Set savings goals, monitor contributions,
+                track your progress, and see how much remains
+                to reach each goal.
+            </p>
+
+            <div class="price">
+                $5.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/tgLIn"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">📱</div>
+
+            <h3>
+                Premium Subscription Tracker
+            </h3>
+
+            <p>
+                Keep track of recurring subscriptions, billing
+                dates, renewal dates, payment history, and
+                overall subscription spending.
+            </p>
+
+            <div class="price">
+                $4.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/McOYb"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-icon">🎉</div>
+
+            <h3>
+                Labor Day Planner &amp; Money Tracker
+            </h3>
+
+            <p>
+                Plan your Labor Day celebration while keeping
+                your budget, shopping, guests, activities,
+                supplies, and money organized.
+            </p>
+
+            <div class="price">
+                $3.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/yokKl"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FULL STORE CTA -->
 
 <section class="store-section">
 
-    <h2>Looking for More Templates?</h2>
+    <div class="store-box">
 
-    <p>
-        Visit the MoneyTrackTemplates store to explore more digital
-        planners, spreadsheets, money trackers, seasonal products,
-        and organization tools.
-    </p>
+        <h2>
+            Looking for More Templates?
+        </h2>
 
-    <a
-        href="#"
-        class="store-button"
-        onclick="window.location.href='https://'+'payhip.com/MoneyTrackTemplates'; return false;">
-        Browse the Full Store
-    </a>
+        <p>
+            Visit the MoneyTrackTemplates store to explore our
+            growing collection of digital planners, spreadsheets,
+            money trackers, seasonal products, and organization tools.
+        </p>
+
+        <a
+            href="https://payhip.com/MoneyTrackTemplates"
+            class="store-button"
+            target="_blank"
+            rel="noopener">
+            Browse the Full Store
+        </a>
+
+    </div>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <p><strong>MoneyTrackTemplates</strong></p>
+    <p>
+        <strong>MoneyTrackTemplates</strong>
+    </p>
 
     <p>
         Plan Better. Track Smarter. Live More Organized.
