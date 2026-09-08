@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Planners | MoneyTrackTemplates</title>
+
+    <meta name="description" content="Explore digital planners from MoneyTrackTemplates for holidays, events, household organization, budgeting, projects, and everyday planning.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #2f6fae;
+            --blue-dark: #153f68;
+            --blue-deep: #102f4d;
+            --ivory: #faf7f1;
+            --ivory-soft: #f4f0e8;
+            --white: #ffffff;
+            --blue-light: #e7f0f8;
+            --blue-border: #c9dbea;
+            --text-blue: #244c70;
+            --muted-blue: #5f7890;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--ivory);
+            color: var(--text-blue);
+            line-height: 1.65;
+        }
+
+        header {
+            background: var(--blue);
+            color: white;
+            text-align: center;
+            padding: 58px 20px 48px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        header p {
+            margin: 12px 0 0;
+            font-size: 1.15rem;
+            color: white;
+        }
+
+        nav {
+            background: var(--blue-dark);
+            text-align: center;
+            padding: 17px 12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(16, 47, 77, 0.16);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 13px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #c9e2f7;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 76px 20px 48px;
+        }
+
+        .intro h2 {
+            margin: 0 0 18px;
+            color: var(--blue-dark);
+            font-size: 2.55rem;
+        }
+
+        .intro p {
+            max-width: 790px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+            color: var(--text-blue);
+        }
+
+        .planner-section {
+            padding: 25px 20px 80px;
+        }
+
+        .planner-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .planner-card {
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 15px;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(36, 76, 112, 0.06);
+            transition: all 0.25s ease;
+        }
+
+        .planner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(36, 76, 112, 0.11);
+        }
+
+        .planner-icon {
+            font-size: 2.7rem;
+            margin-bottom: 12px;
+        }
+
+        .planner-card h3 {
+            color: var(--blue-dark);
+            font-size: 1.3rem;
+            margin: 8px 0 12px;
+        }
+
+        .planner-card p {
+            margin: 0;
+            color: var(--text-blue);
+        }
+
+        .featured-section {
+            background: var(--blue-light);
+            padding: 76px 20px;
+            border-top: 1px solid var(--blue-border);
+        }
+
+        .featured-box {
+            max-width: 920px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 45px 30px;
+            text-align: center;
+            box-shadow: 0 7px 20px rgba(36, 76, 112, 0.07);
+        }
+
+        .featured-box h2 {
+            color: var(--blue-dark);
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .featured-box p {
+            max-width: 700px;
+            margin: 0 auto 24px;
+        }
+
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            background: var(--blue);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+
+        .button:hover {
+            background: var(--blue-dark);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--blue-deep);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        footer strong {
+            font-size: 1.15rem;
+        }
+
+        @media (max-width: 850px) {
+            .planner-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header h1 {
+                font-size: 2.4rem;
+            }
+
+            .intro h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 45px 18px 40px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .intro {
+                padding: 58px 18px 38px;
+            }
+
+            .intro h2 {
+                font-size: 1.75rem;
+            }
+
+            .planner-section {
+                padding: 15px 18px 60px;
+            }
+
+            .planner-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-section {
+                padding: 60px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MoneyTrackTemplates</h1>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="money-templates.html">Money Templates</a>
+    <a href="planners.html">Planners</a>
+    <a href="free-downloads.html">Free Downloads</a>
+    <a href="shop.html">Shop</a>
+</nav>
+
+<section class="intro">
+    <h2>Digital Planners for Everyday Life</h2>
+
+    <p>
+        Explore practical planning tools designed to help you organize
+        holidays, events, household tasks, projects, schedules, purchases,
+        and everyday responsibilities.
+    </p>
+</section>
+
+<section class="planner-section">
+
+    <div class="planner-grid">
+
+        <div class="planner-card">
+            <div class="planner-icon">📅</div>
+            <h3>Daily &amp; Weekly Planners</h3>
+            <p>
+                Organize appointments, priorities, tasks, routines,
+                and weekly plans in one convenient place.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">🗓️</div>
+            <h3>Monthly Planners</h3>
+            <p>
+                Plan ahead for important dates, deadlines, goals,
+                household needs, and monthly responsibilities.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">🎉</div>
+            <h3>Holiday Planners</h3>
+            <p>
+                Organize holiday budgets, shopping, meals, supplies,
+                activities, guests, and special-event details.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">🎈</div>
+            <h3>Event Planners</h3>
+            <p>
+                Keep celebrations, gatherings, parties, and special
+                occasions organized from planning through completion.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">🏡</div>
+            <h3>Home &amp; Household Planners</h3>
+            <p>
+                Manage household routines, chores, projects, maintenance,
+                shopping, and everyday home organization.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">🛍️</div>
+            <h3>Shopping &amp; Supplies Planners</h3>
+            <p>
+                Plan purchases, compare needs, track supplies, and stay
+                organized before shopping trips and special events.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">✈️</div>
+            <h3>Travel Planners</h3>
+            <p>
+                Organize trip details, packing, spending, transportation,
+                reservations, and travel-related tasks.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">🎯</div>
+            <h3>Goal &amp; Project Planners</h3>
+            <p>
+                Break larger goals and projects into manageable steps,
+                priorities, deadlines, and milestones.
+            </p>
+        </div>
+
+        <div class="planner-card">
+            <div class="planner-icon">📝</div>
+            <h3>Printable Planners</h3>
+            <p>
+                Use simple printable planning pages, checklists,
+                worksheets, and organization tools at home or on the go.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="featured-section">
+
+    <div class="featured-box">
+
+        <h2>Featured Planner</h2>
+
+        <p>
+            Looking for a planner you can start using today? Explore our
+            Labor Day Planner &amp; Money Tracker for event planning,
+            budgeting, shopping, guests, supplies, and more.
+        </p>
+
+        <a
+            href="https://payhip.com/b/yokKl"
+            class="button"
+            target="_blank"
+            rel="noopener">
+            View Labor Day Planner
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p><strong>MoneyTrackTemplates</strong></p>
+
+    <p>
+        Plan Better. Track Smarter. Live More Organized.
+    </p>
+
+    <p>
+        &copy; 2026 MoneyTrackTemplates. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
