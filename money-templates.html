@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Money Templates | MoneyTrackTemplates</title>
 
-    <meta name="description" content="Explore budgeting, savings, expense, debt payoff and financial tracking templates from MoneyTrackTemplates.">
+    <meta name="description" content="Explore budgeting templates, savings trackers, debt payoff tools, subscription trackers, and practical money management spreadsheets from MoneyTrackTemplates.">
 
     <style>
 
@@ -17,176 +14,402 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #2f6fae;
+            --blue-dark: #153f68;
+            --blue-deep: #102f4d;
+
+            --ivory: #faf7f1;
+            --ivory-soft: #f4f0e8;
+
+            --white: #ffffff;
+
+            --blue-light: #e7f0f8;
+            --blue-border: #c9dbea;
+
+            --text-blue: #244c70;
+            --muted-blue: #5f7890;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f7f3ed;
-            color: #333333;
-            line-height: 1.6;
+            background: var(--ivory);
+            color: var(--text-blue);
+            line-height: 1.65;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
-            background: #5b4636;
+            background: var(--blue);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 58px 20px 48px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
+            font-size: 3rem;
+            letter-spacing: 1px;
+            color: white;
         }
 
         header p {
-            font-size: 19px;
-            margin-top: 10px;
+            margin: 12px 0 0;
+            font-size: 1.15rem;
+            color: white;
         }
 
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
-            background: #3f3127;
-            padding: 16px 10px;
+            background: var(--blue-dark);
             text-align: center;
+            padding: 17px 12px;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(16, 47, 77, 0.16);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
+            margin: 0 13px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: 0.2s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #c9e2f7;
         }
 
+        /* =========================
+           INTRO
+        ========================= */
+
         .intro {
-            background: white;
             text-align: center;
-            padding: 60px 25px;
+            padding: 76px 20px 48px;
         }
 
         .intro h2 {
-            color: #5b4636;
-            font-size: 34px;
+            color: var(--blue-dark);
+            font-size: 2.55rem;
+            margin: 0 0 18px;
         }
 
         .intro p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-blue);
+            font-size: 1.08rem;
         }
 
-        .section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 25px;
+        /* =========================
+           MONEY CATEGORIES
+        ========================= */
+
+        .categories-section {
+            background: var(--ivory);
+            padding: 25px 20px 80px;
         }
 
-        .section h2 {
+        .section-title {
             text-align: center;
-            color: #5b4636;
-            margin-bottom: 35px;
-            font-size: 30px;
+            color: var(--blue-dark);
+            font-size: 2rem;
+            margin: 0 0 14px;
         }
 
-        .cards {
+        .section-intro {
+            max-width: 770px;
+            margin: 0 auto 42px;
+            text-align: center;
+            color: var(--muted-blue);
+            font-size: 1.05rem;
+        }
+
+        .category-grid {
+            max-width: 1100px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 24px;
         }
 
-        .card {
+        .category-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
+            border: 1px solid var(--blue-border);
+            border-radius: 15px;
+            padding: 30px 24px;
             text-align: center;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 18px rgba(36, 76, 112, 0.06);
+            transition: all 0.25s ease;
         }
 
-        .card h3 {
-            color: #5b4636;
-            font-size: 21px;
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(36, 76, 112, 0.11);
         }
 
-        .card p {
-            font-size: 16px;
+        .category-icon {
+            font-size: 2.7rem;
+            margin-bottom: 12px;
+        }
+
+        .category-card h3 {
+            color: var(--blue-dark);
+            font-size: 1.25rem;
+            margin: 8px 0 12px;
+        }
+
+        .category-card p {
+            margin: 0;
+            color: var(--text-blue);
+        }
+
+        /* =========================
+           FEATURED MONEY PRODUCTS
+        ========================= */
+
+        .featured-section {
+            background: var(--blue-light);
+            padding: 76px 20px;
+            border-top: 1px solid var(--blue-border);
+        }
+
+        .product-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 15px;
+            padding: 30px 24px;
+            box-shadow: 0 6px 18px rgba(36, 76, 112, 0.07);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 11px 25px rgba(36, 76, 112, 0.12);
+        }
+
+        .product-icon {
+            font-size: 2.7rem;
+            margin-bottom: 12px;
+        }
+
+        .product-card h3 {
+            color: var(--blue-dark);
+            font-size: 1.3rem;
+            margin: 0 0 12px;
+        }
+
+        .product-card p {
+            color: var(--text-blue);
+            margin: 0 0 20px;
+        }
+
+        .price {
+            color: var(--blue);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product-button {
+            display: block;
+            text-align: center;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 13px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: auto;
+            transition: all 0.2s ease;
+        }
+
+        .product-button:hover {
+            background: var(--blue-dark);
+        }
+
+        /* =========================
+           MONEY PLANNING SECTION
+        ========================= */
+
+        .planning-section {
+            background: var(--ivory);
+            padding: 78px 20px;
+        }
+
+        .planning-box {
+            max-width: 920px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: 0 7px 20px rgba(36, 76, 112, 0.07);
+        }
+
+        .planning-box h2 {
+            color: var(--blue-dark);
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .planning-box p {
+            max-width: 720px;
+            margin: 0 auto 26px;
         }
 
         .button {
             display: inline-block;
-            background: #5b4636;
+            background: var(--blue);
             color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.2s ease;
         }
 
         .button:hover {
-            background: #3f3127;
+            background: var(--blue-dark);
+            transform: translateY(-2px);
         }
 
-        .callout {
-            background: #ebe2d7;
-            text-align: center;
-            padding: 60px 25px;
-        }
-
-        .callout h2 {
-            color: #5b4636;
-            font-size: 30px;
-        }
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background: #3f3127;
+            background: var(--blue-deep);
             color: white;
             text-align: center;
             padding: 35px 20px;
         }
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
+        footer p {
+            margin: 6px 0;
         }
 
-        @media (max-width: 800px) {
+        footer strong {
+            font-size: 1.15rem;
+        }
 
-            .cards {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-grid {
                 grid-template-columns: 1fr;
+                max-width: 650px;
             }
 
             header h1 {
-                font-size: 34px;
+                font-size: 2.4rem;
+            }
+
+            .intro h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 45px 18px 40px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
             }
 
             nav a {
                 display: inline-block;
-                margin: 6px 8px;
+                margin: 5px 7px;
             }
 
+            .intro {
+                padding: 58px 18px 38px;
+            }
+
+            .intro h2 {
+                font-size: 1.75rem;
+            }
+
+            .categories-section {
+                padding: 15px 18px 60px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-section {
+                padding: 60px 18px;
+            }
+
+            .planning-section {
+                padding: 60px 18px;
+            }
         }
 
     </style>
-
 </head>
-
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <h1>MoneyTrackTemplates</h1>
 
-    <p>Practical Tools for Managing Your Money</p>
+    <p>
+        Plan Better. Track Smarter. Live More Organized.
+    </p>
 
 </header>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -196,219 +419,348 @@
 
     <a href="money-templates.html">Money Templates</a>
 
-    <a href="index.html#free">Free Downloads</a>
+    <a href="planners.html">Planners</a>
 
-    <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
+    <a href="free-downloads.html">Free Downloads</a>
+
+    <a href="shop.html">Shop</a>
 
 </nav>
 
 
+<!-- =========================
+     INTRO
+========================= -->
+
 <section class="intro">
 
-    <h2>Money Templates & Trackers</h2>
+    <h2>Money Templates &amp; Trackers</h2>
 
     <p>
-        Take control of your finances with practical templates designed
-        to make budgeting, saving, spending and financial planning easier.
+        Explore practical spreadsheets and digital tools designed
+        to help you organize spending, manage debt, build savings,
+        track recurring expenses, plan purchases, and work toward
+        your financial goals.
     </p>
 
 </section>
 
 
-<section class="section">
+<!-- =========================
+     MONEY CATEGORIES
+========================= -->
 
-    <h2>Explore Our Money Tools</h2>
+<section class="categories-section">
+
+    <h2 class="section-title">
+        Tools for Managing Your Money
+    </h2>
+
+    <p class="section-intro">
+        From everyday budgeting to long-term financial goals,
+        MoneyTrackTemplates provides practical tools for keeping
+        important money information organized.
+    </p>
+
+    <div class="category-grid">
 
 
-    <div class="cards">
+        <div class="category-card">
 
+            <div class="category-icon">📊</div>
 
-        <div class="card">
-
-            <h3>💵 Budget Planners</h3>
+            <h3>Budget Planners</h3>
 
             <p>
-                Plan your income and expenses and create a clearer picture
-                of where your money is going.
+                Organize income, expenses, spending categories,
+                and monthly financial plans.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>📊 Expense Trackers</h3>
+            <div class="category-icon">🧾</div>
+
+            <h3>Expense Trackers</h3>
 
             <p>
-                Keep track of everyday spending and identify opportunities
-                to improve your financial habits.
+                Keep everyday purchases and spending organized
+                so you can better understand where your money goes.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>💰 Savings Trackers</h3>
+            <div class="category-icon">💰</div>
+
+            <h3>Savings Trackers</h3>
 
             <p>
-                Set savings goals and monitor your progress toward the
-                things that matter most.
+                Set savings goals, record contributions,
+                and monitor your progress over time.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>💳 Debt Payoff Trackers</h3>
+            <div class="category-icon">💳</div>
+
+            <h3>Debt Payoff Trackers</h3>
 
             <p>
-                Organize balances, payments and progress as you work
-                toward reducing your debt.
+                Organize balances, payments, interest,
+                and payoff strategies in one place.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>🧾 Bill Trackers</h3>
+            <div class="category-icon">📅</div>
+
+            <h3>Bill Trackers</h3>
 
             <p>
-                Keep upcoming bills, due dates and payment information
-                organized in one convenient place.
+                Keep payment dates, recurring bills,
+                amounts, and monthly obligations organized.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>🎯 Financial Goals</h3>
+            <div class="category-icon">🎯</div>
+
+            <h3>Financial Goals</h3>
 
             <p>
-                Turn financial goals into manageable steps and keep track
-                of your progress along the way.
+                Create clear financial targets and keep track
+                of progress toward the goals that matter to you.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>🎉 Holiday Budgets</h3>
+            <div class="category-icon">🎄</div>
+
+            <h3>Holiday Budgets</h3>
 
             <p>
-                Plan holiday spending, gifts, food, travel and celebrations
-                without losing track of your budget.
+                Plan seasonal spending for gifts, food,
+                decorations, events, travel, and celebrations.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>✈️ Travel Budgets</h3>
+            <div class="category-icon">✈️</div>
+
+            <h3>Travel Budgets</h3>
 
             <p>
-                Organize transportation, lodging, food, activities and
-                other expenses for your next trip.
+                Organize expected travel costs including
+                transportation, lodging, meals, and activities.
             </p>
-
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="category-card">
 
-            <h3>🛒 Shopping & Grocery Budgets</h3>
+            <div class="category-icon">🛒</div>
+
+            <h3>Shopping &amp; Grocery Budgets</h3>
 
             <p>
-                Plan purchases and keep grocery and shopping expenses
-                within your desired budget.
+                Plan purchases, household supplies,
+                groceries, and everyday shopping expenses.
             </p>
 
-            <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-                Browse Products
-            </a>
-
         </div>
-
 
     </div>
 
 </section>
 
 
-<section class="callout">
+<!-- =========================
+     FEATURED MONEY PRODUCTS
+========================= -->
 
-    <h2>Ready to Start Tracking?</h2>
+<section class="featured-section">
 
-    <p>
-        Explore the MoneyTrackTemplates shop for downloadable planners,
-        spreadsheets, trackers and other practical tools.
+    <h2 class="section-title">
+        Featured Money Templates
+    </h2>
+
+    <p class="section-intro">
+        Start with one of our current premium Excel tools
+        for debt, savings, and recurring-expense management.
     </p>
 
-    <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-        Visit the MoneyTrackTemplates Shop
-    </a>
+
+    <div class="product-grid">
+
+
+        <!-- DEBT PAYOFF CALCULATOR -->
+
+        <div class="product-card">
+
+            <div class="product-icon">💳</div>
+
+            <h3>
+                Debt Payoff Calculator — Excel
+            </h3>
+
+            <p>
+                Organize multiple debts, compare payoff strategies,
+                calculate interest, explore extra payments, and build
+                a clearer debt payoff plan.
+            </p>
+
+            <div class="price">
+                $7.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/DdU7B"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+
+        <!-- SAVINGS TRACKER -->
+
+        <div class="product-card">
+
+            <div class="product-icon">💰</div>
+
+            <h3>
+                Premium Savings Goal Tracker — Excel
+            </h3>
+
+            <p>
+                Create savings goals, track contributions,
+                monitor progress, and see how much remains
+                to reach each target.
+            </p>
+
+            <div class="price">
+                $5.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/tgLIn"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+
+        <!-- SUBSCRIPTION TRACKER -->
+
+        <div class="product-card">
+
+            <div class="product-icon">📱</div>
+
+            <h3>
+                Premium Subscription Tracker
+            </h3>
+
+            <p>
+                Keep recurring subscriptions organized with
+                billing dates, renewal information, payment history,
+                and monthly and annual cost tracking.
+            </p>
+
+            <div class="price">
+                $4.99
+            </div>
+
+            <a
+                href="https://payhip.com/b/McOYb"
+                class="product-button"
+                target="_blank"
+                rel="noopener">
+                View Product
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="planning-section">
+
+    <div class="planning-box">
+
+        <h2>
+            Make Money Management More Organized
+        </h2>
+
+        <p>
+            Whether you're paying down debt, saving toward a goal,
+            tracking recurring expenses, or simply trying to keep
+            your finances organized, a clear system can make planning
+            easier. Explore the full MoneyTrackTemplates collection
+            for more practical tools.
+        </p>
+
+        <a
+            href="shop.html"
+            class="button">
+            Explore the Shop
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
+    <p>
+        <strong>MoneyTrackTemplates</strong>
+    </p>
+
+    <p>
+        Plan Better. Track Smarter. Live More Organized.
+    </p>
 
     <p>
         &copy; 2026 MoneyTrackTemplates. All rights reserved.
     </p>
 
-    <p>
-
-        <a href="index.html">Home</a>
-
-        <a href="about.html">About</a>
-
-        <a href="money-templates.html">Money Templates</a>
-
-        <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
-
-    </p>
-
 </footer>
 
-
 </body>
-
 </html>
