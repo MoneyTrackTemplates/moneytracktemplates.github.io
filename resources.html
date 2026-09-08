@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Helpful Resources | MoneyTrackTemplates</title>
+
+    <meta name="description" content="Explore practical guides and helpful resources for budgeting, saving money, organizing expenses, using planners, managing subscriptions, and staying organized.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fbf8f2;
+            color: #063b6f;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #377bb8;
+            color: white;
+            text-align: center;
+            padding: 52px 20px 42px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 44px;
+        }
+
+        header p {
+            margin-top: 14px;
+            font-size: 17px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #174a75;
+            text-align: center;
+            padding: 17px 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 55px;
+            background: #fbf8f2;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin: 0 0 18px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* RESOURCE SECTION */
+
+        .resources-section {
+            background: #e8f2fb;
+            padding: 65px 20px 75px;
+        }
+
+        .resources-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+            color: #416d94;
+        }
+
+        .resource-grid {
+            max-width: 990px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .resource-card {
+            background: white;
+            border: 1px solid #bdd7ed;
+            border-radius: 14px;
+            padding: 32px 28px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+        }
+
+        .resource-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .resource-card h3 {
+            font-size: 21px;
+            margin: 5px 0 12px;
+        }
+
+        .resource-card p {
+            margin: 0 0 22px;
+            flex-grow: 1;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            background: #337ab7;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            padding: 13px 18px;
+            border-radius: 7px;
+        }
+
+        .resource-card a:hover {
+            background: #28669c;
+        }
+
+        /* TOPICS */
+
+        .topics {
+            padding: 70px 20px;
+            text-align: center;
+            background: #fbf8f2;
+        }
+
+        .topics h2 {
+            font-size: 31px;
+            margin-top: 0;
+        }
+
+        .topics p {
+            max-width: 760px;
+            margin: 0 auto 35px;
+        }
+
+        .topic-list {
+            max-width: 850px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .topic {
+            background: white;
+            border: 1px solid #bdd7ed;
+            border-radius: 30px;
+            padding: 10px 18px;
+            font-weight: bold;
+        }
+
+        /* FREE RESOURCES CTA */
+
+        .cta-section {
+            background: #e8f2fb;
+            padding: 70px 20px;
+        }
+
+        .cta-box {
+            max-width: 830px;
+            margin: auto;
+            background: white;
+            border: 1px solid #bdd7ed;
+            border-radius: 14px;
+            padding: 45px 30px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            background: #337ab7;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 25px;
+            border-radius: 7px;
+        }
+
+        .button:hover {
+            background: #28669c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #123b60;
+            color: white;
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        footer strong {
+            font-size: 17px;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MoneyTrackTemplates</h1>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="money-templates.html">Money Templates</a>
+    <a href="planners.html">Planners</a>
+    <a href="free-downloads.html">Free Downloads</a>
+    <a href="resources.html">Resources</a>
+    <a href="shop.html">Shop</a>
+</nav>
+
+<section class="hero">
+    <h2>Helpful Resources for Money & Organization</h2>
+
+    <p>
+        Explore practical guides for budgeting, saving, planning,
+        tracking expenses, organizing your household, and making
+        everyday life a little easier.
+    </p>
+</section>
+
+<section class="resources-section">
+
+    <h2>Explore Our Latest Guides</h2>
+
+    <p class="section-intro">
+        We're building a growing library of useful articles designed
+        to help you make the most of your money, planners, spreadsheets,
+        and organizational tools.
+    </p>
+
+    <div class="resource-grid">
+
+        <article class="resource-card">
+            <div class="resource-icon">💰</div>
+
+            <h3>How to Create a Monthly Budget That Actually Works</h3>
+
+            <p>
+                Learn a simple approach to organizing income, expenses,
+                savings, bills, and financial goals without making your
+                budget unnecessarily complicated.
+            </p>
+
+            <a href="how-to-create-a-monthly-budget.html">
+                Read the Guide
+            </a>
+        </article>
+
+
+        <article class="resource-card">
+            <div class="resource-icon">💳</div>
+
+            <h3>How to Organize Your Debts Before Paying Them Off</h3>
+
+            <p>
+                Discover how to gather balances, interest rates,
+                minimum payments, and other information before choosing
+                a debt payoff strategy.
+            </p>
+
+            <a href="how-to-organize-your-debts.html">
+                Read the Guide
+            </a>
+        </article>
+
+
+        <article class="resource-card">
+            <div class="resource-icon">🎯</div>
+
+            <h3>How to Track a Savings Goal</h3>
+
+            <p>
+                Turn a savings target into a manageable plan by tracking
+                your goal amount, contributions, progress, and remaining
+                balance.
+            </p>
+
+            <a href="how-to-track-a-savings-goal.html">
+                Read the Guide
+            </a>
+        </article>
+
+
+        <article class="resource-card">
+            <div class="resource-icon">📱</div>
+
+            <h3>How to Keep Track of Monthly Subscriptions</h3>
+
+            <p>
+                Organize recurring subscriptions, renewal dates,
+                payment amounts, billing frequencies, and annual costs
+                in one convenient place.
+            </p>
+
+            <a href="how-to-track-subscriptions.html">
+                Read the Guide
+            </a>
+        </article>
+
+
+        <article class="resource-card">
+            <div class="resource-icon">📅</div>
+
+            <h3>How to Use a Planner More Effectively</h3>
+
+            <p>
+                Build a practical planning routine for appointments,
+                priorities, deadlines, household responsibilities,
+                projects, and everyday tasks.
+            </p>
+
+            <a href="how-to-use-a-planner.html">
+                Read the Guide
+            </a>
+        </article>
+
+
+        <article class="resource-card">
+            <div class="resource-icon">🏠</div>
+
+            <h3>Simple Ways to Organize Household Expenses</h3>
+
+            <p>
+                Learn how to organize recurring bills, groceries,
+                household purchases, utilities, and other everyday
+                expenses.
+            </p>
+
+            <a href="organize-household-expenses.html">
+                Read the Guide
+            </a>
+        </article>
+
+    </div>
+</section>
+
+
+<section class="topics">
+
+    <h2>Topics We'll Be Exploring</h2>
+
+    <p>
+        MoneyTrackTemplates is growing into a library of practical
+        information for managing money, planning ahead, and staying
+        organized.
+    </p>
+
+    <div class="topic-list">
+
+        <div class="topic">Budgeting</div>
+        <div class="topic">Saving Money</div>
+        <div class="topic">Debt Organization</div>
+        <div class="topic">Expense Tracking</div>
+        <div class="topic">Subscriptions</div>
+        <div class="topic">Planning</div>
+        <div class="topic">Spreadsheets</div>
+        <div class="topic">Household Organization</div>
+        <div class="topic">Holiday Planning</div>
+        <div class="topic">Checklists</div>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="cta-box">
+
+        <h2>Looking for Something You Can Use Right Now?</h2>
+
+        <p>
+            Explore our collection of free planners, checklists,
+            cheat sheets, samples, and other downloadable resources.
+        </p>
+
+        <a class="button" href="free-downloads.html">
+            Explore Free Downloads
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <strong>MoneyTrackTemplates</strong>
+
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+
+    <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
