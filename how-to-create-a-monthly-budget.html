@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How to Create a Monthly Budget That Actually Works | MoneyTrackTemplates</title>
+
+    <meta name="description" content="Learn how to create a realistic monthly budget, organize income and expenses, plan savings goals, track spending, and reuse an Excel budget each month.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #2f6fae;
+            --blue-dark: #153f68;
+            --blue-deep: #102f4d;
+            --ivory: #faf7f1;
+            --white: #ffffff;
+            --blue-light: #e7f0f8;
+            --blue-border: #c9dbea;
+            --text-blue: #244c70;
+            --muted-blue: #5f7890;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--ivory);
+            color: var(--text-blue);
+            line-height: 1.75;
+        }
+
+        header {
+            background: var(--blue);
+            color: white;
+            text-align: center;
+            padding: 58px 20px 48px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: white;
+        }
+
+        header p {
+            margin: 12px 0 0;
+            font-size: 1.15rem;
+            color: white;
+        }
+
+        nav {
+            background: var(--blue-dark);
+            text-align: center;
+            padding: 17px 12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(16, 47, 77, 0.16);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 13px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            color: #c9e2f7;
+        }
+
+        .article-hero {
+            text-align: center;
+            padding: 72px 20px 50px;
+        }
+
+        .article-hero h2 {
+            color: var(--blue-dark);
+            font-size: 2.6rem;
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.2;
+        }
+
+        .article-hero p {
+            max-width: 790px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+        }
+
+        .article-wrap {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 10px 20px 80px;
+        }
+
+        .article-card {
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 48px;
+            box-shadow: 0 7px 20px rgba(36, 76, 112, 0.07);
+        }
+
+        .article-card h2 {
+            color: var(--blue-dark);
+            font-size: 1.9rem;
+            margin-top: 42px;
+            line-height: 1.3;
+        }
+
+        .article-card h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-card h3 {
+            color: var(--blue-dark);
+            font-size: 1.35rem;
+            margin-top: 30px;
+        }
+
+        .article-card p {
+            margin: 0 0 18px;
+        }
+
+        .article-card ul,
+        .article-card ol {
+            padding-left: 26px;
+            margin-bottom: 22px;
+        }
+
+        .article-card li {
+            margin-bottom: 8px;
+        }
+
+        .article-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0 30px;
+            background: white;
+        }
+
+        .article-card th,
+        .article-card td {
+            border: 1px solid var(--blue-border);
+            padding: 12px 14px;
+            text-align: left;
+        }
+
+        .article-card th {
+            background: var(--blue-light);
+            color: var(--blue-dark);
+        }
+
+        .article-card td:last-child,
+        .article-card th:last-child {
+            text-align: right;
+        }
+
+        .formula-box {
+            background: var(--blue-light);
+            border: 1px solid var(--blue-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
+        .beginner-box {
+            background: #f1f7fc;
+            border-left: 5px solid var(--blue);
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin: 28px 0;
+        }
+
+        .beginner-box strong {
+            color: var(--blue-dark);
+        }
+
+        .file-example {
+            background: #f7fafc;
+            border: 1px solid var(--blue-border);
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin: 20px 0;
+            font-family: Consolas, "Courier New", monospace;
+            color: var(--blue-dark);
+            white-space: pre-line;
+        }
+
+        .cta-section {
+            background: var(--blue-light);
+            padding: 72px 20px;
+            border-top: 1px solid var(--blue-border);
+        }
+
+        .cta-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 44px 30px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            color: var(--blue-dark);
+            margin-top: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin: 7px;
+        }
+
+        .button:hover {
+            background: var(--blue-dark);
+        }
+
+        footer {
+            background: var(--blue-deep);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .article-hero h2 {
+                font-size: 2rem;
+            }
+
+            .article-card {
+                padding: 30px 22px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .article-card table {
+                font-size: 0.92rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MoneyTrackTemplates</h1>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="money-templates.html">Money Templates</a>
+    <a href="planners.html">Planners</a>
+    <a href="free-downloads.html">Free Downloads</a>
+    <a href="resources.html">Resources</a>
+    <a href="shop.html">Shop</a>
+</nav>
+
+<section class="article-hero">
+    <h2>How to Create a Monthly Budget That Actually Works</h2>
+
+    <p>
+        A beginner-friendly guide to organizing income, expenses,
+        savings, spending, and Excel budget files without making
+        money management unnecessarily complicated.
+    </p>
+</section>
+
+<main class="article-wrap">
+
+<article class="article-card">
+
+    <p>
+        Creating a monthly budget may sound complicated, especially if
+        you have never managed money with a spreadsheet before. But budgeting
+        is really just a way of answering a few simple questions:
+    </p>
+
+    <p>
+        <strong>
+            How much money do I have? Where does it need to go?
+            What do I want to save? And how much will I have left?
+        </strong>
+    </p>
+
+    <p>
+        You do not need to be an accountant, a financial expert, or an Excel
+        expert to begin. A useful budget simply gives your money a plan.
+    </p>
+
+    <p>
+        Whether you are managing allowance money, earnings from a part-time
+        job, college expenses, your first full-time paycheck, household bills,
+        savings goals, or debt payments, the same basic budgeting ideas apply.
+    </p>
+
+    <p>
+        The goal is not to create a perfect budget. The goal is to create
+        a budget you understand and can actually use.
+    </p>
+
+    <h2>What Is a Monthly Budget?</h2>
+
+    <p>
+        A monthly budget is a plan for the money you expect to receive
+        and spend during one month.
+    </p>
+
+    <p>
+        It helps you compare money coming in with money going out and decide
+        what you would like to do with anything left over.
+    </p>
+
+    <p>A basic monthly budget answers four questions:</p>
+
+    <ol>
+        <li>How much money will I receive?</li>
+        <li>What expenses do I need to pay?</li>
+        <li>How much would I like to save?</li>
+        <li>How much money remains after everything else?</li>
+    </ol>
+
+    <p>
+        Your budget will probably change from month to month. That is normal.
+        A budget is not a promise that everything will happen exactly as planned.
+        It is a tool that helps you prepare.
+    </p>
+
+    <h2>New to Money Management? Start Small</h2>
+
+    <p>
+        You do not need thousands of dollars to learn how budgeting works.
+        You can practice budgeting with almost any amount of money.
+    </p>
+
+    <h3>Middle-School Students</h3>
+    <ul>
+        <li>Allowance</li>
+        <li>Birthday money</li>
+        <li>Gift money</li>
+        <li>Money earned doing chores</li>
+    </ul>
+
+    <h3>High-School Students</h3>
+    <ul>
+        <li>Part-time job income</li>
+        <li>Gas money</li>
+        <li>Clothing</li>
+        <li>Entertainment</li>
+        <li>School activities</li>
+        <li>Savings for a car or college</li>
+    </ul>
+
+    <h3>College Students</h3>
+    <ul>
+        <li>Job income</li>
+        <li>Books</li>
+        <li>Groceries</li>
+        <li>Transportation</li>
+        <li>Rent</li>
+        <li>Utilities</li>
+        <li>Entertainment</li>
+    </ul>
+
+    <p>
+        Adults may manage paychecks, housing, insurance, groceries,
+        transportation, debt, savings, and household expenses.
+        The amounts differ, but the budgeting process is similar.
+    </p>
+
+    <h2>A Simple Student Budget Example</h2>
+
+    <p>
+        Imagine a student earns $300 during the month from a part-time job.
+        Their budget might look like this:
+    </p>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Amount</th>
+        </tr>
+        <tr><td>Part-time job income</td><td>$300</td></tr>
+        <tr><td>Savings</td><td>$75</td></tr>
+        <tr><td>Transportation</td><td>$50</td></tr>
+        <tr><td>School supplies</td><td>$30</td></tr>
+        <tr><td>Food and snacks</td><td>$60</td></tr>
+        <tr><td>Entertainment</td><td>$40</td></tr>
+        <tr><td>Other spending</td><td>$25</td></tr>
+        <tr><td><strong>Money remaining</strong></td><td><strong>$20</strong></td></tr>
+    </table>
+
+    <p>
+        They received $300, decided ahead of time what they wanted to do
+        with most of it, and still have $20 available. That is budgeting.
+    </p>
+
+    <h2>A Few Money Words You Should Know</h2>
+
+    <p><strong>Income:</strong> Money you receive.</p>
+    <p><strong>Expense:</strong> Money you spend.</p>
+    <p><strong>Savings:</strong> Money you keep for later.</p>
+    <p>
+        <strong>Balance:</strong> The amount of money currently in an account
+        or the amount still owed on a debt.
+    </p>
+    <p>
+        <strong>Budget category:</strong> A group used to organize similar
+        expenses, such as food, transportation, or entertainment.
+    </p>
+    <p>
+        <strong>Recurring expense:</strong> An expense that happens repeatedly,
+        such as a phone bill or monthly subscription.
+    </p>
+
+    <h2>Step 1: Figure Out Your Monthly Income</h2>
+
+    <p>
+        Start by writing down the money you expect to receive during the month.
+    </p>
+
+    <ul>
+        <li>Paychecks</li>
+        <li>Part-time work</li>
+        <li>Freelance work</li>
+        <li>Allowance</li>
+        <li>Side jobs</li>
+        <li>Business income</li>
+        <li>Gift money</li>
+        <li>Other regular income</li>
+    </ul>
+
+    <h3>Gross Income vs. Take-Home Income</h3>
+
+    <p>
+        Gross income is what you earn before taxes and other deductions.
+        Take-home income is the amount that actually reaches you after
+        those deductions.
+    </p>
+
+    <p>
+        For an everyday monthly spending budget, take-home income is generally
+        the more useful number because that is the money actually available.
+    </p>
+
+    <h2>Step 2: Write Down Your Fixed Expenses</h2>
+
+    <p>
+        Fixed expenses are expenses that usually stay the same or close
+        to the same amount.
+    </p>
+
+    <ul>
+        <li>Rent or mortgage</li>
+        <li>Car payment</li>
+        <li>Phone bill</li>
+        <li>Internet</li>
+        <li>Insurance</li>
+        <li>Memberships</li>
+        <li>Subscription services</li>
+        <li>Minimum debt payments</li>
+    </ul>
+
+    <p>
+        It can also help to record the due date beside each bill.
+    </p>
+
+    <h2>Step 3: Estimate Your Variable Expenses</h2>
+
+    <p>
+        Variable expenses can change from month to month.
+    </p>
+
+    <ul>
+        <li>Groceries</li>
+        <li>Gas</li>
+        <li>Dining out</li>
+        <li>Clothing</li>
+        <li>Entertainment</li>
+        <li>Personal care</li>
+        <li>Household supplies</li>
+        <li>School supplies</li>
+        <li>Transportation</li>
+        <li>Hobbies</li>
+    </ul>
+
+    <p>
+        If you are not sure how much to budget, look at what you spent during
+        the last few months and use those numbers to create a realistic estimate.
+    </p>
+
+    <h2>Step 4: Remember Expenses That Don't Happen Every Month</h2>
+
+    <p>
+        Some expenses are easy to forget because they appear only occasionally.
+    </p>
+
+    <ul>
+        <li>Birthdays</li>
+        <li>Holidays</li>
+        <li>School supplies</li>
+        <li>Car repairs</li>
+        <li>Annual subscriptions</li>
+        <li>Travel</li>
+        <li>Home maintenance</li>
+        <li>Medical expenses</li>
+        <li>Special events</li>
+        <li>Gifts</li>
+    </ul>
+
+    <div class="formula-box">
+        $600 future expense ÷ 6 months = $100 saved per month
+    </div>
+
+    <h2>Step 5: Create Budget Categories</h2>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Examples</th>
+        </tr>
+        <tr><td>Housing</td><td>Rent, mortgage</td></tr>
+        <tr><td>Utilities</td><td>Electricity, water</td></tr>
+        <tr><td>Food</td><td>Groceries, dining out</td></tr>
+        <tr><td>Transportation</td><td>Gas, car payment, bus fare</td></tr>
+        <tr><td>Insurance</td><td>Auto, renters, home</td></tr>
+        <tr><td>Debt</td><td>Credit cards, loans</td></tr>
+        <tr><td>Savings</td><td>Emergency fund, goals</td></tr>
+        <tr><td>Household</td><td>Cleaning and home supplies</td></tr>
+        <tr><td>Personal</td><td>Clothing, personal care</td></tr>
+        <tr><td>Entertainment</td><td>Movies, hobbies, streaming</td></tr>
+        <tr><td>School</td><td>Books, supplies, activities</td></tr>
+        <tr><td>Miscellaneous</td><td>Other expenses</td></tr>
+    </table>
+
+    <h2>Step 6: Make Savings Part of the Budget</h2>
+
+    <p>
+        Saving money becomes easier to understand when you treat savings
+        as one of your planned categories.
+    </p>
+
+    <p>
+        Try giving each savings goal a name, target amount, and target date.
+    </p>
+
+    <div class="formula-box">
+        $600 laptop goal ÷ 6 months = $100 per month
+    </div>
+
+    <h2>Step 7: Add Debt Payments if You Have Them</h2>
+
+    <p>
+        If you have debt, useful information may include:
+    </p>
+
+    <ul>
+        <li>Current balance</li>
+        <li>Minimum payment</li>
+        <li>Interest rate</li>
+        <li>Due date</li>
+        <li>Extra payment you plan to make</li>
+    </ul>
+
+    <h2>Step 8: Compare Your Income With Your Plan</h2>
+
+    <div class="formula-box">
+        Income − Expenses − Savings − Debt Payments = Money Remaining
+    </div>
+
+    <p>
+        If money remains, you can decide intentionally what you want it to do.
+    </p>
+
+    <h2>Step 9: Track What You Actually Spend</h2>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Budgeted</th>
+            <th>Actual</th>
+            <th>Difference</th>
+        </tr>
+        <tr><td>Groceries</td><td>$500</td><td>$535</td><td>-$35</td></tr>
+        <tr><td>Gas</td><td>$200</td><td>$175</td><td>+$25</td></tr>
+        <tr><td>Dining Out</td><td>$120</td><td>$145</td><td>-$25</td></tr>
+        <tr><td>Entertainment</td><td>$100</td><td>$70</td><td>+$30</td></tr>
+    </table>
+
+    <h2>Step 10: Review Your Budget at the End of the Month</h2>
+
+    <ul>
+        <li>What went according to plan?</li>
+        <li>What cost more than expected?</li>
+        <li>What cost less?</li>
+        <li>Did I save what I planned to save?</li>
+        <li>Were there unexpected expenses?</li>
+        <li>Did any bills change?</li>
+        <li>What should I change next month?</li>
+    </ul>
+
+    <h2>Excel Beginner Corner</h2>
+
+    <p>
+        If you have never used Excel very much, you do not need advanced
+        spreadsheet skills to use a simple budgeting template.
+    </p>
+
+    <p><strong>Workbook:</strong> The entire Excel file.</p>
+    <p><strong>Worksheet:</strong> A page or tab inside the workbook.</p>
+    <p><strong>Cell:</strong> One individual box in the spreadsheet.</p>
+    <p><strong>Row:</strong> A horizontal line of cells.</p>
+    <p><strong>Column:</strong> A vertical line of cells.</p>
+
+    <h2>How to Reuse Your Excel Budget Every Month</h2>
+
+    <p>
+        You usually do not need to download or rebuild your budget every month.
+        Instead, keep one clean original copy and create a new copy for each month.
+    </p>
+
+    <h3>Step 1: Keep a Blank Master Copy</h3>
+
+    <p>
+        Rename your original workbook something like:
+    </p>
+
+    <div class="file-example">
+MASTER - Monthly Budget Template.xlsx
+    </div>
+
+    <p>
+        Do not use that file for a particular month. Keep it as your clean original.
+    </p>
+
+    <h3>Step 2: Create January's Copy</h3>
+
+    <p>
+        Open the clean master workbook. In Excel choose:
+    </p>
+
+    <div class="formula-box">
+        File → Save As
+    </div>
+
+    <p>
+        Choose where to save it and rename the new copy:
+    </p>
+
+    <div class="file-example">
+Monthly Budget - January 2026.xlsx
+    </div>
+
+    <h3>Step 3: Repeat the Process Next Month</h3>
+
+    <p>
+        Return to the blank master workbook, choose File → Save As again,
+        and create:
+    </p>
+
+    <div class="file-example">
+Monthly Budget - February 2026.xlsx
+    </div>
+
+    <div class="beginner-box">
+        <strong>Excel Beginner Tip:</strong>
+        Avoid typing next month's information directly over the previous
+        month's budget unless the workbook was specifically designed for that.
+        Separate monthly copies make it much easier to preserve your records.
+    </div>
+
+    <h2>Where Should You Save Your Budget?</h2>
+
+    <p>
+        Create a folder somewhere easy to remember, such as:
+    </p>
+
+    <div class="file-example">
+Monthly Budgets
+
+MASTER - Monthly Budget Template.xlsx
+Monthly Budget - January 2026.xlsx
+Monthly Budget - February 2026.xlsx
+Monthly Budget - March 2026.xlsx
+Monthly Budget - April 2026.xlsx
+    </div>
+
+    <h2>What If I Accidentally Change My Original Template?</h2>
+
+    <p>
+        Consider keeping a second untouched backup copy:
+    </p>
+
+    <div class="file-example">
+MASTER - Monthly Budget Template - BACKUP.xlsx
+    </div>
+
+    <h2>Be Careful With Formula Cells</h2>
+
+    <p>
+        Some Excel templates contain formulas that automatically calculate totals.
+    </p>
+
+    <div class="beginner-box">
+        <strong>Beginner Rule:</strong>
+        If a cell already contains something that looks like
+        <strong>=SUM(...)</strong>, it probably contains a formula.
+        Do not erase it unless you know what you are changing.
+    </div>
+
+    <h2>What If My Workbook Already Has Monthly Tabs?</h2>
+
+    <p>
+        Some spreadsheets already include tabs such as January, February,
+        March, and April. In that case, the workbook may be designed to hold
+        an entire year's information in one file.
+    </p>
+
+    <p>
+        Follow the instructions included with that specific workbook and avoid
+        erasing information you want to keep.
+    </p>
+
+    <h2>Spreadsheet or Printable Budget?</h2>
+
+    <p>
+        A spreadsheet can be useful for automatic calculations, reusable
+        monthly records, category totals, and easy corrections.
+    </p>
+
+    <p>
+        A printable budget can be useful if you prefer handwriting,
+        simplicity, or working without a computer.
+    </p>
+
+    <p>
+        There is no prize for using the most complicated system.
+        Use the system you are most likely to continue using.
+    </p>
+
+    <h2>Common Budgeting Mistakes</h2>
+
+    <h3>Making Your Budget Too Strict</h3>
+
+    <p>
+        A realistic budget is often more useful than an extremely restrictive one.
+    </p>
+
+    <h3>Forgetting Small Subscriptions</h3>
+
+    <p>
+        Review streaming services, apps, memberships, software, and other
+        recurring charges.
+    </p>
+
+    <h3>Forgetting Annual Expenses</h3>
+
+    <div class="formula-box">
+        $240 annual expense ÷ 12 months = $20 per month
+    </div>
+
+    <h3>Using Numbers You Wish Were True</h3>
+
+    <p>
+        Start with realistic spending numbers, then decide what changes
+        are actually possible.
+    </p>
+
+    <h3>Giving Up After One Bad Month</h3>
+
+    <p>
+        A difficult month does not mean budgeting failed.
+        Record what happened, learn from it, and prepare the next budget.
+    </p>
+
+    <h2>How Often Should You Check Your Budget?</h2>
+
+    <p><strong>Once a week:</strong> Check recent spending.</p>
+
+    <p>
+        <strong>Once a month:</strong> Review your results and prepare
+        the next month's budget.
+    </p>
+
+    <p>
+        <strong>Several times per year:</strong> Review larger savings goals,
+        subscriptions, recurring expenses, and other financial priorities.
+    </p>
+
+    <h2>A Simple Monthly Budget Routine</h2>
+
+    <p><strong>Before the month:</strong> Plan income, expenses, savings, and payments.</p>
+
+    <p><strong>During the month:</strong> Track what you actually spend.</p>
+
+    <p><strong>At the end of the month:</strong> Compare your plan with what happened.</p>
+
+    <p>
+        <strong>Before the next month:</strong> Make a new copy of your budget,
+        adjust your estimates, and begin again.
+    </p>
+
+    <h2>You Don't Have to Know Everything Before You Begin</h2>
+
+    <p>
+        If you are new to money management, Excel, or both, you do not need
+        to understand everything before starting.
+    </p>
+
+    <p>
+        Start with the money you have. Write down where it comes from.
+        Decide where it needs to go. Track what happens. Learn from the month.
+        Then try again next month.
+    </p>
+
+    <p>
+        That process, more than any complicated formula, is what makes
+        a budget useful.
+    </p>
+
+</article>
+
+</main>
+
+<section class="cta-section">
+
+    <div class="cta-box">
+
+        <h2>Looking for Tools to Help You Stay Organized?</h2>
+
+        <p>
+            Explore practical budgeting, savings, debt, planning,
+            and organization resources from MoneyTrackTemplates.
+        </p>
+
+        <a href="money-templates.html" class="button">
+            Explore Money Templates
+        </a>
+
+        <a href="free-downloads.html" class="button">
+            Browse Free Downloads
+        </a>
+
+        <a href="shop.html" class="button">
+            Visit the Shop
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p><strong>MoneyTrackTemplates</strong></p>
+
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+
+    <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
