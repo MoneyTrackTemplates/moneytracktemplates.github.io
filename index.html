@@ -1,228 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MoneyTrackTemplates | Planners, Money Trackers & Digital Templates</title>
 
-    <meta name="description" content="Discover practical planners, money trackers, spreadsheets, printables and digital templates designed to help you plan better, track smarter and stay organized.">
+    <meta name="description" content="MoneyTrackTemplates offers practical money trackers, planners, spreadsheets, checklists, printables, and digital organization tools.">
 
     <style>
-
         * {
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f7f3ed;
-            color: #333333;
-            line-height: 1.6;
+            background: #fbf7f4;
+            color: #493b45;
+            line-height: 1.65;
         }
 
+        /* ---------- COLOR PALETTE ---------- */
+        :root {
+            --ivory: #fbf7f4;
+            --white: #ffffff;
+            --blush: #ead7d7;
+            --blush-soft: #f4e7e5;
+            --mauve: #b79ba8;
+            --sage: #b9c5b6;
+            --plum: #584454;
+            --plum-dark: #43333f;
+            --taupe: #d8cbc2;
+            --text: #493b45;
+            --muted: #756772;
+        }
+
+        /* ---------- HEADER ---------- */
+
         header {
-            background: #5b4636;
-            color: white;
+            background:
+                linear-gradient(135deg, #ead7d7 0%, #f4e7e5 45%, #ded7df 100%);
             text-align: center;
-            padding: 55px 20px;
+            padding: 65px 20px 55px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 46px;
+            color: var(--plum);
+            font-size: 3rem;
             letter-spacing: 1px;
+            font-weight: 700;
         }
 
         header p {
-            font-size: 20px;
-            margin-top: 12px;
+            margin: 12px 0 0;
+            color: var(--plum-dark);
+            font-size: 1.15rem;
+            letter-spacing: 0.3px;
         }
 
+        /* ---------- NAVIGATION ---------- */
+
         nav {
-            background: #3f3127;
-            padding: 16px 10px;
+            background: var(--plum-dark);
+            padding: 16px 15px;
             text-align: center;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(67, 51, 63, 0.15);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-            font-size: 16px;
+            margin: 0 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #ead7d7;
         }
 
+        /* ---------- HERO ---------- */
+
         .hero {
-            background: white;
+            background: var(--ivory);
             text-align: center;
-            padding: 70px 25px;
+            padding: 85px 20px 75px;
         }
 
         .hero h2 {
-            font-size: 38px;
-            color: #5b4636;
-            margin-bottom: 15px;
+            color: var(--plum);
+            font-size: 2.45rem;
+            margin: 0 0 18px;
         }
 
         .hero p {
-            max-width: 750px;
-            margin: 0 auto 30px;
-            font-size: 19px;
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
         }
 
         .button {
             display: inline-block;
-            background: #5b4636;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            margin: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            margin: 7px;
+            font-weight: 700;
+            transition: all 0.2s ease;
         }
 
-        .button:hover {
-            background: #3f3127;
+        .primary-button {
+            background: var(--plum);
+            color: white;
+            box-shadow: 0 5px 14px rgba(88, 68, 84, 0.18);
         }
+
+        .primary-button:hover {
+            background: var(--plum-dark);
+            transform: translateY(-2px);
+        }
+
+        .secondary-button {
+            background: var(--blush);
+            color: var(--plum-dark);
+        }
+
+        .secondary-button:hover {
+            background: #dfc6c8;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- GENERAL SECTIONS ---------- */
 
         .section {
+            padding: 75px 20px;
+        }
+
+        .section-light {
+            background: var(--ivory);
+        }
+
+        .section-soft {
+            background: var(--blush-soft);
+        }
+
+        .section-sage {
+            background: #edf1eb;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--plum);
+            font-size: 2rem;
+            margin: 0 0 14px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* ---------- CATEGORY CARDS ---------- */
+
+        .card-grid {
             max-width: 1100px;
-            margin: auto;
-            padding: 60px 25px;
-        }
-
-        .section h2 {
-            text-align: center;
-            color: #5b4636;
-            font-size: 32px;
-            margin-bottom: 35px;
-        }
-
-        .intro {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 40px;
-            font-size: 18px;
-        }
-
-        .cards {
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 24px;
         }
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
+        .category-card {
+            background: var(--white);
+            border: 1px solid var(--taupe);
+            border-radius: 18px;
+            padding: 32px 24px;
             text-align: center;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 7px 20px rgba(88, 68, 84, 0.07);
+            transition: all 0.25s ease;
         }
 
-        .card h3 {
-            color: #5b4636;
-            font-size: 22px;
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(88, 68, 84, 0.12);
         }
 
-        .card p {
-            font-size: 16px;
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
         }
 
-        .free-section {
-            background: #ebe2d7;
+        .category-card h3 {
+            color: var(--plum);
+            font-size: 1.25rem;
+            margin: 8px 0 12px;
+        }
+
+        .category-card p {
+            color: var(--text);
+            margin: 0;
+        }
+
+        /* ---------- FREE RESOURCES ---------- */
+
+        .resource-box {
+            max-width: 920px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid var(--taupe);
+            border-radius: 20px;
+            padding: 48px 30px;
             text-align: center;
-            padding: 65px 25px;
+            box-shadow: 0 8px 22px rgba(88, 68, 84, 0.07);
         }
 
-        .free-section h2 {
-            color: #5b4636;
-            font-size: 32px;
+        .resource-box h2 {
+            color: var(--plum);
+            margin-top: 0;
+            font-size: 2rem;
         }
 
-        .shop-section {
-            background: white;
+        .resource-box p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        /* ---------- FINAL CTA ---------- */
+
+        .cta {
             text-align: center;
-            padding: 65px 25px;
+            padding: 85px 20px;
+            background:
+                linear-gradient(135deg, #d8cbd2 0%, #e9dada 100%);
         }
 
-        .shop-section h2 {
-            color: #5b4636;
-            font-size: 32px;
+        .cta h2 {
+            color: var(--plum);
+            font-size: 2.15rem;
+            margin-top: 0;
         }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 28px;
+        }
+
+        /* ---------- FOOTER ---------- */
 
         footer {
-            background: #3f3127;
+            background: var(--plum-dark);
             color: white;
             text-align: center;
-            padding: 35px 20px;
+            padding: 34px 20px;
         }
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
+        footer p {
+            margin: 6px 0;
         }
 
-        @media (max-width: 800px) {
+        footer strong {
+            font-size: 1.15rem;
+        }
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 850px) {
 
             header h1 {
-                font-size: 34px;
+                font-size: 2.35rem;
             }
 
             .hero h2 {
-                font-size: 30px;
+                font-size: 2rem;
             }
 
-            .cards {
-                grid-template-columns: 1fr;
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 45px 18px 40px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
             }
 
             nav a {
                 display: inline-block;
-                margin: 6px 8px;
+                margin: 5px 8px;
+            }
+
+            .hero {
+                padding: 60px 18px;
+            }
+
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 60px 18px;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                width: 90%;
+                max-width: 300px;
             }
         }
-
     </style>
-
 </head>
 
 <body>
 
 <header>
-
     <h1>MoneyTrackTemplates</h1>
-
     <p>Plan Better. Track Smarter. Live More Organized.</p>
-
 </header>
 
-
 <nav>
-
     <a href="index.html">Home</a>
-
     <a href="about.html">About</a>
-
-    <a href="#categories">Templates</a>
-
-    <a href="#free">Free Downloads</a>
-
-    <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
-
+    <a href="money-templates.html">Templates</a>
+    <a href="free-downloads.html">Free Downloads</a>
+    <a href="shop.html">Shop</a>
 </nav>
 
+
+<!-- HERO SECTION -->
 
 <section class="hero">
 
@@ -230,164 +372,151 @@
 
     <p>
         Discover practical planners, money trackers, spreadsheets,
-        checklists, printables and digital templates designed to help
-        you organize your money, your plans and your everyday life.
+        checklists, printables, and digital templates designed to help
+        you organize your money, your plans, and your everyday life.
     </p>
 
-    <a class="button" href="https://payhip.com/MoneyTrackTemplates">
-        Visit Our Shop
-    </a>
+    <div class="hero-buttons">
 
-    <a class="button" href="#categories">
-        Explore Templates
-    </a>
+        <a href="shop.html" class="button primary-button">
+            Visit Our Shop
+        </a>
 
-</section>
-
-
-<section class="section" id="categories">
-
-    <h2>What You'll Find Here</h2>
-
-    <p class="intro">
-        Whether you're planning a holiday, organizing your household,
-        tracking your spending or working toward a financial goal,
-        MoneyTrackTemplates is designed to give you practical tools
-        that make planning easier.
-    </p>
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <h3>💰 Money Trackers</h3>
-
-            <p>
-                Track spending, savings, budgets, expenses and financial
-                goals with simple, practical templates.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>📅 Planners</h3>
-
-            <p>
-                Organize your days, weeks, months, holidays, projects
-                and special events with easy-to-use planners.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>📊 Spreadsheet Templates</h3>
-
-            <p>
-                Useful spreadsheet tools for budgeting, organization,
-                planning and keeping important information in one place.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>🎉 Holiday & Seasonal</h3>
-
-            <p>
-                Plan birthdays, holidays, celebrations, travel,
-                shopping and seasonal spending without the stress.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>🏠 Home & Life Organization</h3>
-
-            <p>
-                Keep household tasks, projects, lists and everyday
-                responsibilities organized.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>🖨️ Printables</h3>
-
-            <p>
-                Download useful printable resources that you can
-                use at home, at work or wherever you need them.
-            </p>
-
-        </div>
-
+        <a href="money-templates.html" class="button secondary-button">
+            Explore Templates
+        </a>
 
     </div>
 
 </section>
 
 
-<section class="free-section" id="free">
+<!-- CATEGORIES -->
 
-    <h2>🎁 Free Resources</h2>
+<section class="section section-light">
 
-    <p>
-        We're building a collection of free planners, trackers,
-        checklists and helpful resources for our visitors.
+    <h2 class="section-title">What You'll Find Here</h2>
+
+    <p class="section-intro">
+        Whether you're planning a holiday, organizing your household,
+        tracking your spending, or working toward a financial goal,
+        MoneyTrackTemplates gives you practical tools that make planning easier.
     </p>
 
-    <a class="button" href="about.html">
-        Learn More
-    </a>
+    <div class="card-grid">
+
+        <div class="category-card">
+            <div class="category-icon">💰</div>
+            <h3>Money Trackers</h3>
+            <p>
+                Track spending, savings, budgets, expenses, and financial
+                goals with simple, practical templates.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🗓️</div>
+            <h3>Planners</h3>
+            <p>
+                Organize your days, weeks, months, holidays, projects,
+                and special events with easy-to-use planners.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">📊</div>
+            <h3>Spreadsheet Templates</h3>
+            <p>
+                Useful spreadsheet tools for budgeting, organization,
+                planning, and keeping important information in one place.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🎉</div>
+            <h3>Holiday &amp; Seasonal</h3>
+            <p>
+                Plan birthdays, holidays, celebrations, seasonal shopping,
+                events, and special occasions.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🏡</div>
+            <h3>Home &amp; Life Organization</h3>
+            <p>
+                Manage household tasks, routines, projects, schedules,
+                and everyday responsibilities more easily.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🖨️</div>
+            <h3>Printables</h3>
+            <p>
+                Download useful printable resources, checklists, planners,
+                worksheets, and organizational tools.
+            </p>
+        </div>
+
+    </div>
 
 </section>
 
 
-<section class="shop-section">
+<!-- FREE RESOURCES -->
+
+<section class="section section-soft">
+
+    <div class="resource-box">
+
+        <h2>🎁 Free Resources</h2>
+
+        <p>
+            We're building a collection of free planners, trackers,
+            checklists, samples, and helpful resources for our visitors.
+            Start exploring useful tools without spending a thing.
+        </p>
+
+        <a href="free-downloads.html" class="button primary-button">
+            Explore Free Downloads
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="cta">
 
     <h2>Ready to Get Organized?</h2>
 
     <p>
-        Browse our growing collection of digital planners,
-        money trackers, spreadsheets and practical templates.
+        Browse our growing collection of digital planners, money trackers,
+        spreadsheets, and practical templates designed to help you plan
+        better and stay organized.
     </p>
 
-    <a class="button" href="https://payhip.com/MoneyTrackTemplates">
+    <a href="shop.html" class="button primary-button">
         Shop MoneyTrackTemplates
     </a>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <p>
-        &copy; 2026 MoneyTrackTemplates. All rights reserved.
-    </p>
+    <p><strong>MoneyTrackTemplates</strong></p>
 
-    <p>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
 
-        <a href="index.html">Home</a>
-
-        <a href="about.html">About</a>
-
-        <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
-
-    </p>
+    <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
 
 </footer>
 
-
 </body>
-
 </html>
