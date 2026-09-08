@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How to Organize Your Debts Before Paying Them Off | MoneyTrackTemplates</title>
+
+    <meta name="description" content="Learn how to organize debt balances, minimum payments, interest rates, due dates, and payment records before choosing a debt payoff strategy. Beginner-friendly Excel guidance included.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #2f6fae;
+            --blue-dark: #153f68;
+            --blue-deep: #102f4d;
+            --ivory: #faf7f1;
+            --white: #ffffff;
+            --blue-light: #e7f0f8;
+            --blue-border: #c9dbea;
+            --text-blue: #244c70;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--ivory);
+            color: var(--text-blue);
+            line-height: 1.75;
+        }
+
+        header {
+            background: var(--blue);
+            color: white;
+            text-align: center;
+            padding: 58px 20px 48px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: white;
+        }
+
+        header p {
+            margin: 12px 0 0;
+            font-size: 1.15rem;
+        }
+
+        nav {
+            background: var(--blue-dark);
+            text-align: center;
+            padding: 17px 12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(16, 47, 77, 0.16);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 13px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            color: #c9e2f7;
+        }
+
+        .article-hero {
+            text-align: center;
+            padding: 72px 20px 50px;
+        }
+
+        .article-hero h2 {
+            color: var(--blue-dark);
+            font-size: 2.6rem;
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.2;
+        }
+
+        .article-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.08rem;
+        }
+
+        .article-wrap {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 10px 20px 80px;
+        }
+
+        .article-card {
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 48px;
+            box-shadow: 0 7px 20px rgba(36, 76, 112, 0.07);
+        }
+
+        .article-card h2 {
+            color: var(--blue-dark);
+            font-size: 1.9rem;
+            margin-top: 42px;
+            line-height: 1.3;
+        }
+
+        .article-card h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-card h3 {
+            color: var(--blue-dark);
+            font-size: 1.35rem;
+            margin-top: 30px;
+        }
+
+        .article-card p {
+            margin: 0 0 18px;
+        }
+
+        .article-card ul,
+        .article-card ol {
+            padding-left: 26px;
+            margin-bottom: 22px;
+        }
+
+        .article-card li {
+            margin-bottom: 8px;
+        }
+
+        .article-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0 30px;
+            background: white;
+        }
+
+        .article-card th,
+        .article-card td {
+            border: 1px solid var(--blue-border);
+            padding: 12px 14px;
+            text-align: left;
+        }
+
+        .article-card th {
+            background: var(--blue-light);
+            color: var(--blue-dark);
+        }
+
+        .article-card td:not(:first-child),
+        .article-card th:not(:first-child) {
+            text-align: right;
+        }
+
+        .formula-box {
+            background: var(--blue-light);
+            border: 1px solid var(--blue-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
+        .beginner-box {
+            background: #f1f7fc;
+            border-left: 5px solid var(--blue);
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin: 28px 0;
+        }
+
+        .warning-box {
+            background: #fffaf0;
+            border-left: 5px solid #c9973a;
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin: 28px 0;
+        }
+
+        .file-example {
+            background: #f7fafc;
+            border: 1px solid var(--blue-border);
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin: 20px 0;
+            font-family: Consolas, "Courier New", monospace;
+            color: var(--blue-dark);
+            white-space: pre-line;
+            overflow-x: auto;
+        }
+
+        .product-box {
+            background: var(--blue-light);
+            border: 1px solid var(--blue-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 45px;
+        }
+
+        .product-box h2 {
+            margin-top: 0;
+        }
+
+        .cta-section {
+            background: var(--blue-light);
+            padding: 72px 20px;
+            border-top: 1px solid var(--blue-border);
+        }
+
+        .cta-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--blue-border);
+            border-radius: 18px;
+            padding: 44px 30px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            color: var(--blue-dark);
+            margin-top: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin: 7px;
+        }
+
+        .button:hover {
+            background: var(--blue-dark);
+        }
+
+        .educational-note {
+            font-size: 0.92rem;
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px solid var(--blue-border);
+        }
+
+        footer {
+            background: var(--blue-deep);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .article-hero h2 {
+                font-size: 2rem;
+            }
+
+            .article-card {
+                padding: 30px 22px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .article-card table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MoneyTrackTemplates</h1>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="money-templates.html">Money Templates</a>
+    <a href="planners.html">Planners</a>
+    <a href="free-downloads.html">Free Downloads</a>
+    <a href="resources.html">Resources</a>
+    <a href="shop.html">Shop</a>
+</nav>
+
+<section class="article-hero">
+    <h2>How to Organize Your Debts Before Paying Them Off</h2>
+
+    <p>
+        A beginner-friendly guide to understanding balances, minimum payments,
+        interest rates, due dates, payoff strategies, and Excel debt tracking.
+    </p>
+</section>
+
+<main class="article-wrap">
+
+<article class="article-card">
+
+    <p>
+        Having several debts can feel confusing before you even begin paying
+        them down.
+    </p>
+
+    <p>
+        One bill may show a balance. Another lists an interest rate.
+        A credit card statement may show a minimum payment, due date,
+        and available credit. A student loan account may contain several
+        individual loan balances.
+    </p>
+
+    <p>
+        Then someone tells you to create a debt payoff plan.
+    </p>
+
+    <p><strong>Where do you even start?</strong></p>
+
+    <p>Start by getting organized.</p>
+
+    <p>
+        Before comparing payoff strategies or deciding where extra money
+        should go, create one clear list showing what you owe.
+    </p>
+
+    <p>
+        You do not need to be a financial expert or an Excel expert to do this.
+    </p>
+
+    <div class="beginner-box">
+        <strong>Your first goal:</strong> Know what you owe, whom you owe,
+        how much you are required to pay, and when each payment is due.
+    </div>
+
+    <h2>What Is Debt?</h2>
+
+    <p>
+        Debt is money you owe to another person, company, lender,
+        or organization.
+    </p>
+
+    <p>Common examples include:</p>
+
+    <ul>
+        <li>Credit cards</li>
+        <li>Student loans</li>
+        <li>Auto loans</li>
+        <li>Personal loans</li>
+        <li>Medical bills</li>
+        <li>Buy-now-pay-later balances</li>
+        <li>Other installment loans</li>
+    </ul>
+
+    <p>
+        Some debts charge interest. Some may charge fees.
+        Different debts can also have different payment schedules and rules.
+    </p>
+
+    <p>
+        That is why simply knowing your total debt isn't always enough.
+        You also need to understand the individual debts that make up that total.
+    </p>
+
+    <h2>If You're a Student, This Article Can Still Be Useful</h2>
+
+    <p>
+        You may be reading this before you have any debt at all.
+        That's actually a good time to learn these concepts.
+    </p>
+
+    <p>
+        Middle- and high-school students can learn what borrowing,
+        interest, balances, and payments mean before making major
+        financial decisions later.
+    </p>
+
+    <p>College and graduate students may encounter:</p>
+
+    <ul>
+        <li>Student loans</li>
+        <li>Credit cards</li>
+        <li>Car loans</li>
+        <li>Medical bills</li>
+        <li>School-related payment plans</li>
+        <li>Other forms of borrowing</li>
+    </ul>
+
+    <p>
+        You don't need to have debt to learn how debt works.
+        Understanding the vocabulary now can make financial information
+        much less intimidating later.
+    </p>
+
+    <h2>A Few Debt Words You Should Know</h2>
+
+    <h3>Balance</h3>
+
+    <p>
+        Your <strong>balance</strong> is the amount currently owed on a debt.
+    </p>
+
+    <h3>Minimum Payment</h3>
+
+    <p>
+        A <strong>minimum payment</strong> is the minimum amount the lender
+        requires you to pay for that billing period.
+    </p>
+
+    <h3>Interest</h3>
+
+    <p>
+        <strong>Interest</strong> is generally the cost of borrowing money.
+    </p>
+
+    <h3>Interest Rate</h3>
+
+    <p>
+        The <strong>interest rate</strong> helps determine how much interest
+        is charged.
+    </p>
+
+    <h3>APR</h3>
+
+    <p>
+        APR stands for <strong>Annual Percentage Rate</strong>.
+        It is commonly used to express the yearly cost of borrowing,
+        although how APR works can depend on the financial product.
+    </p>
+
+    <h3>Due Date</h3>
+
+    <p>
+        The <strong>due date</strong> is the date by which a payment is due.
+    </p>
+
+    <h3>Lender or Creditor</h3>
+
+    <p>
+        A lender or creditor is the company, financial institution,
+        organization, or other party to which money is owed.
+    </p>
+
+    <h3>Principal</h3>
+
+    <p>
+        The <strong>principal</strong> generally refers to the amount borrowed
+        before interest and certain other charges.
+    </p>
+
+    <h2>Step 1: Gather Your Debt Information</h2>
+
+    <p>
+        Before making a payoff plan, gather information about each debt.
+    </p>
+
+    <p>You might find this information on:</p>
+
+    <ul>
+        <li>Monthly statements</li>
+        <li>Online account pages</li>
+        <li>Loan documents</li>
+        <li>Billing statements</li>
+        <li>Account summaries</li>
+        <li>Other lender or creditor records</li>
+    </ul>
+
+    <p>For each debt, try to identify:</p>
+
+    <ul>
+        <li>Name of lender or creditor</li>
+        <li>Type of debt</li>
+        <li>Current balance</li>
+        <li>Minimum payment</li>
+        <li>Interest rate or APR, when applicable</li>
+        <li>Payment due date</li>
+        <li>Account status</li>
+        <li>Other information you need for your records</li>
+    </ul>
+
+    <p>
+        You are not making a payoff decision yet.
+        You're simply gathering the facts.
+    </p>
+
+    <h2>Step 2: Put Everything in One List</h2>
+
+    <table>
+        <tr>
+            <th>Debt</th>
+            <th>Balance</th>
+            <th>Minimum Payment</th>
+            <th>Interest Rate</th>
+            <th>Due Date</th>
+        </tr>
+
+        <tr>
+            <td>Credit Card A</td>
+            <td>$1,200</td>
+            <td>$45</td>
+            <td>24%</td>
+            <td>8th</td>
+        </tr>
+
+        <tr>
+            <td>Credit Card B</td>
+            <td>$600</td>
+            <td>$30</td>
+            <td>18%</td>
+            <td>15th</td>
+        </tr>
+
+        <tr>
+            <td>Student Loan</td>
+            <td>$5,000</td>
+            <td>$75</td>
+            <td>5%</td>
+            <td>21st</td>
+        </tr>
+
+        <tr>
+            <td>Car Loan</td>
+            <td>$8,000</td>
+            <td>$250</td>
+            <td>7%</td>
+            <td>27th</td>
+        </tr>
+    </table>
+
+    <p>
+        These numbers are hypothetical and provided only as examples.
+    </p>
+
+    <p>
+        A table like this tells you much more than simply saying,
+        “I owe about $14,800.”
+    </p>
+
+    <p>
+        You can see balances, required payments, rates, and due dates.
+        That is why organization comes before strategy.
+    </p>
+
+    <h2>Step 3: Calculate Your Total Debt</h2>
+
+    <div class="formula-box">
+        $1,200 + $600 + $5,000 + $8,000 = $14,800
+    </div>
+
+    <p>
+        Your total gives you a starting point and can help you measure
+        progress later.
+    </p>
+
+    <h2>Step 4: Calculate Your Required Monthly Payments</h2>
+
+    <div class="formula-box">
+        $45 + $30 + $75 + $250 = $400
+    </div>
+
+    <p>
+        In this hypothetical example, the listed minimum or required
+        payments total $400 per month.
+    </p>
+
+    <p>
+        Your debt tracker and monthly budget should work together.
+        The debt tracker shows what you owe. The budget helps you see
+        how those payments fit alongside income and other expenses.
+    </p>
+
+    <h2>Step 5: Check Your Due Dates</h2>
+
+    <table>
+        <tr>
+            <th>Payment</th>
+            <th>Due Date</th>
+        </tr>
+        <tr><td>Credit Card A</td><td>8th</td></tr>
+        <tr><td>Credit Card B</td><td>15th</td></tr>
+        <tr><td>Student Loan</td><td>21st</td></tr>
+        <tr><td>Car Loan</td><td>27th</td></tr>
+    </table>
+
+    <p>
+        A simple payment calendar can make it easier to understand when
+        payments need to be planned during the month.
+    </p>
+
+    <h2>Step 6: Understand Why Interest Rates Matter</h2>
+
+    <p>Imagine two hypothetical debts:</p>
+
+    <div class="formula-box">
+        Debt A: $1,000 balance at 5%<br><br>
+        Debt B: $1,000 balance at 25%
+    </div>
+
+    <p>
+        Both have the same balance, but their interest rates are very different.
+    </p>
+
+    <p>
+        You do not need to calculate complicated interest formulas just to get
+        organized. At this stage, record the interest rate accurately so you
+        have the information available when comparing payoff approaches.
+    </p>
+
+    <h2>Step 7: Debt Snowball vs. Debt Avalanche</h2>
+
+    <h3>Debt Snowball</h3>
+
+    <p>
+        With the debt snowball approach, debts are generally prioritized
+        from the <strong>smallest balance to the largest balance</strong>,
+        while required payments continue on other debts.
+    </p>
+
+    <ol>
+        <li>$600 debt</li>
+        <li>$1,200 debt</li>
+        <li>$5,000 debt</li>
+        <li>$8,000 debt</li>
+    </ol>
+
+    <p>
+        Some people like this approach because eliminating a smaller
+        balance can provide a visible sense of progress.
+    </p>
+
+    <h3>Debt Avalanche</h3>
+
+    <p>
+        With the debt avalanche approach, debts are generally prioritized
+        by <strong>interest rate</strong>, beginning with the highest rate,
+        while required payments continue on other debts.
+    </p>
+
+    <ol>
+        <li>24%</li>
+        <li>18%</li>
+        <li>7%</li>
+        <li>5%</li>
+    </ol>
+
+    <p>
+        Depending on the debts and payment assumptions, this approach can
+        reduce total interest compared with other ordering strategies.
+    </p>
+
+    <div class="beginner-box">
+        <strong>Which method should you use?</strong><br><br>
+        There is not one universal answer for every person.
+        Interest rates, balances, loan terms, income, expenses, available
+        cash, and individual priorities can all matter.
+        This guide is designed to help you organize the information so
+        you can understand and compare different approaches.
+    </div>
+
+    <h2>Step 8: See Whether Extra Money Is Available</h2>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Amount</th>
+        </tr>
+        <tr><td>Monthly take-home income</td><td>$3,000</td></tr>
+        <tr><td>Regular expenses</td><td>$2,100</td></tr>
+        <tr><td>Required debt payments</td><td>$400</td></tr>
+        <tr><td>Other planned savings/spending</td><td>$300</td></tr>
+        <tr><td><strong>Remaining</strong></td><td><strong>$200</strong></td></tr>
+    </table>
+
+    <p>
+        In this hypothetical situation, $200 remains in the plan.
+    </p>
+
+    <p>
+        Someone might choose to use some or all of that money toward debt,
+        savings, a future expense, or another priority.
+    </p>
+
+    <p>
+        The spreadsheet's job is to help you see the numbers clearly.
+    </p>
+
+    <h2>Step 9: Track Your Payments</h2>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Debt</th>
+            <th>Payment</th>
+            <th>New Balance</th>
+        </tr>
+
+        <tr><td>Jan. 8</td><td>Credit Card A</td><td>$45</td><td>$1,175</td></tr>
+        <tr><td>Jan. 15</td><td>Credit Card B</td><td>$80</td><td>$535</td></tr>
+        <tr><td>Jan. 21</td><td>Student Loan</td><td>$75</td><td>$4,945</td></tr>
+        <tr><td>Jan. 27</td><td>Car Loan</td><td>$250</td><td>$7,810</td></tr>
+    </table>
+
+    <p>
+        These figures are intentionally simplified examples.
+        Actual balances may change differently because of interest, fees,
+        new charges, payment timing, credits, and account terms.
+    </p>
+
+    <p>
+        Use your current lender or statement information when updating
+        the actual balance.
+    </p>
+
+    <h2>Excel Beginner Corner</h2>
+
+    <p>
+        A debt tracker is simply information organized into rows and columns.
+    </p>
+
+    <p><strong>Workbook:</strong> The entire Excel file.</p>
+
+    <p><strong>Worksheet:</strong> A page or tab inside the workbook.</p>
+
+    <p><strong>Cell:</strong> One individual box in the spreadsheet.</p>
+
+    <p><strong>Row:</strong> A horizontal line of cells.</p>
+
+    <p><strong>Column:</strong> A vertical line of cells.</p>
+
+    <p>
+        You do not need to become an Excel expert before using a
+        debt-tracking spreadsheet.
+    </p>
+
+    <h2>How to Create a Simple Debt List in Excel</h2>
+
+    <p>
+        If you're starting with a blank worksheet, create headings such as:
+    </p>
+
+    <div class="file-example">
+Debt Name
+Current Balance
+Minimum Payment
+Interest Rate
+Due Date
+    </div>
+
+    <p>
+        Then enter one debt on each row.
+    </p>
+
+    <div class="file-example">
+Debt Name      Current Balance    Minimum Payment    Interest Rate    Due Date
+Card A         $1,200             $45                24%              8th
+Card B         $600               $30                18%              15th
+Student Loan   $5,000             $75                5%               21st
+    </div>
+
+    <p>
+        That's already a basic debt tracker.
+        You can make it more sophisticated later.
+    </p>
+
+    <h2>Excel Beginner Tip: Protect Formula Cells</h2>
+
+    <p>
+        A pre-built Excel debt tracker may contain formulas that calculate
+        totals, payment amounts, payoff estimates, or other information
+        automatically.
+    </p>
+
+    <div class="beginner-box">
+        <strong>Beginner Rule:</strong><br><br>
+        If a cell contains something that begins with an equals sign,
+        such as <strong>=SUM(B2:B10)</strong>, it probably contains a formula.
+        Avoid erasing it unless you understand what that cell is designed to do.
+    </div>
+
+    <h2>How to Save Your Debt Tracker</h2>
+
+    <p>
+        Consider keeping an untouched master version of your tracker.
+    </p>
+
+    <div class="file-example">
+MASTER - Debt Tracker.xlsx
+    </div>
+
+    <p>
+        Then create your working version using:
+    </p>
+
+    <div class="formula-box">
+        File → Save As
+    </div>
+
+    <p>For example:</p>
+
+    <div class="file-example">
+My Debt Tracker - 2026.xlsx
+    </div>
+
+    <p>
+        Your clean master copy remains available if you ever need to start over.
+    </p>
+
+    <h2>Do You Need a New Debt Tracker Every Month?</h2>
+
+    <p>
+        Not necessarily.
+    </p>
+
+    <p>
+        A debt tracker may continue over many months so that you can
+        maintain a payment history and watch your balances change.
+    </p>
+
+    <p>A workbook might include tabs such as:</p>
+
+    <div class="file-example">
+Debt Overview
+Payment Log
+Payoff Plan
+Dashboard
+    </div>
+
+    <p>
+        You can continue updating the same working workbook as payments are made.
+    </p>
+
+    <h2>Back Up Your Debt Tracker</h2>
+
+    <p>
+        If you have been updating a workbook for several months,
+        consider keeping periodic backup copies.
+    </p>
+
+    <div class="file-example">
+Debt Tracker
+│
+├── MASTER - Debt Tracker.xlsx
+├── My Debt Tracker - 2026.xlsx
+└── Backups
+    ├── Debt Tracker Backup - January 2026.xlsx
+    ├── Debt Tracker Backup - February 2026.xlsx
+    └── Debt Tracker Backup - March 2026.xlsx
+    </div>
+
+    <h2>Be Careful What You Put in a Spreadsheet</h2>
+
+    <div class="warning-box">
+        <strong>A debt tracker generally does not need:</strong>
+        <ul>
+            <li>Online banking passwords</li>
+            <li>Credit-card PINs</li>
+            <li>Full credit-card numbers</li>
+            <li>Account passwords</li>
+            <li>Social Security numbers</li>
+            <li>Security-question answers</li>
+        </ul>
+
+        Use simple labels such as <strong>Credit Card A</strong>,
+        <strong>Car Loan</strong>, or <strong>Student Loan 1</strong>.
+    </div>
+
+    <h2>What If You Have Student Loans?</h2>
+
+    <p>
+        What feels like one student loan may sometimes consist of multiple
+        individual loans with different balances or interest rates.
+    </p>
+
+    <table>
+        <tr>
+            <th>Loan</th>
+            <th>Balance</th>
+            <th>Rate</th>
+        </tr>
+        <tr><td>Student Loan A</td><td>$2,500</td><td>4.5%</td></tr>
+        <tr><td>Student Loan B</td><td>$3,200</td><td>5.0%</td></tr>
+        <tr><td>Student Loan C</td><td>$1,800</td><td>5.5%</td></tr>
+    </table>
+
+    <p>
+        If your account shows separate loans, recording each one separately
+        may give you a clearer picture.
+    </p>
+
+    <h2>What If You Still Use a Credit Card You're Paying Down?</h2>
+
+    <p>
+        Credit-card balances can change even after you make a payment.
+    </p>
+
+    <p>
+        Interest, new purchases, credits, fees, and payment timing can all
+        affect the balance.
+    </p>
+
+    <div class="beginner-box">
+        <strong>Tracking Tip:</strong>
+        Update the balance using current account information instead of
+        assuming that Old Balance − Payment always equals the new balance.
+    </div>
+
+    <h2>What If You Don't Know an Interest Rate?</h2>
+
+    <p>Don't guess.</p>
+
+    <p>
+        Check your statement, lender account, loan documents, or other
+        official records.
+    </p>
+
+    <p>
+        If you cannot determine it immediately, leave the field blank
+        temporarily and return to it later.
+    </p>
+
+    <p>
+        A blank cell is better than knowingly entering incorrect information.
+    </p>
+
+    <h2>What If You Miss a Payment?</h2>
+
+    <p>
+        Do not change your spreadsheet to make it look as though the
+        payment happened.
+    </p>
+
+    <p>
+        Record what actually happened and check the account or contact
+        the lender or creditor if you need current information about the
+        amount due or available options.
+    </p>
+
+    <p>
+        A financial tracker is most useful when it reflects reality.
+    </p>
+
+    <h2>Common Debt-Tracking Mistakes</h2>
+
+    <h3>Keeping Everything in Your Head</h3>
+
+    <p>
+        Writing balances, rates, and due dates down gives you one place
+        to review everything.
+    </p>
+
+    <h3>Tracking Only the Total Balance</h3>
+
+    <p>
+        Knowing the total amount is useful, but knowing which debts make up
+        that total is much more informative.
+    </p>
+
+    <h3>Forgetting Interest Rates</h3>
+
+    <p>
+        Interest rates can matter when comparing debts and payoff approaches.
+    </p>
+
+    <h3>Forgetting Due Dates</h3>
+
+    <p>
+        A payoff strategy does not replace the need to keep track of required
+        payments and due dates.
+    </p>
+
+    <h3>Assuming Every Balance Changes by the Payment Amount</h3>
+
+    <p>
+        Interest, fees, new charges, credits, and timing can affect actual balances.
+    </p>
+
+    <h3>Deleting Spreadsheet Formulas</h3>
+
+    <p>
+        Changing formula cells can cause automatic calculations to stop working.
+    </p>
+
+    <h3>Storing Sensitive Account Information</h3>
+
+    <p>
+        Your tracker does not need banking passwords or full account credentials.
+    </p>
+
+    <h2>Review Your Debt Tracker Regularly</h2>
+
+    <p><strong>When you make a payment:</strong> Record it.</p>
+
+    <p>
+        <strong>When a new statement arrives:</strong>
+        Check the current balance and important account information.
+    </p>
+
+    <p><strong>Once a month:</strong> Review all debts together.</p>
+
+    <p><strong>Periodically:</strong> Save a backup copy of your workbook.</p>
+
+    <h2>What Happens When You Pay Off a Debt?</h2>
+
+    <p>
+        Consider keeping the completed debt in your records instead of
+        immediately deleting it.
+    </p>
+
+    <p>
+        You can add a <strong>Status</strong> column and mark it
+        <strong>Paid Off</strong>.
+    </p>
+
+    <table>
+        <tr>
+            <th>Debt</th>
+            <th>Starting Balance</th>
+            <th>Current Balance</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>Credit Card A</td>
+            <td>$1,200</td>
+            <td>$0</td>
+            <td>Paid Off</td>
+        </tr>
+
+        <tr>
+            <td>Credit Card B</td>
+            <td>$600</td>
+            <td>$0</td>
+            <td>Paid Off</td>
+        </tr>
+
+        <tr>
+            <td>Student Loan</td>
+            <td>$5,000</td>
+            <td>$3,850</td>
+            <td>Active</td>
+        </tr>
+
+        <tr>
+            <td>Car Loan</td>
+            <td>$8,000</td>
+            <td>$6,400</td>
+            <td>Active</td>
+        </tr>
+    </table>
+
+    <p>
+        Keeping completed debts visible can help preserve your history and
+        show how far you've come.
+    </p>
+
+    <h2>Organization Comes Before the Payoff Strategy</h2>
+
+    <p>
+        When people want to get rid of debt, it is natural to immediately ask:
+    </p>
+
+    <p><strong>Which debt should I pay first?</strong></p>
+
+    <p>
+        But an important step comes before that.
+    </p>
+
+    <p><strong>Know exactly what you're working with.</strong></p>
+
+    <p>
+        Gather your balances. Record your minimum payments.
+        Find your interest rates. Write down your due dates.
+        Calculate your totals. Understand how those payments fit into your budget.
+    </p>
+
+    <p>
+        Then you have a much clearer foundation for evaluating different approaches.
+    </p>
+
+    <p>
+        You do not need to solve everything in one afternoon.
+        Start by organizing the information.
+    </p>
+
+    <p><strong>That's progress too.</strong></p>
+
+    <section class="product-box">
+
+        <h2>Looking for a Tool to Organize Multiple Debts?</h2>
+
+        <p>
+            If you would rather use a prepared spreadsheet instead of building
+            one from scratch, the MoneyTrackTemplates
+            <strong>Debt Payoff Calculator — Excel</strong> can help organize
+            and compare multiple debts.
+        </p>
+
+        <p>
+            It can track up to 15 debts and includes debt and payment
+            calculations, snowball vs. avalanche comparison, payoff estimates,
+            an extra-payment calculator, monthly payoff schedule, and chart.
+        </p>
+
+        <p><strong>Debt Payoff Calculator — Excel — $7.99</strong></p>
+
+        <a href="https://payhip.com/b/DdU7B"
+           class="button"
+           target="_blank"
+           rel="noopener">
+            View Debt Payoff Calculator
+        </a>
+
+    </section>
+
+    <div class="educational-note">
+        <strong>Educational Note:</strong>
+        This guide is provided for general educational and organizational
+        purposes and is not individualized financial advice. Loan terms,
+        interest calculations, fees, and financial circumstances vary.
+        Check your account documents and lender information for details
+        specific to your accounts.
+    </div>
+
+</article>
+
+</main>
+
+<section class="cta-section">
+
+    <div class="cta-box">
+
+        <h2>Keep Building Your Money Organization Skills</h2>
+
+        <p>
+            Explore more practical budgeting, savings, planning,
+            spreadsheet, and organization resources from MoneyTrackTemplates.
+        </p>
+
+        <a href="money-templates.html" class="button">
+            Explore Money Templates
+        </a>
+
+        <a href="free-downloads.html" class="button">
+            Browse Free Downloads
+        </a>
+
+        <a href="resources.html" class="button">
+            More Resources
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p><strong>MoneyTrackTemplates</strong></p>
+
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+
+    <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
