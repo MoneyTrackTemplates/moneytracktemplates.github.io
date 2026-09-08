@@ -17,63 +17,58 @@
             scroll-behavior: smooth;
         }
 
+        :root {
+            --white: #ffffff;
+            --off-white: #f7fbff;
+            --light-blue: #eaf4ff;
+            --soft-blue: #d8ebff;
+            --blue: #2f74c0;
+            --blue-dark: #174a7e;
+            --navy: #123454;
+            --text: #24384d;
+            --muted: #61758a;
+            --border: #cfe0ef;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #fbf7f4;
-            color: #493b45;
+            background: var(--white);
+            color: var(--text);
             line-height: 1.65;
         }
 
-        /* ---------- COLOR PALETTE ---------- */
-        :root {
-            --ivory: #fbf7f4;
-            --white: #ffffff;
-            --blush: #ead7d7;
-            --blush-soft: #f4e7e5;
-            --mauve: #b79ba8;
-            --sage: #b9c5b6;
-            --plum: #584454;
-            --plum-dark: #43333f;
-            --taupe: #d8cbc2;
-            --text: #493b45;
-            --muted: #756772;
-        }
-
-        /* ---------- HEADER ---------- */
+        /* HEADER */
 
         header {
-            background:
-                linear-gradient(135deg, #ead7d7 0%, #f4e7e5 45%, #ded7df 100%);
+            background: linear-gradient(135deg, #eaf4ff 0%, #ffffff 55%, #dceeff 100%);
             text-align: center;
-            padding: 65px 20px 55px;
+            padding: 68px 20px 58px;
         }
 
         header h1 {
             margin: 0;
-            color: var(--plum);
+            color: var(--navy);
             font-size: 3rem;
             letter-spacing: 1px;
-            font-weight: 700;
         }
 
         header p {
             margin: 12px 0 0;
-            color: var(--plum-dark);
+            color: var(--blue-dark);
             font-size: 1.15rem;
-            letter-spacing: 0.3px;
         }
 
-        /* ---------- NAVIGATION ---------- */
+        /* NAVIGATION */
 
         nav {
-            background: var(--plum-dark);
+            background: var(--navy);
             padding: 16px 15px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 3px 12px rgba(67, 51, 63, 0.15);
+            box-shadow: 0 3px 12px rgba(18, 52, 84, 0.16);
         }
 
         nav a {
@@ -86,25 +81,25 @@
         }
 
         nav a:hover {
-            color: #ead7d7;
+            color: #b9dcff;
         }
 
-        /* ---------- HERO ---------- */
+        /* HERO */
 
         .hero {
-            background: var(--ivory);
+            background: var(--off-white);
             text-align: center;
-            padding: 85px 20px 75px;
+            padding: 88px 20px 78px;
         }
 
         .hero h2 {
-            color: var(--plum);
-            font-size: 2.45rem;
+            color: var(--navy);
+            font-size: 2.5rem;
             margin: 0 0 18px;
         }
 
         .hero p {
-            max-width: 760px;
+            max-width: 780px;
             margin: 0 auto;
             font-size: 1.1rem;
             color: var(--text);
@@ -118,67 +113,64 @@
             display: inline-block;
             text-decoration: none;
             padding: 14px 28px;
-            border-radius: 10px;
+            border-radius: 9px;
             margin: 7px;
             font-weight: 700;
             transition: all 0.2s ease;
         }
 
         .primary-button {
-            background: var(--plum);
+            background: var(--blue);
             color: white;
-            box-shadow: 0 5px 14px rgba(88, 68, 84, 0.18);
+            box-shadow: 0 5px 14px rgba(47, 116, 192, 0.22);
         }
 
         .primary-button:hover {
-            background: var(--plum-dark);
+            background: var(--blue-dark);
             transform: translateY(-2px);
         }
 
         .secondary-button {
-            background: var(--blush);
-            color: var(--plum-dark);
+            background: white;
+            color: var(--blue-dark);
+            border: 1px solid var(--border);
         }
 
         .secondary-button:hover {
-            background: #dfc6c8;
+            background: var(--light-blue);
             transform: translateY(-2px);
         }
 
-        /* ---------- GENERAL SECTIONS ---------- */
+        /* SECTIONS */
 
         .section {
-            padding: 75px 20px;
+            padding: 78px 20px;
         }
 
-        .section-light {
-            background: var(--ivory);
+        .section-blue {
+            background: var(--light-blue);
         }
 
-        .section-soft {
-            background: var(--blush-soft);
-        }
-
-        .section-sage {
-            background: #edf1eb;
+        .section-white {
+            background: white;
         }
 
         .section-title {
             text-align: center;
-            color: var(--plum);
+            color: var(--navy);
             font-size: 2rem;
             margin: 0 0 14px;
         }
 
         .section-intro {
-            max-width: 760px;
+            max-width: 770px;
             margin: 0 auto 42px;
             text-align: center;
             color: var(--muted);
             font-size: 1.05rem;
         }
 
-        /* ---------- CATEGORY CARDS ---------- */
+        /* CATEGORY CARDS */
 
         .card-grid {
             max-width: 1100px;
@@ -189,18 +181,18 @@
         }
 
         .category-card {
-            background: var(--white);
-            border: 1px solid var(--taupe);
-            border-radius: 18px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
             padding: 32px 24px;
             text-align: center;
-            box-shadow: 0 7px 20px rgba(88, 68, 84, 0.07);
+            box-shadow: 0 7px 20px rgba(32, 82, 125, 0.07);
             transition: all 0.25s ease;
         }
 
         .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(88, 68, 84, 0.12);
+            box-shadow: 0 12px 28px rgba(32, 82, 125, 0.13);
         }
 
         .category-icon {
@@ -209,31 +201,91 @@
         }
 
         .category-card h3 {
-            color: var(--plum);
+            color: var(--navy);
             font-size: 1.25rem;
             margin: 8px 0 12px;
         }
 
         .category-card p {
-            color: var(--text);
             margin: 0;
+            color: var(--text);
         }
 
-        /* ---------- FREE RESOURCES ---------- */
+        /* FEATURED PRODUCTS */
+
+        .product-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 7px 20px rgba(32, 82, 125, 0.07);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-icon {
+            font-size: 2.7rem;
+            margin-bottom: 12px;
+        }
+
+        .product-card h3 {
+            margin: 0 0 10px;
+            color: var(--navy);
+            font-size: 1.3rem;
+        }
+
+        .product-card p {
+            margin: 0 0 18px;
+            color: var(--text);
+        }
+
+        .product-price {
+            color: var(--blue);
+            font-size: 1.35rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product-button {
+            margin-top: auto;
+            display: block;
+            text-align: center;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .product-button:hover {
+            background: var(--blue-dark);
+        }
+
+        /* FREE RESOURCES */
 
         .resource-box {
             max-width: 920px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.78);
-            border: 1px solid var(--taupe);
+            background: white;
+            border: 1px solid var(--border);
             border-radius: 20px;
             padding: 48px 30px;
             text-align: center;
-            box-shadow: 0 8px 22px rgba(88, 68, 84, 0.07);
+            box-shadow: 0 8px 22px rgba(32, 82, 125, 0.07);
         }
 
         .resource-box h2 {
-            color: var(--plum);
+            color: var(--navy);
             margin-top: 0;
             font-size: 2rem;
         }
@@ -243,17 +295,16 @@
             margin: 0 auto 25px;
         }
 
-        /* ---------- FINAL CTA ---------- */
+        /* FINAL CTA */
 
         .cta {
             text-align: center;
             padding: 85px 20px;
-            background:
-                linear-gradient(135deg, #d8cbd2 0%, #e9dada 100%);
+            background: linear-gradient(135deg, #dceeff 0%, #edf6ff 100%);
         }
 
         .cta h2 {
-            color: var(--plum);
+            color: var(--navy);
             font-size: 2.15rem;
             margin-top: 0;
         }
@@ -263,13 +314,13 @@
             margin: 0 auto 28px;
         }
 
-        /* ---------- FOOTER ---------- */
+        /* FOOTER */
 
         footer {
-            background: var(--plum-dark);
+            background: var(--navy);
             color: white;
             text-align: center;
-            padding: 34px 20px;
+            padding: 35px 20px;
         }
 
         footer p {
@@ -280,7 +331,7 @@
             font-size: 1.15rem;
         }
 
-        /* ---------- MOBILE ---------- */
+        /* MOBILE */
 
         @media (max-width: 850px) {
 
@@ -297,18 +348,21 @@
             }
         }
 
+        @media (max-width: 700px) {
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 600px) {
 
             header {
-                padding: 45px 18px 40px;
+                padding: 48px 18px 42px;
             }
 
             header h1 {
                 font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
             }
 
             nav a {
@@ -317,7 +371,7 @@
             }
 
             .hero {
-                padding: 60px 18px;
+                padding: 62px 18px;
             }
 
             .hero h2 {
@@ -364,7 +418,7 @@
 </nav>
 
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -393,7 +447,7 @@
 
 <!-- CATEGORIES -->
 
-<section class="section section-light">
+<section class="section section-white">
 
     <h2 class="section-title">What You'll Find Here</h2>
 
@@ -410,7 +464,7 @@
             <h3>Money Trackers</h3>
             <p>
                 Track spending, savings, budgets, expenses, and financial
-                goals with simple, practical templates.
+                goals with practical templates.
             </p>
         </div>
 
@@ -454,9 +508,110 @@
             <div class="category-icon">🖨️</div>
             <h3>Printables</h3>
             <p>
-                Download useful printable resources, checklists, planners,
-                worksheets, and organizational tools.
+                Download useful printable resources, checklists,
+                planners, worksheets, and organizational tools.
             </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED PRODUCTS -->
+
+<section class="section section-blue">
+
+    <h2 class="section-title">Featured Templates</h2>
+
+    <p class="section-intro">
+        A few of our most useful digital tools for managing money,
+        planning ahead, and staying organized.
+    </p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="product-icon">💳</div>
+
+            <h3>Debt Payoff Calculator — Excel</h3>
+
+            <p>
+                Organize your debts, compare payoff strategies, calculate
+                interest, and create a clear debt payoff plan.
+            </p>
+
+            <div class="product-price">$7.99</div>
+
+            <a
+                href="#"
+                class="product-button"
+                onclick="window.location.href='https://'+'payhip.com/b/DdU7B'; return false;">
+                View Product
+            </a>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-icon">💰</div>
+
+            <h3>Premium Savings Goal Tracker — Excel</h3>
+
+            <p>
+                Set savings goals, monitor contributions, track progress,
+                and see how much remains to reach your goals.
+            </p>
+
+            <div class="product-price">$5.99</div>
+
+            <a
+                href="#"
+                class="product-button"
+                onclick="window.location.href='https://'+'payhip.com/b/tgLIn'; return false;">
+                View Product
+            </a>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-icon">📱</div>
+
+            <h3>Premium Subscription Tracker</h3>
+
+            <p>
+                Track recurring subscriptions, renewal dates, billing
+                frequency, payment history, and total subscription spending.
+            </p>
+
+            <div class="product-price">$4.99</div>
+
+            <a
+                href="#"
+                class="product-button"
+                onclick="window.location.href='https://'+'payhip.com/b/McOYb'; return false;">
+                View Product
+            </a>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-icon">🎉</div>
+
+            <h3>Labor Day Planner &amp; Money Tracker</h3>
+
+            <p>
+                Plan your Labor Day celebration while keeping your spending,
+                shopping, guests, activities, and supplies organized.
+            </p>
+
+            <div class="product-price">$3.99</div>
+
+            <a
+                href="#"
+                class="product-button"
+                onclick="window.location.href='https://'+'payhip.com/b/yokKl'; return false;">
+                View Product
+            </a>
         </div>
 
     </div>
@@ -466,7 +621,7 @@
 
 <!-- FREE RESOURCES -->
 
-<section class="section section-soft">
+<section class="section section-blue">
 
     <div class="resource-box">
 
