@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZP3T0LXM1C');
-</script>
-    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZP3T0LXM1C');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About | MoneyTrackTemplates</title>
+    <title>About MoneyTrackTemplates | Why I Created It</title>
 
-    <meta name="description" content="Learn about MoneyTrackTemplates and our mission to create practical digital planners, money trackers, spreadsheets, checklists, and organization tools.">
+    <meta name="description"
+          content="Discover why MoneyTrackTemplates was created and the story behind our practical Excel budget trackers, savings tools, planners, and everyday money-management resources.">
 
     <style>
 
@@ -104,16 +105,16 @@
         .intro h2 {
             color: var(--blue-dark);
             font-size: 2.55rem;
-            margin: 0 0 18px;
+            margin: 0 0 14px;
         }
 
         .intro p {
             max-width: 820px;
             margin: 0 auto;
-            font-size: 1.08rem;
+            font-size: 1.15rem;
         }
 
-        /* ABOUT CONTENT */
+        /* ABOUT STORY */
 
         .about-section {
             padding: 20px 20px 80px;
@@ -131,18 +132,52 @@
 
         .about-box h2 {
             color: var(--blue-dark);
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             margin-top: 0;
         }
 
         .about-box h3 {
             color: var(--blue-dark);
-            font-size: 1.4rem;
-            margin-top: 34px;
+            font-size: 1.45rem;
+            margin-top: 38px;
+            margin-bottom: 12px;
         }
 
         .about-box p {
             margin-bottom: 18px;
+        }
+
+        .story-highlight {
+            background: var(--blue-light);
+            border-left: 5px solid var(--blue);
+            border-radius: 10px;
+            padding: 24px 26px;
+            margin: 28px 0;
+        }
+
+        .story-highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .questions {
+            margin: 25px 0;
+            padding: 25px 28px;
+            background: var(--ivory);
+            border-radius: 12px;
+            border: 1px solid var(--blue-border);
+        }
+
+        .questions p {
+            margin: 8px 0;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
+        .center-statement {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--blue-dark);
+            margin: 30px 0;
         }
 
         /* VALUES */
@@ -164,15 +199,15 @@
             max-width: 1050px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .value-card {
             background: white;
             border: 1px solid var(--blue-border);
             border-radius: 15px;
-            padding: 30px 24px;
+            padding: 30px 22px;
             text-align: center;
             box-shadow: 0 6px 18px rgba(36, 76, 112, 0.06);
         }
@@ -187,12 +222,104 @@
             margin: 6px 0 12px;
         }
 
+        /* SUGGESTION BOX */
+
+        .suggestion-section {
+            padding: 78px 20px;
+            background: var(--ivory);
+        }
+
+        .suggestion-box {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+            border: 2px solid var(--blue-border);
+            border-radius: 20px;
+            padding: 48px 36px;
+            box-shadow: 0 8px 24px rgba(36, 76, 112, 0.08);
+        }
+
+        .suggestion-icon {
+            font-size: 3rem;
+            margin-bottom: 8px;
+        }
+
+        .suggestion-box h2 {
+            color: var(--blue-dark);
+            font-size: 2rem;
+            margin: 5px 0 10px;
+        }
+
+        .suggestion-box h3 {
+            color: var(--blue);
+            font-size: 1.35rem;
+            margin: 0 0 20px;
+        }
+
+        .suggestion-box p {
+            max-width: 680px;
+            margin: 0 auto 18px;
+        }
+
+        .suggestion-button {
+            display: inline-block;
+            margin-top: 10px;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .suggestion-button:hover {
+            background: var(--blue-dark);
+            transform: translateY(-2px);
+        }
+
+        /* CLOSING */
+
+        .closing-section {
+            background: var(--blue-light);
+            padding: 72px 20px;
+            text-align: center;
+            border-top: 1px solid var(--blue-border);
+        }
+
+        .closing-section h2 {
+            color: var(--blue-dark);
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .closing-section p {
+            max-width: 780px;
+            margin: 0 auto 18px;
+        }
+
+        .closing-quote {
+            max-width: 700px;
+            margin: 30px auto 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
+        .tagline {
+            margin-top: 34px !important;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--blue-dark);
+        }
+
         /* CTA */
 
         .cta {
             background: var(--ivory);
             text-align: center;
-            padding: 78px 20px;
+            padding: 70px 20px;
         }
 
         .cta h2 {
@@ -239,7 +366,17 @@
             font-size: 1.15rem;
         }
 
+        footer a {
+            color: white;
+        }
+
         /* MOBILE */
+
+        @media (max-width: 900px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
         @media (max-width: 750px) {
 
@@ -251,10 +388,6 @@
                 font-size: 2rem;
             }
 
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-
             .about-box {
                 padding: 32px 24px;
             }
@@ -262,6 +395,12 @@
             nav a {
                 display: inline-block;
                 margin: 5px 7px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .values-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -282,6 +421,10 @@
             .intro h2 {
                 font-size: 1.75rem;
             }
+
+            .suggestion-box {
+                padding: 36px 22px;
+            }
         }
 
     </style>
@@ -290,95 +433,190 @@
 <body>
 
 <header>
-
     <h1>MoneyTrackTemplates</h1>
-
-    <p>
-        Plan Better. Track Smarter. Live More Organized.
-    </p>
-
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
 </header>
 
-
 <nav>
-
     <a href="index.html">Home</a>
-
     <a href="about.html">About</a>
-
     <a href="money-templates.html">Money Templates</a>
-
     <a href="planners.html">Planners</a>
-<a href="holiday-planners.html">Holiday Planners</a>
+    <a href="holiday-planners.html">Holiday Planners</a>
     <a href="free-downloads.html">Free Downloads</a>
-
     <a href="resources.html">Resources</a>
-   
     <a href="shop.html">Shop</a>
-
 </nav>
 
-
 <section class="intro">
-
     <h2>About MoneyTrackTemplates</h2>
-
-    <p>
-        Practical digital tools created to make planning,
-        organizing, and managing everyday life simpler.
-    </p>
-
+    <p>Practical tools for real-life money decisions.</p>
 </section>
-
 
 <section class="about-section">
 
     <div class="about-box">
 
-        <h2>Welcome to MoneyTrackTemplates</h2>
+        <h2>Why I Created MoneyTrackTemplates</h2>
 
         <p>
-            MoneyTrackTemplates was created to provide practical,
-            easy-to-use digital templates for people who want a
-            simpler way to organize their money, plans, projects,
-            household responsibilities, and everyday life.
+            MoneyTrackTemplates started because I needed these tools myself.
         </p>
 
         <p>
-            Our growing collection includes money trackers,
-            budgeting spreadsheets, digital planners, checklists,
-            printable resources, holiday planners, and other
-            organizational tools.
-        </p>
-
-        <h3>Simple Tools for Real Life</h3>
-
-        <p>
-            Good organization does not need to be complicated.
-            Our goal is to create resources that are useful,
-            understandable, and easy to put into practice.
+            The way I think about everyday spending has changed.
+            Groceries cost more. Gas costs more. Bills and subscriptions
+            that once seemed small can add up quickly.
         </p>
 
         <p>
-            Whether you're working toward a savings goal,
-            organizing household expenses, planning a holiday,
-            preparing for an event, or simply trying to keep
-            everyday responsibilities under control,
-            MoneyTrackTemplates is here to help.
+            I realized I couldn't spend money the same way I had five years
+            ago and expect the same results.
         </p>
 
-        <h3>A Growing Collection</h3>
+        <div class="story-highlight">
+
+            <p>
+                <strong>
+                    Five years ago, I could finish my shopping, stop at
+                    Starbucks, order a Venti latte, and not give it much
+                    thought. Sometimes I'd sit right there in the café,
+                    listen to the music, sip my latte, and enjoy a little
+                    time to myself. It wasn't some extravagant purchase.
+                    It was simply a small pleasure I could enjoy without
+                    feeling guilty about what I'd already spent that day.
+                </strong>
+            </p>
+
+            <p>
+                <strong>
+                    Today, even something as simple as that can make me
+                    stop and think.
+                </strong>
+            </p>
+
+            <p><em>Did I already spend too much?</em></p>
+
+            <p>
+                <em>
+                    Is there another expense coming up that I need that
+                    money for?
+                </em>
+            </p>
+
+            <p>
+                <em>Can I really afford the extra treat this week?</em>
+            </p>
+
+            <p><strong>It's not really about the latte.</strong></p>
+
+            <p>
+                It's about realizing that the little bit of financial
+                breathing room I once took for granted doesn't always
+                feel like it's there anymore.
+            </p>
+
+        </div>
 
         <p>
-            MoneyTrackTemplates continues to grow with new
-            spreadsheets, planners, trackers, printable resources,
-            seasonal tools, and free downloads.
+            And that realization changed the way I approached my money.
+        </p>
+
+
+        <h3>I Didn't Want to Stop Living. I Wanted to Start Planning Better.</h3>
+
+        <p>
+            I didn't want budgeting to mean eliminating every small
+            pleasure from my life.
         </p>
 
         <p>
-            As our collection expands, our purpose remains the same:
-            to create practical tools that help make planning
-            easier and life a little more organized.
+            I wanted to understand my spending well enough to make better
+            decisions about it.
+        </p>
+
+        <div class="questions">
+            <p>Where is my money actually going?</p>
+            <p>Which expenses are quietly adding up?</p>
+            <p>How much can I realistically save?</p>
+            <p>What bills are coming next?</p>
+            <p>Can I afford something I want without regretting it later?</p>
+        </div>
+
+        <p>
+            I didn't need another lecture telling me simply to
+            <strong>"spend less."</strong>
+        </p>
+
+        <p class="center-statement">
+            <strong>I needed a system.</strong>
+        </p>
+
+        <p>
+            So I started building one.
+        </p>
+
+
+        <h3>That's Where MoneyTrackTemplates Began</h3>
+
+        <p>
+            I began creating spreadsheets and trackers that helped me see
+            my finances more clearly.
+        </p>
+
+        <p>
+            I didn't want complicated financial software or intimidating
+            systems. I wanted practical tools that could help answer
+            ordinary questions.
+        </p>
+
+        <div class="questions">
+            <p>Where did my money go?</p>
+            <p>How much am I really spending?</p>
+            <p>How much progress am I making toward my savings goal?</p>
+            <p>What happens if I put a little extra toward my debt?</p>
+            <p>Can I make the money I already have work better for me?</p>
+        </div>
+
+        <p>
+            Those questions became the foundation of
+            <strong>MoneyTrackTemplates</strong>.
+        </p>
+
+
+        <h3>What I Create</h3>
+
+        <p>
+            Today, MoneyTrackTemplates creates practical Excel
+            spreadsheets, budget planners, savings trackers, debt payoff
+            tools, bill and subscription trackers, holiday planners,
+            checklists, and other organizational resources.
+        </p>
+
+        <p>
+            But every template starts with essentially the same question:
+        </p>
+
+        <p class="center-statement">
+            <strong>What would make this easier to manage?</strong>
+        </p>
+
+        <p>
+            The goal isn't perfection.
+        </p>
+
+        <p>
+            <strong>It's clarity.</strong>
+        </p>
+
+        <p>
+            A good financial tool shouldn't make you feel guilty about
+            buying a cup of coffee.
+        </p>
+
+        <p>
+            It should help you understand whether that coffee fits your
+            budget <strong>so you can enjoy it when it does.</strong>
         </p>
 
     </div>
@@ -388,52 +626,123 @@
 
 <section class="values-section">
 
-    <h2>What We Believe In</h2>
+    <h2>Simple Tools for Real Life</h2>
 
     <div class="values-grid">
 
         <div class="value-card">
-
             <div class="value-icon">💡</div>
-
-            <h3>Keep It Practical</h3>
-
+            <h3>Practical</h3>
             <p>
-                Templates should solve real problems and make
+                A useful template should solve an actual problem and make
                 everyday tasks easier to manage.
             </p>
-
         </div>
 
-
         <div class="value-card">
-
             <div class="value-icon">✓</div>
-
-            <h3>Keep It Simple</h3>
-
+            <h3>Simple</h3>
             <p>
-                Useful tools should be understandable and
-                approachable without unnecessary complexity.
+                You shouldn't need an accounting degree to understand the
+                tools you use.
             </p>
-
         </div>
 
+        <div class="value-card">
+            <div class="value-icon">↔</div>
+            <h3>Flexible</h3>
+            <p>
+                Your budget, priorities, goals, and financial decisions
+                belong to you.
+            </p>
+        </div>
 
         <div class="value-card">
-
             <div class="value-icon">📈</div>
-
-            <h3>Keep Improving</h3>
-
+            <h3>Useful</h3>
             <p>
-                Our collection will continue growing as we create
-                new resources for planning, tracking, and organizing.
+                A beautiful spreadsheet isn't enough. It needs to help you
+                accomplish something.
             </p>
-
         </div>
 
     </div>
+
+</section>
+
+
+<section class="suggestion-section">
+
+    <div class="suggestion-box">
+
+        <div class="suggestion-icon">💡</div>
+
+        <h2>Have a Template Idea?</h2>
+
+        <h3>What template would make your life easier?</h3>
+
+        <p>
+            Maybe there's an expense you can't find a good way to track.
+            Maybe you need a planner for something I haven't created yet.
+            Or maybe you've searched everywhere for a spreadsheet that
+            does one very specific thing—and nobody seems to make it.
+        </p>
+
+        <p><strong>Tell me.</strong></p>
+
+        <p>
+            Your suggestion could inspire a future MoneyTrackTemplates
+            spreadsheet, tracker, planner, checklist—or even a free
+            resource.
+        </p>
+
+        <!--
+            We will connect this button to the real Suggestion Box
+            form after we create the form page.
+        -->
+        <a href="#suggestion-coming-soon" class="suggestion-button">
+            Submit a Template Idea
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="closing-section">
+
+    <h2>Why I'll Keep Building</h2>
+
+    <p>
+        Life changes. Prices change. Goals change.
+    </p>
+
+    <p>
+        And sometimes the financial habits that worked perfectly well a
+        few years ago simply don't work anymore.
+    </p>
+
+    <p>
+        MoneyTrackTemplates grew from my own need to understand and
+        organize everyday money better. But it doesn't have to stop with
+        the problems I've encountered myself.
+    </p>
+
+    <p>
+        <strong>
+            I want to hear about the problems you're trying to solve, too.
+        </strong>
+    </p>
+
+    <p class="closing-quote">
+        "I wish there were a spreadsheet for this."
+    </p>
+
+    <p><strong>Maybe there should be.</strong></p>
+
+    <p class="tagline">
+        Plan Better. Track Smarter. Live More Organized.
+    </p>
 
 </section>
 
@@ -443,8 +752,8 @@
     <h2>Ready to Explore?</h2>
 
     <p>
-        Browse our growing collection of digital planners,
-        money trackers, spreadsheets, and organization tools.
+        Browse the growing collection of digital planners, money trackers,
+        spreadsheets, and organization tools.
     </p>
 
     <a href="shop.html" class="button">
@@ -465,9 +774,9 @@
     </p>
 
     <p>
-    &copy; 2026 MoneyTrackTemplates. All rights reserved. |
-    <a href="privacy-policy.html">Privacy Policy</a>
-</p>
+        &copy; 2026 MoneyTrackTemplates. All rights reserved. |
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
 
 </footer>
 
