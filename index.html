@@ -225,6 +225,67 @@
             border: 1px solid var(--blue-border);
         }
 
+        .almanac-feature {
+            background: #f3ead5;
+            padding: 32px 20px;
+            border-top: 1px solid #dfcca1;
+            border-bottom: 1px solid #dfcca1;
+        }
+
+        .almanac-feature-inner {
+            width: min(1080px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .almanac-emblem {
+            width: 78px;
+            height: 78px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #fffaf0;
+            border: 2px solid #bc8b35;
+            font-size: 2.35rem;
+        }
+
+        .almanac-copy .feature-label {
+            display: block;
+            color: #8a611f;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .almanac-copy h2 {
+            color: #31563d;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.85rem;
+        }
+
+        .almanac-copy p {
+            color: #5e604e;
+            margin: 5px 0 0;
+        }
+
+        .almanac-button {
+            background: #31563d;
+            color: white;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(49, 86, 61, 0.18);
+        }
+
+        .almanac-button:hover {
+            background: #24432f;
+            transform: translateY(-2px);
+        }
+
         .secondary-button:hover {
             background: var(--blue-light);
             transform: translateY(-2px);
@@ -458,6 +519,15 @@
                 margin-bottom: 10px;
             }
 
+            .almanac-feature-inner {
+                grid-template-columns: auto 1fr;
+            }
+
+            .almanac-feature .almanac-button {
+                grid-column: 1 / -1;
+                justify-self: center;
+            }
+
             .card-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -513,6 +583,19 @@
             .free-tool-card {
                 width: min(100%, 380px);
                 margin: 0 auto;
+            }
+
+            .almanac-feature-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .almanac-emblem {
+                margin: 0 auto;
+            }
+
+            .almanac-copy h2 {
+                font-size: 1.55rem;
             }
 
             .section {
@@ -630,6 +713,18 @@
 
     </div>
 
+</section>
+
+<section class="almanac-feature" aria-labelledby="almanac-feature-title">
+    <div class="almanac-feature-inner">
+        <div class="almanac-emblem" aria-hidden="true">🌻</div>
+        <div class="almanac-copy">
+            <span class="feature-label">New Monthly Series</span>
+            <h2 id="almanac-feature-title">Diana’s Country Almanac</h2>
+            <p>Seasonal wisdom for the home, garden, kitchen, and sky—one month at a time.</p>
+        </div>
+        <a href="dianas-country-almanac.html" class="button almanac-button">Explore the Almanac</a>
+    </div>
 </section>
 
 
