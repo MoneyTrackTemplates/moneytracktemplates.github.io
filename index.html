@@ -116,6 +116,67 @@
             padding: 82px 20px 75px;
         }
 
+        .hero-layout {
+            width: min(1240px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(210px, 0.75fr) minmax(460px, 1.8fr) minmax(210px, 0.75fr);
+            grid-template-areas: "binder center savings";
+            gap: 32px;
+            align-items: center;
+        }
+
+        .hero-center {
+            grid-area: center;
+        }
+
+        .binder-card {
+            grid-area: binder;
+        }
+
+        .savings-card {
+            grid-area: savings;
+        }
+
+        .free-tool-card {
+            background: var(--white);
+            border: 1px solid var(--blue-border);
+            border-top: 5px solid var(--blue);
+            border-radius: 10px;
+            padding: 25px 20px;
+            box-shadow: 0 8px 24px rgba(16, 47, 77, 0.10);
+        }
+
+        .free-tool-card .free-label {
+            display: inline-block;
+            color: var(--blue);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .free-tool-card h3 {
+            color: var(--blue-dark);
+            font-size: 1.25rem;
+            line-height: 1.3;
+            margin: 0 0 10px;
+        }
+
+        .free-tool-card p {
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin: 0 0 18px;
+        }
+
+        .free-tool-card .button {
+            width: 100%;
+            margin: 0;
+            padding: 12px 15px;
+            font-size: 0.88rem;
+        }
+
         .hero h2 {
             color: var(--blue-dark);
             font-size: 2.55rem;
@@ -386,6 +447,17 @@
                 font-size: 2rem;
             }
 
+            .hero-layout {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-areas:
+                    "center center"
+                    "binder savings";
+            }
+
+            .hero-center {
+                margin-bottom: 10px;
+            }
+
             .card-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -427,6 +499,20 @@
 
             .hero p {
                 font-size: 1rem;
+            }
+
+            .hero-layout {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "center"
+                    "binder"
+                    "savings";
+                gap: 20px;
+            }
+
+            .free-tool-card {
+                width: min(100%, 380px);
+                margin: 0 auto;
             }
 
             .section {
@@ -483,8 +569,6 @@
 
     <a href="holiday-planners.html">Holiday Planners</a>
 
-    <a href="home-organization-binder.html">FREE Home Binder Sheets</a>
-<a href="free-savings-goal-tracker.html">FREE Savings Tracker</a>
     <a href="free-downloads.html">Free Downloads</a>
 
     <a href="resources.html">Resources</a>
@@ -500,29 +584,49 @@
 
 <section class="hero">
 
-    <h2>
-        Simple Tools for a More Organized Life
-    </h2>
+    <div class="hero-layout">
 
-    <p>
-        Discover practical planners, money trackers, spreadsheets,
-        checklists, printables, and digital templates designed to help
-        you organize your money, your plans, and your everyday life.
-    </p>
+        <article class="free-tool-card binder-card">
+            <span class="free-label">Free Interactive Tool</span>
+            <h3>Home Binder Sheets</h3>
+            <p>Keep household information, routines, and important details organized in one convenient place.</p>
+            <a href="home-organization-binder.html" class="button primary-button">Open Home Binder</a>
+        </article>
 
-    <div class="hero-buttons">
+        <div class="hero-center">
+            <h2>
+                Simple Tools for a More Organized Life
+            </h2>
 
-        <a
-            href="shop.html"
-            class="button primary-button">
-            Visit Our Shop
-        </a>
+            <p>
+                Discover practical planners, money trackers, spreadsheets,
+                checklists, printables, and digital templates designed to help
+                you organize your money, your plans, and your everyday life.
+            </p>
 
-        <a
-            href="money-templates.html"
-            class="button secondary-button">
-            Explore Money Templates
-        </a>
+            <div class="hero-buttons">
+
+                <a
+                    href="shop.html"
+                    class="button primary-button">
+                    Visit Our Shop
+                </a>
+
+                <a
+                    href="money-templates.html"
+                    class="button secondary-button">
+                    Explore Money Templates
+                </a>
+
+            </div>
+        </div>
+
+        <article class="free-tool-card savings-card">
+            <span class="free-label">Free Interactive Tool</span>
+            <h3>Savings Goal Tracker</h3>
+            <p>Choose a goal, record your progress, and stay motivated as your savings grow.</p>
+            <a href="free-savings-goal-tracker.html" class="button primary-button">Open Savings Tracker</a>
+        </article>
 
     </div>
 
