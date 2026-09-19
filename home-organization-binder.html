@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A free, private, fillable Home Organization Binder from MoneyTrackTemplates.">
+  <title>Home Organization Binder | MoneyTrackTemplates</title>
+  <style>
+    :root {
+      --navy:#123a5a;
+      --blue:#1d4f7a;
+      --sky:#dcecf6;
+      --ivory:#fffdf5;
+      --paper:#fff;
+      --ink:#173247;
+      --muted:#647887;
+      --line:#b9cfdd;
+      --soft:#eef6fa;
+      --danger:#9c2f2f;
+      --shadow:0 14px 38px rgba(18,58,90,.12);
+    }
+
+    * { box-sizing:border-box; }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      margin:0;
+      background:linear-gradient(135deg,#eef7fb,#fffdf5 55%);
+      color:var(--ink);
+      font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;
+    }
+
+    button,input,textarea,select { font:inherit; }
+    button { cursor:pointer; }
+
+    .site-header {
+      background:var(--blue);
+      color:white;
+      padding:1rem max(1rem,4vw);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      border-bottom:6px solid var(--navy);
+    }
+
+    .brand {
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand small {
+      display:block;
+      font-size:.72rem;
+      font-weight:500;
+      opacity:.8;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .privacy-note {
+      font-size:.82rem;
+      opacity:.92;
+      text-align:right;
+    }
+
+    .app {
+      max-width:1400px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:260px minmax(0,1fr);
+      gap:1.5rem;
+      padding:1.5rem;
+    }
+
+    .sidebar {
+      position:sticky;
+      top:1rem;
+      align-self:start;
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:1rem;
+      box-shadow:var(--shadow);
+    }
+
+    .sidebar h1 {
+      font-family:Georgia,serif;
+      color:var(--navy);
+      font-size:1.55rem;
+      line-height:1.1;
+      margin:.3rem .35rem .5rem;
+    }
+
+    .sidebar > p {
+      font-size:.86rem;
+      color:var(--muted);
+      margin:.35rem .35rem 1rem;
+    }
+
+    .section-nav {
+      display:grid;
+      gap:.35rem;
+    }
+
+    .nav-btn {
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+      width:100%;
+      border:0;
+      border-radius:10px;
+      background:transparent;
+      color:var(--ink);
+      padding:.72rem;
+      text-align:left;
+      font-weight:650;
+    }
+
+    .nav-btn:hover,
+    .nav-btn:focus-visible {
+      background:var(--soft);
+    }
+
+    .nav-btn.active {
+      background:var(--blue);
+      color:#fff;
+    }
+
+    .nav-num {
+      display:grid;
+      place-items:center;
+      width:1.55rem;
+      height:1.55rem;
+      border-radius:50%;
+      background:rgba(255,255,255,.18);
+      font-size:.75rem;
+    }
+
+    .progress-wrap {
+      margin:1rem .35rem .4rem;
+    }
+
+    .progress-label {
+      display:flex;
+      justify-content:space-between;
+      font-size:.76rem;
+      color:var(--muted);
+      margin-bottom:.35rem;
+    }
+
+    .progress {
+      height:7px;
+      background:#dce8ef;
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    .progress span {
+      display:block;
+      height:100%;
+      width:0;
+      background:var(--blue);
+      transition:width .2s;
+    }
+
+    .workspace { min-width:0; }
+
+    .toolbar {
+      position:sticky;
+      top:0;
+      z-index:5;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:.55rem;
+      padding:.75rem;
+      margin-bottom:1rem;
+      background:rgba(255,253,245,.92);
+      border:1px solid var(--line);
+      border-radius:14px;
+      backdrop-filter:blur(8px);
+    }
+
+    .tool-btn {
+      border:1px solid var(--blue);
+      border-radius:9px;
+      background:white;
+      color:var(--blue);
+      font-weight:700;
+      padding:.58rem .85rem;
+    }
+
+    .tool-btn:hover,
+    .tool-btn:focus-visible {
+      background:var(--soft);
+    }
+
+    .tool-btn.primary {
+      background:var(--blue);
+      color:white;
+    }
+
+    .tool-btn.danger {
+      border-color:#c88;
+      color:var(--danger);
+    }
+
+    .save-status {
+      margin-left:auto;
+      color:var(--muted);
+      font-size:.83rem;
+    }
+
+    .save-status strong { color:#276541; }
+
+    .privacy-card {
+      width:min(100%,8.5in);
+      margin:0 auto 1rem;
+      background:#f1f8fc;
+      border:1px solid #91b6cd;
+      border-left:7px solid var(--blue);
+      border-radius:14px;
+      padding:1rem 1.1rem;
+      box-shadow:0 8px 24px rgba(18,58,90,.08);
+    }
+
+    .privacy-card h2 {
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+      margin:0 0 .4rem;
+      color:var(--navy);
+      font:700 1.25rem Georgia,serif;
+    }
+
+    .privacy-card p {
+      margin:.3rem 0;
+      color:#385467;
+    }
+
+    .privacy-card strong { color:var(--navy); }
+
+    .privacy-details {
+      margin:.65rem 0 0;
+      padding-left:1.2rem;
+      color:#496575;
+      font-size:.9rem;
+    }
+
+    .privacy-details li + li { margin-top:.3rem; }
+
+    .binder-page {
+      display:none;
+      width:min(100%,8.5in);
+      min-height:11in;
+      margin:0 auto 1.5rem;
+      background:var(--paper);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      padding:.6in;
+      position:relative;
+    }
+
+    .binder-page.active { display:block; }
+
+    .page-kicker {
+      color:var(--blue);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.72rem;
+      font-weight:800;
+    }
+
+    .page-title {
+      margin:.15rem 0 .25rem;
+      font:700 clamp(1.8rem,5vw,2.65rem)/1.1 Georgia,serif;
+      color:var(--navy);
+    }
+
+    .page-intro {
+      margin:0 0 1.2rem;
+      color:var(--muted);
+      max-width:55ch;
+    }
+
+    .rule {
+      height:5px;
+      background:linear-gradient(90deg,var(--blue) 0 72%,var(--sky) 72%);
+      margin-bottom:1.35rem;
+    }
+
+    .grid {
+      display:grid;
+      gap:.85rem;
+    }
+
+    .grid.two {
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .grid.three {
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .field {
+      display:grid;
+      gap:.28rem;
+    }
+
+    .field.full { grid-column:1/-1; }
+
+    label {
+      font-size:.78rem;
+      font-weight:800;
+      color:var(--blue);
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    input,
+    textarea,
+    select {
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:7px;
+      background:#fbfdfe;
+      color:var(--ink);
+      padding:.62rem .7rem;
+      outline:none;
+    }
+
+    textarea {
+      min-height:92px;
+      resize:vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color:var(--blue);
+      box-shadow:0 0 0 3px rgba(29,79,122,.12);
+    }
+
+    .section-card {
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:1rem;
+      background:linear-gradient(145deg,#fff,#f8fcfe);
+    }
+
+    .section-card h2 {
+      font:700 1.15rem Georgia,serif;
+      color:var(--navy);
+      margin:0 0 .75rem;
+    }
+
+    .section-card + .section-card { margin-top:1rem; }
+
+    .check-list {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.55rem 1rem;
+    }
+
+    .check-item {
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+      background:var(--soft);
+      padding:.55rem .65rem;
+      border-radius:8px;
+    }
+
+    .check-item input {
+      width:1.05rem;
+      height:1.05rem;
+      accent-color:var(--blue);
+    }
+
+    .check-item input[type=text] {
+      width:100%;
+      height:auto;
+      background:white;
+    }
+
+    table {
+      width:100%;
+      border-collapse:collapse;
+      font-size:.85rem;
+    }
+
+    th {
+      background:var(--blue);
+      color:white;
+      text-align:left;
+      padding:.5rem;
+    }
+
+    td {
+      border:1px solid var(--line);
+      padding:.2rem;
+    }
+
+    td input {
+      border:0;
+      border-radius:0;
+      background:transparent;
+      padding:.45rem;
+      box-shadow:none !important;
+    }
+
+    .table-wrap {
+      overflow-x:auto;
+      border:1px solid var(--line);
+      border-radius:9px;
+    }
+
+    .table-wrap table td,
+    .table-wrap table th {
+      min-width:105px;
+    }
+
+    .table-wrap table td:first-child,
+    .table-wrap table th:first-child {
+      min-width:135px;
+    }
+
+    .cover {
+      display:grid;
+      place-items:center;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 25%,#fff 0 22%,transparent 55%),
+        linear-gradient(145deg,#e9f4f9,#fffdf5);
+    }
+
+    .cover-inner {
+      width:100%;
+      border:3px double var(--blue);
+      padding:1.2in .55in;
+    }
+
+    .cover-mark { font-size:3rem; }
+
+    .cover h2 {
+      font:700 clamp(2.4rem,7vw,4rem)/1.05 Georgia,serif;
+      color:var(--navy);
+      margin:.4rem 0;
+    }
+
+    .cover .subtitle {
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      color:var(--blue);
+      font-size:.82rem;
+      font-weight:800;
+    }
+
+    .cover .household {
+      max-width:460px;
+      margin:2rem auto 0;
+    }
+
+    .cover .household input {
+      text-align:center;
+      border:0;
+      border-bottom:2px solid var(--blue);
+      border-radius:0;
+      background:transparent;
+      font:1.3rem Georgia,serif;
+    }
+
+    .cover footer {
+      margin-top:2rem;
+      color:var(--muted);
+      font-size:.8rem;
+    }
+
+    .priority {
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:.55rem;
+      align-items:center;
+      margin-bottom:.55rem;
+    }
+
+    .priority span {
+      display:grid;
+      place-items:center;
+      background:var(--blue);
+      color:white;
+      border-radius:50%;
+      width:34px;
+      height:34px;
+      font-weight:800;
+    }
+
+    .page-number {
+      position:absolute;
+      bottom:.3in;
+      right:.55in;
+      color:var(--muted);
+      font-size:.72rem;
+    }
+
+    .mobile-tabs { display:none; }
+
+    .modal {
+      border:0;
+      border-radius:16px;
+      padding:0;
+      max-width:470px;
+      width:calc(100% - 2rem);
+      box-shadow:0 25px 80px rgba(0,0,0,.25);
+    }
+
+    .modal::backdrop {
+      background:rgba(10,29,42,.58);
+    }
+
+    .modal-inner { padding:1.4rem; }
+
+    .modal h2 {
+      margin:0 0 .4rem;
+      font-family:Georgia,serif;
+      color:var(--navy);
+    }
+
+    .modal p { color:var(--muted); }
+
+    .modal-actions {
+      display:flex;
+      justify-content:flex-end;
+      gap:.6rem;
+      margin-top:1rem;
+    }
+
+    .sr-only {
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    @media(max-width:850px) {
+      .app {
+        grid-template-columns:1fr;
+        padding:1rem;
+      }
+
+      .sidebar { position:static; }
+      .section-nav { display:none; }
+
+      .mobile-tabs {
+        display:block;
+        width:100%;
+        padding:.7rem;
+        border:1px solid var(--blue);
+        border-radius:9px;
+      }
+
+      .binder-page {
+        min-height:auto;
+        padding:1.2rem;
+      }
+
+      .cover-inner { padding:3rem 1rem; }
+      .toolbar { top:.25rem; }
+
+      .grid.two,
+      .grid.three,
+      .check-list {
+        grid-template-columns:1fr;
+      }
+
+      .privacy-note { display:none; }
+    }
+
+    @media print {
+      @page {
+        size:letter;
+        margin:0;
+      }
+
+      body { background:white; }
+
+      .site-header,
+      .sidebar,
+      .toolbar,
+      .privacy-card,
+      .modal {
+        display:none !important;
+      }
+
+      .app {
+        display:block;
+        padding:0;
+      }
+
+      .binder-page,
+      .binder-page.active {
+        display:block !important;
+        width:8.5in;
+        height:11in;
+        min-height:11in;
+        margin:0;
+        border:0;
+        box-shadow:none;
+        padding:.5in;
+        page-break-after:always;
+        overflow:hidden;
+      }
+
+      .binder-page:last-child {
+        page-break-after:auto;
+      }
+
+      input,
+      textarea,
+      select {
+        border-color:#9eb3c0;
+        background:white;
+        color:#111;
+      }
+
+      .section-card { break-inside:avoid; }
+      .page-intro { font-size:.86rem; }
+      .page-title { font-size:2rem; }
+      .check-item { padding:.35rem; font-size:.8rem; }
+      table { font-size:.72rem; }
+      td input { padding:.3rem; }
+      .cover { background:white; }
+      .cover-inner { padding:.9in .5in; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      MoneyTrackTemplates
+      <small>Free Online Tools</small>
+    </div>
+    <div class="privacy-note">
+      Private by design — your entries stay on this device.
+    </div>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <h1>Home Organization Binder</h1>
+      <p>Type directly into each page. Your work saves automatically in this browser.</p>
+
+      <select class="mobile-tabs" id="mobileTabs" aria-label="Choose binder section"></select>
+      <nav class="section-nav" aria-label="Binder sections"></nav>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Binder progress</span>
+          <span id="progressText">0%</span>
+        </div>
+        <div class="progress">
+          <span id="progressBar"></span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <div class="toolbar">
+        <button class="tool-btn primary" id="printBtn" type="button">Print / Save as PDF</button>
+        <button class="tool-btn" id="downloadBtn" type="button">Download Backup</button>
+        <button class="tool-btn" id="importBtn" type="button">Open Backup</button>
+        <input class="sr-only" id="importFile" type="file" accept="application/json,.json">
+        <button class="tool-btn danger" id="clearBtn" type="button">Clear All</button>
+        <span class="save-status" id="saveStatus">
+          <strong>Saved</strong> on this device
+        </span>
+      </div>
+
+      <aside class="privacy-card">
+        <h2>🔒 Your Information Stays Private</h2>
+        <p>
+          You can safely type directly into this binder.
+          <strong>Your entries are stored only in this browser on this computer or device.</strong>
+          MoneyTrackTemplates does not receive, collect, or store the information you enter.
+        </p>
+
+        <ul class="privacy-details">
+          <li>Your work saves automatically so you can return later using the same browser and device.</li>
+          <li>Use <strong>Print / Save as PDF</strong> to keep a printable copy, or <strong>Download Backup</strong> to save a data copy to your computer.</li>
+          <li>If you clear your browser data, use private browsing, or select <strong>Clear All</strong>, your saved entries may be removed. On a shared computer, other people using the same browser may be able to see them.</li>
+        </ul>
+      </aside>
+
+      <section class="binder-page cover active" data-title="Binder Cover">
+        <div class="cover-inner">
+          <div class="cover-mark">⌂</div>
+          <div class="subtitle">MoneyTrackTemplates presents</div>
+          <h2>Home<br>Organization Binder</h2>
+          <p>A calmer home begins with one organized place.</p>
+
+          <div class="household field">
+            <label for="household-name">Prepared for</label>
+            <input id="household-name" data-save placeholder="The Smith Household">
+          </div>
+
+          <div class="household field">
+            <label for="cover-year">Year</label>
+            <input id="cover-year" data-save placeholder="2026">
+          </div>
+
+          <footer>Fill online • Save on your device • Print anytime</footer>
+        </div>
+        <span class="page-number">1</span>
+      </section>
+
+      <section class="binder-page" data-title="Home at a Glance">
+        <div class="page-kicker">Section 1</div>
+        <h2 class="page-title">Home at a Glance</h2>
+        <p class="page-intro">Keep the household details you reach for most in one convenient place.</p>
+        <div class="rule"></div>
+
+        <div class="section-card">
+          <h2>Household Information</h2>
+          <div class="grid two">
+            <div class="field">
+              <label>Household name</label>
+              <input data-save>
+            </div>
+
+            <div class="field">
+              <label>Primary phone</label>
+              <input data-save type="tel">
+            </div>
+
+            <div class="field full">
+              <label>Home address</label>
+              <textarea data-save></textarea>
+            </div>
+
+            <div class="field">
+              <label>Move-in date</label>
+              <input data-save type="date">
+            </div>
+
+            <div class="field">
+              <label>Wi-Fi network name</label>
+              <input data-save>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>Utilities & Services</h2>
+          <div class="grid two">
+            <div class="field"><label>Electric company</label><input data-save></div>
+            <div class="field"><label>Account / phone</label><input data-save></div>
+            <div class="field"><label>Gas company</label><input data-save></div>
+            <div class="field"><label>Account / phone</label><input data-save></div>
+            <div class="field"><label>Water company</label><input data-save></div>
+            <div class="field"><label>Account / phone</label><input data-save></div>
+            <div class="field"><label>Internet provider</label><input data-save></div>
+            <div class="field"><label>Account / phone</label><input data-save></div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>Quick Notes</h2>
+          <textarea data-save rows="4" placeholder="Trash day, recycling schedule, alarm instructions, gate code location..."></textarea>
+        </div>
+
+        <span class="page-number">2</span>
+      </section>
+
+      <section class="binder-page" data-title="Weekly Home Reset">
+        <div class="page-kicker">Section 2</div>
+        <h2 class="page-title">Weekly Home Reset</h2>
+        <p class="page-intro">Choose a reset day, check off each area, and begin the week with a fresh start.</p>
+        <div class="rule"></div>
+
+        <div class="grid two">
+          <div class="field">
+            <label>Week of</label>
+            <input data-save type="date">
+          </div>
+
+          <div class="field">
+            <label>My reset day</label>
+            <select data-save>
+              <option value="">Choose a day</option>
+              <option>Sunday</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>Reset Checklist</h2>
+          <div class="check-list">
+            <label class="check-item"><input data-save type="checkbox"> Clear kitchen counters</label>
+            <label class="check-item"><input data-save type="checkbox"> Check refrigerator</label>
+            <label class="check-item"><input data-save type="checkbox"> Plan meals / groceries</label>
+            <label class="check-item"><input data-save type="checkbox"> Wash and fold laundry</label>
+            <label class="check-item"><input data-save type="checkbox"> Change bed linens</label>
+            <label class="check-item"><input data-save type="checkbox"> Refresh bathrooms</label>
+            <label class="check-item"><input data-save type="checkbox"> Sort mail and paperwork</label>
+            <label class="check-item"><input data-save type="checkbox"> Empty household bins</label>
+            <label class="check-item"><input data-save type="checkbox"> Tidy living spaces</label>
+            <label class="check-item"><input data-save type="checkbox"> Review the family calendar</label>
+            <label class="check-item"><input data-save type="checkbox"> Restock essentials</label>
+            <label class="check-item"><input data-save type="checkbox"> Water indoor plants</label>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>This Week’s Focus</h2>
+          <div class="priority"><span>1</span><input data-save></div>
+          <div class="priority"><span>2</span><input data-save></div>
+          <div class="priority"><span>3</span><input data-save></div>
+        </div>
+
+        <div class="section-card">
+          <h2>Notes for Next Week</h2>
+          <textarea data-save></textarea>
+        </div>
+
+        <span class="page-number">3</span>
+      </section>
+
+      <section class="binder-page" data-title="Cleaning Schedule">
+        <div class="page-kicker">Section 3</div>
+        <h2 class="page-title">Cleaning Schedule</h2>
+        <p class="page-intro">Create a realistic routine for daily, weekly, monthly, and seasonal care.</p>
+        <div class="rule"></div>
+
+        <div class="grid two">
+          <div class="section-card">
+            <h2>Daily</h2>
+            <textarea data-save rows="8" placeholder="Make beds&#10;Wipe kitchen counters&#10;Load dishwasher..."></textarea>
+          </div>
+
+          <div class="section-card">
+            <h2>Weekly</h2>
+            <textarea data-save rows="8" placeholder="Vacuum floors&#10;Clean bathrooms&#10;Change linens..."></textarea>
+          </div>
+
+          <div class="section-card">
+            <h2>Monthly</h2>
+            <textarea data-save rows="8" placeholder="Dust ceiling fans&#10;Clean appliances&#10;Wash bath mats..."></textarea>
+          </div>
+
+          <div class="section-card">
+            <h2>Seasonal</h2>
+            <textarea data-save rows="8" placeholder="Wash windows&#10;Rotate mattresses&#10;Declutter closets..."></textarea>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>Supplies to Restock</h2>
+          <div class="grid three">
+            <input data-save>
+            <input data-save>
+            <input data-save>
+            <input data-save>
+            <input data-save>
+            <input data-save>
+          </div>
+        </div>
+
+        <span class="page-number">4</span>
+      </section>
+
+      <section class="binder-page" data-title="Maintenance Tracker">
+        <div class="page-kicker">Section 4</div>
+        <h2 class="page-title">Home Maintenance Tracker</h2>
+        <p class="page-intro">Track recurring care and repairs before small tasks become expensive surprises.</p>
+        <div class="rule"></div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Task / Appliance</th>
+                <th>Area</th>
+                <th>Frequency</th>
+                <th>Last Done</th>
+                <th>Next Due</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="maintenanceRows"></tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <h2>Upcoming Maintenance Priorities</h2>
+          <div class="grid two">
+            <div class="field">
+              <label>Next appointment</label>
+              <input data-save type="date">
+            </div>
+
+            <div class="field">
+              <label>Estimated cost</label>
+              <input data-save placeholder="$0.00">
+            </div>
+
+            <div class="field full">
+              <label>Details</label>
+              <textarea data-save></textarea>
+            </div>
+          </div>
+        </div>
+
+        <span class="page-number">5</span>
+      </section>
+
+      <section class="binder-page" data-title="Household Inventory">
+        <div class="page-kicker">Section 5</div>
+        <h2 class="page-title">Household Inventory</h2>
+        <p class="page-intro">Record important belongings and where their receipts or warranties are stored.</p>
+        <div class="rule"></div>
+
+        <div class="grid two">
+          <div class="field">
+            <label>Room / area</label>
+            <input data-save placeholder="Living room">
+          </div>
+
+          <div class="field">
+            <label>Date updated</label>
+            <input data-save type="date">
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-top:1rem">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Brand / Model</th>
+                <th>Quantity</th>
+                <th>Purchase Date</th>
+                <th>Approx. Value</th>
+                <th>Receipt / Warranty Location</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryRows"></tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <h2>Inventory Notes</h2>
+          <textarea data-save placeholder="Serial numbers, condition notes, photo folder location..."></textarea>
+        </div>
+
+        <span class="page-number">6</span>
+      </section>
+
+      <section class="binder-page" data-title="Important Contacts">
+        <div class="page-kicker">Section 6</div>
+        <h2 class="page-title">Important Contacts</h2>
+        <p class="page-intro">Keep trusted household and emergency contacts easy to find.</p>
+        <div class="rule"></div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Service / Role</th>
+                <th>Name / Company</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="contactRows"></tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <h2>Emergency Information</h2>
+          <div class="grid two">
+            <div class="field">
+              <label>Nearest hospital</label>
+              <input data-save>
+            </div>
+
+            <div class="field">
+              <label>Hospital phone</label>
+              <input data-save type="tel">
+            </div>
+
+            <div class="field">
+              <label>Insurance company</label>
+              <input data-save>
+            </div>
+
+            <div class="field">
+              <label>Policy number</label>
+              <input data-save>
+            </div>
+
+            <div class="field full">
+              <label>Emergency notes</label>
+              <textarea data-save placeholder="Medication list location, family meeting place, emergency kit location..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <span class="page-number">7</span>
+      </section>
+
+      <section class="binder-page" data-title="Notes & To-Do">
+        <div class="page-kicker">Section 7</div>
+        <h2 class="page-title">Notes & To-Do List</h2>
+        <p class="page-intro">Capture household projects, errands, reminders, and the next right steps.</p>
+        <div class="rule"></div>
+
+        <div class="section-card">
+          <h2>Top Priorities</h2>
+          <div class="priority"><span>1</span><input data-save></div>
+          <div class="priority"><span>2</span><input data-save></div>
+          <div class="priority"><span>3</span><input data-save></div>
+        </div>
+
+        <div class="section-card">
+          <h2>Household To-Do List</h2>
+          <div class="check-list" id="todoRows"></div>
+        </div>
+
+        <div class="section-card">
+          <h2>Project Notes</h2>
+          <textarea data-save rows="9" placeholder="Ideas, measurements, shopping lists, questions, and reminders..."></textarea>
+        </div>
+
+        <span class="page-number">8</span>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="modal" id="clearDialog">
+    <div class="modal-inner">
+      <h2>Clear the entire binder?</h2>
+      <p>This removes all information saved in this browser. Download a backup first if you may need it later.</p>
+
+      <div class="modal-actions">
+        <button class="tool-btn" id="cancelClear" type="button">Keep My Information</button>
+        <button class="tool-btn danger" id="confirmClear" type="button">Clear Everything</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = "moneytrack-home-binder-v1";
+      const pages = [...document.querySelectorAll(".binder-page")];
+      const nav = document.querySelector(".section-nav");
+      const mobileTabs = document.getElementById("mobileTabs");
+      const status = document.getElementById("saveStatus");
+
+      const templates = {
+        maintenanceRows: [
+          "HVAC filter",
+          "Smoke detectors",
+          "Water heater",
+          "Gutters",
+          "Refrigerator coils",
+          "Custom task",
+          "Custom task"
+        ],
+        inventoryRows: Array(8).fill(""),
+        contactRows: [
+          "Emergency contact",
+          "Plumber",
+          "Electrician",
+          "HVAC",
+          "Insurance agent",
+          "Veterinarian",
+          "Other"
+        ],
+        todoRows: Array(10).fill("")
+      };
+
+      function buildRows() {
+        document.getElementById("maintenanceRows").innerHTML =
+          templates.maintenanceRows.map((name,index) => `
+            <tr>
+              <td><input data-save value="${name}" aria-label="Maintenance task ${index + 1}"></td>
+              <td><input data-save aria-label="Area ${index + 1}"></td>
+              <td><input data-save aria-label="Frequency ${index + 1}"></td>
+              <td><input data-save type="date" aria-label="Last completed ${index + 1}"></td>
+              <td><input data-save type="date" aria-label="Next due ${index + 1}"></td>
+              <td><input data-save aria-label="Maintenance notes ${index + 1}"></td>
+            </tr>
+          `).join("");
+
+        document.getElementById("inventoryRows").innerHTML =
+          templates.inventoryRows.map((item,index) => `
+            <tr>
+              <td><input data-save aria-label="Inventory item ${index + 1}"></td>
+              <td><input data-save aria-label="Brand or model ${index + 1}"></td>
+              <td><input data-save type="number" min="0" aria-label="Quantity ${index + 1}"></td>
+              <td><input data-save type="date" aria-label="Purchase date ${index + 1}"></td>
+              <td><input data-save aria-label="Value ${index + 1}"></td>
+              <td><input data-save aria-label="Receipt location ${index + 1}"></td>
+            </tr>
+          `).join("");
+
+        document.getElementById("contactRows").innerHTML =
+          templates.contactRows.map((name,index) => `
+            <tr>
+              <td><input data-save value="${name}" aria-label="Service ${index + 1}"></td>
+              <td><input data-save aria-label="Contact name ${index + 1}"></td>
+              <td><input data-save type="tel" aria-label="Contact phone ${index + 1}"></td>
+              <td><input data-save type="email" aria-label="Contact email ${index + 1}"></td>
+              <td><input data-save aria-label="Contact notes ${index + 1}"></td>
+            </tr>
+          `).join("");
+
+        document.getElementById("todoRows").innerHTML =
+          templates.todoRows.map((item,index) => `
+            <label class="check-item">
+              <input data-save type="checkbox" aria-label="Complete task ${index + 1}">
+              <input data-save type="text" aria-label="To-do item ${index + 1}" placeholder="Add a task...">
+            </label>
+          `).join("");
+      }
+
+      buildRows();
+
+      const fields = [...document.querySelectorAll("[data-save]")];
+
+      fields.forEach((field,index) => {
+        field.dataset.key = `field-${index}`;
+      });
+
+      pages.forEach((page,index) => {
+        const title = page.dataset.title;
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "nav-btn";
+        button.innerHTML = `
+          <span class="nav-num">${index + 1}</span>
+          <span>${title}</span>
+        `;
+
+        button.addEventListener("click", () => showPage(index));
+        nav.appendChild(button);
+
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = `${index + 1}. ${title}`;
+        mobileTabs.appendChild(option);
+      });
+
+      function showPage(index) {
+        pages.forEach((page,pageIndex) => {
+          page.classList.toggle("active", pageIndex === index);
+        });
+
+        [...nav.children].forEach((button,buttonIndex) => {
+          button.classList.toggle("active", buttonIndex === index);
+        });
+
+        mobileTabs.value = index;
+        window.scrollTo({top:0,behavior:"smooth"});
+      }
+
+      mobileTabs.addEventListener("change", () => {
+        showPage(Number(mobileTabs.value));
+      });
+
+      function readData() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+        } catch {
+          return {};
+        }
+      }
+
+      function applyData(data) {
+        fields.forEach(field => {
+          const value = data[field.dataset.key];
+
+          if (value === undefined) return;
+
+          if (field.type === "checkbox") {
+            field.checked = Boolean(value);
+          } else {
+            field.value = value;
+          }
+        });
+
+        updateProgress();
+      }
+
+      let saveTimer;
+
+      function save() {
+        const data = {};
+
+        fields.forEach(field => {
+          data[field.dataset.key] =
+            field.type === "checkbox" ? field.checked : field.value;
+        });
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        status.innerHTML = "<strong>Saved</strong> on this device";
+        updateProgress();
+      }
+
+      function queueSave() {
+        status.textContent = "Saving…";
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(save,250);
+      }
+
+      fields.forEach(field => {
+        field.addEventListener("input",queueSave);
+        field.addEventListener("change",queueSave);
+      });
+
+      function updateProgress() {
+        const completed = fields.filter(field => {
+          if (field.type === "checkbox") return field.checked;
+          return String(field.value).trim();
+        }).length;
+
+        const percent = Math.round((completed / fields.length) * 100);
+        document.getElementById("progressText").textContent = `${percent}%`;
+        document.getElementById("progressBar").style.width = `${percent}%`;
+      }
+
+      document.getElementById("printBtn").addEventListener("click", () => {
+        save();
+        window.print();
+      });
+
+      document.getElementById("downloadBtn").addEventListener("click", () => {
+        save();
+
+        const payload = {
+          title:"Home Organization Binder",
+          version:1,
+          savedAt:new Date().toISOString(),
+          data:readData()
+        };
+
+        const blob = new Blob(
+          [JSON.stringify(payload,null,2)],
+          {type:"application/json"}
+        );
+
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "My_Home_Organization_Binder_Backup.json";
+        link.click();
+
+        setTimeout(() => URL.revokeObjectURL(link.href),1000);
+      });
+
+      document.getElementById("importBtn").addEventListener("click", () => {
+        document.getElementById("importFile").click();
+      });
+
+      document.getElementById("importFile").addEventListener("change", async event => {
+        const file = event.target.files[0];
+
+        if (!file) return;
+
+        try {
+          const payload = JSON.parse(await file.text());
+          const data = payload.data || payload;
+
+          if (!data || typeof data !== "object") {
+            throw new Error();
+          }
+
+          localStorage.setItem(STORAGE_KEY,JSON.stringify(data));
+          applyData(data);
+          status.innerHTML = "<strong>Backup opened</strong> and saved on this device";
+        } catch {
+          alert("That backup could not be opened. Please choose a Home Organization Binder JSON backup.");
+        }
+
+        event.target.value = "";
+      });
+
+      const dialog = document.getElementById("clearDialog");
+
+      document.getElementById("clearBtn").addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      document.getElementById("cancelClear").addEventListener("click", () => {
+        dialog.close();
+      });
+
+      document.getElementById("confirmClear").addEventListener("click", () => {
+        localStorage.removeItem(STORAGE_KEY);
+
+        fields.forEach(field => {
+          if (field.type === "checkbox") {
+            field.checked = false;
+          } else {
+            field.value = field.defaultValue;
+          }
+        });
+
+        updateProgress();
+        dialog.close();
+        status.innerHTML = "<strong>Cleared.</strong> Ready for a fresh start.";
+      });
+
+      dialog.addEventListener("click", event => {
+        if (event.target === dialog) {
+          dialog.close();
+        }
+      });
+
+      applyData(readData());
+      showPage(0);
+    })();
+  </script>
+</body>
+</html>
