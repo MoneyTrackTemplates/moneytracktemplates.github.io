@@ -615,7 +615,87 @@
                 max-width: 300px;
             }
         }
+/* MoneyTrackTemplates Mascot */
+.mascot-section {
+    max-width: 1050px;
+    margin: 55px auto;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    background: #f6f1e5;
+    border: 2px solid #b58b35;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(25, 72, 51, 0.12);
+}
 
+.mascot-image {
+    width: 280px;
+    max-width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 16px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.mascot-message {
+    max-width: 480px;
+    text-align: left;
+}
+
+.mascot-message h2 {
+    margin: 0 0 14px;
+    color: #24533b;
+    font-size: 2rem;
+}
+
+.mascot-message p {
+    margin: 0 0 18px;
+    color: #34483c;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.mascot-tagline {
+    color: #24533b;
+    font-weight: 700;
+}
+
+.mascot-button {
+    display: inline-block;
+    padding: 12px 22px;
+    color: #ffffff;
+    background: #24533b;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.mascot-button:hover {
+    background: #173c2a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+    .mascot-section {
+        margin: 35px 18px;
+        padding: 24px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mascot-message {
+        text-align: center;
+    }
+
+    .mascot-image {
+        width: 240px;
+        height: 290px;
+    }
+}
     </style>
 </head>
 
@@ -1074,7 +1154,33 @@
 <!-- =========================
      FOOTER
 ========================= -->
+<section class="mascot-section" aria-labelledby="mascot-heading">
+    <img
+        class="mascot-image"
+        src="moneytracktemplates-mascot.png.png"
+        alt="MoneyTrackTemplates Balinese cat mascot holding a monthly budget and savings spreadsheet"
+        width="1024"
+        height="1536"
+        loading="lazy"
+    >
 
+    <div class="mascot-message">
+        <h2 id="mascot-heading">Meet Our Savings Expert</h2>
+
+        <p>
+            She believes every good plan should leave a little room for
+            something special—even if that something happens to be catnip.
+        </p>
+
+        <p class="mascot-tagline">
+            Plan wisely. Save happily. Dream a little bigger.
+        </p>
+
+        <a class="mascot-button" href="money-templates.html">
+            Explore Money Templates
+        </a>
+    </div>
+</section>
 <footer>
 
     <p>
