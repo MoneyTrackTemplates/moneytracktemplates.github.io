@@ -18,7 +18,7 @@
 
     <title>MoneyTrackTemplates | Money Trackers, Planners & Digital Templates</title>
 
-    <meta name="description" content="MoneyTrackTemplates offers practical money trackers, planners, spreadsheets, checklists, printables, and digital organization tools.">
+    <meta name="description" content="Explore printable planners, free checklists, and practical money tracking spreadsheets from MoneyTrackTemplates. Plan your money, home, and celebrations with confidence.">
 
     <style>
 
@@ -66,7 +66,7 @@
             padding: 58px 20px 48px;
         }
 
-        header h1 {
+        header .brand-name {
             margin: 0;
             font-size: 3rem;
             letter-spacing: 1px;
@@ -177,7 +177,7 @@
             font-size: 0.88rem;
         }
 
-        .hero h2 {
+        .hero h1 {
             color: var(--blue-dark);
             font-size: 2.55rem;
             margin: 0 0 18px;
@@ -500,11 +500,11 @@
 
         @media (max-width: 850px) {
 
-            header h1 {
+            header .brand-name {
                 font-size: 2.4rem;
             }
 
-            .hero h2 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
@@ -546,7 +546,7 @@
                 padding: 45px 18px 40px;
             }
 
-            header h1 {
+            header .brand-name {
                 font-size: 2rem;
             }
 
@@ -563,7 +563,7 @@
                 padding: 62px 18px;
             }
 
-            .hero h2 {
+            .hero h1 {
                 font-size: 1.75rem;
             }
 
@@ -696,6 +696,76 @@
         height: 290px;
     }
 }
+
+        /* Homepage refresh */
+        header { padding: 24px 20px 20px; }
+        header .brand-name { margin: 0; font-weight: 700; letter-spacing: .03em; }
+        header .brand-name { font-size: clamp(1.75rem, 3.5vw, 2.35rem); line-height: 1.2; }
+        header p { margin-top: 4px; font-size: .95rem; }
+        nav { padding: 12px; }
+        nav a { margin: 0 10px; }
+        nav a:focus-visible, .button:focus-visible, .product-button:focus-visible,
+        .showcase-card a:focus-visible, summary:focus-visible { outline: 3px solid #d6922c; outline-offset: 3px; }
+        .desktop-nav { max-width: 1180px; margin: auto; }
+        .mobile-nav { display: none; }
+        .hero { padding: 48px 20px 34px; text-align: left; }
+        .hero-layout { max-width: 1120px; display: grid; grid-template-columns: 1fr .92fr;
+            grid-template-areas: none; gap: clamp(25px, 5vw, 74px); align-items: center; }
+        .hero-center { grid-area: auto; }
+        .hero-eyebrow { color: var(--blue); font-size: .78rem; text-transform: uppercase;
+            letter-spacing: .14em; font-weight: 800; }
+        .hero h1 { font-size: clamp(2.2rem, 4vw, 3.35rem); line-height: 1.13; margin: 13px 0 20px; }
+        .hero p { margin: 0; max-width: 560px; font-size: 1.07rem; }
+        .hero-buttons { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+        .hero-buttons .button { margin: 0; text-align: center; }
+        .hero-visual { margin: 0; background: #fff; padding: 13px; border: 1px solid var(--blue-border);
+            border-radius: 18px; box-shadow: 0 15px 36px rgba(16,47,77,.13); }
+        .hero-visual img { display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover;
+            border-radius: 11px; }
+        .hero-visual figcaption { padding: 10px 5px 1px; font-size: .85rem; text-align: center; }
+        .hero-visual figcaption a { color: var(--blue-dark); font-weight: 700; }
+        .showcase { padding: 32px 20px 58px; background: var(--ivory); }
+        .showcase-inner { max-width: 1120px; margin: auto; }
+        .showcase h2 { font-size: 1.65rem; color: var(--blue-dark); margin: 0 0 6px; }
+        .showcase-lead { margin: 0 0 20px; color: var(--muted-blue); }
+        .showcase-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+        .showcase-card { overflow: hidden; background: white; border: 1px solid var(--blue-border);
+            border-radius: 12px; box-shadow: 0 5px 18px rgba(16,47,77,.07); }
+        .showcase-card img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+        .showcase-copy { padding: 14px 17px 19px; }
+        .showcase-copy span { display: block; color: var(--blue); font-size: .75rem; font-weight: 800;
+            letter-spacing: .09em; text-transform: uppercase; }
+        .showcase-copy h3 { font-size: 1.1rem; line-height: 1.3; color: var(--blue-dark); margin: 6px 0 11px; }
+        .showcase-copy a { color: var(--blue-dark); font-weight: 700; text-underline-offset: 3px; }
+        .interactive-tools { padding: 28px 20px 50px; background: var(--blue-light); }
+        .interactive-inner { max-width: 1000px; margin: auto; }
+        .interactive-inner h2 { color: var(--blue-dark); font-size: 1.6rem; margin: 0 0 18px; }
+        .interactive-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+        .free-tool-card { display: flex; flex-direction: column; min-width: 0; }
+        .free-tool-card .button { margin-top: auto; width: fit-content; }
+        @media (max-width: 850px) { .hero-layout { grid-template-columns: 1fr 1fr; grid-template-areas: none; }
+            .hero-center { grid-area: auto; } }
+        @media (max-width: 700px) {
+            header { padding: 20px 15px 17px; }
+            .desktop-nav { display: none; } .mobile-nav { display: block; text-align: left; max-width: 620px; margin: auto; }
+            .mobile-nav summary { cursor: pointer; color: white; font-weight: 700; padding: 3px 12px; }
+            .mobile-nav .mobile-links { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 12px 0 7px; }
+            .mobile-nav a { display: block; margin: 0; padding: 8px 12px; }
+            .hero { padding: 38px 20px 24px; }
+            .hero-layout { grid-template-columns: 1fr; grid-template-areas: none; gap: 25px; }
+            .hero h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+            .hero-buttons .button { width: auto; max-width: none; }
+            .hero-visual { max-width: 580px; }
+            .showcase-grid { grid-template-columns: 1fr; }
+            .showcase-card { display: grid; grid-template-columns: 42% 58%; align-items: center; }
+            .showcase-card img { height: 100%; min-height: 160px; }
+            .interactive-grid { grid-template-columns: 1fr; }
+            .free-tool-card { width: 100%; margin: 0; }
+        }
+        @media (max-width: 420px) { .showcase-card { display: block; }
+            .showcase-card img { height: auto; min-height: 0; } }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important;
+            transition-duration: .01ms !important; } }
     </style>
 </head>
 
@@ -707,7 +777,7 @@
 
 <header>
 
-    <h1>MoneyTrackTemplates</h1>
+    <p class="brand-name">MoneyTrackTemplates</p>
 
     <p>
         Plan Better. Track Smarter. Live More Organized.
@@ -720,24 +790,30 @@
      NAVIGATION
 ========================= -->
 
-<nav>
-
-    <a href="index.html">Home</a>
-
-    <a href="about.html">About</a>
-
-    <a href="money-templates.html">Money Templates</a>
-
-    <a href="planners.html">Planners</a>
-
-    <a href="holiday-planners.html">Holiday Planners</a>
-
-    <a href="free-downloads.html">Free Downloads</a>
-
-    <a href="resources.html">Resources</a>
-    
-    <a href="shop.html">Shop</a>
-
+<nav aria-label="Main navigation">
+    <div class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="money-templates.html">Money Templates</a>
+        <a href="planners.html">Planners</a>
+        <a href="holiday-planners.html">Holiday Planners</a>
+        <a href="free-downloads.html">Free Downloads</a>
+        <a href="resources.html">Resources</a>
+        <a href="shop.html">Shop</a>
+    </div>
+    <details class="mobile-nav">
+        <summary>Menu</summary>
+        <div class="mobile-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="money-templates.html">Money Templates</a>
+            <a href="planners.html">Planners</a>
+            <a href="holiday-planners.html">Holiday Planners</a>
+            <a href="free-downloads.html">Free Downloads</a>
+            <a href="resources.html">Resources</a>
+            <a href="shop.html">Shop</a>
+        </div>
+    </details>
 </nav>
 
 
@@ -745,54 +821,61 @@
      HERO
 ========================= -->
 
-<section class="hero">
-
+<section class="hero" aria-labelledby="homepage-hero-title">
     <div class="hero-layout">
-
-        <article class="free-tool-card binder-card">
-            <span class="free-label">Free Interactive Tool</span>
-            <h3>Home Binder Sheets</h3>
-            <p>Keep household information, routines, and important details organized in one convenient place.</p>
-            <a href="home-organization-binder.html" class="button primary-button">Open Home Binder</a>
-        </article>
-
         <div class="hero-center">
-            <h2>
-                Simple Tools for a More Organized Life
-            </h2>
-
-            <p>
-                Discover practical planners, money trackers, spreadsheets,
-                checklists, printables, and digital templates designed to help
-                you organize your money, your plans, and your everyday life.
-            </p>
-
+            <span class="hero-eyebrow">Plan your money, home &amp; celebrations</span>
+            <h1 id="homepage-hero-title">Beautiful tools for a more organized life.</h1>
+            <p>Printable planners and practical spreadsheets to help you plan ahead, track what matters, and make everyday life a little easier.</p>
             <div class="hero-buttons">
-
-                <a
-                    href="shop.html"
-                    class="button primary-button">
-                    Visit Our Shop
-                </a>
-
-                <a
-                    href="money-templates.html"
-                    class="button secondary-button">
-                    Explore Money Templates
-                </a>
-
+                <a href="planners.html" class="button primary-button">Browse Planners</a>
+                <a href="free-downloads.html" class="button secondary-button">Get Free Downloads</a>
             </div>
         </div>
-
-        <article class="free-tool-card savings-card">
-            <span class="free-label">Free Interactive Tool</span>
-            <h3>Savings Goal Tracker</h3>
-            <p>Choose a goal, record your progress, and stay motivated as your savings grow.</p>
-            <a href="free-savings-goal-tracker.html" class="button primary-button">Open Savings Tracker</a>
-        </article>
-
+        <figure class="hero-visual">
+            <a href="https://payhip.com/b/x65rV" target="_blank" rel="noopener noreferrer" aria-label="View the Premium Halloween Planner and Budget Tracker on Payhip">
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k24m540u18pqdq91uoe6e23o11a.png" alt="Cover of the Premium Halloween Planner and Budget Tracker" width="960" height="720" fetchpriority="high">
+            </a>
+            <figcaption>Featured seasonal planner · <a href="https://payhip.com/b/x65rV" target="_blank" rel="noopener noreferrer">View on Payhip</a></figcaption>
+        </figure>
     </div>
-
+</section>
+<section class="showcase" aria-labelledby="showcase-heading">
+    <div class="showcase-inner">
+        <h2 id="showcase-heading">Explore what’s inside</h2>
+        <p class="showcase-lead">Start with a free printable or find a planner for your next project.</p>
+        <div class="showcase-grid">
+            <article class="showcase-card">
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k364nbinc391hgptmi3rl1mu1a.png" alt="Preview of the free Halloween Checklist Planner" width="800" height="600" loading="lazy">
+                <div class="showcase-copy"><span>Free printable</span><h3>Halloween Checklist Planner</h3><a href="https://payhip.com/b/NXds1" target="_blank" rel="noopener noreferrer">Get the free planner →</a></div>
+            </article>
+            <article class="showcase-card">
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k24l0nb7bbc1cn1ns714ul1kvp1a.png" alt="Preview of the Premium Christmas Planner and Budget Tracker" width="800" height="600" loading="lazy">
+                <div class="showcase-copy"><span>Holiday planning</span><h3>Christmas Planner &amp; Budget Tracker</h3><a href="https://payhip.com/b/Hc3zT" target="_blank" rel="noopener noreferrer">View the planner →</a></div>
+            </article>
+            <article class="showcase-card">
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k0u10hv3iorp8372fdc1ono1c.png" alt="Preview of the Debt Payoff Calculator" width="800" height="600" loading="lazy">
+                <div class="showcase-copy"><span>Money templates</span><h3>Debt Payoff Calculator</h3><a href="https://payhip.com/b/DdU7B" target="_blank" rel="noopener noreferrer">View the calculator →</a></div>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="interactive-tools" aria-labelledby="interactive-heading">
+    <div class="interactive-inner">
+        <h2 id="interactive-heading">Try a free interactive tool</h2>
+        <div class="interactive-grid">
+            <article class="free-tool-card binder-card">
+                <span class="free-label">Free interactive tool</span><h3>Home Binder Sheets</h3>
+                <p>Keep household information, routines, and important details organized in one convenient place.</p>
+                <a href="home-organization-binder.html" class="button primary-button">Open Home Binder</a>
+            </article>
+            <article class="free-tool-card savings-card">
+                <span class="free-label">Free interactive tool</span><h3>Savings Goal Tracker</h3>
+                <p>Choose a goal, record your progress, and stay motivated as your savings grow.</p>
+                <a href="free-savings-goal-tracker.html" class="button primary-button">Open Savings Tracker</a>
+            </article>
+        </div>
+    </div>
 </section>
 
 <section class="almanac-feature" aria-labelledby="almanac-feature-title">
@@ -1059,36 +1142,13 @@
         </div>
 
 
-        <!-- LABOR DAY -->
-
+        <!-- SEASONAL FEATURE -->
         <div class="product-card">
-
-            <div class="product-icon">
-                🎉
-            </div>
-
-            <h3>
-                Labor Day Planner &amp; Money Tracker
-            </h3>
-
-            <p>
-                Plan your Labor Day celebration while keeping
-                your spending, shopping, guests, activities,
-                and supplies organized.
-            </p>
-
-            <div class="product-price">
-                $3.99
-            </div>
-
-            <a
-                href="https://payhip.com/b/yokKl"
-                class="product-button"
-                target="_blank"
-                rel="noopener">
-                View Product
-            </a>
-
+            <div class="product-icon">🎃</div>
+            <h3>Premium Halloween Planner &amp; Budget Tracker — Excel</h3>
+            <p>Plan your celebration, organize activities and shopping, and keep the holiday budget in view.</p>
+            <div class="product-price">$8.99</div>
+            <a href="https://payhip.com/b/x65rV" class="product-button" target="_blank" rel="noopener noreferrer">View Product</a>
         </div>
 
 
@@ -1110,9 +1170,8 @@
         </h2>
 
         <p>
-            We're building a collection of free planners, trackers,
-            checklists, samples, and helpful resources for our visitors.
-            Start exploring useful tools without spending a thing.
+            Explore free printable checklists for the seasons and holidays,
+            plus practical guides and interactive tools to help you get organized.
         </p>
 
         <a
