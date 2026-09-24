@@ -312,6 +312,49 @@
             .book-search { flex-direction: column; }
             .book-search button { min-height: 45px; }
         }
+
+        /* Compact page rhythm shared with the Home page */
+        header { padding: 24px 20px 20px; background: #2f6fae; }
+        header h1 { font-size: clamp(1.75rem, 3.5vw, 2.35rem); line-height: 1.2; letter-spacing: .03em; }
+        header p { margin: 4px 0 0; font-size: .95rem; }
+        nav { padding: 12px; position: sticky; top: 0; z-index: 20; background: #153f68; }
+        nav a { margin: 0 10px; }
+        .reading-room { padding: 56px 22px 60px; }
+        .reading-heading { margin: 10px 0 15px; }
+        .reading-lede { margin-bottom: 21px; }
+        .search-caption { margin: 9px 0 26px; }
+        .reading-rule { margin-bottom: 22px; }
+        .reading-subtitle { margin-bottom: 16px; }
+        .rights-note { margin-top: 20px; }
+        .hero { padding: 39px 20px 25px; }
+        .hero h2 { font-size: clamp(1.8rem, 4vw, 2.45rem); margin-bottom: 10px; }
+        .resources-section { padding: 40px 20px 49px; }
+        .section-intro { margin-bottom: 26px; }
+        .topics { padding: 35px 20px 38px; }
+        .topics h2 { margin-bottom: 9px; }
+        .topics p { margin-bottom: 20px; }
+        .topic-list { gap: 8px; }
+        .topic { padding: 7px 14px; }
+        .cta-section { padding: 42px 20px; }
+        .cta-box { padding: 30px 25px; }
+        @media (max-width: 580px) {
+            header { padding: 20px 15px 17px; }
+            .reading-room { padding: 44px 18px 48px; }
+            .hero { padding: 32px 18px 22px; }
+            .resources-section { padding: 36px 18px 42px; }
+            .topics { padding: 30px 18px 34px; }
+            nav { position: static; }
+        }
+
+        .share-panel { max-width: 780px; margin: 0 0 24px; padding: 16px 18px; border: 1px solid #ffffff65; border-radius: 11px; background: #ffffff12; }
+        .share-label { display: block; font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+        .share-actions { display: flex; gap: 9px; flex-wrap: wrap; align-items: center; }
+        .share-actions a, .share-actions button { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; margin: 0; padding: 7px 12px; border: 1px solid #f7f5efad; border-radius: 7px; font: 700 13px Arial, sans-serif; cursor: pointer; text-decoration: none; }
+        .share-main { background: #d1aa71; border-color: #d1aa71 !important; color: #173a56; }
+        .share-secondary { background: transparent; color: white; }
+        .share-actions a:hover, .share-actions button:hover, .share-actions a:focus-visible, .share-actions button:focus-visible { background: white; color: #173a56; }
+        .share-feedback { display: block; min-height: 0; font-size: 13px; color: #eaf7ef; }
+        .share-feedback:not(:empty) { margin-top: 9px; }
     </style>
 </head>
 
@@ -332,6 +375,71 @@
     <a href="resources.html">Resources</a>
     <a href="shop.html">Shop</a>
 </nav>
+
+<section class="reading-room" id="public-domain-books" aria-labelledby="reading-title">
+    <div class="reading-inner">
+        <div class="reading-eyebrow">THE FREE READING ROOM</div>
+        <h2 class="reading-heading" id="reading-title">A world of books,<br>open to everyone.</h2>
+        <p class="reading-lede">Discover classics, old cookbooks, historical guides, poetry, and more through trusted digital libraries. Read online or explore the download options offered by each collection.</p>
+        <div class="share-panel" aria-label="Share this page">
+            <span class="share-label">Know a fellow reader? Share this page</span>
+            <div class="share-actions">
+                <button type="button" id="share-page" class="share-main">Share with an app ↗</button>
+                <button type="button" id="copy-page" class="share-secondary">Copy link</button>
+                <a id="email-page" class="share-secondary" href="mailto:?subject=Free%20public%20domain%20book%20resources&amp;body=https%3A%2F%2Fmoneytracktemplates.github.io%2Fresources.html">Email</a>
+                <a id="text-page" class="share-secondary" href="sms:?body=https%3A%2F%2Fmoneytracktemplates.github.io%2Fresources.html">Text</a>
+            </div>
+            <span id="share-feedback" class="share-feedback" role="status" aria-live="polite"></span>
+        </div>
+        <form class="book-search" action="https://www.gutenberg.org/ebooks/search/" method="get" target="_blank" role="search">
+            <label class="sr-only-reading" for="book-query" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search Project Gutenberg books</label>
+            <input id="book-query" name="query" type="search" placeholder="Search a title, author, or topic" required>
+            <button type="submit">Find free books ↗</button>
+        </form>
+        <p class="search-caption">Your search opens Project Gutenberg in a new tab.</p>
+        <hr class="reading-rule">
+        <h3 class="reading-subtitle">Explore the collections</h3>
+        <div class="library-grid">
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">✦</span>
+                <h3>Project Gutenberg</h3>
+                <p>Search and read classic books in many languages, with free ebook formats and online reading.</p>
+                <a href="https://www.gutenberg.org/ebooks/" target="_blank" rel="noopener noreferrer">Browse Gutenberg ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">✳</span>
+                <h3>Standard Ebooks</h3>
+                <p>Beautifully prepared editions of literary works believed to be in the U.S. public domain.</p>
+                <a href="https://standardebooks.org/ebooks" target="_blank" rel="noopener noreferrer">Browse Standard Ebooks ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">⌂</span>
+                <h3>Library of Congress</h3>
+                <p>Browse the Library’s Selected Digitized Books, with books available to read online and download.</p>
+                <a href="https://www.loc.gov/collections/selected-digitized-books/" target="_blank" rel="noopener noreferrer">Explore digitized books ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">◈</span>
+                <h3>HathiTrust</h3>
+                <p>Search a vast research library. Look for “Full View” books to read online.</p>
+                <a href="https://www.hathitrust.org/the-collection/search-access/" target="_blank" rel="noopener noreferrer">Search HathiTrust ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">✧</span>
+                <h3>Google Books</h3>
+                <p>Search historical books and select “Full view only” to find books you can read in full.</p>
+                <a href="https://books.google.com/advanced_book_search" target="_blank" rel="noopener noreferrer">Search Google Books ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">❖</span>
+                <h3>Internet Archive</h3>
+                <p>Browse scanned books and texts from libraries worldwide. Check each item’s access and rights details.</p>
+                <a href="https://archive.org/details/texts" target="_blank" rel="noopener noreferrer">Explore the texts archive ↗</a>
+            </article>
+        </div>
+        <p class="rights-note"><strong>A note for readers:</strong> Free to read does not always mean public domain. Some collections also include copyrighted books available to borrow or preview. Check the rights statement on an individual book before reusing it; public domain status can differ by country.</p>
+    </div>
+</section>
 
 <section class="hero">
     <h2>Helpful Resources for Money & Organization</h2>
@@ -461,61 +569,6 @@
 
 
 
-<section class="reading-room" id="public-domain-books" aria-labelledby="reading-title">
-    <div class="reading-inner">
-        <div class="reading-eyebrow">THE FREE READING ROOM</div>
-        <h2 class="reading-heading" id="reading-title">A world of books,<br>open to everyone.</h2>
-        <p class="reading-lede">Discover classics, old cookbooks, historical guides, poetry, and more through trusted digital libraries. Read online or explore the download options offered by each collection.</p>
-        <form class="book-search" action="https://www.gutenberg.org/ebooks/search/" method="get" target="_blank" role="search">
-            <label class="sr-only-reading" for="book-query" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search Project Gutenberg books</label>
-            <input id="book-query" name="query" type="search" placeholder="Search a title, author, or topic" required>
-            <button type="submit">Find free books ↗</button>
-        </form>
-        <p class="search-caption">Your search opens Project Gutenberg in a new tab.</p>
-        <hr class="reading-rule">
-        <h3 class="reading-subtitle">Explore the collections</h3>
-        <div class="library-grid">
-            <article class="library-card">
-                <span class="library-symbol" aria-hidden="true">✦</span>
-                <h3>Project Gutenberg</h3>
-                <p>Search and read classic books in many languages, with free ebook formats and online reading.</p>
-                <a href="https://www.gutenberg.org/ebooks/" target="_blank" rel="noopener noreferrer">Browse Gutenberg ↗</a>
-            </article>
-            <article class="library-card">
-                <span class="library-symbol" aria-hidden="true">✳</span>
-                <h3>Standard Ebooks</h3>
-                <p>Beautifully prepared editions of literary works believed to be in the U.S. public domain.</p>
-                <a href="https://standardebooks.org/ebooks" target="_blank" rel="noopener noreferrer">Browse Standard Ebooks ↗</a>
-            </article>
-            <article class="library-card">
-                <span class="library-symbol" aria-hidden="true">⌂</span>
-                <h3>Library of Congress</h3>
-                <p>Browse the Library’s Selected Digitized Books, with books available to read online and download.</p>
-                <a href="https://www.loc.gov/collections/selected-digitized-books/" target="_blank" rel="noopener noreferrer">Explore digitized books ↗</a>
-            </article>
-            <article class="library-card">
-                <span class="library-symbol" aria-hidden="true">◈</span>
-                <h3>HathiTrust</h3>
-                <p>Search a vast research library. Look for “Full View” books to read online.</p>
-                <a href="https://www.hathitrust.org/the-collection/search-access/" target="_blank" rel="noopener noreferrer">Search HathiTrust ↗</a>
-            </article>
-            <article class="library-card">
-                <span class="library-symbol" aria-hidden="true">✧</span>
-                <h3>Google Books</h3>
-                <p>Search historical books and select “Full view only” to find books you can read in full.</p>
-                <a href="https://books.google.com/advanced_book_search" target="_blank" rel="noopener noreferrer">Search Google Books ↗</a>
-            </article>
-            <article class="library-card">
-                <span class="library-symbol" aria-hidden="true">❖</span>
-                <h3>Internet Archive</h3>
-                <p>Browse scanned books and texts from libraries worldwide. Check each item’s access and rights details.</p>
-                <a href="https://archive.org/details/texts" target="_blank" rel="noopener noreferrer">Explore the texts archive ↗</a>
-            </article>
-        </div>
-        <p class="rights-note"><strong>A note for readers:</strong> Free to read does not always mean public domain. Some collections also include copyrighted books available to borrow or preview. Check the rights statement on an individual book before reusing it; public domain status can differ by country.</p>
-    </div>
-</section>
-
 <section class="topics">
 
     <h2>Topics We'll Be Exploring</h2>
@@ -570,5 +623,53 @@
   <p>&copy; 2026 MoneyTrackTemplates. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
+
+<script>
+(() => {
+    const pageUrl = new URL('resources.html', window.location.href).href;
+    const message = 'Explore free public domain books and helpful guides at MoneyTrackTemplates';
+    const feedback = document.getElementById('share-feedback');
+    const share = document.getElementById('share-page');
+    const copy = document.getElementById('copy-page');
+    const email = document.getElementById('email-page');
+    const sms = document.getElementById('text-page');
+    email.href = `mailto:?subject=${encodeURIComponent('Free public domain books and guides')}&body=${encodeURIComponent(message + '\n' + pageUrl)}`;
+    sms.href = `sms:?body=${encodeURIComponent(message + ' ' + pageUrl)}`;
+    async function copyUrl() {
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(pageUrl);
+            } else {
+                const field = document.createElement('textarea');
+                field.value = pageUrl;
+                field.style.position = 'fixed';
+                field.style.opacity = '0';
+                document.body.appendChild(field);
+                field.select();
+                const copied = document.execCommand('copy');
+                field.remove();
+                if (!copied) throw new Error('Clipboard unavailable');
+            }
+            feedback.textContent = 'Link copied. Paste it into any app or message.';
+        } catch {
+            window.prompt('Copy this page link:', pageUrl);
+            feedback.textContent = 'Copy the link above to share it.';
+        }
+    }
+    copy.addEventListener('click', copyUrl);
+    share.addEventListener('click', async () => {
+        if (!navigator.share) {
+            await copyUrl();
+            return;
+        }
+        try {
+            await navigator.share({ title: 'Free books and helpful resources', text: message, url: pageUrl });
+            feedback.textContent = '';
+        } catch (error) {
+            if (error.name !== 'AbortError') feedback.textContent = 'Sharing was unavailable. Try Copy link instead.';
+        }
+    });
+})();
+</script>
 </body>
 </html>
