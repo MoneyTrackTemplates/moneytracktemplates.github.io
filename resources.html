@@ -355,6 +355,15 @@
         .share-actions a:hover, .share-actions button:hover, .share-actions a:focus-visible, .share-actions button:focus-visible { background: white; color: #173a56; }
         .share-feedback { display: block; min-height: 0; font-size: 13px; color: #eaf7ef; }
         .share-feedback:not(:empty) { margin-top: 9px; }
+
+        /* Clear route to the growing student section */
+        .student-feature { display: flex; align-items: center; gap: 13px; width: min(100%,700px); padding: 12px 16px; margin: 0 0 18px; border: 1px solid #edd3a4; border-radius: 10px; background: #fffdf7; color: #173f60; text-decoration: none; box-shadow: 0 6px 17px #092c462b; }
+        .student-feature:hover, .student-feature:focus-visible { background: #fff2d9; transform: translateY(-1px); }
+        .student-feature-icon { flex: none; display: grid; place-items: center; width: 39px; height: 39px; border-radius: 9px; background: #e8f2f6; color: #185475; font-size: 22px; }
+        .student-feature strong, .student-feature small { display: block; }
+        .student-feature strong { font-size: 16px; line-height: 1.2; }
+        .student-feature small { font-size: 13px; color: #4d6679; margin-top: 3px; }
+        .student-feature-arrow { margin-left: auto; font-size: 24px; }
     </style>
 </head>
 
@@ -370,6 +379,7 @@
     <a href="about.html">About</a>
     <a href="money-templates.html">Money Templates</a>
     <a href="planners.html">Planners</a>
+    <a href="for-students.html">For Students</a>
     <a href="holiday-planners.html">Holiday Planners</a>
     <a href="free-downloads.html">Free Downloads</a>
     <a href="resources.html">Resources</a>
@@ -381,6 +391,7 @@
         <div class="reading-eyebrow">THE FREE READING ROOM</div>
         <h2 class="reading-heading" id="reading-title">A world of books,<br>open to everyone.</h2>
         <p class="reading-lede">Discover classics, old cookbooks, historical guides, poetry, and more through trusted digital libraries. Read online or explore the download options offered by each collection.</p>
+        <a class="student-feature" href="for-students.html" aria-label="Explore For Students, including the Student Planner and Academic Calendar"><span class="student-feature-icon" aria-hidden="true">✎</span><span><strong>New: For Students</strong><small>Explore the Student Planner &amp; Academic Calendar</small></span><span class="student-feature-arrow" aria-hidden="true">→</span></a>
         <div class="share-panel" aria-label="Share this page">
             <span class="share-label">Know a fellow reader? Share this page</span>
             <div class="share-actions">
