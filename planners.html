@@ -1,440 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZP3T0LXM1C');
-</script>
-    
+    <!-- Google Analytics: retained from the existing Planners page -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZP3T0LXM1C');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Planners | MoneyTrackTemplates</title>
-
-    <meta name="description" content="Explore digital planners from MoneyTrackTemplates for holidays, events, household organization, budgeting, projects, and everyday planning.">
-
+    <meta name="description" content="Explore wedding, holiday, home, and printable planners from MoneyTrackTemplates. Browse premium Excel planners and free printable checklists.">
+    <title>Planners for Real Life | MoneyTrackTemplates</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        *, *::before, *::after { box-sizing: border-box; }
         :root {
             --blue: #2f6fae;
-            --blue-dark: #153f68;
-            --blue-deep: #102f4d;
+            --navy: #153f68;
+            --deep: #102f4d;
             --ivory: #faf7f1;
-            --ivory-soft: #f4f0e8;
-            --white: #ffffff;
-            --blue-light: #e7f0f8;
-            --blue-border: #c9dbea;
-            --text-blue: #244c70;
-            --muted-blue: #5f7890;
+            --cream: #f3eee4;
+            --mist: #e7f0f8;
+            --line: #c9dbea;
+            --ink: #244c70;
+            --soft: #54728a;
+            --gold: #b38441;
         }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--ivory);
-            color: var(--text-blue);
-            line-height: 1.65;
+        html { scroll-behavior: smooth; }
+        body { margin: 0; color: var(--ink); background: var(--ivory); font: 16px/1.65 Arial, Helvetica, sans-serif; }
+        a { color: inherit; }
+        a:focus-visible, summary:focus-visible { outline: 3px solid #d6922c; outline-offset: 4px; }
+        .site-header { padding: 24px 18px 20px; text-align: center; background: var(--blue); color: #fff; }
+        .site-header .brand { margin: 0; font-size: clamp(1.75rem, 3.5vw, 2.35rem); font-weight: 700; line-height: 1.2; letter-spacing: .03em; }
+        .site-header .tagline { margin: 4px 0 0; font-size: .95rem; }
+        .site-nav { position: sticky; top: 0; z-index: 20; background: var(--navy); box-shadow: 0 3px 12px rgba(16,47,77,.16); }
+        .site-nav .desktop-links { max-width: 1180px; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 20px; margin: auto; padding: 12px 16px; }
+        .site-nav a { color: #fff; font-size: .94rem; font-weight: 700; text-decoration: none; }
+        .site-nav a:hover, .site-nav a[aria-current="page"] { color: #d9edff; text-decoration: underline; text-underline-offset: 5px; }
+        .mobile-nav { display: none; }
+        .eyebrow { font-size: .75rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; color: var(--blue); }
+        .page-hero { padding: 55px 20px 64px; background: radial-gradient(circle at 92% 5%, #ecf3f7 0, transparent 35%), var(--ivory); }
+        .hero-inner { max-width: 1130px; margin: auto; display: grid; grid-template-columns: 1fr .95fr; align-items: center; gap: clamp(28px,5vw,70px); }
+        .hero-text h1 { margin: 13px 0 18px; max-width: 590px; color: var(--deep); font: 700 clamp(2.35rem,4.3vw,3.75rem)/1.1 Georgia, 'Times New Roman', serif; letter-spacing: -.025em; }
+        .hero-text p { max-width: 540px; margin: 0 0 25px; font-size: 1.08rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+        .button { display: inline-block; padding: 13px 22px; border: 1px solid var(--blue); border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; transition: transform .2s,background .2s; }
+        .button:hover { transform: translateY(-2px); }
+        .button-primary { background: var(--blue); color: #fff; box-shadow: 0 5px 15px rgba(47,111,174,.17); }
+        .button-primary:hover { background: var(--navy); }
+        .button-secondary { background: #fff; color: var(--navy); border-color: var(--line); }
+        .button-secondary:hover { background: var(--mist); }
+        .hero-media { margin: 0; padding: 12px; background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 15px 36px rgba(16,47,77,.12); }
+        .hero-media img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; }
+        .hero-media figcaption { padding: 10px 5px 2px; font-size: .85rem; text-align: center; color: var(--soft); }
+        .hero-media figcaption a { color: var(--navy); font-weight: 700; }
+        .section { padding: 68px 20px; }
+        .wrap { max-width: 1130px; margin: auto; }
+        .section-kicker { margin: 0 0 6px; color: var(--blue); font-size: .77rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+        .section h2 { margin: 0 0 9px; color: var(--deep); font: 700 clamp(1.85rem,3vw,2.4rem)/1.2 Georgia, 'Times New Roman', serif; }
+        .section-lead { margin: 0 0 27px; max-width: 690px; color: var(--soft); }
+        .purpose-section { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .purpose-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+        .purpose-card { display: flex; flex-direction: column; min-width: 0; padding: 25px 21px; border: 1px solid var(--line); border-radius: 14px; background: var(--ivory); transition: transform .2s,box-shadow .2s; }
+        .purpose-card:hover { transform: translateY(-3px); box-shadow: 0 9px 22px rgba(16,47,77,.1); }
+        .purpose-icon { font-size: 2rem; line-height: 1.2; }
+        .purpose-card h3 { margin: 14px 0 8px; color: var(--navy); font-size: 1.12rem; line-height: 1.35; }
+        .purpose-card p { margin: 0 0 18px; font-size: .94rem; }
+        .purpose-card a { margin-top: auto; color: var(--navy); font-weight: 700; text-underline-offset: 3px; }
+        .featured-section { background: var(--ivory); }
+        .product-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+        .product-card { overflow: hidden; display: flex; flex-direction: column; min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 6px 20px rgba(16,47,77,.08); }
+        .product-card img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+        .product-content { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+        .product-content .type { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+        .product-content h3 { color: var(--navy); font-size: 1.2rem; line-height: 1.35; margin: 8px 0; }
+        .product-content p { margin: 0 0 21px; font-size: .95rem; }
+        .product-content .button { margin-top: auto; align-self: flex-start; }
+        .free-strip { padding: 37px 20px; background: var(--mist); border-block: 1px solid var(--line); }
+        .free-strip .wrap { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+        .free-strip h2 { margin: 0 0 7px; color: var(--deep); font: 700 1.7rem Georgia,'Times New Roman',serif; }
+        .free-strip p { margin: 0; }
+        .free-strip .button { flex-shrink: 0; }
+        .site-footer { padding: 31px 20px; text-align: center; background: var(--deep); color: white; }
+        .site-footer p { margin: 5px 0; }
+        .site-footer a { color: white; }
+        @media (max-width: 950px) { .purpose-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+        @media (max-width: 700px) {
+            .site-nav .desktop-links { display: none; }
+            .mobile-nav { display: block; max-width: 620px; margin: auto; padding: 9px 16px; }
+            .mobile-nav summary { color: #fff; cursor: pointer; font-weight: 700; padding: 4px 8px; }
+            .mobile-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px; padding: 12px 0 5px; }
+            .mobile-links a { padding: 8px; }
+            .page-hero { padding: 40px 20px 43px; }
+            .hero-inner { grid-template-columns: 1fr; gap: 26px; }
+            .hero-media { max-width: 580px; }
+            .section { padding: 52px 20px; }
+            .product-grid { grid-template-columns: 1fr; }
+            .product-card { display: grid; grid-template-columns: 43% 57%; }
+            .product-card img { height: 100%; }
+            .free-strip .wrap { align-items: flex-start; flex-direction: column; }
         }
-
-        header {
-            background: var(--blue);
-            color: white;
-            text-align: center;
-            padding: 58px 20px 48px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        header p {
-            margin: 12px 0 0;
-            font-size: 1.15rem;
-            color: white;
-        }
-
-        nav {
-            background: var(--blue-dark);
-            text-align: center;
-            padding: 17px 12px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 12px rgba(16, 47, 77, 0.16);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 13px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            transition: 0.2s ease;
-        }
-
-        nav a:hover {
-            color: #c9e2f7;
-        }
-
-        .intro {
-            text-align: center;
-            padding: 76px 20px 48px;
-        }
-
-        .intro h2 {
-            margin: 0 0 18px;
-            color: var(--blue-dark);
-            font-size: 2.55rem;
-        }
-
-        .intro p {
-            max-width: 790px;
-            margin: 0 auto;
-            font-size: 1.08rem;
-            color: var(--text-blue);
-        }
-
-        .planner-section {
-            padding: 25px 20px 80px;
-        }
-
-        .planner-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .planner-card {
-            background: white;
-            border: 1px solid var(--blue-border);
-            border-radius: 15px;
-            padding: 30px 24px;
-            text-align: center;
-            box-shadow: 0 6px 18px rgba(36, 76, 112, 0.06);
-            transition: all 0.25s ease;
-        }
-
-        .planner-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 24px rgba(36, 76, 112, 0.11);
-        }
-
-        .planner-icon {
-            font-size: 2.7rem;
-            margin-bottom: 12px;
-        }
-
-        .planner-card h3 {
-            color: var(--blue-dark);
-            font-size: 1.3rem;
-            margin: 8px 0 12px;
-        }
-
-        .planner-card p {
-            margin: 0;
-            color: var(--text-blue);
-        }
-
-        .featured-section {
-            background: var(--blue-light);
-            padding: 76px 20px;
-            border-top: 1px solid var(--blue-border);
-        }
-
-        .featured-box {
-            max-width: 920px;
-            margin: 0 auto;
-            background: white;
-            border: 1px solid var(--blue-border);
-            border-radius: 18px;
-            padding: 45px 30px;
-            text-align: center;
-            box-shadow: 0 7px 20px rgba(36, 76, 112, 0.07);
-        }
-
-        .featured-box h2 {
-            color: var(--blue-dark);
-            font-size: 2rem;
-            margin-top: 0;
-        }
-
-        .featured-box p {
-            max-width: 700px;
-            margin: 0 auto 24px;
-        }
-
-        .button {
-            display: inline-block;
-            text-decoration: none;
-            background: var(--blue);
-            color: white;
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-weight: 700;
-            transition: all 0.2s ease;
-        }
-
-        .button:hover {
-            background: var(--blue-dark);
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background: var(--blue-deep);
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        footer p {
-            margin: 6px 0;
-        }
-
-        footer strong {
-            font-size: 1.15rem;
-        }
-
-        @media (max-width: 850px) {
-            .planner-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            header h1 {
-                font-size: 2.4rem;
-            }
-
-            .intro h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 45px 18px 40px;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 7px;
-            }
-
-            .intro {
-                padding: 58px 18px 38px;
-            }
-
-            .intro h2 {
-                font-size: 1.75rem;
-            }
-
-            .planner-section {
-                padding: 15px 18px 60px;
-            }
-
-            .planner-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .featured-section {
-                padding: 60px 18px;
-            }
-        }
+        @media (max-width: 480px) { .purpose-grid { grid-template-columns: 1fr; }
+            .product-card { display: block; } .product-card img { height: auto; }
+            .hero-actions .button { width: 100%; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }
+            *,*::before,*::after { transition-duration: .01ms !important; } }
     </style>
 </head>
-
 <body>
-
-<header>
-    <h1>MoneyTrackTemplates</h1>
-    <p>Plan Better. Track Smarter. Live More Organized.</p>
+<header class="site-header">
+    <p class="brand">MoneyTrackTemplates</p>
+    <p class="tagline">Plan Better. Track Smarter. Live More Organized.</p>
 </header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="money-templates.html">Money Templates</a>
-    <a href="planners.html">Planners</a>
-    <a href="holiday-planners.html">Holiday Planners</a>
-    <a href="free-downloads.html">Free Downloads</a>
-    <a href="resources.html">Resources</a>
-    <a href="shop.html">Shop</a>
+<nav class="site-nav" aria-label="Main navigation">
+    <div class="desktop-links">
+        <a href="index.html">Home</a><a href="about.html">About</a>
+        <a href="money-templates.html">Money Templates</a><a href="planners.html" aria-current="page">Planners</a>
+        <a href="holiday-planners.html">Holiday Planners</a><a href="free-downloads.html">Free Downloads</a>
+        <a href="resources.html">Resources</a><a href="shop.html">Shop</a>
+    </div>
+    <details class="mobile-nav">
+        <summary>Menu</summary>
+        <div class="mobile-links">
+            <a href="index.html">Home</a><a href="about.html">About</a>
+            <a href="money-templates.html">Money Templates</a><a href="planners.html" aria-current="page">Planners</a>
+            <a href="holiday-planners.html">Holiday Planners</a><a href="free-downloads.html">Free Downloads</a>
+            <a href="resources.html">Resources</a><a href="shop.html">Shop</a>
+        </div>
+    </details>
 </nav>
-
-<section class="intro">
-    <h2>Digital Planners for Everyday Life</h2>
-
-    <p>
-        Explore practical planning tools designed to help you organize
-        holidays, events, household tasks, projects, schedules, purchases,
-        and everyday responsibilities.
-    </p>
-</section>
-
-<section class="planner-section">
-
-    <div class="planner-grid">
-
-        <div class="planner-card">
-            <div class="planner-icon">📅</div>
-            <h3>Daily &amp; Weekly Planners</h3>
-            <p>
-                Organize appointments, priorities, tasks, routines,
-                and weekly plans in one convenient place.
-            </p>
+<main>
+    <section class="page-hero" aria-labelledby="page-title">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <span class="eyebrow">Thoughtful tools for real life</span>
+                <h1 id="page-title">Make room for every plan.</h1>
+                <p>From a dream wedding to a holiday dinner, find beautifully designed planners that make the details easier to manage.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#featured">Explore Planners</a>
+                    <a class="button button-secondary" href="free-downloads.html">Try a Free Printable</a>
+                </div>
+            </div>
+            <figure class="hero-media">
+                <a href="https://payhip.com/b/QX28x" target="_blank" rel="noopener noreferrer" aria-label="View the Premium Wedding Planning and Budget Tracker on Payhip">
+                    <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k2hb6c7o17akeim2m21okv3a41a.png" alt="Cover of the Premium Wedding Planning and Budget Tracker" width="1000" height="750" fetchpriority="high">
+                </a>
+                <figcaption>Featured wedding planner · <a href="https://payhip.com/b/QX28x" target="_blank" rel="noopener noreferrer">See the full planner</a></figcaption>
+            </figure>
         </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">🗓️</div>
-            <h3>Monthly Planners</h3>
-            <p>
-                Plan ahead for important dates, deadlines, goals,
-                household needs, and monthly responsibilities.
-            </p>
+    </section>
+    <section class="section purpose-section" aria-labelledby="purpose-title">
+        <div class="wrap">
+            <p class="section-kicker">Choose your direction</p>
+            <h2 id="purpose-title">What are you planning?</h2>
+            <p class="section-lead">Start with the kind of plan on your mind. Every destination below opens a real collection, tool, or product.</p>
+            <div class="purpose-grid">
+                <article class="purpose-card"><div class="purpose-icon" aria-hidden="true">💍</div><h3>Weddings &amp; Events</h3><p>Bring budgets, guests, vendors, and big-day details together.</p><a href="https://payhip.com/b/QX28x" target="_blank" rel="noopener noreferrer">View Wedding Planner →</a></article>
+                <article class="purpose-card"><div class="purpose-icon" aria-hidden="true">🎉</div><h3>Holidays &amp; Seasons</h3><p>Make room for celebrations, shopping, meals, and seasonal plans.</p><a href="holiday-planners.html">Browse Holiday Planners →</a></article>
+                <article class="purpose-card"><div class="purpose-icon" aria-hidden="true">🏡</div><h3>Home &amp; Everyday</h3><p>Keep household information, schedules, and routines close at hand.</p><a href="home-organization-binder.html">Open Free Home Binder →</a></article>
+                <article class="purpose-card"><div class="purpose-icon" aria-hidden="true">📝</div><h3>Free Printables</h3><p>Try a checklist planner before choosing another tool.</p><a href="free-downloads.html">Explore Free Downloads →</a></article>
+            </div>
         </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">🎉</div>
-            <h3>Holiday Planners</h3>
-            <p>
-                Organize holiday budgets, shopping, meals, supplies,
-                activities, guests, and special-event details.
-            </p>
+    </section>
+    <section class="section featured-section" id="featured" aria-labelledby="featured-title">
+        <div class="wrap">
+            <p class="section-kicker">From the collection</p>
+            <h2 id="featured-title">Planners worth opening</h2>
+            <p class="section-lead">See the designs and choose the planner that fits your next occasion.</p>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k2hb6c7o17akeim2m21okv3a41a.png" alt="Preview of the Premium Wedding Planning and Budget Tracker" width="800" height="600" loading="lazy">
+                    <div class="product-content"><span class="type">Wedding planning · Excel</span><h3>Wedding Planning &amp; Budget Tracker</h3><p>Plan expenses, vendors, guests, and the many details of your celebration in one workbook.</p><a href="https://payhip.com/b/QX28x" class="button button-primary" target="_blank" rel="noopener noreferrer">View Wedding Planner</a></div>
+                </article>
+                <article class="product-card">
+                    <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k24m540u18pqdq91uoe6e23o11a.png" alt="Preview of the Premium Halloween Planner and Budget Tracker" width="800" height="600" loading="lazy">
+                    <div class="product-content"><span class="type">Seasonal planning · Excel</span><h3>Halloween Planner &amp; Budget Tracker</h3><p>Coordinate the celebration while tracking shopping, activities, supplies, and spending.</p><a href="https://payhip.com/b/x65rV" class="button button-primary" target="_blank" rel="noopener noreferrer">View Halloween Planner</a></div>
+                </article>
+                <article class="product-card">
+                    <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k24jgs573el1o7q42118teg3n1g.png" alt="Preview of the Premium Thanksgiving Planner and Budget Tracker" width="800" height="600" loading="lazy">
+                    <div class="product-content"><span class="type">Holiday planning · Excel</span><h3>Thanksgiving Planner &amp; Budget Tracker</h3><p>Bring meals, guests, shopping, and your holiday budget into one clear plan.</p><a href="https://payhip.com/b/dilRT" class="button button-primary" target="_blank" rel="noopener noreferrer">View Thanksgiving Planner</a></div>
+                </article>
+            </div>
         </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">🎈</div>
-            <h3>Event Planners</h3>
-            <p>
-                Keep celebrations, gatherings, parties, and special
-                occasions organized from planning through completion.
-            </p>
+    </section>
+    <section class="free-strip" aria-labelledby="free-title">
+        <div class="wrap">
+            <div><h2 id="free-title">Start with something free.</h2><p>Explore printable seasonal checklists and practical planning pages, ready when you are.</p></div>
+            <a class="button button-primary" href="free-downloads.html">Browse Free Planners</a>
         </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">🏡</div>
-            <h3>Home &amp; Household Planners</h3>
-            <p>
-                Manage household routines, chores, projects, maintenance,
-                shopping, and everyday home organization.
-            </p>
-        </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">🛍️</div>
-            <h3>Shopping &amp; Supplies Planners</h3>
-            <p>
-                Plan purchases, compare needs, track supplies, and stay
-                organized before shopping trips and special events.
-            </p>
-        </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">✈️</div>
-            <h3>Travel Planners</h3>
-            <p>
-                Organize trip details, packing, spending, transportation,
-                reservations, and travel-related tasks.
-            </p>
-        </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">🎯</div>
-            <h3>Goal &amp; Project Planners</h3>
-            <p>
-                Break larger goals and projects into manageable steps,
-                priorities, deadlines, and milestones.
-            </p>
-        </div>
-
-        <div class="planner-card">
-            <div class="planner-icon">📝</div>
-            <h3>Printable Planners</h3>
-            <p>
-                Use simple printable planning pages, checklists,
-                worksheets, and organization tools at home or on the go.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="featured-section">
-
-    <div class="featured-box">
-
-        <h2>Featured Planner</h2>
-
-        <p>
-            Looking for a planner you can start using today? Explore our
-            Labor Day Planner &amp; Money Tracker for event planning,
-            budgeting, shopping, guests, supplies, and more.
-        </p>
-
-        <a
-            href="https://payhip.com/b/yokKl"
-            class="button"
-            target="_blank"
-            rel="noopener">
-            View Labor Day Planner
-        </a>
-
-      <hr style="margin: 35px 0; border: 0; border-top: 1px solid #d9e5f2;">
-
-<h2>Premium Wedding Planning &amp; Budget Tracker</h2>
-
-<p>
-  Plan your wedding and budget in one beautifully organized Excel workbook.
-  Track expenses, vendors, payments, guests, RSVPs, checklists, seating,
-  attire, décor, honeymoon costs, and more.
-</p>
-
-<a
-  href="https://payhip.com/b/QX28x"
-  class="button"
-  target="_blank"
-  rel="noopener">
-  View Wedding Planning &amp; Budget Tracker
-</a>
-
-    </div>
-
-</section>
-
-<footer>
-
+    </section>
+</main>
+<footer class="site-footer">
     <p><strong>MoneyTrackTemplates</strong></p>
-
-    <p>
-        Plan Better. Track Smarter. Live More Organized.
-    </p>
-
-    <p>
-    &copy; 2026 MoneyTrackTemplates. All rights reserved. |
-    <a href="privacy-policy.html">Privacy Policy</a>
-</p>
-
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+    <p>&copy; 2026 MoneyTrackTemplates. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
-
 </body>
 </html>
