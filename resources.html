@@ -16,7 +16,7 @@
 
     <title>Helpful Resources | MoneyTrackTemplates</title>
 
-    <meta name="description" content="Explore practical guides and helpful resources for budgeting, saving money, organizing expenses, using planners, managing subscriptions, and staying organized.">
+    <meta name="description" content="Explore practical guides and search free public domain books through Project Gutenberg, Standard Ebooks, and trusted digital libraries.">
 
     <style>
         * {
@@ -268,6 +268,50 @@
                 margin: 6px 8px;
             }
         }
+
+        /* PUBLIC DOMAIN READING ROOM */
+        .reading-room {
+            padding: 88px 22px 92px;
+            background: linear-gradient(160deg, #163f60 0%, #215773 58%, #306b78 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .reading-room::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: .18;
+            pointer-events: none;
+            background: repeating-linear-gradient(90deg, transparent 0 165px, #96c1ba 166px 167px, transparent 168px 177px);
+        }
+        .reading-inner { position: relative; max-width: 1120px; margin: auto; }
+        .reading-eyebrow { color: #eacb92; text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: .2em; }
+        .reading-heading { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; font-size: clamp(38px, 5vw, 65px); line-height: 1.08; margin: 13px 0 19px; letter-spacing: -.035em; }
+        .reading-lede { max-width: 700px; font-size: 18px; color: #e6f2f4; margin: 0 0 29px; }
+        .book-search { display: flex; gap: 10px; max-width: 700px; padding: 8px; background: #fff; border-radius: 12px; box-shadow: 0 15px 35px #092c4660; }
+        .book-search input { border: 0; border-radius: 8px; padding: 12px 14px; font: inherit; min-width: 0; flex: 1; color: #123b60; }
+        .book-search input:focus-visible { outline: 2px solid #317895; }
+        .book-search button { border: 0; border-radius: 8px; background: #d1aa71; color: #183650; padding: 11px 20px; font: 700 15px Arial,sans-serif; cursor: pointer; }
+        .book-search button:hover, .book-search button:focus-visible { background: #edcb92; }
+        .search-caption { font-size: 13px; color: #e0ebef; margin: 11px 0 42px; }
+        .reading-rule { border: 0; height: 1px; background: #ffffff5e; margin: 0 0 31px; }
+        .reading-subtitle { font-family: Georgia,serif; font-size: 27px; font-weight: 500; margin: 0 0 20px; }
+        .library-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+        .library-card { background: #fffdf8; color: #163a59; border-radius: 12px; border-top: 5px solid #d6b67f; padding: 25px; display: flex; flex-direction: column; box-shadow: 0 10px 25px #0b29421c; }
+        .library-card .library-symbol { font-size: 26px; color: #c39452; line-height: 1; }
+        .library-card h3 { font: 700 23px Georgia,serif; margin: 13px 0 9px; }
+        .library-card p { margin: 0 0 22px; color: #455b68; flex: 1; font-size: 15px; }
+        .library-card a { align-self: flex-start; color: #174d70; font-weight: 800; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+        .library-card a:hover, .library-card a:focus-visible { color: #0b7790; }
+        .rights-note { background: #ffffff17; border-left: 3px solid #e2c68f; padding: 13px 17px; margin: 30px 0 0; max-width: 980px; font-size: 14px; color: #eaf3f1; }
+        @media(max-width: 850px) { .library-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+        @media(max-width: 580px) {
+            .reading-room { padding: 65px 18px; }
+            .library-grid { grid-template-columns: 1fr; }
+            .book-search { flex-direction: column; }
+            .book-search button { min-height: 45px; }
+        }
     </style>
 </head>
 
@@ -416,6 +460,62 @@
 </section>
 
 
+
+<section class="reading-room" id="public-domain-books" aria-labelledby="reading-title">
+    <div class="reading-inner">
+        <div class="reading-eyebrow">THE FREE READING ROOM</div>
+        <h2 class="reading-heading" id="reading-title">A world of books,<br>open to everyone.</h2>
+        <p class="reading-lede">Discover classics, old cookbooks, historical guides, poetry, and more through trusted digital libraries. Read online or explore the download options offered by each collection.</p>
+        <form class="book-search" action="https://www.gutenberg.org/ebooks/search/" method="get" target="_blank" role="search">
+            <label class="sr-only-reading" for="book-query" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Search Project Gutenberg books</label>
+            <input id="book-query" name="query" type="search" placeholder="Search a title, author, or topic" required>
+            <button type="submit">Find free books ↗</button>
+        </form>
+        <p class="search-caption">Your search opens Project Gutenberg in a new tab.</p>
+        <hr class="reading-rule">
+        <h3 class="reading-subtitle">Explore the collections</h3>
+        <div class="library-grid">
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">✦</span>
+                <h3>Project Gutenberg</h3>
+                <p>Search and read classic books in many languages, with free ebook formats and online reading.</p>
+                <a href="https://www.gutenberg.org/ebooks/" target="_blank" rel="noopener noreferrer">Browse Gutenberg ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">✳</span>
+                <h3>Standard Ebooks</h3>
+                <p>Beautifully prepared editions of literary works believed to be in the U.S. public domain.</p>
+                <a href="https://standardebooks.org/ebooks" target="_blank" rel="noopener noreferrer">Browse Standard Ebooks ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">⌂</span>
+                <h3>Library of Congress</h3>
+                <p>Browse the Library’s Selected Digitized Books, with books available to read online and download.</p>
+                <a href="https://www.loc.gov/collections/selected-digitized-books/" target="_blank" rel="noopener noreferrer">Explore digitized books ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">◈</span>
+                <h3>HathiTrust</h3>
+                <p>Search a vast research library. Look for “Full View” books to read online.</p>
+                <a href="https://www.hathitrust.org/the-collection/search-access/" target="_blank" rel="noopener noreferrer">Search HathiTrust ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">✧</span>
+                <h3>Google Books</h3>
+                <p>Search historical books and select “Full view only” to find books you can read in full.</p>
+                <a href="https://books.google.com/advanced_book_search" target="_blank" rel="noopener noreferrer">Search Google Books ↗</a>
+            </article>
+            <article class="library-card">
+                <span class="library-symbol" aria-hidden="true">❖</span>
+                <h3>Internet Archive</h3>
+                <p>Browse scanned books and texts from libraries worldwide. Check each item’s access and rights details.</p>
+                <a href="https://archive.org/details/texts" target="_blank" rel="noopener noreferrer">Explore the texts archive ↗</a>
+            </article>
+        </div>
+        <p class="rights-note"><strong>A note for readers:</strong> Free to read does not always mean public domain. Some collections also include copyrighted books available to borrow or preview. Check the rights statement on an individual book before reusing it; public domain status can differ by country.</p>
+    </div>
+</section>
+
 <section class="topics">
 
     <h2>Topics We'll Be Exploring</h2>
@@ -472,4 +572,3 @@
 
 </body>
 </html>
-
