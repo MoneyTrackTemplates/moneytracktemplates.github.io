@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZP3T0LXM1C');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5959578710115297"
+    crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Money & Banking | MoneyTrackTemplates</title>
+
+  <meta
+    name="description"
+    content="Learn the basics of banking, saving, credit, debt, loans, investing, cryptocurrency, financial terminology, and financial research with MoneyTrackTemplates."
+  >
+
+  <style>
+    :root {
+      --blue: #3278b8;
+      --dark-blue: #174a75;
+      --deeper-blue: #103a5e;
+      --light-blue: #eaf4fc;
+      --pale-blue: #f5faff;
+      --ivory: #fbf8f1;
+      --white: #ffffff;
+      --text: #174a75;
+      --muted: #5e7181;
+      --border: #c9dceb;
+      --gold: #d9a441;
+      --soft-gold: #fff7df;
+      --green: #4e7b5b;
+      --soft-green: #eef7ef;
+      --shadow: 0 8px 24px rgba(23, 74, 117, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 18px 20px 16px;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2.15rem;
+      line-height: 1.15;
+      letter-spacing: 0.2px;
+    }
+
+    .site-header p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+    }
+
+    /* NAVIGATION */
+
+    .main-nav {
+      background: var(--dark-blue);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 14px;
+    }
+
+    .main-nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.91rem;
+      padding: 14px 13px;
+      display: block;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      background: rgba(255,255,255,0.10);
+    }
+
+    .main-nav a.active {
+      background: rgba(255,255,255,0.14);
+    }
+
+    /* SHARE */
+
+    .share-page-bar {
+      text-align: center;
+      padding: 10px 20px;
+      background: #f5f0e7;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .share-page-button {
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 19px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(23, 74, 117, 0.15);
+    }
+
+    .share-page-button:hover {
+      background: var(--dark-blue);
+    }
+
+    .share-status {
+      display: block;
+      min-height: 20px;
+      margin-top: 4px;
+      font-size: 0.82rem;
+      color: var(--green);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 62px 20px 52px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234,244,252,0.75),
+          rgba(251,248,241,0.96)
+        );
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      margin: 0 auto 16px;
+      max-width: 850px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.08;
+      color: var(--dark-blue);
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      color: #365d79;
+    }
+
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-weight: 700;
+      border: 1px solid var(--blue);
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .button-secondary {
+      background: var(--white);
+      color: var(--dark-blue);
+    }
+
+    /* MAIN SECTIONS */
+
+    .section {
+      padding: 58px 20px;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-blue {
+      background: var(--pale-blue);
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 36px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: var(--dark-blue);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* INTRO NOTE */
+
+    .welcome-box {
+      max-width: 920px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--blue);
+      border-radius: 12px;
+      padding: 24px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .welcome-box h3 {
+      margin-top: 0;
+      color: var(--dark-blue);
+    }
+
+    .welcome-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CARDS */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .finance-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .finance-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(23, 74, 117, 0.14);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .finance-card h3 {
+      margin: 0 0 8px;
+      color: var(--dark-blue);
+      font-size: 1.22rem;
+    }
+
+    .finance-card p {
+      margin: 0 0 18px;
+      color: #526b7d;
+      font-size: 0.95rem;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      background: var(--light-blue);
+      color: var(--dark-blue);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    /* CRYPTO FEATURE */
+
+    .crypto-feature {
+      max-width: 1050px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .crypto-main,
+    .crypto-safety {
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .crypto-main {
+      background: var(--deeper-blue);
+      color: var(--white);
+    }
+
+    .crypto-main h2,
+    .crypto-main h3 {
+      color: var(--white);
+      margin-top: 0;
+    }
+
+    .crypto-main p {
+      color: #e6f1f8;
+    }
+
+    .crypto-safety {
+      background: var(--soft-gold);
+      border: 1px solid #ead39a;
+      color: #5a4921;
+    }
+
+    .crypto-safety h3 {
+      margin-top: 0;
+      color: #6c531c;
+    }
+
+    .crypto-list {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .crypto-list li {
+      margin-bottom: 7px;
+    }
+
+    /* DATA AREA */
+
+    .data-panel {
+      max-width: 1050px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .data-panel-header {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 20px 24px;
+    }
+
+    .data-panel-header h2 {
+      margin: 0 0 4px;
+    }
+
+    .data-panel-header p {
+      margin: 0;
+      color: #dceaf4;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .data-box {
+      padding: 24px;
+      border-right: 1px solid var(--border);
+      min-height: 180px;
+    }
+
+    .data-box:last-child {
+      border-right: none;
+    }
+
+    .data-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--blue);
+    }
+
+    .data-box h3 {
+      margin: 7px 0;
+      color: var(--dark-blue);
+    }
+
+    .data-placeholder {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .data-date {
+      margin-top: 14px;
+      font-size: 0.78rem;
+      color: #71818d;
+    }
+
+    /* RESEARCH DESK */
+
+    .research-desk {
+      max-width: 1000px;
+      margin: 0 auto;
+      background:
+        linear-gradient(135deg, var(--dark-blue), #286fa7);
+      color: var(--white);
+      border-radius: 18px;
+      padding: 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .research-desk h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .research-desk p {
+      color: #e9f4fb;
+    }
+
+    .research-examples {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .example-question {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 13px 15px;
+      border-radius: 9px;
+      font-size: 0.92rem;
+    }
+
+    .research-badge {
+      display: inline-block;
+      background: var(--white);
+      color: var(--dark-blue);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    /* SOURCE PRINCIPLES */
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .source-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .source-card strong {
+      display: block;
+      color: var(--dark-blue);
+      margin-bottom: 6px;
+    }
+
+    .source-card span {
+      font-size: 0.87rem;
+      color: var(--muted);
+    }
+
+    /* DISCLAIMER */
+
+    .education-note {
+      max-width: 950px;
+      margin: 0 auto;
+      background: var(--soft-green);
+      border: 1px solid #bed8c3;
+      border-radius: 12px;
+      padding: 24px;
+      color: #31573a;
+    }
+
+    .education-note h3 {
+      margin-top: 0;
+      color: #31573a;
+    }
+
+    .education-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 34px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    footer a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin: 14px 0;
+    }
+
+    .footer-links a {
+      margin: 0 8px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .crypto-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .source-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .data-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .data-box {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .data-box:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .site-header h1 {
+        font-size: 1.7rem;
+      }
+
+      .main-nav a {
+        padding: 10px 8px;
+        font-size: 0.79rem;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .card-grid,
+      .source-grid,
+      .research-examples {
+        grid-template-columns: 1fr;
+      }
+
+      .research-desk {
+        padding: 27px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>MoneyTrackTemplates</h1>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="money-templates.html">Money Templates</a>
+      <a href="planners.html">Planners</a>
+      <a href="holiday-planners.html">Holiday Planners</a>
+      <a href="free-downloads.html">Free Downloads</a>
+      <a href="money-banking.html" class="active">Money &amp; Banking</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
+    </div>
+  </nav>
+
+  <!-- SHARE BUTTON -->
+  <section class="share-page-bar" aria-label="Share this page">
+    <button
+      class="share-page-button"
+      id="share-page-button"
+      type="button"
+    >
+      ↗ Share This Page
+    </button>
+
+    <span
+      class="share-status"
+      id="share-status"
+      aria-live="polite"
+    ></span>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <p class="eyebrow">MoneyTrack Financial Learning Center</p>
+
+      <h2>Money &amp; Banking</h2>
+
+      <p class="hero-text">
+        Understand your money. Understand your bank.
+        Learn the language of finance and make more informed
+        financial decisions — one subject at a time.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#financial-library" class="button button-primary">
+          Explore Financial Topics
+        </a>
+
+        <a href="#research-desk" class="button button-secondary">
+          Financial Research Desk
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WELCOME -->
+  <section class="section">
+    <div class="section-inner">
+
+      <div class="welcome-box">
+        <h3>Welcome. You do not need to be a financial expert.</h3>
+
+        <p>
+          Money and banking can seem complicated because the financial
+          world has its own vocabulary. APR, APY, principal, yield,
+          utilization, securities, blockchain — sometimes the hardest
+          part is simply understanding what everyone is talking about.
+        </p>
+
+        <p>
+          This section of MoneyTrackTemplates is being built as a
+          plain-English financial learning and research center. Start
+          with the basics, explore a subject, check the terminology,
+          and follow the original sources when you want to learn more.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINANCIAL LIBRARY -->
+  <section class="section section-white" id="financial-library">
+    <div class="section-inner">
+
+      <div class="section-heading">
+        <p class="eyebrow">Explore the Library</p>
+        <h2>Financial Departments</h2>
+        <p>
+          Each department will grow into its own collection of
+          explanations, tools, calculators, examples and reliable
+          reference material.
+        </p>
+      </div>
+
+      <div class="card-grid">
+
+        <!-- BANKING -->
+        <article class="finance-card">
+          <div class="card-icon">🏦</div>
+          <h3>Banking Basics</h3>
+          <p>
+            Learn how banks and credit unions work, how deposits move
+            through the banking system, what deposit insurance means,
+            and how to compare financial institutions.
+          </p>
+          <span class="coming-soon">Building This Section</span>
+        </article>
+
+        <!-- CHECKING AND SAVINGS -->
+        <article class="finance-card">
+          <div class="card-icon">💵</div>
+          <h3>Checking &amp; Savings</h3>
+          <p>
+            Understand checking accounts, savings accounts, CDs,
+            money market accounts, APY, minimum balances, fees and
+            common banking terminology.
+          </p>
+          <span class="coming-soon">Building This Section</span>
+        </article>
+
+        <!-- CREDIT -->
+        <article class="finance-card">
+          <div class="card-icon">💳</div>
+          <h3>Credit &amp; Debt</h3>
+          <p>
+            Explore credit reports, credit scores, credit cards,
+            interest, APR, balances, utilization and practical
+            approaches to understanding debt.
+          </p>
+          <span class="coming-soon">Building This Section</span>
+        </article>
+
+        <!-- LOANS -->
+        <article class="finance-card">
+          <div class="card-icon">🏠</div>
+          <h3>Loans &amp; Borrowing</h3>
+          <p>
+            Learn the vocabulary behind mortgages, auto loans,
+            personal loans, student loans, principal, interest,
+            amortization and borrowing costs.
+          </p>
+          <span class="coming-soon">Building This Section</span>
+        </article>
+
+        <!-- SAVING INVESTING -->
+        <article class="finance-card">
+          <div class="card-icon">📈</div>
+          <h3>Saving &amp; Investing</h3>
+          <p>
+            Start with compound interest and move into stocks,
+            bonds, Treasury securities, funds, retirement accounts,
+            diversification and investment terminology.
+          </p>
+          <span class="coming-soon">Building This Section</span>
+        </article>
+
+        <!-- CRYPTO -->
+        <article class="finance-card">
+          <div class="card-icon">₿</div>
+          <h3>Cryptocurrency &amp; Digital Assets</h3>
+          <p>
+            New to crypto? Start here. Learn what cryptocurrency is,
+            how blockchain works, what wallets and exchanges do,
+            and what risks newcomers should understand.
+          </p>
+          <span class="coming-soon">Crypto Learning Center</span>
+        </article>
+
+        <!-- CALCULATORS -->
+        <article class="finance-card">
+          <div class="card-icon">🧮</div>
+          <h3>Financial Calculators</h3>
+          <p>
+            A growing collection of interactive calculators for
+            savings, interest, debt, loans and other everyday
+            financial questions.
+          </p>
+          <span class="coming-soon">Tools Coming Soon</span>
+        </article>
+
+        <!-- GLOSSARY -->
+        <article class="finance-card">
+          <div class="card-icon">📖</div>
+          <h3>Financial Glossary</h3>
+          <p>
+            Look up financial words and abbreviations without
+            wading through pages of technical language.
+          </p>
+          <span class="coming-soon">Glossary Coming Soon</span>
+        </article>
+
+        <!-- GOVERNMENT -->
+        <article class="finance-card">
+          <div class="card-icon">🏛️</div>
+          <h3>Financial Resources</h3>
+          <p>
+            Find authoritative financial agencies, public databases,
+            consumer resources, educational materials and original
+            government information.
+          </p>
+          <span class="coming-soon">Resource Library</span>
+        </article>
+
+        <!-- STUDENTS -->
+        <article class="finance-card">
+          <div class="card-icon">🎓</div>
+          <h3>Money for Students</h3>
+          <p>
+            Learn about first bank accounts, first paychecks,
+            budgeting, saving, credit, student borrowing and the
+            financial vocabulary young adults encounter.
+          </p>
+          <span class="coming-soon">Student Finance</span>
+        </article>
+
+        <!-- RESEARCH -->
+        <article class="finance-card">
+          <div class="card-icon">🔎</div>
+          <h3>Financial Research Desk</h3>
+          <p>
+            Our planned research assistant will help visitors
+            investigate financial subjects and trace information
+            back to reliable original sources.
+          </p>
+          <span class="coming-soon">In Development</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CRYPTO BEGINNER FEATURE -->
+  <section class="section section-blue" id="crypto">
+    <div class="section-inner">
+
+      <div class="section-heading">
+        <p class="eyebrow">Newcomer's Corner</p>
+        <h2>Cryptocurrency Without the Confusion</h2>
+        <p>
+          Cryptocurrency should not require a secret decoder ring.
+          We'll begin with the fundamentals before discussing anything
+          more complicated.
+        </p>
+      </div>
+
+      <div class="crypto-feature">
+
+        <div class="crypto-main">
+          <h2>₿ Crypto: Start at the Beginning</h2>
+
+          <p>
+            What exactly is cryptocurrency? What is a blockchain?
+            Why does Bitcoin exist? What does a crypto wallet actually
+            do? What is an exchange? And why does everyone keep talking
+            about private keys?
+          </p>
+
+          <p>
+            The MoneyTrack crypto section will answer those questions
+            in plain English before moving into more advanced subjects.
+          </p>
+
+          <h3>Topics we'll cover:</h3>
+
+          <ul class="crypto-list">
+            <li>Cryptocurrency basics</li>
+            <li>Blockchain explained simply</li>
+            <li>Bitcoin and other digital assets</li>
+            <li>Crypto wallets</li>
+            <li>Private keys and seed phrases</li>
+            <li>Cryptocurrency exchanges</li>
+            <li>Buying, selling and transferring</li>
+            <li>Transaction and network fees</li>
+            <li>Stablecoins</li>
+            <li>Mining and staking</li>
+            <li>Taxes and record keeping</li>
+            <li>Volatility and financial risk</li>
+          </ul>
+        </div>
+
+        <div class="crypto-safety">
+          <h3>🛡️ Crypto Safety School</h3>
+
+          <p>
+            Before discussing potential opportunities, newcomers
+            should understand the risks.
+          </p>
+
+          <ul class="crypto-list">
+            <li>
+              Learn the difference between traditional bank deposits
+              and crypto assets.
+            </li>
+
+            <li>
+              Understand what private keys and recovery phrases do.
+            </li>
+
+            <li>
+              Learn why sending crypto can be very different from
+              making an ordinary card payment.
+            </li>
+
+            <li>
+              Recognize promises of guaranteed profits as a warning sign.
+            </li>
+
+            <li>
+              Learn how impersonation, investment and romance scams
+              can involve cryptocurrency.
+            </li>
+
+            <li>
+              Understand volatility before risking money.
+            </li>
+
+            <li>
+              Verify information before acting on social-media
+              promotions or unsolicited messages.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Our rule:</strong><br>
+            Understand it before you put money into it.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE LIVE DATA -->
+  <section class="section section-white" id="current-data">
+    <div class="section-inner">
+
+      <div class="section-heading">
+        <p class="eyebrow">Current Financial Data</p>
+        <h2>A Home for Changing Numbers</h2>
+        <p>
+          Rates and financial data change. This area is being designed
+          so current figures can eventually be retrieved from reliable
+          sources rather than permanently typed into the page.
+        </p>
+      </div>
+
+      <div class="data-panel">
+
+        <div class="data-panel-header">
+          <h2>MoneyTrack Current Data Board</h2>
+          <p>
+            Future live-data connections will appear here.
+          </p>
+        </div>
+
+        <div class="data-grid">
+
+          <div class="data-box">
+            <span class="data-label">Interest Rates</span>
+            <h3>Federal &amp; Banking Data</h3>
+
+            <p class="data-placeholder">
+              Current rate information will be connected to an
+              authoritative data source.
+            </p>
+
+            <p class="data-date">
+              Status: Live connection not yet activated.
+            </p>
+          </div>
+
+          <div class="data-box">
+            <span class="data-label">Treasury</span>
+            <h3>Treasury Data</h3>
+
+            <p class="data-placeholder">
+              Current Treasury information will appear here with
+              the source and observation date clearly identified.
+            </p>
+
+            <p class="data-date">
+              Status: Live connection not yet activated.
+            </p>
+          </div>
+
+          <div class="data-box">
+            <span class="data-label">Digital Assets</span>
+            <h3>Crypto Market Reference</h3>
+
+            <p class="data-placeholder">
+              If market data is added, the page will identify its
+              source, timestamp and educational purpose.
+            </p>
+
+            <p class="data-date">
+              Status: Live connection not yet activated.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESEARCH DESK -->
+  <section class="section section-blue" id="research-desk">
+    <div class="section-inner">
+
+      <div class="research-desk">
+
+        <span class="research-badge">
+          Planned Feature
+        </span>
+
+        <h2>🔎 MoneyTrack Financial Research Desk</h2>
+
+        <p>
+          Eventually, visitors will be able to ask financial questions
+          in ordinary language and use the Research Desk to investigate
+          the subject.
+        </p>
+
+        <p>
+          The goal is not to tell someone what financial decision to
+          make. The goal is to help the visitor understand the subject,
+          examine relevant information, and see where that information
+          came from.
+        </p>
+
+        <div class="research-examples">
+
+          <div class="example-question">
+            “What is the difference between APR and APY?”
+          </div>
+
+          <div class="example-question">
+            “How does a certificate of deposit work?”
+          </div>
+
+          <div class="example-question">
+            “What happens when the Federal Reserve changes rates?”
+          </div>
+
+          <div class="example-question">
+            “Explain a crypto wallet to someone who has never used one.”
+          </div>
+
+          <div class="example-question">
+            “What is compound interest?”
+          </div>
+
+          <div class="example-question">
+            “Where can I find official information about my credit report?”
+          </div>
+
+        </div>
+
+        <p>
+          <strong>
+            Research first. Understand the evidence. Then make your own decision.
+          </strong>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="section section-white">
+    <div class="section-inner">
+
+      <div class="section-heading">
+        <p class="eyebrow">How We'll Build It</p>
+        <h2>Sources Matter</h2>
+        <p>
+          Financial information is most useful when visitors can tell
+          where it came from and how current it is.
+        </p>
+      </div>
+
+      <div class="source-grid">
+
+        <div class="source-card">
+          <strong>Original Sources</strong>
+          <span>
+            Whenever practical, we'll trace information back to the
+            agency, regulator or original publisher.
+          </span>
+        </div>
+
+        <div class="source-card">
+          <strong>Publication Dates</strong>
+          <span>
+            Changing financial information should include a date or
+            observation period when available.
+          </span>
+        </div>
+
+        <div class="source-card">
+          <strong>Plain English</strong>
+          <span>
+            Technical terminology will be explained rather than
+            assumed.
+          </span>
+        </div>
+
+        <div class="source-card">
+          <strong>Evidence vs. Interpretation</strong>
+          <span>
+            Facts, estimates, opinions and interpretations should not
+            be presented as though they are the same thing.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATIONAL NOTE -->
+  <section class="section">
+    <div class="section-inner">
+
+      <div class="education-note">
+
+        <h3>Educational Purpose</h3>
+
+        <p>
+          MoneyTrackTemplates provides educational and organizational
+          information. Financial products, laws, tax rules, rates,
+          regulations and market conditions can change.
+        </p>
+
+        <p>
+          Information on this site should not be treated as individualized
+          financial, investment, tax or legal advice. When a decision
+          depends on current rules or personal circumstances, verify the
+          information with the appropriate official source or qualified
+          professional.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>MoneyTrackTemplates</strong>
+    </p>
+
+    <p>
+      Plan Better. Track Smarter. Live More Organized.
+    </p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="free-downloads.html">Free Downloads</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <a
+        href="https://www.pinterest.com/MoneyTrackTemplates/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pinterest
+      </a>
+
+      <a
+        href="https://x.com/tracktemplates"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        X
+      </a>
+    </div>
+
+    <p>
+      &copy; 2026 MoneyTrackTemplates. All rights reserved.
+    </p>
+
+  </footer>
+
+  <!-- SHARE SCRIPT -->
+  <script>
+    const shareButton = document.getElementById('share-page-button');
+    const shareStatus = document.getElementById('share-status');
+
+    shareButton.addEventListener('click', async function () {
+
+      const shareData = {
+        title: document.title,
+        text: 'Explore Money & Banking at MoneyTrackTemplates.',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          shareStatus.textContent = '';
+        } catch (error) {
+          shareStatus.textContent = '';
+        }
+      } else {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          shareStatus.textContent =
+            'Page link copied! You can now share it anywhere.';
+        } catch (error) {
+          shareStatus.textContent =
+            'Copy the page address from your browser to share this page.';
+        }
+      }
+
+    });
+  </script>
+
+</body>
+</html>
