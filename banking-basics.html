@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZP3T0LXM1C');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5959578710115297"
+    crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Banking Basics: How the U.S. Banking System Works | MoneyTrackTemplates</title>
+
+  <meta name="description"
+        content="A beginner-friendly guide to the U.S. banking system, deposit insurance, bank regulation, credit unions, banking law, original documents, and primary sources.">
+
+  <style>
+    :root {
+      --blue: #3278b8;
+      --dark-blue: #174a75;
+      --deep-blue: #103a5e;
+      --light-blue: #eaf4fc;
+      --pale-blue: #f5faff;
+      --ivory: #fbf8f1;
+      --white: #ffffff;
+      --text: #174a75;
+      --body-text: #334f63;
+      --muted: #667985;
+      --border: #c9dceb;
+      --gold: #d5a13d;
+      --soft-gold: #fff7df;
+      --green: #3f7350;
+      --soft-green: #eef7ef;
+      --paper: #f4ead2;
+      --paper-dark: #745a2c;
+      --shadow: 0 8px 24px rgba(23,74,117,0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--ivory);
+      color: var(--body-text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--dark-blue);
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 18px 20px 16px;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2.15rem;
+      line-height: 1.15;
+    }
+
+    .site-header p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+    }
+
+    /* NAVIGATION */
+
+    .main-nav {
+      background: var(--dark-blue);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 12px;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 12px;
+    }
+
+    .main-nav a:hover {
+      background: rgba(255,255,255,0.10);
+    }
+
+    .main-nav a.active {
+      background: rgba(255,255,255,0.14);
+    }
+
+    /* SHARE */
+
+    .share-page-bar {
+      text-align: center;
+      padding: 10px 20px;
+      background: #f5f0e7;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .share-page-button {
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 19px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(23,74,117,0.15);
+    }
+
+    .share-page-button:hover {
+      background: var(--dark-blue);
+    }
+
+    .share-status {
+      display: block;
+      min-height: 20px;
+      margin-top: 4px;
+      font-size: 0.82rem;
+      color: var(--green);
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234,244,252,0.90),
+          rgba(251,248,241,0.97)
+        );
+      border-bottom: 1px solid var(--border);
+      padding: 62px 20px 54px;
+    }
+
+    .hero-inner {
+      max-width: 950px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    .hero h2 {
+      color: var(--dark-blue);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
+
+    .hero-text {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+    }
+
+    .article-meta {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ARTICLE */
+
+    .article {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 54px 22px;
+    }
+
+    .article h2 {
+      color: var(--dark-blue);
+      font-size: 1.9rem;
+      margin-top: 52px;
+      line-height: 1.25;
+    }
+
+    .article h3 {
+      color: var(--dark-blue);
+      margin-top: 30px;
+    }
+
+    .article p {
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: #294f69;
+    }
+
+    /* BEGINNER BOX */
+
+    .plain-english {
+      background: var(--light-blue);
+      border-left: 6px solid var(--blue);
+      border-radius: 10px;
+      padding: 22px 25px;
+      margin: 30px 0;
+    }
+
+    .plain-english strong {
+      color: var(--dark-blue);
+    }
+
+    /* SOURCE NOTE */
+
+    .source-note {
+      background: #f7fafc;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 14px 17px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    .source-note strong {
+      color: var(--dark-blue);
+    }
+
+    /* REGULATOR GRID */
+
+    .regulator-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+      margin: 26px 0;
+    }
+
+    .regulator-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .regulator-card h3 {
+      margin: 0 0 8px;
+    }
+
+    .regulator-card p {
+      margin-bottom: 12px;
+      font-size: 0.94rem;
+    }
+
+    /* BUTTONS */
+
+    .source-button,
+    .archive-button {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 7px;
+      padding: 9px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin: 4px 4px 4px 0;
+    }
+
+    .source-button {
+      background: var(--blue);
+      color: white;
+    }
+
+    .source-button:hover {
+      background: var(--dark-blue);
+    }
+
+    .archive-button {
+      background: var(--paper-dark);
+      color: white;
+    }
+
+    /* INSURANCE */
+
+    .insurance-box {
+      background: var(--soft-green);
+      border: 1px solid #bcd8c4;
+      border-radius: 14px;
+      padding: 25px;
+      margin: 28px 0;
+    }
+
+    .insurance-box h3 {
+      margin-top: 0;
+      color: #315b3d;
+    }
+
+    /* LAW TRAIL */
+
+    .law-trail {
+      background: var(--pale-blue);
+      border-top: 5px solid var(--dark-blue);
+      padding: 34px;
+      border-radius: 14px;
+      margin: 45px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .law-trail h2 {
+      margin-top: 0;
+    }
+
+    .trail-step {
+      border-left: 3px solid var(--blue);
+      padding: 3px 0 20px 20px;
+      margin-left: 7px;
+    }
+
+    .trail-step:last-child {
+      padding-bottom: 0;
+    }
+
+    .trail-step strong {
+      display: block;
+      color: var(--dark-blue);
+      font-size: 1.02rem;
+    }
+
+    /* ARCHIVE */
+
+    .archive {
+      background: var(--paper);
+      border: 1px solid #dbc89e;
+      border-radius: 16px;
+      padding: 32px;
+      margin: 45px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .archive-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--paper-dark);
+    }
+
+    .archive h2 {
+      color: #59451f;
+      margin: 5px 0 14px;
+    }
+
+    .archive h3 {
+      color: #59451f;
+    }
+
+    .document-card {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid #d6c092;
+      border-radius: 10px;
+      padding: 22px;
+      margin-top: 22px;
+    }
+
+    .document-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ORIGINAL SOURCES */
+
+    .sources-section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 45px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .sources-section h2 {
+      margin-top: 0;
+    }
+
+    .source-item {
+      border-bottom: 1px solid #e2ebf1;
+      padding: 18px 0;
+    }
+
+    .source-item:last-child {
+      border-bottom: none;
+    }
+
+    .source-item h3 {
+      margin: 0 0 6px;
+    }
+
+    .source-item p {
+      font-size: 0.92rem;
+      margin-bottom: 9px;
+    }
+
+    /* CITATION */
+
+    .citation-box {
+      background: var(--soft-gold);
+      border: 1px solid #e4cf93;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 45px 0;
+    }
+
+    .citation-box h2 {
+      color: #66501c;
+      margin-top: 0;
+    }
+
+    .citation-example {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 12px 0;
+      font-size: 0.91rem;
+      overflow-wrap: anywhere;
+    }
+
+    /* AUTHOR */
+
+    .author-box {
+      background: var(--deep-blue);
+      color: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 45px 0 20px;
+    }
+
+    .author-box h2 {
+      color: white;
+      margin-top: 0;
+    }
+
+    .author-box p {
+      color: #e8f2f8;
+    }
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 8px 18px;
+      margin-top: 20px;
+    }
+
+    .author-grid strong {
+      color: white;
+    }
+
+    /* EDUCATION */
+
+    .education-note {
+      background: var(--soft-green);
+      border: 1px solid #bed8c3;
+      border-radius: 12px;
+      padding: 23px;
+      margin-top: 35px;
+      color: #31573a;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark-blue);
+      color: white;
+      text-align: center;
+      padding: 34px 20px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    .footer-links {
+      margin: 14px 0;
+    }
+
+    .footer-links a {
+      margin: 0 8px;
+    }
+
+    @media (max-width: 750px) {
+      .regulator-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .author-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-nav a {
+        font-size: 0.78rem;
+        padding: 10px 7px;
+      }
+
+      .law-trail,
+      .archive,
+      .sources-section,
+      .citation-box {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>MoneyTrackTemplates</h1>
+  <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav class="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="money-templates.html">Money Templates</a>
+    <a href="planners.html">Planners</a>
+    <a href="holiday-planners.html">Holiday Planners</a>
+    <a href="free-downloads.html">Free Downloads</a>
+    <a href="money-banking.html" class="active">Money &amp; Banking</a>
+    <a href="resources.html">Resources</a>
+    <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
+  </div>
+</nav>
+
+<section class="share-page-bar" aria-label="Share this page">
+  <button class="share-page-button" id="share-page-button" type="button">
+    ↗ Share This Page
+  </button>
+
+  <span class="share-status" id="share-status" aria-live="polite"></span>
+</section>
+
+<section class="hero">
+  <div class="hero-inner">
+
+    <p class="eyebrow">MoneyTrack Banking Basics</p>
+
+    <h2>How the U.S. Banking System Actually Works</h2>
+
+    <p class="hero-text">
+      Banks, credit unions, regulators, deposit insurance and banking law
+      explained for the person who was never handed an instruction manual.
+    </p>
+
+    <p class="article-meta">
+      Research &amp; drafting: OpenAI's ChatGPT<br>
+      Editing &amp; publication: MoneyTrackTemplates<br>
+      Research reviewed: September 24, 2026
+    </p>
+
+  </div>
+</section>
+
+<main class="article">
+
+  <p class="lead">
+    Most of us learn how to use a bank account long before anyone explains
+    what a bank actually is. We deposit a paycheck, use a debit card, pay
+    bills and perhaps borrow money — but what is happening behind the scenes?
+  </p>
+
+  <p>
+    This guide starts at the beginning. It also shows you something many
+    financial explanations leave out: where important banking rules came
+    from and where you can examine the original government documents yourself.
+  </p>
+
+  <div class="plain-english">
+    <strong>Plain English:</strong>
+    A bank is a financial institution that can accept deposits and provide
+    financial services such as loans and payment services. Banks do not
+    simply place everyone's deposited money into separate boxes in a vault.
+    Deposits become part of the institution's funding, while customers retain
+    claims on their account balances under the terms of their accounts and
+    applicable law.
+  </div>
+
+
+  <h2>1. What Happens When You Deposit Money?</h2>
+
+  <p>
+    Suppose you deposit $100 into a checking account. Your bank records that
+    it owes you $100 according to the terms of your account. From the bank's
+    perspective, your deposit is a liability because the bank has an
+    obligation to you.
+  </p>
+
+  <p>
+    Banks also hold assets. These can include loans, securities, reserves
+    and other financial assets. Banks use deposits and other funding sources
+    to support lending and other activities.
+  </p>
+
+  <p>
+    That is why modern banking is more complicated than a giant vault filled
+    with individually labeled piles of cash.
+  </p>
+
+  <div class="source-note">
+    <strong>Why this matters:</strong>
+    Understanding the difference between a bank's assets and liabilities
+    makes subjects such as bank runs, liquidity, capital and bank failures
+    much easier to understand later.
+  </div>
+
+
+  <h2>2. Banks and Credit Unions Are Not Exactly the Same</h2>
+
+  <p>
+    Banks and credit unions can offer many similar consumer services, such
+    as checking accounts, savings accounts and loans. But they are organized
+    differently and may operate under different charters and regulatory
+    structures.
+  </p>
+
+  <p>
+    One especially important distinction concerns federal deposit or share
+    insurance. Eligible deposits at FDIC-insured banks are protected through
+    the Federal Deposit Insurance Corporation. Federally insured credit unions
+    use the National Credit Union Share Insurance Fund, administered by the
+    National Credit Union Administration.
+  </p>
+
+  <div class="insurance-box">
+    <h3>🛡️ Deposit Insurance: A Beginner's Rule</h3>
+
+    <p>
+      Never assume that every financial product sold by a bank, credit union,
+      brokerage, app or financial company is federally insured merely because
+      the company handles money.
+    </p>
+
+    <p>
+      Insurance depends on the institution, account ownership category and
+      type of financial product.
+    </p>
+
+    <p>
+      When in doubt, verify the institution and coverage with the appropriate
+      federal agency.
+    </p>
+
+    <a class="source-button"
+       href="https://www.fdic.gov/resources/deposit-insurance/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Verify Bank Deposit Insurance at FDIC →
+    </a>
+
+    <a class="source-button"
+       href="https://ncua.gov/consumers/share-insurance-coverage"
+       target="_blank"
+       rel="noopener noreferrer">
+       Verify Credit Union Share Insurance at NCUA →
+    </a>
+  </div>
+
+
+  <h2>3. Who Regulates a Bank?</h2>
+
+  <p>
+    There is no single answer for every bank in the United States.
+    Regulation depends partly on how an institution is chartered and
+    whether it is a member of the Federal Reserve System.
+  </p>
+
+  <p>
+    At the federal level, bank supervision is divided principally among
+    the Federal Reserve, Office of the Comptroller of the Currency and
+    Federal Deposit Insurance Corporation. State banking authorities also
+    supervise certain state-chartered institutions.
+  </p>
+
+  <div class="regulator-grid">
+
+    <div class="regulator-card">
+      <h3>🏛️ OCC</h3>
+      <p>
+        The Office of the Comptroller of the Currency charters, regulates
+        and supervises national banks and federal savings associations,
+        as well as federal branches and agencies of foreign banks.
+      </p>
+
+      <a class="source-button"
+         href="https://www.occ.treas.gov/about/index-about.html"
+         target="_blank"
+         rel="noopener noreferrer">
+         Verify at OCC →
+      </a>
+    </div>
+
+    <div class="regulator-card">
+      <h3>🏦 Federal Reserve</h3>
+      <p>
+        The Federal Reserve has supervisory responsibilities for particular
+        banking organizations, including state-chartered banks that are
+        members of the Federal Reserve System and certain other institutions.
+      </p>
+
+      <a class="source-button"
+         href="https://www.federalreserve.gov/supervisionreg/understanding-federal-reserve-supervision.htm"
+         target="_blank"
+         rel="noopener noreferrer">
+         Verify at Federal Reserve →
+      </a>
+    </div>
+
+    <div class="regulator-card">
+      <h3>🛡️ FDIC</h3>
+      <p>
+        In addition to administering federal deposit insurance, the FDIC
+        supervises state-chartered banks that are not members of the
+        Federal Reserve System and certain savings institutions.
+      </p>
+
+      <a class="source-button"
+         href="https://www.fdic.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit FDIC →
+      </a>
+    </div>
+
+    <div class="regulator-card">
+      <h3>🤝 NCUA</h3>
+      <p>
+        The National Credit Union Administration charters and supervises
+        federal credit unions and administers the federal Share Insurance
+        Fund for federally insured credit unions.
+      </p>
+
+      <a class="source-button"
+         href="https://ncua.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit NCUA →
+      </a>
+    </div>
+
+    <div class="regulator-card">
+      <h3>👥 CFPB</h3>
+      <p>
+        The Consumer Financial Protection Bureau implements and enforces
+        federal consumer financial law. Consumer-financial enforcement
+        responsibilities can also involve other federal and state regulators.
+      </p>
+
+      <a class="source-button"
+         href="https://www.consumerfinance.gov/about-us/the-bureau/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Verify at CFPB →
+      </a>
+    </div>
+
+    <div class="regulator-card">
+      <h3>🗺️ State Regulators</h3>
+      <p>
+        State-chartered banks can also be supervised by the banking
+        regulator in the state where they are chartered.
+      </p>
+
+      <p>
+        This is one reason two banks offering similar accounts may not
+        have exactly the same supervisory structure.
+      </p>
+    </div>
+
+  </div>
+
+
+  <h2>4. What Does Deposit Insurance Actually Mean?</h2>
+
+  <p>
+    Federal deposit insurance was designed to protect eligible deposits
+    when an insured depository institution fails.
+  </p>
+
+  <p>
+    Coverage is not simply "$250,000 for everything a person owns."
+    The standard FDIC insurance amount is $250,000 per depositor,
+    per insured bank, for each account ownership category. Different
+    ownership arrangements can affect how coverage is calculated.
+  </p>
+
+  <p>
+    Likewise, the NCUA's Share Insurance Fund provides federal insurance
+    for qualifying accounts at federally insured credit unions under its
+    own coverage rules.
+  </p>
+
+  <div class="plain-english">
+    <strong>Very important:</strong>
+    Stocks, bonds, mutual funds and crypto assets are not FDIC-insured
+    deposits merely because they may be purchased through or associated
+    with a banking organization.
+  </div>
+
+
+  <h2>5. What Happens If a Bank Fails?</h2>
+
+  <p>
+    A bank failure does not mean that every insured depositor simply loses
+    the money in an insured account. The FDIC has procedures for resolving
+    failed insured banks and protecting insured depositors.
+  </p>
+
+  <p>
+    A common resolution method involves another institution assuming
+    deposits of the failed bank. The exact resolution depends on the
+    circumstances of the failure.
+  </p>
+
+  <p>
+    This is one reason knowing whether your institution is federally
+    insured — and understanding the applicable coverage rules — matters.
+  </p>
+
+  <a class="source-button"
+     href="https://www.fdic.gov/resources/resolutions/bank-failures/"
+     target="_blank"
+     rel="noopener noreferrer">
+     Explore FDIC Bank Failure Information →
+  </a>
+
+
+  <!-- POLICY AND LEGISLATIVE TRAIL -->
+
+  <section class="law-trail">
+
+    <p class="eyebrow">Follow the Law</p>
+
+    <h2>🏛️ Policy &amp; Legislative Trail</h2>
+
+    <p>
+      Banking rules do not appear from nowhere. Congress can enact statutes,
+      presidents can sign legislation, agencies can issue regulations under
+      legal authority, courts can interpret laws, and regulators supervise
+      institutions under those legal frameworks.
+    </p>
+
+    <div class="trail-step">
+      <strong>1863 — National Currency Act</strong>
+      The legislation established the Office of the Comptroller of the
+      Currency and a system of nationally chartered banks. President
+      Abraham Lincoln signed the legislation on February 25, 1863.
+    </div>
+
+    <div class="trail-step">
+      <strong>1913 — Federal Reserve Act</strong>
+      Congress established the Federal Reserve System, creating a new
+      institutional framework for central banking in the United States.
+    </div>
+
+    <div class="trail-step">
+      <strong>1933 — Banking Act of 1933</strong>
+      Enacted June 16, 1933, the Banking Act of 1933 created the Federal
+      Deposit Insurance Corporation and made major changes to banking law.
+    </div>
+
+    <div class="trail-step">
+      <strong>1970 — Federal Credit Union Share Insurance</strong>
+      Congress created the National Credit Union Share Insurance Fund,
+      establishing federal insurance for qualifying member accounts at
+      federally insured credit unions.
+    </div>
+
+    <div class="trail-step">
+      <strong>Today — Statutes + Regulations + Supervision</strong>
+      Banking law now consists of many statutes and regulations administered
+      and enforced through multiple federal and state authorities.
+    </div>
+
+  </section>
+
+
+  <h2>6. Who Was Involved in the Banking Act of 1933?</h2>
+
+  <p>
+    Historical legislation is rarely the work of only one person.
+    For that reason, MoneyTrackTemplates will identify documented roles
+    rather than simply declaring that one politician "created" a law.
+  </p>
+
+  <p>
+    The Banking Act of 1933 combined legislation associated with
+    Senator Carter Glass and Representative Henry B. Steagall.
+    The official House historical record identifies both men with
+    H.R. 5661.
+  </p>
+
+  <p>
+    Federal Reserve History describes Glass as a major force behind
+    the banking-reform legislation and Steagall, chairman of the House
+    Banking and Currency Committee, as an important advocate of federal
+    deposit insurance.
+  </p>
+
+  <p>
+    President Franklin D. Roosevelt signed the measure into law on
+    June 16, 1933.
+  </p>
+
+  <div class="source-note">
+    <strong>Editorial rule:</strong>
+    MoneyTrackTemplates identifies lawmakers by their documented role
+    in the legislation. Political-party affiliation is not included unless
+    it is necessary to understand the subject being discussed. Readers who
+    wish to research a lawmaker's political history can independently
+    follow the person's name and official records.
+  </div>
+
+
+  <!-- FROM THE ARCHIVES -->
+
+  <section class="archive">
+
+    <p class="archive-label">From the Archives</p>
+
+    <h2>📜 See the Original Banking Act</h2>
+
+    <p>
+      You do not have to rely solely on somebody else's description
+      of the Banking Act of 1933.
+    </p>
+
+    <p>
+      The official historical collections of the U.S. House of
+      Representatives preserve a digitized engrossed copy of H.R. 5661,
+      the legislation that became the Banking Act of 1933.
+    </p>
+
+    <div class="document-card">
+
+      <h3>H.R. 5661 — Banking Act of 1933</h3>
+
+      <p>
+        <strong>Congress:</strong> 73rd Congress<br>
+        <strong>Document date:</strong> June 1933<br>
+        <strong>Enacted:</strong> June 16, 1933<br>
+        <strong>Statutory citation:</strong> Chapter 89, 48 Stat. 162<br>
+        <strong>Repository:</strong> Records of the U.S. House of Representatives /
+        National Archives
+      </p>
+
+      <a class="archive-button"
+         href="https://history.house.gov/Records-and-Research/Listing/lfp_038/"
+         target="_blank"
+         rel="noopener noreferrer">
+         📜 View Scanned Original →
+      </a>
+
+      <a class="archive-button"
+         href="https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title12-section227"
+         target="_blank"
+         rel="noopener noreferrer">
+         ⚖️ View U.S. Code Record →
+      </a>
+
+    </div>
+
+    <p style="margin-top:20px;">
+      <strong>Why show the original?</strong>
+      Primary documents allow students, researchers and curious readers
+      to inspect the historical record for themselves rather than relying
+      entirely on summaries.
+    </p>
+
+    <p>
+      MoneyTrackTemplates will link to archival copies whenever suitable
+      original documents are available. Before reproducing an archival
+      image directly on this website, we will check the rights information
+      attached to that particular item.
+    </p>
+
+  </section>
+
+
+  <!-- HOW A LAW BECOMES A RULE -->
+
+  <h2>7. A Law and a Regulation Are Not the Same Thing</h2>
+
+  <p>
+    This distinction is easy to miss.
+  </p>
+
+  <div class="plain-english">
+    <strong>A simplified research trail:</strong><br><br>
+    Congress passes legislation → the legislation becomes law →
+    an agency may receive authority or instructions under that law →
+    the agency may propose regulations → the public may have an
+    opportunity to comment → final regulations may be published →
+    regulators supervise and enforce applicable requirements.
+  </div>
+
+  <p>
+    For example, the OCC explains that regulations governing national
+    banks and federal savings associations are found in Title 12 of the
+    Code of Federal Regulations. Proposed OCC rules are published for
+    public comment before finalization.
+  </p>
+
+  <p>
+    This means that researching a financial policy sometimes requires
+    following more than the original act of Congress. The trail can
+    continue through regulations, Federal Register notices, agency
+    guidance, enforcement actions and court decisions.
+  </p>
+
+  <a class="source-button"
+     href="https://www.occ.treas.gov/topics/laws-and-regulations/occ-regulations/index-occ-regulations.html"
+     target="_blank"
+     rel="noopener noreferrer">
+     Explore OCC Regulations →
+  </a>
+
+  <a class="source-button"
+     href="https://www.federalregister.gov/"
+     target="_blank"
+     rel="noopener noreferrer">
+     Search the Federal Register →
+  </a>
+
+
+  <!-- ORIGINAL SOURCES -->
+
+  <section class="sources-section">
+
+    <p class="eyebrow">Research Library</p>
+
+    <h2>📚 Original &amp; Authoritative Sources</h2>
+
+    <p>
+      These links are provided so readers can verify important statements
+      and continue their own research.
+    </p>
+
+
+    <div class="source-item">
+      <h3>U.S. House of Representatives — Banking Act of 1933</h3>
+
+      <p>
+        Official historical record and digitized engrossed copy of
+        H.R. 5661.
+      </p>
+
+      <a class="source-button"
+         href="https://history.house.gov/Records-and-Research/Listing/lfp_038/"
+         target="_blank"
+         rel="noopener noreferrer">
+         View Original Record →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>Office of the Law Revision Counsel — U.S. Code</h3>
+
+      <p>
+        Official U.S. Code record identifying the Banking Act of 1933
+        as the Act of June 16, 1933, Chapter 89, 48 Stat. 162.
+      </p>
+
+      <a class="source-button"
+         href="https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title12-section227"
+         target="_blank"
+         rel="noopener noreferrer">
+         View U.S. Code →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>Federal Deposit Insurance Corporation</h3>
+
+      <p>
+        Official information about deposit insurance, bank failures,
+        FDIC history and insured institutions.
+      </p>
+
+      <a class="source-button"
+         href="https://www.fdic.gov/resources/deposit-insurance/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit FDIC Deposit Insurance →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>Federal Reserve</h3>
+
+      <p>
+        Official explanation of federal bank supervision and the Federal
+        Reserve's supervisory role.
+      </p>
+
+      <a class="source-button"
+         href="https://www.federalreserve.gov/supervisionreg/understanding-federal-reserve-supervision.htm"
+         target="_blank"
+         rel="noopener noreferrer">
+         Federal Reserve Supervision →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>Federal Reserve History</h3>
+
+      <p>
+        Historical discussion of the Banking Act of 1933 and the
+        documented roles of Carter Glass and Henry Steagall.
+      </p>
+
+      <a class="source-button"
+         href="https://www.federalreservehistory.org/essays/glass-steagall-act"
+         target="_blank"
+         rel="noopener noreferrer">
+         Read Historical Account →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>Office of the Comptroller of the Currency</h3>
+
+      <p>
+        Official information about national-bank chartering,
+        supervision and banking regulation.
+      </p>
+
+      <a class="source-button"
+         href="https://www.occ.treas.gov/about/index-about.html"
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit OCC →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>National Credit Union Administration</h3>
+
+      <p>
+        Official information about federal credit-union share insurance
+        and the National Credit Union Share Insurance Fund.
+      </p>
+
+      <a class="source-button"
+         href="https://ncua.gov/consumers/share-insurance-coverage"
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit NCUA →
+      </a>
+    </div>
+
+
+    <div class="source-item">
+      <h3>Consumer Financial Protection Bureau</h3>
+
+      <p>
+        Official information concerning federal consumer financial law
+        and consumer financial markets.
+      </p>
+
+      <a class="source-button"
+         href="https://www.consumerfinance.gov/about-us/the-bureau/"
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit CFPB →
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- CITATION CENTER -->
+
+  <section class="citation-box">
+
+    <p class="eyebrow">For Students &amp; Researchers</p>
+
+    <h2>✍️ Cite This Research</h2>
+
+    <p>
+      There are two different things you might want to cite.
+    </p>
+
+    <h3>1. Citing This MoneyTrackTemplates Article</h3>
+
+    <p>
+      If you are discussing this article itself, identify
+      MoneyTrackTemplates as the publisher and disclose the article's
+      AI-assisted preparation when required by your instructor,
+      institution, publication or citation style.
+    </p>
+
+    <div class="citation-example">
+      <strong>Article title:</strong>
+      “Banking Basics: How the U.S. Banking System Actually Works”<br>
+      <strong>Website:</strong> MoneyTrackTemplates<br>
+      <strong>Research &amp; drafting:</strong> OpenAI's ChatGPT<br>
+      <strong>Editing &amp; publication:</strong> MoneyTrackTemplates<br>
+      <strong>Research reviewed:</strong> September 24, 2026
+    </div>
+
+    <h3>2. Citing the Original Source</h3>
+
+    <p>
+      If you are writing about the Banking Act of 1933, deposit insurance,
+      bank supervision or another underlying subject, the primary or
+      authoritative source may be more appropriate than citing our summary.
+    </p>
+
+    <div class="citation-example">
+      <strong>Example primary document:</strong><br>
+      Banking Act of 1933, ch. 89, 48 Stat. 162
+      (June 16, 1933).
+    </div>
+
+    <p>
+      Citation requirements vary by school, instructor, journal and style
+      guide. Always follow the requirements that apply to your assignment
+      or publication.
+    </p>
+
+  </section>
+
+
+  <!-- ABOUT ARTICLE -->
+
+  <section class="author-box">
+
+    <h2>🤖 About This Article</h2>
+
+    <p>
+      MoneyTrackTemplates believes readers should know how research
+      material on this site was produced.
+    </p>
+
+    <div class="author-grid">
+
+      <strong>Research &amp; drafting:</strong>
+      <span>OpenAI's ChatGPT</span>
+
+      <strong>Editing &amp; publication:</strong>
+      <span>MoneyTrackTemplates</span>
+
+      <strong>Research reviewed:</strong>
+      <span>September 24, 2026</span>
+
+      <strong>Research approach:</strong>
+      <span>
+        Primary and authoritative government sources were preferred.
+        Important historical and regulatory claims are accompanied by
+        links that allow readers to examine the underlying sources.
+      </span>
+
+    </div>
+
+    <p style="margin-top:22px;">
+      AI-assisted research can contain errors. Readers conducting academic,
+      legal, financial or historical research should verify material against
+      the linked original sources.
+    </p>
+
+  </section>
+
+
+  <div class="education-note">
+
+    <strong>Educational Purpose</strong>
+
+    <p>
+      This page provides general educational information and is not
+      individualized financial, investment, tax or legal advice.
+      Banking laws, regulations, agency responsibilities and financial
+      products can change.
+    </p>
+
+    <p>
+      For decisions that depend on current law, regulation or personal
+      circumstances, consult the applicable official source or a qualified
+      professional.
+    </p>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <p><strong>MoneyTrackTemplates</strong></p>
+
+  <p>Plan Better. Track Smarter. Live More Organized.</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="money-banking.html">Money &amp; Banking</a>
+    <a href="resources.html">Resources</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+
+  <div class="footer-links">
+
+    <a href="https://www.pinterest.com/MoneyTrackTemplates/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Pinterest
+    </a>
+
+    <a href="https://x.com/tracktemplates"
+       target="_blank"
+       rel="noopener noreferrer">
+       X
+    </a>
+
+  </div>
+
+  <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
+
+</footer>
+
+
+<script>
+  const shareButton = document.getElementById('share-page-button');
+  const shareStatus = document.getElementById('share-status');
+
+  shareButton.addEventListener('click', async function () {
+
+    const shareData = {
+      title: document.title,
+      text: 'Explore Banking Basics at MoneyTrackTemplates.',
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+
+      try {
+        await navigator.share(shareData);
+        shareStatus.textContent = '';
+      } catch (error) {
+        shareStatus.textContent = '';
+      }
+
+    } else {
+
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+
+        shareStatus.textContent =
+          'Page link copied! You can now share it anywhere.';
+
+      } catch (error) {
+
+        shareStatus.textContent =
+          'Copy the page address from your browser to share this page.';
+      }
+
+    }
+  });
+</script>
+
+</body>
+</html>
