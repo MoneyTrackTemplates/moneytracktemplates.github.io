@@ -228,6 +228,13 @@
       color: var(--dark-blue);
     }
 
+    .article-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
     /* MAIN SECTIONS */
 
     .section {
@@ -734,6 +741,7 @@
       <div class="section-heading">
         <p class="eyebrow">Explore the Library</p>
         <h2>Financial Departments</h2>
+
         <p>
           Each department will grow into its own collection of
           explanations, tools, calculators, examples and reliable
@@ -745,135 +753,173 @@
 
         <!-- BANKING -->
         <article class="finance-card">
-  <div class="card-icon">🏦</div>
-  <h3>Banking Basics</h3>
-  <p>
-    Learn how banks and credit unions work, how deposits move
-    through the banking system, what deposit insurance means,
-    and how to compare financial institutions.
-  </p>
+          <div class="card-icon">🏦</div>
 
-  <a href="banking-basics.html" class="button button-primary">
-    Explore Banking Basics →
-  </a>
-</article>
+          <h3>Banking Basics</h3>
+
+          <p>
+            Learn how banks and credit unions work, how deposits move
+            through the banking system, what deposit insurance means,
+            and how to compare financial institutions.
+          </p>
+
+          <div class="article-buttons">
+            <a href="banking-basics.html" class="button button-primary">
+              Explore Banking Basics →
+            </a>
+
+            <a href="banks-vs-credit-unions.html" class="button button-primary">
+              Banks vs. Credit Unions →
+            </a>
+          </div>
+        </article>
 
         <!-- CHECKING AND SAVINGS -->
         <article class="finance-card">
           <div class="card-icon">💵</div>
+
           <h3>Checking &amp; Savings</h3>
+
           <p>
             Understand checking accounts, savings accounts, CDs,
             money market accounts, APY, minimum balances, fees and
             common banking terminology.
           </p>
+
           <span class="coming-soon">Building This Section</span>
         </article>
 
         <!-- CREDIT -->
         <article class="finance-card">
           <div class="card-icon">💳</div>
+
           <h3>Credit &amp; Debt</h3>
+
           <p>
             Explore credit reports, credit scores, credit cards,
             interest, APR, balances, utilization and practical
             approaches to understanding debt.
           </p>
+
           <span class="coming-soon">Building This Section</span>
         </article>
 
         <!-- LOANS -->
         <article class="finance-card">
           <div class="card-icon">🏠</div>
+
           <h3>Loans &amp; Borrowing</h3>
+
           <p>
             Learn the vocabulary behind mortgages, auto loans,
             personal loans, student loans, principal, interest,
             amortization and borrowing costs.
           </p>
+
           <span class="coming-soon">Building This Section</span>
         </article>
 
         <!-- SAVING INVESTING -->
         <article class="finance-card">
           <div class="card-icon">📈</div>
+
           <h3>Saving &amp; Investing</h3>
+
           <p>
             Start with compound interest and move into stocks,
             bonds, Treasury securities, funds, retirement accounts,
             diversification and investment terminology.
           </p>
+
           <span class="coming-soon">Building This Section</span>
         </article>
 
         <!-- CRYPTO -->
         <article class="finance-card">
           <div class="card-icon">₿</div>
+
           <h3>Cryptocurrency &amp; Digital Assets</h3>
+
           <p>
             New to crypto? Start here. Learn what cryptocurrency is,
             how blockchain works, what wallets and exchanges do,
             and what risks newcomers should understand.
           </p>
+
           <span class="coming-soon">Crypto Learning Center</span>
         </article>
 
         <!-- CALCULATORS -->
         <article class="finance-card">
           <div class="card-icon">🧮</div>
+
           <h3>Financial Calculators</h3>
+
           <p>
             A growing collection of interactive calculators for
             savings, interest, debt, loans and other everyday
             financial questions.
           </p>
+
           <span class="coming-soon">Tools Coming Soon</span>
         </article>
 
         <!-- GLOSSARY -->
         <article class="finance-card">
           <div class="card-icon">📖</div>
+
           <h3>Financial Glossary</h3>
+
           <p>
             Look up financial words and abbreviations without
             wading through pages of technical language.
           </p>
+
           <span class="coming-soon">Glossary Coming Soon</span>
         </article>
 
         <!-- GOVERNMENT -->
         <article class="finance-card">
           <div class="card-icon">🏛️</div>
+
           <h3>Financial Resources</h3>
+
           <p>
             Find authoritative financial agencies, public databases,
             consumer resources, educational materials and original
             government information.
           </p>
+
           <span class="coming-soon">Resource Library</span>
         </article>
 
         <!-- STUDENTS -->
         <article class="finance-card">
           <div class="card-icon">🎓</div>
+
           <h3>Money for Students</h3>
+
           <p>
             Learn about first bank accounts, first paychecks,
             budgeting, saving, credit, student borrowing and the
             financial vocabulary young adults encounter.
           </p>
+
           <span class="coming-soon">Student Finance</span>
         </article>
 
         <!-- RESEARCH -->
         <article class="finance-card">
           <div class="card-icon">🔎</div>
+
           <h3>Financial Research Desk</h3>
+
           <p>
             Our planned research assistant will help visitors
             investigate financial subjects and trace information
             back to reliable original sources.
           </p>
+
           <span class="coming-soon">In Development</span>
         </article>
 
@@ -887,7 +933,9 @@
 
       <div class="section-heading">
         <p class="eyebrow">Newcomer's Corner</p>
+
         <h2>Cryptocurrency Without the Confusion</h2>
+
         <p>
           Cryptocurrency should not require a secret decoder ring.
           We'll begin with the fundamentals before discussing anything
@@ -988,7 +1036,9 @@
 
       <div class="section-heading">
         <p class="eyebrow">Current Financial Data</p>
+
         <h2>A Home for Changing Numbers</h2>
+
         <p>
           Rates and financial data change. This area is being designed
           so current figures can eventually be retrieved from reliable
@@ -1000,6 +1050,7 @@
 
         <div class="data-panel-header">
           <h2>MoneyTrack Current Data Board</h2>
+
           <p>
             Future live-data connections will appear here.
           </p>
@@ -1009,6 +1060,7 @@
 
           <div class="data-box">
             <span class="data-label">Interest Rates</span>
+
             <h3>Federal &amp; Banking Data</h3>
 
             <p class="data-placeholder">
@@ -1023,6 +1075,7 @@
 
           <div class="data-box">
             <span class="data-label">Treasury</span>
+
             <h3>Treasury Data</h3>
 
             <p class="data-placeholder">
@@ -1037,6 +1090,7 @@
 
           <div class="data-box">
             <span class="data-label">Digital Assets</span>
+
             <h3>Crypto Market Reference</h3>
 
             <p class="data-placeholder">
@@ -1124,7 +1178,9 @@
 
       <div class="section-heading">
         <p class="eyebrow">How We'll Build It</p>
+
         <h2>Sources Matter</h2>
+
         <p>
           Financial information is most useful when visitors can tell
           where it came from and how current it is.
@@ -1135,6 +1191,7 @@
 
         <div class="source-card">
           <strong>Original Sources</strong>
+
           <span>
             Whenever practical, we'll trace information back to the
             agency, regulator or original publisher.
@@ -1143,6 +1200,7 @@
 
         <div class="source-card">
           <strong>Publication Dates</strong>
+
           <span>
             Changing financial information should include a date or
             observation period when available.
@@ -1151,6 +1209,7 @@
 
         <div class="source-card">
           <strong>Plain English</strong>
+
           <span>
             Technical terminology will be explained rather than
             assumed.
@@ -1159,6 +1218,7 @@
 
         <div class="source-card">
           <strong>Evidence vs. Interpretation</strong>
+
           <span>
             Facts, estimates, opinions and interpretations should not
             be presented as though they are the same thing.
@@ -1166,7 +1226,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -1216,6 +1275,7 @@
     </div>
 
     <div class="footer-links">
+
       <a
         href="https://www.pinterest.com/MoneyTrackTemplates/"
         target="_blank"
@@ -1231,6 +1291,7 @@
       >
         X
       </a>
+
     </div>
 
     <p>
@@ -1245,7 +1306,6 @@
     const shareStatus = document.getElementById('share-status');
 
     shareButton.addEventListener('click', async function () {
-
       const shareData = {
         title: document.title,
         text: 'Explore Money & Banking at MoneyTrackTemplates.',
@@ -1262,6 +1322,7 @@
       } else {
         try {
           await navigator.clipboard.writeText(window.location.href);
+
           shareStatus.textContent =
             'Page link copied! You can now share it anywhere.';
         } catch (error) {
@@ -1269,7 +1330,6 @@
             'Copy the page address from your browser to share this page.';
         }
       }
-
     });
   </script>
 
