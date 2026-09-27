@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Checking Accounts: How They Actually Work | MoneyTrackTemplates</title>
+
+  <meta name="description" content="A plain-English guide to checking accounts, balances, debit cards, checks, ACH payments, overdrafts, deposit insurance, financial apps, and the public records behind your money.">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZP3T0LXM1C');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5959578710115297"
+    crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fffaf0;
+      color: #173b63;
+      line-height: 1.75;
+    }
+
+    a {
+      color: #145da0;
+    }
+
+    .site-header {
+      background: #1769aa;
+      color: white;
+      text-align: center;
+      padding: 24px 20px 20px;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .tagline {
+      margin: 6px 0 14px;
+      font-size: 1rem;
+    }
+
+    .share-button {
+      display: inline-block;
+      border: 2px solid white;
+      background: white;
+      color: #145da0;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav {
+      background: #0c3f70;
+      padding: 11px 12px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      display: inline-block;
+      padding: 7px 10px;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      background: #1769aa;
+      border-radius: 6px;
+    }
+
+    .hero {
+      text-align: center;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 48px 24px 28px;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #56748e;
+      font-size: .82rem;
+    }
+
+    .hero h2 {
+      font-size: 2.55rem;
+      line-height: 1.15;
+      margin: 10px 0 14px;
+      color: #123d67;
+    }
+
+    .hero-subtitle {
+      max-width: 820px;
+      margin: auto;
+      font-size: 1.18rem;
+      color: #47637c;
+    }
+
+    .article-meta {
+      margin-top: 24px;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+      color: #60788c;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px 55px;
+    }
+
+    .section {
+      margin: 28px 0;
+      padding: 31px;
+      background: white;
+      border: 1px solid #d7e1e8;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.04);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #123d67;
+      font-size: 1.7rem;
+      line-height: 1.25;
+    }
+
+    .section h3 {
+      color: #1769aa;
+      margin-top: 24px;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+    }
+
+    .callout {
+      background: #eef6fc;
+      border-left: 5px solid #1769aa;
+      padding: 18px 22px;
+      margin: 24px 0;
+      border-radius: 0 9px 9px 0;
+      font-size: 1.06rem;
+    }
+
+    .warning {
+      background: #fff6dc;
+      border-left: 5px solid #b88920;
+      padding: 18px 22px;
+      margin: 24px 0;
+      border-radius: 0 9px 9px 0;
+    }
+
+    .research-note {
+      background: #f1f6ef;
+      border: 1px solid #cad9c4;
+      padding: 22px;
+      border-radius: 10px;
+      margin: 22px 0;
+    }
+
+    .research-note h3 {
+      color: #416b3c;
+      margin-top: 0;
+    }
+
+    .flow {
+      text-align: center;
+      background: #f7fafc;
+      border: 1px solid #d6e0e7;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 22px 0;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      line-height: 2;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      font-family: Arial, sans-serif;
+      font-size: .94rem;
+    }
+
+    th {
+      background: #123d67;
+      color: white;
+      text-align: left;
+      padding: 12px;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #d8e1e7;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f7fafc;
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+      margin-top: 22px;
+    }
+
+    .source-card {
+      border: 1px solid #d3dee7;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fbfdff;
+    }
+
+    .source-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .source-card p {
+      font-size: .92rem;
+      margin-bottom: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      background: #1769aa;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 7px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
+    .button:hover {
+      background: #0c3f70;
+    }
+
+    .data-record {
+      display: grid;
+      grid-template-columns: minmax(200px, 1fr) 2fr;
+      border: 1px solid #d5e0e7;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .data-record div {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e0e7ec;
+    }
+
+    .data-record .label {
+      background: #edf4f9;
+      font-weight: bold;
+    }
+
+    .closing-rule {
+      text-align: center;
+      font-size: 1.12rem;
+      font-weight: bold;
+      line-height: 2;
+      color: #123d67;
+      margin-top: 25px;
+    }
+
+    .back-links {
+      text-align: center;
+      margin: 38px 0 10px;
+    }
+
+    .back-links a {
+      margin: 5px;
+    }
+
+    footer {
+      background: #0c3f70;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 22px 18px;
+      }
+
+      .data-record {
+        grid-template-columns: 1fr;
+      }
+
+      .data-record .label {
+        padding-bottom: 4px;
+      }
+
+      .data-record div:not(.label) {
+        padding-top: 4px;
+      }
+
+      table {
+        font-size: .82rem;
+      }
+
+      th,
+      td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>MoneyTrackTemplates</h1>
+  <p class="tagline">Plan Better. Track Smarter. Live More Organized.</p>
+  <button class="share-button" onclick="sharePage()">↗ Share This Page</button>
+</header>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="money-templates.html">Money Templates</a>
+  <a href="planners.html">Planners</a>
+  <a href="holiday-planners.html">Holiday Planners</a>
+  <a href="free-downloads.html">Free Downloads</a>
+  <a href="money-banking.html" class="active">Money &amp; Banking</a>
+  <a href="shop.html">Shop</a>
+  <a href="resources.html">Resources</a>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">MoneyTrackTemplates Financial Research Library</div>
+
+  <h2>Checking Accounts: How They Actually Work</h2>
+
+  <p class="hero-subtitle">
+    A plain-English guide to balances, debit cards, checks, electronic
+    payments, overdrafts, deposit insurance—and what happens after you press
+    “Pay.”
+  </p>
+
+  <div class="article-meta">
+    Research &amp; drafting: OpenAI's ChatGPT<br>
+    Editing &amp; publication: MoneyTrackTemplates<br>
+    Research reviewed: September 26, 2026
+  </div>
+</section>
+
+<main>
+
+  <section class="section intro">
+    <p>Checking accounts seem simple.</p>
+
+    <p>
+      Your paycheck arrives. Bills leave. You use a debit card, deposit
+      checks, transfer money, and occasionally glance at your balance.
+    </p>
+
+    <p>
+      Behind those everyday transactions is a network of banks, payment
+      systems, regulations, and computer records.
+    </p>
+
+    <p>
+      Even the balance shown in your banking app may not mean exactly what you
+      think it means.
+    </p>
+
+    <div class="callout">
+      <strong>So let's follow the money.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🏦 Your Checking Account Isn't a Little Box of Money</h2>
+
+    <p>Suppose you deposit $1,000.</p>
+
+    <p>
+      The bank doesn't normally put your money into an envelope with your name
+      on it. Your deposit becomes part of the bank's accounting records.
+    </p>
+
+    <p>
+      From your perspective, the deposit is an asset. From the bank's
+      perspective, it is generally a liability: money the bank owes you under
+      the terms of your account.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Your checking-account balance is an accounting record of what the
+        financial institution owes you—not a personal pile of cash sitting
+        inside the bank.
+      </strong>
+    </div>
+
+    <p>That distinction helps explain much of what happens next.</p>
+  </section>
+
+
+  <section class="section">
+    <h2>💵 Current Balance vs. Available Balance</h2>
+
+    <p>
+      Your banking app may show a <strong>current balance</strong> and an
+      <strong>available balance</strong>.
+    </p>
+
+    <p>They aren't necessarily the same.</p>
+
+    <p>
+      The current balance generally reflects transactions that have posted.
+      The available balance reflects what the institution currently considers
+      available for additional transactions, taking account of holds and other
+      activity under its policies.
+    </p>
+
+    <p>
+      A hotel, for example, may place a temporary authorization hold on your
+      debit card. A check deposit may appear in your account before all of the
+      funds are available.
+    </p>
+
+    <p>
+      The <strong>Consumer Financial Protection Bureau (CFPB)</strong>
+      cautions that deposits and withdrawals do not always update balances
+      immediately or in the order consumers expect.
+    </p>
+
+    <div class="callout">
+      <strong>
+        The balance you see and the amount you can spend can be different
+        numbers.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>⏳ Authorized, Pending and Posted</h2>
+
+    <p>Transactions move through stages.</p>
+
+    <div class="flow">
+      Authorized → Pending → Posted
+    </div>
+
+    <p>
+      Suppose you have $200 and spend $75. The purchase may appear as pending
+      while another payment arrives, a deposit becomes available, or the
+      merchant changes the final amount.
+    </p>
+
+    <p>
+      A checking account is therefore more than a balance.
+    </p>
+
+    <p><strong>It is a constantly changing financial ledger.</strong></p>
+  </section>
+
+
+  <section class="section">
+    <h2>💳 What Happens When You Use Your Debit Card?</h2>
+
+    <p>You buy $40 of groceries and tap your card.</p>
+
+    <p>
+      The transaction feels instantaneous, but the final accounting may not
+      be.
+    </p>
+
+    <p>
+      Transaction information moves through payment infrastructure. The card
+      issuer may authorize the purchase. The merchant later submits it for
+      settlement, and the transaction ultimately posts to your account.
+    </p>
+
+    <p>
+      The exact path depends on the transaction and payment network.
+    </p>
+
+    <div class="callout">
+      <strong>
+        The moment you buy something and the moment it becomes a final posted
+        transaction are not necessarily the same event.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🔢 What Does a Routing Number Do?</h2>
+
+    <p>
+      A routing number helps identify the financial institution involved in a
+      payment.
+    </p>
+
+    <p>
+      It does <strong>not</strong> tell you who ultimately owns that
+      institution.
+    </p>
+
+    <p>
+      For ownership research, we would instead use sources such as the
+      <strong>Federal Financial Institutions Examination Council (FFIEC)
+      National Information Center (NIC)</strong>.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Payment identity and corporate ownership are different kinds of
+        information.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🧾 What Happens to a Paper Check?</h2>
+
+    <p>
+      Paper checks once had to travel physically through much of the banking
+      system.
+    </p>
+
+    <p>
+      Congress changed that process significantly with the
+      <strong>Check Clearing for the 21st Century Act</strong>, usually called
+      <strong>Check 21</strong>.
+    </p>
+
+    <p>
+      Signed on October 28, 2003, and effective October 28, 2004, the law
+      helped remove legal barriers to electronic check processing. It also
+      established a legally recognized paper instrument called a
+      <strong>substitute check</strong>.
+    </p>
+
+    <p>
+      Today, banks can capture check images and payment information and
+      transmit them electronically.
+    </p>
+
+    <div class="callout">
+      <strong>
+        The check you write may begin its life as paper and spend much of the
+        rest of its journey as information.
+      </strong>
+    </div>
+
+    <a class="button"
+       href="https://www.federalreserve.gov/paymentsystems/regcc-faq-check21.htm"
+       target="_blank" rel="noopener">
+      Federal Reserve: Check 21 →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>⚡ What Is ACH?</h2>
+
+    <p>
+      <strong>Automated Clearing House (ACH)</strong> is an electronic payment
+      network used for many transfers between financial institutions.
+    </p>
+
+    <p>You may use it without realizing it.</p>
+
+    <ul>
+      <li>Direct deposit</li>
+      <li>Automatic mortgage payments</li>
+      <li>Utility payments</li>
+      <li>Electronic bill payments</li>
+      <li>Many account-to-account transfers</li>
+    </ul>
+
+    <p>
+      The Federal Reserve operates <strong>FedACH Services</strong>, one
+      operator supporting Automated Clearing House payments.
+    </p>
+
+    <div class="callout">
+      <strong>
+        A direct deposit is an electronic payment instruction moving through
+        financial infrastructure—not money magically appearing in an account.
+      </strong>
+    </div>
+
+    <a class="button"
+       href="https://www.frbservices.org/financial-services/ach"
+       target="_blank" rel="noopener">
+      Federal Reserve Financial Services: ACH →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>🛤️ One Account, Several Payment Rails</h2>
+
+    <p>
+      The same checking account can participate in several payment systems.
+    </p>
+
+    <p>
+      Your paycheck might arrive through Automated Clearing House processing.
+      You might spend with a debit card, write a check, send a wire transfer,
+      and connect the account to a financial app.
+    </p>
+
+    <p>Those transactions don't necessarily travel through the same system.</p>
+
+    <p>
+      That matters because speed, fees, processing rules, and consumer
+      protections can differ depending on how the money moves.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Same checking account. Different payment rail. Different rules may
+        apply.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🚨 What Is an Overdraft?</h2>
+
+    <p>
+      An overdraft occurs when there isn't enough money in your account to
+      cover a transaction and the financial institution pays it anyway.
+    </p>
+
+    <p>
+      You then owe the shortfall, and a fee may apply depending on the
+      transaction and institution.
+    </p>
+
+    <p>But not every overdraft situation is treated the same way.</p>
+
+    <p>
+      For covered <strong>Automated Teller Machine (ATM)</strong> withdrawals
+      and <strong>one-time debit-card transactions</strong>, federal
+      <strong>Regulation E</strong>, which implements the
+      <strong>Electronic Fund Transfer Act (EFTA)</strong>, generally requires
+      a financial institution to obtain the consumer's affirmative consent
+      before charging a fee under the institution's covered overdraft service.
+    </p>
+
+    <p>
+      In other words, this is generally an <strong>opt-in</strong> arrangement
+      for those covered transactions.
+    </p>
+
+    <p>
+      Other transactions, including checks and certain recurring payments, can
+      be treated differently.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Ask which transactions your overdraft choice actually covers.
+      </strong>
+    </div>
+
+    <a class="button"
+       href="https://www.consumerfinance.gov/consumer-tools/bank-accounts/know-your-overdraft-options/"
+       target="_blank" rel="noopener">
+      CFPB: Know Your Overdraft Options →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>📊 Who Reports Paying Overdraft Fees?</h2>
+
+    <p>
+      The <strong>Board of Governors of the Federal Reserve System</strong>
+      reported that in 2024, <strong>11 percent of adults with a bank
+      account</strong> said they had paid an overdraft fee during the previous
+      12 months.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Family income</th>
+          <th>Banked adults reporting an overdraft fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Less than $25,000</td>
+          <td><strong>16%</strong></td>
+        </tr>
+        <tr>
+          <td>$25,000–$49,999</td>
+          <td><strong>19%</strong></td>
+        </tr>
+        <tr>
+          <td>$50,000–$99,999</td>
+          <td><strong>13%</strong></td>
+        </tr>
+        <tr>
+          <td>$100,000 or more</td>
+          <td><strong>6%</strong></td>
+        </tr>
+        <tr>
+          <td>Overall</td>
+          <td><strong>11%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warning">
+      <strong>The denominator matters.</strong><br><br>
+      These figures describe adults with a bank account—not all Americans and
+      not all households.
+    </div>
+
+    <a class="button"
+       href="https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-banking-and-credit.htm"
+       target="_blank" rel="noopener">
+      Federal Reserve: Banking &amp; Credit Data →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>📊 How Can 4.2% and 6% Both Be Correct?</h2>
+
+    <p>
+      The <strong>Federal Deposit Insurance Corporation (FDIC)</strong>
+      reported that <strong>4.2 percent of U.S. households—about 5.6 million
+      households—were unbanked in 2023</strong>.
+    </p>
+
+    <p>
+      The Federal Reserve reported that <strong>6 percent of adults were
+      unbanked in 2024</strong> under its survey definition.
+    </p>
+
+    <p>Those numbers don't contradict each other.</p>
+
+    <p>
+      They measure different populations in different surveys and different
+      years.
+    </p>
+
+    <div class="flow">
+      FDIC: Households<br>
+      Federal Reserve: Adults
+    </div>
+
+    <div class="callout">
+      <strong>
+        4.2 percent of households and 6 percent of adults are not answers to
+        the same statistical question.
+      </strong>
+    </div>
+
+    <p>
+      This is why population, year, and unit of analysis belong beside the
+      number.
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>📱 The Bank Branch in Your Pocket</h2>
+
+    <p>
+      The Federal Deposit Insurance Corporation's
+      <strong>2023 National Survey of Unbanked and Underbanked
+      Households</strong> found that <strong>48.3 percent of banked
+      households</strong> used mobile banking as their primary method of
+      account access.
+    </p>
+
+    <p>
+      For many households, the primary bank branch is now a screen carried in
+      a pocket.
+    </p>
+
+    <p>But the app is only the interface.</p>
+
+    <p>
+      Behind it remains a legal financial institution, payment
+      infrastructure, account agreements, and regulatory rules.
+    </p>
+
+    <a class="button"
+       href="https://www.fdic.gov/analysis/household-survey"
+       target="_blank" rel="noopener">
+      Explore the FDIC Household Survey →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>📲 When a Financial App Connects to Your Account</h2>
+
+    <p>
+      Connecting a checking account to a financial app raises additional
+      questions:
+    </p>
+
+    <ul>
+      <li>Who operates the app?</li>
+      <li>Is the company itself a bank?</li>
+      <li>What financial institution holds the money?</li>
+      <li>How is money transferred?</li>
+      <li>Who handles disputes?</li>
+      <li>What happens if access is frozen?</li>
+      <li>What happens if the technology company fails?</li>
+      <li>What happens if the underlying bank fails?</li>
+    </ul>
+
+    <p>
+      The logo on the screen may be only the beginning of the story.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Follow the money to the institution that actually holds it.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🛡️ Is Your Checking Account Federally Insured?</h2>
+
+    <p>
+      At an <strong>FDIC-insured bank</strong>, checking accounts are among the
+      deposit products eligible for federal deposit insurance.
+    </p>
+
+    <p>The standard insurance amount is generally:</p>
+
+    <div class="callout">
+      <strong>
+        $250,000 per depositor, per insured bank, for each account ownership
+        category.
+      </strong>
+    </div>
+
+    <p>
+      At a federally insured credit union, comparable federal share insurance
+      is administered through the
+      <strong>National Credit Union Share Insurance Fund (NCUSIF)</strong> by
+      the <strong>National Credit Union Administration (NCUA)</strong>.
+    </p>
+
+    <p>
+      But a financial app displaying a balance isn't automatically a federally
+      insured bank account.
+    </p>
+
+    <p><strong>Identify the legal institution first. Then verify the insurance.</strong></p>
+
+    <a class="button"
+       href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance"
+       target="_blank" rel="noopener">
+      FDIC: Understanding Deposit Insurance →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>📄 Read This Before Opening an Account</h2>
+
+    <p>
+      The advertisement tells you why an account sounds attractive.
+    </p>
+
+    <p>
+      The account documents tell you what you're agreeing to.
+    </p>
+
+    <p>Before opening a checking account, examine the:</p>
+
+    <ul>
+      <li>Fee schedule</li>
+      <li>Deposit-account agreement</li>
+      <li>Funds-availability policy</li>
+      <li>Overdraft policy</li>
+      <li>Debit-card terms</li>
+      <li>Electronic-transfer disclosures</li>
+      <li>Minimum-balance requirements</li>
+      <li>Conditions for waiving fees</li>
+    </ul>
+
+    <div class="callout">
+      <strong>
+        Pay particular attention to what happens when a transaction exceeds
+        your available balance. That is usually where the expensive details
+        live.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🔎 Ownership, Control &amp; Public Record</h2>
+
+    <p>A checking account is a product.</p>
+
+    <p>The institution providing it is what we investigate.</p>
+
+    <div class="flow">
+      Brand → Legal Institution → Charter → Federal Insurance → Regulator →
+      Parent → Top Holder → Country → Mergers → Enforcement History →
+      Effective Date
+    </div>
+
+    <p>If a financial-technology company is involved, we can add:</p>
+
+    <div class="flow">
+      App → Legal Operator → Partner Bank → Deposit Arrangement →
+      Insurance Conditions
+    </div>
+
+    <p>
+      This allows us to distinguish the company whose name appears on the
+      screen from the institution legally holding the account.
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>📜 Policy &amp; Legislative Trail</h2>
+
+    <p>
+      Several federal laws and regulations help shape the modern checking
+      account.
+    </p>
+
+    <h3>Electronic Fund Transfer Act &amp; Regulation E</h3>
+    <p>
+      Electronic transfers and important consumer protections.
+    </p>
+
+    <h3>Expedited Funds Availability Act &amp; Regulation CC</h3>
+    <p>
+      Funds availability and check-collection rules.
+    </p>
+
+    <h3>Check Clearing for the 21st Century Act</h3>
+    <p>
+      Legal framework facilitating electronic check processing and substitute
+      checks.
+    </p>
+
+    <h3>Truth in Savings Act &amp; Regulation DD</h3>
+    <p>
+      Account disclosures designed to help consumers understand and compare
+      deposit accounts.
+    </p>
+
+    <div class="callout">
+      <strong>
+        An ordinary checking account sits at the intersection of technology,
+        banking, and public policy.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>📜 From the Archives: When Checks Traveled</h2>
+
+    <p>Imagine explaining mobile check deposit to someone in 1950.</p>
+
+    <p>You photograph a check.</p>
+
+    <p>The image enters the banking system.</p>
+
+    <p>
+      The original paper may never need to make the journey that checks once
+      made.
+    </p>
+
+    <p>
+      Check 21 helped make this possible by allowing banks to truncate
+      original checks and, when necessary, create legally equivalent
+      substitute checks.
+    </p>
+
+    <p>
+      So the next time you photograph a check, remember that you're using a
+      payment process shaped partly by a federal law with the wonderfully
+      grand title:
+    </p>
+
+    <div class="callout">
+      <strong>The Check Clearing for the 21st Century Act.</strong>
+      <br><br>
+      All that so Grandma's birthday check doesn't need its own travel
+      itinerary. 😂
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>📊 Public Administration Research Note</h2>
+
+    <p>
+      These statistics illustrate why researchers should always identify the
+      population and unit of analysis.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Measure</th>
+          <th>Value</th>
+          <th>Period</th>
+          <th>Population / Unit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unbanked</td>
+          <td><strong>4.2%</strong></td>
+          <td>2023</td>
+          <td>U.S. households</td>
+        </tr>
+        <tr>
+          <td>Unbanked</td>
+          <td><strong>6%</strong></td>
+          <td>2024</td>
+          <td>Adults</td>
+        </tr>
+        <tr>
+          <td>Paid an overdraft fee</td>
+          <td><strong>11%</strong></td>
+          <td>2024</td>
+          <td>Adults with a bank account</td>
+        </tr>
+        <tr>
+          <td>Mobile banking as primary access method</td>
+          <td><strong>48.3%</strong></td>
+          <td>2023</td>
+          <td>Banked households</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="research-note">
+      <h3>Don't Mix the Units</h3>
+
+      <p>
+        These figures measure different populations and should not be combined
+        as though they describe the same group.
+      </p>
+    </div>
+
+    <div class="callout">
+      <strong>
+        Measure → Value → Observation Period → Population → Unit of Analysis →
+        Geography → Primary Source → Release Date → Research Review Date
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>📋 Data Record</h2>
+
+    <div class="data-record">
+      <div class="label">Geography</div>
+      <div>United States</div>
+
+      <div class="label">FDIC household survey</div>
+      <div>2023</div>
+
+      <div class="label">Federal Reserve survey</div>
+      <div>2024</div>
+
+      <div class="label">Unbanked households</div>
+      <div>4.2%, approximately 5.6 million households</div>
+
+      <div class="label">Unbanked adults</div>
+      <div>6%</div>
+
+      <div class="label">Reported overdraft fee</div>
+      <div>11% of adults with a bank account</div>
+
+      <div class="label">Mobile banking as primary access</div>
+      <div>48.3% of banked households</div>
+
+      <div class="label">Primary sources</div>
+      <div>
+        Federal Deposit Insurance Corporation; Board of Governors of the
+        Federal Reserve System; Consumer Financial Protection Bureau
+      </div>
+
+      <div class="label">Research reviewed</div>
+      <div>September 26, 2026</div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>✅ Before You Open a Checking Account</h2>
+
+    <p>Ask more than, <strong>“Is checking free?”</strong></p>
+
+    <p>
+      Find out who actually holds the account, whether the institution is
+      federally insured, what the monthly and overdraft fees are, how fees can
+      be waived, how the available balance is calculated, when deposits become
+      available, what Automated Teller Machine fees apply, what happens when
+      something goes wrong, and where the actual account agreement can be
+      read.
+    </p>
+
+    <div class="callout">
+      One final question may be especially useful:
+      <br><br>
+      <strong>
+        If I misunderstand one of these rules, what could it cost me?
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🔎 Try the Research Yourself</h2>
+
+    <p>Readers should be able to verify what we teach.</p>
+
+    <div class="source-grid">
+
+      <div class="source-card">
+        <h3>FDIC BankFind Suite</h3>
+        <p>Verify a bank and its federal deposit-insurance status.</p>
+        <a class="button"
+           href="https://banks.data.fdic.gov/bankfind-suite/bankfind"
+           target="_blank" rel="noopener">
+          Search Banks →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>NCUA Credit Union Locator</h3>
+        <p>Search federally insured credit unions and public institution data.</p>
+        <a class="button"
+           href="https://mapping.ncua.gov/"
+           target="_blank" rel="noopener">
+          Search Credit Unions →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>FFIEC National Information Center</h3>
+        <p>Investigate bank ownership and organizational history.</p>
+        <a class="button"
+           href="https://www.ffiec.gov/npw"
+           target="_blank" rel="noopener">
+          Follow Bank Ownership →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>Consumer Financial Protection Bureau</h3>
+        <p>Research checking-account and overdraft consumer protections.</p>
+        <a class="button"
+           href="https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+           target="_blank" rel="noopener">
+          Bank Account Resources →
+        </a>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <strong>
+        Use MoneyTrackTemplates to find the trail. Cite the original evidence
+        whenever possible.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>Original &amp; Authoritative Sources</h2>
+
+    <div class="source-grid">
+
+      <div class="source-card">
+        <h3>FDIC Household Survey</h3>
+        <p>
+          National research on banked and unbanked households and methods of
+          account access.
+        </p>
+        <a class="button"
+           href="https://www.fdic.gov/analysis/household-survey"
+           target="_blank" rel="noopener">
+          View Survey →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>Federal Reserve Household Economics</h3>
+        <p>
+          Adult-level information concerning banking access and reported
+          overdraft fees.
+        </p>
+        <a class="button"
+           href="https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-banking-and-credit.htm"
+           target="_blank" rel="noopener">
+          View Banking &amp; Credit Data →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>CFPB Overdraft Guidance</h3>
+        <p>
+          Consumer information concerning overdraft options and applicable
+          federal protections.
+        </p>
+        <a class="button"
+           href="https://www.consumerfinance.gov/consumer-tools/bank-accounts/know-your-overdraft-options/"
+           target="_blank" rel="noopener">
+          Overdraft Guidance →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>Federal Reserve Check 21</h3>
+        <p>
+          Official material explaining Check 21 and substitute checks.
+        </p>
+        <a class="button"
+           href="https://www.federalreserve.gov/paymentsystems/regcc-faq-check21.htm"
+           target="_blank" rel="noopener">
+          Check 21 →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>FDIC Deposit Insurance</h3>
+        <p>
+          Official information about federal deposit insurance and covered
+          deposit products.
+        </p>
+        <a class="button"
+           href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance"
+           target="_blank" rel="noopener">
+          Deposit Insurance →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>Federal Reserve Financial Services</h3>
+        <p>
+          Information about Automated Clearing House payment services.
+        </p>
+        <a class="button"
+           href="https://www.frbservices.org/financial-services/ach"
+           target="_blank" rel="noopener">
+          ACH Services →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>Cite This Research</h2>
+
+    <h3>Citing this MoneyTrackTemplates article</h3>
+
+    <p>A starting point in Modern Language Association style:</p>
+
+    <div class="callout">
+      “Checking Accounts: How They Actually Work.”
+      <em>MoneyTrackTemplates</em>, 26 Sept. 2026,
+      moneytracktemplates.github.io/checking-accounts.html.
+    </div>
+
+    <h3>Citing the evidence</h3>
+
+    <p>
+      Researchers should cite the underlying Federal Deposit Insurance
+      Corporation, Federal Reserve, Consumer Financial Protection Bureau,
+      statute, regulation, dataset, or other primary record when it provides
+      the evidence being used.
+    </p>
+
+    <div class="callout">
+      <strong>MoneyTrackTemplates is the trail map.</strong>
+      <br><br>
+      <strong>The original document is the evidence.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>About This Article</h2>
+
+    <p><strong>Research &amp; drafting:</strong> OpenAI's ChatGPT</p>
+    <p><strong>Editing &amp; publication:</strong> MoneyTrackTemplates</p>
+    <p><strong>Research reviewed:</strong> September 26, 2026</p>
+
+    <p>
+      This article was created with artificial intelligence assistance and
+      reviewed by a human editor.
+    </p>
+
+    <p>
+      Financial regulations, fees, payment systems, institutional ownership,
+      and insurance status can change. Readers should verify time-sensitive
+      information against the linked primary sources.
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>Educational &amp; Research Purpose</h2>
+
+    <p>
+      MoneyTrackTemplates provides educational and research information and
+      does not provide individualized financial, investment, tax, or legal
+      advice.
+    </p>
+
+    <div class="closing-rule">
+      Don't just check the balance.<br>
+      Know which balance you're checking.<br>
+      Know how the payment is moving.<br>
+      Know what can trigger a fee.<br>
+      Know who holds the account.<br>
+      Verify the insurance.<br>
+      Read the agreement.<br>
+      Follow the money.
+    </div>
+  </section>
+
+
+  <div class="back-links">
+    <a class="button" href="banks-vs-credit-unions.html">← Banks vs. Credit Unions</a>
+    <a class="button" href="banking-basics.html">Banking Basics</a>
+    <a class="button" href="money-banking.html">Back to Money &amp; Banking</a>
+  </div>
+
+</main>
+
+
+<footer>
+  <p><strong>MoneyTrackTemplates</strong></p>
+  <p>Plan Better. Track Smarter. Live More Organized.</p>
+
+  <p>
+    <a href="https://www.pinterest.com/MoneyTrackTemplates/" target="_blank" rel="noopener">Pinterest</a>
+    &nbsp; | &nbsp;
+    <a href="https://x.com/tracktemplates" target="_blank" rel="noopener">X</a>
+  </p>
+
+  <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
+</footer>
+
+
+<script>
+  function sharePage() {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: "Checking Accounts: How They Actually Work",
+        url: window.location.href
+      }).catch(function() {});
+    } else {
+      navigator.clipboard.writeText(window.location.href)
+        .then(function() {
+          alert("Page link copied!");
+        })
+        .catch(function() {
+          alert("Copy this page address from your browser to share it.");
+        });
+    }
+  }
+</script>
+
+</body>
+</html>
