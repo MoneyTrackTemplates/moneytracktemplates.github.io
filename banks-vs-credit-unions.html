@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Banks vs. Credit Unions: What's Actually Different? | MoneyTrackTemplates</title>
+
+  <meta name="description" content="A plain-English comparison of banks and credit unions, including ownership, voting power, deposit insurance, fees, membership, regulation, governance, and public records.">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
@@ -17,553 +22,349 @@
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5959578710115297"
     crossorigin="anonymous"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Banks vs. Credit Unions: What's Actually Different? | MoneyTrackTemplates</title>
-
-  <meta name="description"
-        content="A plain-English comparison of banks and credit unions, including ownership, FDIC and NCUA insurance, account features, history, original sources, and what to check before opening an account.">
-
   <style>
-    :root {
-      --blue: #3278b8;
-      --dark-blue: #174a75;
-      --deep-blue: #103a5e;
-      --light-blue: #eaf4fc;
-      --pale-blue: #f5faff;
-      --ivory: #fbf8f1;
-      --white: #ffffff;
-      --text: #174a75;
-      --body-text: #334f63;
-      --muted: #667985;
-      --border: #c9dceb;
-      --gold: #d5a13d;
-      --soft-gold: #fff7df;
-      --green: #3f7350;
-      --soft-green: #eef7ef;
-      --paper: #f4ead2;
-      --paper-dark: #745a2c;
-      --shadow: 0 8px 24px rgba(23,74,117,0.10);
-    }
-
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--ivory);
-      color: var(--body-text);
-      line-height: 1.7;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fffaf0;
+      color: #173b63;
+      line-height: 1.75;
     }
 
     a {
-      color: var(--dark-blue);
+      color: #145da0;
     }
 
     .site-header {
-      background: var(--blue);
+      background: #1769aa;
       color: white;
       text-align: center;
-      padding: 18px 20px 16px;
+      padding: 24px 20px 20px;
     }
 
     .site-header h1 {
       margin: 0;
-      font-size: 2.15rem;
-      line-height: 1.15;
+      font-size: 2rem;
     }
 
-    .site-header p {
-      margin: 5px 0 0;
-      font-size: 0.95rem;
+    .tagline {
+      margin: 6px 0 14px;
+      font-size: 1rem;
     }
 
-    .main-nav {
-      background: var(--dark-blue);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    .share-button {
+      display: inline-block;
+      border: 2px solid white;
+      background: white;
+      color: #145da0;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
     }
 
-    .nav-inner {
-      max-width: 1150px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 0 12px;
+    .nav {
+      background: #0c3f70;
+      padding: 11px 12px;
+      text-align: center;
     }
 
-    .main-nav a {
+    .nav a {
       color: white;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 14px 12px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      display: inline-block;
+      padding: 7px 10px;
     }
 
-    .main-nav a:hover,
-    .main-nav a.active {
-      background: rgba(255,255,255,0.12);
-    }
-
-    .share-page-bar {
-      text-align: center;
-      padding: 10px 20px;
-      background: #f5f0e7;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .share-page-button {
-      background: var(--blue);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 19px;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(23,74,117,0.15);
-    }
-
-    .share-page-button:hover {
-      background: var(--dark-blue);
-    }
-
-    .share-status {
-      display: block;
-      min-height: 20px;
-      margin-top: 4px;
-      font-size: 0.82rem;
-      color: var(--green);
+    .nav a:hover,
+    .nav a.active {
+      background: #1769aa;
+      border-radius: 6px;
     }
 
     .hero {
-      background: linear-gradient(
-        135deg,
-        rgba(234,244,252,0.90),
-        rgba(251,248,241,0.97)
-      );
-      border-bottom: 1px solid var(--border);
-      padding: 62px 20px 54px;
-    }
-
-    .hero-inner {
-      max-width: 950px;
-      margin: 0 auto;
       text-align: center;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 48px 24px 28px;
     }
 
-    .eyebrow {
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 2px;
+    .hero .eyebrow {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
       text-transform: uppercase;
-      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      color: #56748e;
+      font-size: .82rem;
     }
 
     .hero h2 {
-      color: var(--dark-blue);
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 1.1;
-      margin: 0 0 18px;
+      font-size: 2.55rem;
+      line-height: 1.15;
+      margin: 10px 0 14px;
+      color: #123d67;
     }
 
-    .hero-text {
-      max-width: 780px;
-      margin: 0 auto;
-      font-size: 1.08rem;
+    .hero-subtitle {
+      max-width: 820px;
+      margin: auto;
+      font-size: 1.18rem;
+      color: #47637c;
     }
 
     .article-meta {
       margin-top: 24px;
-      color: var(--muted);
-      font-size: 0.88rem;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+      color: #60788c;
     }
 
-    .article {
-      max-width: 920px;
+    main {
+      max-width: 980px;
       margin: 0 auto;
-      padding: 54px 22px;
+      padding: 0 24px 55px;
     }
 
-    .article h2 {
-      color: var(--dark-blue);
-      font-size: 1.9rem;
-      margin-top: 52px;
+    .section {
+      margin: 28px 0;
+      padding: 31px;
+      background: white;
+      border: 1px solid #d7e1e8;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.04);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #123d67;
+      font-size: 1.7rem;
       line-height: 1.25;
     }
 
-    .article h3 {
-      color: var(--dark-blue);
-      margin-top: 28px;
+    .section h3 {
+      color: #1769aa;
+      margin-top: 26px;
     }
 
-    .article p {
-      margin: 0 0 18px;
+    .intro {
+      font-size: 1.08rem;
     }
 
-    .lead {
-      font-size: 1.15rem;
-      color: #294f69;
+    .callout {
+      background: #eef6fc;
+      border-left: 5px solid #1769aa;
+      padding: 18px 22px;
+      margin: 24px 0;
+      border-radius: 0 9px 9px 0;
+      font-size: 1.06rem;
     }
 
-    .plain-english {
-      background: var(--light-blue);
-      border-left: 6px solid var(--blue);
+    .warning {
+      background: #fff6dc;
+      border-left: 5px solid #b88920;
+      padding: 18px 22px;
+      margin: 24px 0;
+      border-radius: 0 9px 9px 0;
+    }
+
+    .research-note {
+      background: #f1f6ef;
+      border: 1px solid #cad9c4;
+      padding: 22px;
       border-radius: 10px;
-      padding: 22px 25px;
-      margin: 30px 0;
+      margin: 22px 0;
     }
 
-    .plain-english strong {
-      color: var(--dark-blue);
+    .research-note h3 {
+      color: #416b3c;
+      margin-top: 0;
     }
 
     .comparison {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 22px;
-      margin: 30px 0;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 24px 0;
     }
 
-    .comparison-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 26px;
-      box-shadow: var(--shadow);
+    .compare-card {
+      border: 1px solid #d5e0e7;
+      border-radius: 11px;
+      padding: 20px;
+      background: #fbfdff;
     }
 
-    .comparison-card h3 {
+    .compare-card h3 {
       margin-top: 0;
-      font-size: 1.35rem;
     }
 
-    .comparison-card ul {
-      padding-left: 20px;
-    }
-
-    .comparison-card li {
-      margin-bottom: 10px;
-    }
-
-    .comparison-table {
+    table {
       width: 100%;
       border-collapse: collapse;
-      background: white;
-      margin: 28px 0;
-      box-shadow: var(--shadow);
+      margin: 22px 0;
+      font-family: Arial, sans-serif;
+      font-size: .94rem;
     }
 
-    .comparison-table th,
-    .comparison-table td {
-      padding: 14px;
-      border: 1px solid var(--border);
+    th {
+      background: #123d67;
+      color: white;
       text-align: left;
+      padding: 12px;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #d8e1e7;
       vertical-align: top;
     }
 
-    .comparison-table th {
-      background: var(--dark-blue);
-      color: white;
-    }
-
-    .comparison-table tr:nth-child(even) {
-      background: #f8fbfd;
-    }
-
-    .source-button,
-    .archive-button {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 7px;
-      padding: 9px 14px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin: 4px 4px 4px 0;
-    }
-
-    .source-button {
-      background: var(--blue);
-      color: white;
-    }
-
-    .source-button:hover {
-      background: var(--dark-blue);
-    }
-
-    .archive-button {
-      background: var(--paper-dark);
-      color: white;
-    }
-
-    .insurance-box {
-      background: var(--soft-green);
-      border: 1px solid #bcd8c4;
-      border-radius: 14px;
-      padding: 25px;
-      margin: 30px 0;
-    }
-
-    .insurance-box h3 {
-      margin-top: 0;
-      color: #315b3d;
-    }
-
-    .checklist {
-      background: white;
-      border: 2px solid var(--blue);
-      border-radius: 16px;
-      padding: 30px;
-      margin: 45px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .checklist h2 {
-      margin-top: 0;
-    }
-
-    .check-item {
-      padding: 14px 0;
-      border-bottom: 1px solid #dde7ee;
-    }
-
-    .check-item:last-child {
-      border-bottom: none;
-    }
-
-    .check-item strong {
-      color: var(--dark-blue);
-    }
-
-    .law-trail {
-      background: var(--pale-blue);
-      border-top: 5px solid var(--dark-blue);
-      padding: 34px;
-      border-radius: 14px;
-      margin: 45px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .law-trail h2 {
-      margin-top: 0;
-    }
-
-    .trail-step {
-      border-left: 3px solid var(--blue);
-      padding: 3px 0 22px 20px;
-      margin-left: 7px;
-    }
-
-    .trail-step:last-child {
-      padding-bottom: 0;
-    }
-
-    .trail-step strong {
-      display: block;
-      color: var(--dark-blue);
-      font-size: 1.02rem;
-    }
-
-    .archive {
-      background: var(--paper);
-      border: 1px solid #dbc89e;
-      border-radius: 16px;
-      padding: 32px;
-      margin: 45px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .archive-label {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.75rem;
-      font-weight: 800;
-      color: var(--paper-dark);
-    }
-
-    .archive h2,
-    .archive h3 {
-      color: #59451f;
-    }
-
-    .archive h2 {
-      margin-top: 5px;
-    }
-
-    .document-card {
-      background: rgba(255,255,255,0.55);
-      border: 1px solid #d6c092;
-      border-radius: 10px;
-      padding: 22px;
-      margin-top: 22px;
-    }
-
-    .source-note {
+    tr:nth-child(even) td {
       background: #f7fafc;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 14px 17px;
-      margin: 20px 0;
-      font-size: 0.9rem;
     }
 
-    .source-note strong {
-      color: var(--dark-blue);
+    .record-list,
+    .check-list,
+    .archive-list {
+      padding-left: 23px;
     }
 
-    .sources-section {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 30px;
-      margin: 45px 0;
-      box-shadow: var(--shadow);
-    }
-
-    .sources-section h2 {
-      margin-top: 0;
-    }
-
-    .source-item {
-      border-bottom: 1px solid #e2ebf1;
-      padding: 18px 0;
-    }
-
-    .source-item:last-child {
-      border-bottom: none;
-    }
-
-    .source-item h3 {
-      margin: 0 0 6px;
-    }
-
-    .source-item p {
-      font-size: 0.92rem;
+    .record-list li,
+    .check-list li,
+    .archive-list li {
       margin-bottom: 9px;
     }
 
-    .citation-box {
-      background: var(--soft-gold);
-      border: 1px solid #e4cf93;
-      border-radius: 14px;
-      padding: 28px;
-      margin: 45px 0;
-    }
-
-    .citation-box h2 {
-      color: #66501c;
-      margin-top: 0;
-    }
-
-    .citation-example {
-      background: white;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 12px 0;
-      font-size: 0.91rem;
-      overflow-wrap: anywhere;
-    }
-
-    .author-box {
-      background: var(--deep-blue);
-      color: white;
-      border-radius: 15px;
-      padding: 30px;
-      margin: 45px 0 20px;
-    }
-
-    .author-box h2 {
-      color: white;
-      margin-top: 0;
-    }
-
-    .author-box p {
-      color: #e8f2f8;
-    }
-
-    .author-grid {
+    .source-grid {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 8px 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+      margin-top: 22px;
     }
 
-    .author-grid strong {
+    .source-card {
+      border: 1px solid #d3dee7;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fbfdff;
+    }
+
+    .source-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .source-card p {
+      font-size: .92rem;
+      margin-bottom: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      background: #1769aa;
       color: white;
+      padding: 10px 16px;
+      border-radius: 7px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: .9rem;
     }
 
-    .education-note {
-      background: var(--soft-green);
-      border: 1px solid #bed8c3;
-      border-radius: 12px;
-      padding: 23px;
-      margin-top: 35px;
-      color: #31573a;
+    .button:hover {
+      background: #0c3f70;
     }
 
-    .back-link {
+    .data-record {
+      display: grid;
+      grid-template-columns: minmax(190px, 1fr) 2fr;
+      border: 1px solid #d5e0e7;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .data-record div {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e0e7ec;
+    }
+
+    .data-record .label {
+      background: #edf4f9;
+      font-weight: bold;
+    }
+
+    .closing-rule {
       text-align: center;
-      margin: 40px 0 5px;
+      font-size: 1.12rem;
+      font-weight: bold;
+      line-height: 2;
+      color: #123d67;
+      margin-top: 25px;
+    }
+
+    .back-links {
+      text-align: center;
+      margin: 38px 0 10px;
+    }
+
+    .back-links a {
+      margin: 5px;
     }
 
     footer {
-      background: var(--dark-blue);
+      background: #0c3f70;
       color: white;
       text-align: center;
-      padding: 34px 20px;
-    }
-
-    footer p {
-      margin: 6px 0;
+      padding: 30px 20px;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
     }
 
     footer a {
       color: white;
     }
 
-    .footer-links {
-      margin: 14px 0;
-    }
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
 
-    .footer-links a {
-      margin: 0 8px;
-    }
+      .section {
+        padding: 22px 18px;
+      }
 
-    @media (max-width: 750px) {
       .comparison {
         grid-template-columns: 1fr;
       }
 
-      .comparison-table {
-        font-size: 0.84rem;
-      }
-
-      .comparison-table th,
-      .comparison-table td {
-        padding: 9px;
-      }
-
-      .author-grid {
+      .data-record {
         grid-template-columns: 1fr;
       }
 
-      .main-nav a {
-        font-size: 0.78rem;
-        padding: 10px 7px;
+      .data-record .label {
+        padding-bottom: 4px;
       }
 
-      .law-trail,
-      .archive,
-      .sources-section,
-      .citation-box,
-      .checklist {
-        padding: 22px;
+      .data-record div:not(.label) {
+        padding-top: 4px;
+      }
+
+      table {
+        font-size: .82rem;
+      }
+
+      th,
+      td {
+        padding: 8px;
       }
     }
   </style>
@@ -573,896 +374,1524 @@
 
 <header class="site-header">
   <h1>MoneyTrackTemplates</h1>
-  <p>Plan Better. Track Smarter. Live More Organized.</p>
+  <p class="tagline">Plan Better. Track Smarter. Live More Organized.</p>
+  <button class="share-button" onclick="sharePage()">↗ Share This Page</button>
 </header>
 
-<nav class="main-nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="money-templates.html">Money Templates</a>
-    <a href="planners.html">Planners</a>
-    <a href="holiday-planners.html">Holiday Planners</a>
-    <a href="free-downloads.html">Free Downloads</a>
-    <a href="money-banking.html" class="active">Money &amp; Banking</a>
-    <a href="resources.html">Resources</a>
-    <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
-  </div>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="money-templates.html">Money Templates</a>
+  <a href="planners.html">Planners</a>
+  <a href="holiday-planners.html">Holiday Planners</a>
+  <a href="free-downloads.html">Free Downloads</a>
+  <a href="money-banking.html" class="active">Money &amp; Banking</a>
+  <a href="shop.html">Shop</a>
+  <a href="resources.html">Resources</a>
 </nav>
 
-<section class="share-page-bar">
-  <button class="share-page-button" id="share-page-button" type="button">
-    ↗ Share This Page
-  </button>
-  <span class="share-status" id="share-status" aria-live="polite"></span>
-</section>
-
 <section class="hero">
-  <div class="hero-inner">
+  <div class="eyebrow">MoneyTrackTemplates Financial Research Library</div>
 
-    <p class="eyebrow">MoneyTrack Banking Basics</p>
+  <h2>Banks vs. Credit Unions: What's Actually Different?</h2>
 
-    <h2>Banks vs. Credit Unions:<br>What's Actually Different?</h2>
+  <p class="hero-subtitle">
+    Ownership, voting power, insurance, fees, membership, regulation—and
+    where your money really goes.
+  </p>
 
-    <p class="hero-text">
-      They may both offer checking accounts, savings accounts, cards and
-      loans — but banks and credit unions are not organized in quite the
-      same way. Here's what that means for the person opening the account.
-    </p>
-
-    <p class="article-meta">
-      Research &amp; drafting: OpenAI's ChatGPT<br>
-      Editing &amp; publication: MoneyTrackTemplates<br>
-      Research reviewed: September 24, 2026
-    </p>
-
+  <div class="article-meta">
+    Research &amp; drafting: OpenAI's ChatGPT<br>
+    Editing &amp; publication: MoneyTrackTemplates<br>
+    Research reviewed: September 26, 2026
   </div>
 </section>
 
-<main class="article">
+<main>
 
-  <p class="lead">
-    Walk into a bank and a credit union and the experience can look remarkably
-    similar. Both may offer checking and savings accounts, debit cards, online
-    banking, certificates and loans.
-  </p>
+  <section class="section intro">
+    <p>
+      Walk into a bank and a credit union and the experience may look
+      remarkably similar.
+    </p>
 
-  <p>
-    The important differences are underneath the counter: who owns the
-    institution, who can use it, how it is chartered and regulated, and
-    which federal insurance system may protect qualifying deposits or shares.
-  </p>
+    <p>
+      Both may offer checking accounts, savings accounts, debit cards,
+      automobile loans, mortgages, mobile apps, automated teller machines,
+      online banking, and physical branches.
+    </p>
 
-  <div class="plain-english">
-    <strong>Plain English:</strong>
-    You do not need to decide that banks are "good" and credit unions are
-    "better," or the other way around. They are different organizational
-    models. The useful question is whether a particular institution and
-    account fit what you need.
-  </div>
+    <p>So why do we have two different kinds of institutions?</p>
+
+    <p><strong>The biggest difference isn't the debit card.</strong></p>
+
+    <p><strong>It is ownership.</strong></p>
+
+    <p>
+      A commercial bank and a credit union can perform many of the same
+      financial functions while operating under fundamentally different
+      organizational structures.
+    </p>
+
+    <p>And those structures affect some very important questions:</p>
+
+    <ul class="record-list">
+      <li>Who owns the institution?</li>
+      <li>Who gets to vote?</li>
+      <li>Where do earnings go?</li>
+      <li>Who regulates it?</li>
+      <li>Who insures your deposits or shares?</li>
+      <li>Who can become a customer or member?</li>
+      <li>Can another corporation own it?</li>
+      <li>Can a foreign company control it?</li>
+      <li>Who is accountable for what happens to your money?</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Let's follow the trail.</strong>
+    </div>
+  </section>
 
 
-  <h2>1. Start With the Biggest Difference: Ownership</h2>
+  <section class="section">
+    <h2>🏦 What Is a Bank?</h2>
 
-  <div class="comparison">
+    <p>
+      A commercial bank is a financial institution that accepts deposits,
+      makes loans, and provides other financial services.
+    </p>
 
-    <section class="comparison-card">
-      <h3>🏦 Banks</h3>
+    <p>Banks can have shareholders.</p>
+
+    <p>
+      A bank may also be controlled by another corporation known as a
+      <strong>bank holding company</strong>.
+    </p>
+
+    <p>
+      The <strong>Federal Financial Institutions Examination Council (FFIEC)</strong>
+      describes a bank holding company as a company that controls one or more
+      United States banks.
+    </p>
+
+    <p>
+      A bank holding company can itself be owned by another bank holding
+      company, creating an ownership chain. The organization at the top of the
+      reported hierarchy may be identified as the <strong>top holder</strong>.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Depositor → Bank → Bank Holding Company → Parent Company → Top Holder
+      </strong>
+    </div>
+
+    <p>
+      As we learned in <em>Banking Basics</em>, that ownership trail can
+      sometimes extend outside the United States.
+    </p>
+
+    <a class="button"
+       href="https://www.ffiec.gov/npw/Help/InstitutionTypes"
+       target="_blank" rel="noopener">
+      Explore FFIEC Institution Types →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>🤝 What Is a Credit Union?</h2>
+
+    <p>
+      A credit union uses a very different organizational structure.
+    </p>
+
+    <p>
+      The <strong>National Credit Union Administration (NCUA)</strong>
+      describes credit unions as not-for-profit, member-owned, and
+      member-controlled cooperative financial institutions.
+    </p>
+
+    <p>Members don't merely use the credit union.</p>
+
+    <p><strong>They collectively own it.</strong></p>
+
+    <p>
+      A federal credit union is governed by a board of directors elected from
+      its membership.
+    </p>
+
+    <p>And here is one of the most interesting differences:</p>
+
+    <div class="callout">
+      <strong>
+        Each member generally has one vote regardless of the number of shares
+        the member owns.
+      </strong>
+    </div>
+
+    <p>
+      Someone with a much larger account balance doesn't receive proportionally
+      more voting power simply because more money is deposited.
+    </p>
+
+    <p>
+      That is fundamentally different from conventional corporate shareholder
+      voting.
+    </p>
+
+    <a class="button"
+       href="https://publishedguides.ncua.gov/charteringmanual/Content/CharteringManual/IntroductionSummary/OverviewFCUs.htm"
+       target="_blank" rel="noopener">
+      Read NCUA Federal Credit Union Overview →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>🔎 Follow the Ownership</h2>
+
+    <div class="comparison">
+
+      <div class="compare-card">
+        <h3>Commercial Bank</h3>
+        <p>A bank can have a corporate ownership chain.</p>
+        <p><strong>Bank → Immediate Parent → Holding Company → Top Holder → Owners</strong></p>
+        <p>
+          Public securities filings may provide additional information about
+          significant disclosed beneficial owners where applicable.
+        </p>
+      </div>
+
+      <div class="compare-card">
+        <h3>Credit Union</h3>
+        <p>A credit union operates as a member-owned cooperative.</p>
+        <p><strong>Member → Credit Union → Member-Elected Board</strong></p>
+        <p>
+          The governance trail therefore differs from conventional
+          shareholder ownership.
+        </p>
+      </div>
+
+    </div>
+
+    <p>
+      That doesn't mean credit unions are free from management problems,
+      regulatory problems, conflicts, poor decisions, or financial failure.
+    </p>
+
+    <p>It means the <strong>ownership structure is different</strong>.</p>
+  </section>
+
+
+  <section class="section">
+    <h2>📊 By the Numbers: Two Different Systems</h2>
+
+    <p>
+      The scale and reporting populations of the banking and credit-union
+      sectors differ.
+    </p>
+
+    <p>
+      For the first quarter of 2026, the
+      <strong>Federal Deposit Insurance Corporation (FDIC)</strong> reported
+      results from <strong>4,278 insured commercial banks and savings
+      institutions</strong>. Those institutions reported approximately
+      <strong>$80.5 billion in aggregate quarterly net income</strong>.
+    </p>
+
+    <p>
+      For the second quarter of 2026, the
+      <strong>National Credit Union Administration (NCUA)</strong> reported
+      that federally insured credit unions held approximately:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Measure</th>
+          <th>Value</th>
+          <th>Period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total assets</td>
+          <td>$2.50 trillion</td>
+          <td>Second quarter 2026</td>
+        </tr>
+        <tr>
+          <td>Loans outstanding</td>
+          <td>$1.76 trillion</td>
+          <td>Second quarter 2026</td>
+        </tr>
+        <tr>
+          <td>Insured shares and deposits</td>
+          <td>$1.91 trillion</td>
+          <td>Second quarter 2026</td>
+        </tr>
+        <tr>
+          <td>Loan-to-share ratio</td>
+          <td>82.9%</td>
+          <td>Second quarter 2026</td>
+        </tr>
+        <tr>
+          <td>Delinquency rate</td>
+          <td>0.96%</td>
+          <td>Second quarter 2026</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warning">
+      <strong>Research warning:</strong><br><br>
+      The banking statistics above are from the first quarter of 2026, while
+      the credit-union statistics are from the second quarter of 2026.
+      They also describe different institutional populations.
+      <br><br>
+      <strong>
+        Different population + different reporting period = comparison with caution.
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>👥 Who Really Owns a Credit Union?</h2>
+
+    <p>
+      The phrase <strong>member-owned</strong> deserves more explanation.
+    </p>
+
+    <p>
+      When someone joins a federally chartered credit union, deposits are
+      generally called <strong>shares</strong>.
+    </p>
+
+    <p>
+      Those shares help fund the credit union's lending, investments, and
+      other operations.
+    </p>
+
+    <p>
+      Membership gives eligible members governance rights, including the
+      right to vote for credit-union officials and, subject to applicable
+      requirements, to seek election as an official.
+    </p>
+
+    <p>
+      The National Credit Union Administration explains that federal credit
+      unions are governed by boards elected <strong>by and from the membership</strong>.
+    </p>
+
+    <div class="callout">
+      "Member-owned" isn't merely an advertising slogan.
+      <br><br>
+      <strong>It describes a legal and organizational structure.</strong>
+    </div>
+
+    <p>
+      It doesn't mean each member personally owns a particular percentage of
+      the building, computers, loan portfolio, or cash.
+    </p>
+
+    <p>
+      It means the institution operates as a cooperative owned and controlled
+      collectively by its members.
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>🗳️ One Member, One Vote</h2>
+
+    <p>
+      This deserves its own section because it is one of the clearest
+      differences between the two systems.
+    </p>
+
+    <p>Federal credit-union members exercise democratic control.</p>
+
+    <div class="callout">
+      <strong>One member. One vote.</strong>
+    </div>
+
+    <p>
+      The amount a member has deposited doesn't increase the member's voting
+      power.
+    </p>
+
+    <p>
+      Compare that with a publicly traded corporate structure, where voting
+      power is commonly associated with the number and class of voting shares
+      held.
+    </p>
+
+    <p>
+      That doesn't automatically make one governance system superior to the
+      other.
+    </p>
+
+    <p>
+      It means they answer the question
+      <strong>"Who controls this organization?"</strong> differently.
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>🌎 Can a Credit Union Be Foreign-Owned?</h2>
+
+    <p>
+      A conventional commercial bank operating in the United States can be
+      controlled by a foreign banking organization.
+    </p>
+
+    <p>
+      A federal credit union does not operate through that conventional
+      outside-shareholder ownership structure.
+    </p>
+
+    <p>
+      The National Credit Union Administration describes federal credit unions
+      as member-owned and member-controlled cooperatives rather than
+      institutions owned through conventional outside holding-company or
+      investor structures.
+    </p>
+
+    <p>
+      So when investigating international connections involving a credit
+      union, we should ask somewhat different questions.
+    </p>
+
+    <ul class="record-list">
+      <li>What is the membership structure?</li>
+      <li>Who sits on the board?</li>
+      <li>Who are the senior managers where relevant?</li>
+      <li>What material service-provider relationships exist?</li>
+      <li>What investment relationships are relevant?</li>
+      <li>What correspondent or corporate credit-union relationships exist?</li>
+      <li>What financial-technology providers are involved?</li>
+      <li>What do official regulatory records show?</li>
+    </ul>
+
+    <div class="callout">
+      A foreign business relationship isn't the same thing as foreign ownership.
+      <br><br>
+      <strong>Name the relationship correctly.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🚪 Why Can't Everyone Join Every Credit Union?</h2>
+
+    <p>
+      Banks generally offer accounts to customers who satisfy their
+      account-opening requirements.
+    </p>
+
+    <p>Credit unions introduce another concept:</p>
+
+    <div class="callout">
+      <strong>Field of membership.</strong>
+    </div>
+
+    <p>
+      Credit unions are legally limited to serving people within the fields of
+      membership established by their charters.
+    </p>
+
+    <p>
+      Depending upon the credit union, eligibility may be based on occupation,
+      association, community, geographic area, or another qualifying group.
+    </p>
+
+    <p>
+      Modern credit-union membership can sometimes be much broader than
+      consumers expect.
+    </p>
+
+    <p>But eligibility still matters.</p>
+
+    <p>
+      Before comparing a particular credit union with a bank, ask:
+    </p>
+
+    <div class="callout">
+      <strong>Can I actually become a member?</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>💰 Where Do the Earnings Go?</h2>
+
+    <p>
+      This is another area where terminology matters.
+    </p>
+
+    <p>
+      Commercial banks can generate profits for their owners or shareholders.
+    </p>
+
+    <p>
+      Credit unions are organized as not-for-profit cooperatives serving their
+      members rather than conventional outside shareholders.
+    </p>
+
+    <p>
+      That structure can allow credit unions to return economic value to
+      members through combinations of rates, fees, services, reserves, and
+      other member benefits.
+    </p>
+
+    <div class="warning">
+      <strong>But don't turn an organizational structure into a promise about a particular account.</strong>
+    </div>
+
+    <p>A credit union can charge fees.</p>
+
+    <p>A bank can offer a no-fee account.</p>
+
+    <p>A bank can offer an excellent savings rate.</p>
+
+    <p>A credit union can offer an unimpressive one.</p>
+
+    <p>
+      The <strong>Consumer Financial Protection Bureau (CFPB)</strong>
+      confirms that banks and credit unions can charge monthly maintenance or
+      service fees and advises consumers to compare account requirements and
+      fee schedules.
+    </p>
+
+    <div class="callout">
+      We won't write:
+      <br><br>
+      <strong>"Credit unions always have lower fees."</strong>
+      <br><br>
+      We'll write:
+      <br><br>
+      <strong>"Compare the actual fee schedule."</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🛡️ FDIC vs. NCUSIF: Who Insures Your Money?</h2>
+
+    <p>Here are two acronyms worth learning.</p>
+
+    <div class="comparison">
+
+      <div class="compare-card">
+        <h3>Banks</h3>
+        <p>
+          Eligible deposits at insured banks are generally protected by the
+          <strong>Federal Deposit Insurance Corporation (FDIC)</strong>.
+        </p>
+      </div>
+
+      <div class="compare-card">
+        <h3>Credit Unions</h3>
+        <p>
+          Eligible shares at federally insured credit unions are generally
+          protected by the
+          <strong>National Credit Union Share Insurance Fund (NCUSIF)</strong>,
+          administered by the
+          <strong>National Credit Union Administration (NCUA)</strong>.
+        </p>
+      </div>
+
+    </div>
+
+    <p>
+      The National Credit Union Share Insurance Fund was established by
+      Congress in 1970 and is backed by the full faith and credit of the
+      United States.
+    </p>
+
+    <p>
+      For common individual-account arrangements, both federal systems
+      generally provide insurance protection up to at least
+      <strong>$250,000</strong>, subject to the applicable ownership-category
+      rules and other requirements.
+    </p>
+
+    <div class="callout">
+      <strong>Bank? Look for FDIC.</strong>
+      <br><br>
+      <strong>Credit union? Look for NCUA/NCUSIF federal share insurance.</strong>
+      <br><br>
+      But don't stop at the logo.
+      <br><br>
+      <strong>Verify the institution.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🔎 Insurance Is About the Institution, Not the Sign Outside</h2>
+
+    <p>Consumers should independently verify insurance.</p>
+
+    <p>
+      For banks, use the Federal Deposit Insurance Corporation's
+      <strong>BankFind Suite</strong>.
+    </p>
+
+    <p>
+      For credit unions, use the National Credit Union Administration's
+      <strong>Credit Union Locator</strong> and share-insurance resources.
+    </p>
+
+    <p>
+      And don't assume every financial product sold inside a bank or credit
+      union is insured.
+    </p>
+
+    <p>
+      Stocks, bonds, mutual funds, annuities, and other investment products do
+      not become federally insured deposits or shares simply because they are
+      sold through an insured financial institution.
+    </p>
+
+    <div class="callout">
+      <strong>The building doesn't insure the product.</strong>
+      <br><br>
+      <strong>The rules do.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🧭 Follow the Money: Bank vs. Credit Union</h2>
+
+    <div class="comparison">
+
+      <div class="compare-card">
+        <h3>Commercial Bank</h3>
+
+        <p>You deposit money.</p>
+
+        <p>The bank owes that deposit to you.</p>
+
+        <p>
+          The bank uses its assets and funding to make loans, hold securities,
+          and conduct other banking activities.
+        </p>
+
+        <p>
+          Depending upon its organization, profits can ultimately benefit
+          corporate owners or shareholders.
+        </p>
+
+        <p>
+          <strong>
+            Depositor → Bank → Parent → Top Holder → Owners
+          </strong>
+        </p>
+      </div>
+
+      <div class="compare-card">
+        <h3>Credit Union</h3>
+
+        <p>You become a member and deposit funds as shares.</p>
+
+        <p>
+          Member shares provide important funding for loans, investments, and
+          other operations.
+        </p>
+
+        <p>
+          Members collectively own the cooperative and elect its board.
+        </p>
+
+        <p>
+          <strong>
+            Member → Credit Union → Member-Elected Board
+          </strong>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      Same basic consumer activity—depositing money.
+      <br><br>
+      <strong>Very different governance trail.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🧾 Fees: Never Assume</h2>
+
+    <p>
+      A financial institution's organizational type doesn't tell you the
+      entire price of doing business there.
+    </p>
+
+    <p>Before opening an account, examine:</p>
+
+    <ul class="check-list">
+      <li>Monthly maintenance fees</li>
+      <li>Minimum-balance requirements</li>
+      <li>Overdraft fees and policies</li>
+      <li>Insufficient-funds policies</li>
+      <li>Out-of-network automated teller machine fees</li>
+      <li>Wire-transfer fees</li>
+      <li>Paper-statement fees</li>
+      <li>Check fees</li>
+      <li>Foreign-transaction fees</li>
+      <li>Early-account-closing fees</li>
+      <li>Dormant-account fees</li>
+      <li>Requirements for waiving monthly fees</li>
+    </ul>
+
+    <p>
+      The Consumer Financial Protection Bureau explains that banks and credit
+      unions may charge account-maintenance fees and that consumers should
+      review the institution's disclosures and fee schedule.
+    </p>
+
+    <div class="callout">
+      <strong>Read the fee schedule.</strong>
+      <br><br>
+      It's much more informative than the commercial.
+    </div>
+
+    <a class="button"
+       href="https://www.consumerfinance.gov/ask-cfpb/why-am-i-being-charged-a-monthly-maintenance-fee-for-my-bank-or-credit-union-account-en-2151/"
+       target="_blank" rel="noopener">
+      CFPB: Account Maintenance Fees →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>📱 Technology: Don't Assume Here Either</h2>
+
+    <p>Another old stereotype deserves retirement.</p>
+
+    <p>
+      A bank isn't automatically technologically sophisticated because it's a
+      bank.
+    </p>
+
+    <p>
+      A credit union isn't automatically technologically outdated because
+      it's a credit union.
+    </p>
+
+    <p><strong>Compare the actual institution.</strong></p>
+
+    <ul class="check-list">
+      <li>Mobile banking</li>
+      <li>Mobile check deposit</li>
+      <li>Bill payment</li>
+      <li>Person-to-person transfers</li>
+      <li>Card controls</li>
+      <li>Fraud alerts</li>
+      <li>Automated teller machine network</li>
+      <li>Online statements</li>
+      <li>Customer-service availability</li>
+      <li>Accessibility</li>
+      <li>Integration with financial apps</li>
+    </ul>
+
+    <p>
+      And remember what we learned in <em>Banking Basics</em>:
+      a bank or credit union can rely on outside financial-technology
+      providers.
+    </p>
+
+    <div class="callout">
+      The pretty app on your phone doesn't necessarily tell you who built or
+      operates every system behind it.
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>📊 Americans Are Already Banking by Phone</h2>
+
+    <p>
+      This isn't a minor change in consumer behavior.
+    </p>
+
+    <p>
+      The Federal Deposit Insurance Corporation's
+      <strong>2023 National Survey of Unbanked and Underbanked Households</strong>
+      found that <strong>48.3 percent of banked households</strong> used
+      mobile banking as their primary method of account access.
+    </p>
+
+    <p>
+      The survey also found that <strong>4.2 percent of U.S. households</strong>,
+      approximately <strong>5.6 million households</strong>, were unbanked in
+      2023, meaning no one in the household had a checking or savings account
+      at a bank or credit union.
+    </p>
+
+    <div class="callout">
+      The modern competition isn't simply:
+      <br><br>
+      <strong>Bank vs. credit union.</strong>
+      <br><br>
+      Increasingly it is:
+      <br><br>
+      <strong>
+        Bank vs. credit union vs. financial technology platform vs. nonbank
+        payment service—or some combination of them.
+      </strong>
+    </div>
+
+    <a class="button"
+       href="https://www.fdic.gov/analysis/household-survey"
+       target="_blank" rel="noopener">
+      Explore the FDIC Household Survey →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>🏛️ Who Regulates Credit Unions?</h2>
+
+    <p>
+      Just as not every bank has exactly the same regulator, not every credit
+      union has exactly the same regulatory arrangement.
+    </p>
+
+    <p>Credit unions can be:</p>
+
+    <ul class="record-list">
+      <li>Federally chartered</li>
+      <li>State chartered</li>
+    </ul>
+
+    <p>
+      The <strong>National Credit Union Administration (NCUA)</strong>
+      charters and supervises federal credit unions.
+    </p>
+
+    <p>
+      It also administers the National Credit Union Share Insurance Fund,
+      which insures all federal credit unions and most state-chartered credit
+      unions.
+    </p>
+
+    <p>
+      State-chartered credit unions also operate under applicable state
+      supervisory systems.
+    </p>
+
+    <div class="callout">
+      <strong>
+        What exact institution am I examining, what is its charter,
+        and who supervises it?
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>🔎 Ownership, Control &amp; Public Record</h2>
+
+    <p>
+      This research section will appear throughout the MoneyTrackTemplates
+      Financial Research Library.
+    </p>
+
+    <div class="comparison">
+
+      <div class="compare-card">
+        <h3>For a Bank</h3>
+        <ul class="record-list">
+          <li>Legal institution name</li>
+          <li>Charter</li>
+          <li>Federal Deposit Insurance Corporation certificate</li>
+          <li>Primary regulator</li>
+          <li>Immediate parent</li>
+          <li>Bank holding company</li>
+          <li>Top holder</li>
+          <li>Country of parent</li>
+          <li>Country of top holder</li>
+          <li>Publicly traded parent</li>
+          <li>Material beneficial-ownership disclosures where applicable</li>
+          <li>Mergers and acquisitions</li>
+          <li>Official enforcement actions</li>
+          <li>Effective date</li>
+        </ul>
+      </div>
+
+      <div class="compare-card">
+        <h3>For a Credit Union</h3>
+        <ul class="record-list">
+          <li>Legal institution name</li>
+          <li>Charter</li>
+          <li>National Credit Union Administration charter number</li>
+          <li>Federal share-insurance status</li>
+          <li>Field of membership</li>
+          <li>Board of directors</li>
+          <li>Senior management where relevant</li>
+          <li>Membership size</li>
+          <li>Assets</li>
+          <li>Major mergers</li>
+          <li>Material third-party relationships where relevant</li>
+          <li>Official enforcement actions</li>
+          <li>Effective date</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      For a bank we may ask:
+      <br><br>
+      <strong>Who owns the corporation?</strong>
+      <br><br>
+      For a credit union we may ask:
+      <br><br>
+      <strong>Who governs the cooperative?</strong>
+      <br><br>
+      Those aren't the same research question.
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>⚖️ Member-Owned Does Not Mean Problem-Free</h2>
+
+    <p>
+      The cooperative structure of a credit union doesn't make misconduct,
+      poor management, excessive fees, financial problems, or conflicts
+      impossible.
+    </p>
+
+    <p>Credit unions can fail.</p>
+
+    <p>Credit unions can receive regulatory orders.</p>
+
+    <p>Credit unions can make bad loans.</p>
+
+    <p>Credit unions can have governance disputes.</p>
+
+    <p>Credit unions can charge fees.</p>
+
+    <div class="callout">
+      <strong>
+        Member-owned is a description of governance—not a certificate of
+        perfection.
+      </strong>
+    </div>
+
+    <p>
+      Exactly the same evidence rule we use for banks applies here:
+      <strong>check the records.</strong>
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>🚨 Regulatory &amp; Enforcement Records</h2>
+
+    <p>
+      The National Credit Union Administration maintains administrative and
+      enforcement records under the federal credit-union regulatory system.
+    </p>
+
+    <p>
+      That means our research into an individual credit union doesn't have to
+      stop with its website.
+    </p>
+
+    <p>
+      For banks, depending upon the institution, we may consult records from:
+    </p>
+
+    <ul class="record-list">
+      <li>Federal Deposit Insurance Corporation</li>
+      <li>Office of the Comptroller of the Currency</li>
+      <li>Board of Governors of the Federal Reserve System</li>
+      <li>Consumer Financial Protection Bureau</li>
+      <li>Applicable state regulators</li>
+    </ul>
+
+    <p>For credit unions, we may consult:</p>
+
+    <ul class="record-list">
+      <li>National Credit Union Administration</li>
+      <li>Applicable state regulators</li>
+    </ul>
+
+    <div class="callout">
+      <strong>The regulator depends upon the institution.</strong>
+    </div>
+
+    <a class="button"
+       href="https://ncua.gov/regulation-supervision/enforcement-actions"
+       target="_blank" rel="noopener">
+      Explore NCUA Enforcement Information →
+    </a>
+  </section>
+
+
+  <section class="section">
+    <h2>📜 Policy &amp; Legislative Trail</h2>
+
+    <p>
+      The American credit-union system has its own history.
+    </p>
+
+    <p>
+      The National Credit Union Administration's historical material
+      identifies early advocates for cooperative credit, including
+      <strong>Edward Filene</strong> and <strong>Roy Bergengren</strong>.
+    </p>
+
+    <p>
+      The federal system took a major step on
+      <strong>June 26, 1934</strong>, when President
+      <strong>Franklin D. Roosevelt</strong> signed the
+      <strong>Federal Credit Union Act</strong> into law.
+    </p>
+
+    <p>
+      The newly created Federal Credit Union Division was initially placed
+      within the Farm Credit Administration.
+    </p>
+
+    <p>
+      Later in 1934, the Morris Sheppard Federal Credit Union in Texarkana,
+      Texas, became the first federally chartered credit union.
+    </p>
+
+    <p>Federal share insurance came later.</p>
+
+    <p>
+      Congress established the
+      <strong>National Credit Union Share Insurance Fund (NCUSIF)</strong>
+      in 1970.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Cooperative-credit movement → Federal Credit Union Act →
+        Federal chartering system → Federal share insurance →
+        Modern National Credit Union Administration
+      </strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>📜 From the Archives</h2>
+
+    <p>
+      When researching the history of credit unions, we'll look beyond modern
+      marketing material.
+    </p>
+
+    <p>Our archival trail can include:</p>
+
+    <ul class="archive-list">
+      <li>The Federal Credit Union Act</li>
+      <li>Congressional records</li>
+      <li>Historical federal credit-union reports</li>
+      <li>National Credit Union Administration historical material</li>
+      <li>Original charter records where available</li>
+      <li>Historical annual reports</li>
+      <li>Administrative orders</li>
+      <li>Merger records</li>
+      <li>Regulatory documents</li>
+    </ul>
+
+    <div class="callout">
+      And we'll ask the same question we ask throughout MoneyTrackTemplates:
+      <br><br>
+      <strong>What did the original record actually say?</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>📊 Public Administration Research Note</h2>
+
+    <div class="research-note">
+      <h3>Don't Mix the Units</h3>
 
       <p>
-        Many banks are for-profit businesses. Depending on their corporate
-        structure, ownership may ultimately belong to shareholders or other
-        owners of the banking organization.
+        This article contains several measures that should not be casually
+        combined.
       </p>
 
       <p>
-        Banks can range from small community institutions to very large
-        organizations operating across many states.
-      </p>
-    </section>
-
-    <section class="comparison-card">
-      <h3>🤝 Credit Unions</h3>
-
-      <p>
-        Credit unions are cooperative financial institutions owned by their
-        members. A person generally becomes a member by meeting the credit
-        union's eligibility requirements and opening the required membership
-        share account.
+        <strong>4,278</strong> describes Federal Deposit Insurance
+        Corporation-insured commercial banks and savings institutions
+        reporting in the first quarter of 2026.
       </p>
 
       <p>
-        Membership requirements are often described as a credit union's
-        <strong>field of membership.</strong>
+        <strong>$2.50 trillion</strong> describes aggregate assets of
+        federally insured credit unions in the second quarter of 2026.
       </p>
-    </section>
 
-  </div>
+      <p>
+        <strong>4.2 percent</strong> describes United States households
+        without a bank or credit-union account in the Federal Deposit Insurance
+        Corporation's 2023 household survey.
+      </p>
+
+      <p>
+        <strong>48.3 percent</strong> describes the share of banked households
+        reporting mobile banking as their primary method of account access in
+        that same 2023 survey.
+      </p>
+    </div>
+
+    <p>Different measures.</p>
+    <p>Different periods.</p>
+    <p>Different populations.</p>
+    <p>Different units of analysis.</p>
+
+    <div class="callout">
+      <strong>
+        Measure → Value → Observation Period → Population →
+        Unit of Analysis → Geography → Primary Source →
+        Release Date → Research Review Date
+      </strong>
+    </div>
+  </section>
 
 
-  <h2>2. A Quick Side-by-Side Comparison</h2>
+  <section class="section">
+    <h2>📋 Data Record for This Article</h2>
 
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Question</th>
-        <th>Bank</th>
-        <th>Credit Union</th>
-      </tr>
-    </thead>
+    <div class="data-record">
+      <div class="label">Research geography</div>
+      <div>United States</div>
 
-    <tbody>
-      <tr>
-        <td><strong>Basic structure</strong></td>
-        <td>Typically a for-profit banking institution.</td>
-        <td>Member-owned cooperative.</td>
-      </tr>
+      <div class="label">Banking reference period</div>
+      <div>First quarter 2026</div>
 
-      <tr>
-        <td><strong>Customers</strong></td>
-        <td>Generally serves customers who meet account requirements.</td>
-        <td>Serves members who qualify under its field of membership.</td>
-      </tr>
+      <div class="label">Credit-union reference period</div>
+      <div>Second quarter 2026</div>
 
-      <tr>
-        <td><strong>Federal insurance</strong></td>
-        <td>
-          Qualifying deposits at an FDIC-insured bank are covered by FDIC
-          deposit insurance.
-        </td>
-        <td>
-          Qualifying shares at a federally insured credit union are covered
-          by the National Credit Union Share Insurance Fund.
-        </td>
-      </tr>
+      <div class="label">Household banking survey period</div>
+      <div>2023</div>
 
-      <tr>
-        <td><strong>Federal regulator</strong></td>
-        <td>
-          Depends on charter and other factors. Federal bank regulators
-          include the OCC, Federal Reserve and FDIC.
-        </td>
-        <td>
-          NCUA charters and supervises federal credit unions. State-chartered
-          credit unions can also have state supervision.
-        </td>
-      </tr>
+      <div class="label">Banking population</div>
+      <div>Federal Deposit Insurance Corporation-insured commercial banks and savings institutions</div>
 
-      <tr>
-        <td><strong>Products</strong></td>
-        <td>
-          May include checking, savings, CDs, cards, loans and other
+      <div class="label">Credit-union population</div>
+      <div>Federally insured credit unions</div>
+
+      <div class="label">Household-survey population</div>
+      <div>United States households</div>
+
+      <div class="label">Primary banking source</div>
+      <div>Federal Deposit Insurance Corporation</div>
+
+      <div class="label">Primary credit-union source</div>
+      <div>National Credit Union Administration</div>
+
+      <div class="label">Consumer-information source</div>
+      <div>Consumer Financial Protection Bureau</div>
+
+      <div class="label">Ownership source</div>
+      <div>Federal Financial Institutions Examination Council National Information Center</div>
+
+      <div class="label">Research reviewed</div>
+      <div>September 26, 2026</div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>✅ Before You Choose a Bank or Credit Union</h2>
+
+    <h3>1. Verify the institution.</h3>
+    <p>
+      Is the bank actually insured by the Federal Deposit Insurance
+      Corporation? Is the credit union federally insured through the National
+      Credit Union Share Insurance Fund?
+    </p>
+
+    <h3>2. Identify the ownership structure.</h3>
+    <p>
+      If it's a bank, investigate its parent and top holder. If it's a credit
+      union, investigate its charter, membership structure, and board.
+    </p>
+
+    <h3>3. Read the fee schedule.</h3>
+    <p>
+      Don't rely on "free checking" without reading the conditions.
+    </p>
+
+    <h3>4. Compare actual rates.</h3>
+    <p>
+      Compare savings rates, loan rates, and the applicable
+      <strong>Annual Percentage Yield (APY)</strong> or
+      <strong>Annual Percentage Rate (APR)</strong>.
+    </p>
+
+    <p>
+      Annual Percentage Yield describes the rate of return on a deposit
+      account taking compounding into account.
+    </p>
+
+    <p>
+      Annual Percentage Rate is commonly used to express the annualized cost
+      of borrowing under applicable disclosure rules.
+    </p>
+
+    <h3>5. Check access.</h3>
+    <p>
+      Branches? Automated teller machines? Mobile app? Telephone support?
+      Weekend service?
+    </p>
+
+    <h3>6. Check membership eligibility.</h3>
+    <p>
+      For a credit union, determine whether you qualify to join.
+    </p>
+
+    <h3>7. Investigate regulatory history.</h3>
+    <p>Look beyond the institution's own website.</p>
+
+    <h3>8. Ask where your money actually goes.</h3>
+    <p>
+      Especially when a financial app or third-party service sits between you
+      and the institution.
+    </p>
+  </section>
+
+
+  <section class="section">
+    <h2>🔎 Try the Research Yourself</h2>
+
+    <p>Don't take our word for it.</p>
+
+    <p>Open the public databases and investigate an institution yourself.</p>
+
+    <div class="source-grid">
+
+      <div class="source-card">
+        <h3>FDIC BankFind Suite</h3>
+        <p>
+          Verify an insured bank and review identifying information about the
+          institution.
+        </p>
+        <a class="button"
+           href="https://banks.data.fdic.gov/bankfind-suite/bankfind"
+           target="_blank" rel="noopener">
+          Search Banks →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>FFIEC National Information Center</h3>
+        <p>
+          Investigate bank ownership, organizational hierarchy, institutional
+          history, and regulatory characteristics.
+        </p>
+        <a class="button"
+           href="https://www.ffiec.gov/npw"
+           target="_blank" rel="noopener">
+          Follow Bank Ownership →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>NCUA Credit Union Locator</h3>
+        <p>
+          Search for credit unions and review public institution information.
+        </p>
+        <a class="button"
+           href="https://mapping.ncua.gov/"
+           target="_blank" rel="noopener">
+          Search Credit Unions →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>NCUA Share Insurance</h3>
+        <p>
+          Learn how federal share insurance applies to federally insured
+          credit unions.
+        </p>
+        <a class="button"
+           href="https://ncua.gov/consumers/share-insurance-coverage"
+           target="_blank" rel="noopener">
+          Explore Share Insurance →
+        </a>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      Look up:
+      <br><br>
+      <strong>
+        Legal name → Charter → Insurance → Ownership or Governance →
+        Assets → Regulator → History → Mergers → Enforcement Records
+      </strong>
+      <br><br>
+      The advertisement tells you what the institution wants you to know.
+      <br><br>
+      <strong>The public record can tell you what else is worth knowing.</strong>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>Original &amp; Authoritative Sources</h2>
+
+    <div class="source-grid">
+
+      <div class="source-card">
+        <h3>Federal Deposit Insurance Corporation</h3>
+        <p>
+          Quarterly banking statistics and information about insured banks
+          and savings institutions.
+        </p>
+        <a class="button"
+           href="https://www.fdic.gov/quarterly-banking-profile"
+           target="_blank" rel="noopener">
+          Quarterly Banking Profile →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>NCUA Credit Union System Data</h3>
+        <p>
+          Financial performance data for federally insured credit unions.
+        </p>
+        <a class="button"
+           href="https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data"
+           target="_blank" rel="noopener">
+          Credit Union Data →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>NCUA Federal Credit Union Overview</h3>
+        <p>
+          Federal credit-union ownership, governance, voting, and chartering
+          information.
+        </p>
+        <a class="button"
+           href="https://publishedguides.ncua.gov/charteringmanual/Content/CharteringManual/IntroductionSummary/OverviewFCUs.htm"
+           target="_blank" rel="noopener">
+          Federal Credit Union Overview →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>NCUA Share Insurance</h3>
+        <p>
+          Official information about the National Credit Union Share Insurance
+          Fund.
+        </p>
+        <a class="button"
+           href="https://ncua.gov/consumers/share-insurance-coverage"
+           target="_blank" rel="noopener">
+          Share Insurance →
+        </a>
+      </div>
+
+      <div class="source-card">
+        <h3>FDIC Household Survey</h3>
+        <p>
+          Household-level research concerning banking access and use of
           financial services.
-        </td>
-        <td>
-          May offer many comparable services, sometimes using terms such
-          as share accounts and share certificates.
-        </td>
-      </tr>
+        </p>
+        <a class="button"
+           href="https://www.fdic.gov/analysis/household-survey"
+           target="_blank" rel="noopener">
+          Household Survey →
+        </a>
+      </div>
 
-      <tr>
-        <td><strong>Rates and fees</strong></td>
-        <td colspan="2">
-          Compare the actual institution and account. Do not assume that
-          one category will always have the lowest fees or highest rates.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <div class="source-card">
+        <h3>Consumer Financial Protection Bureau</h3>
+        <p>
+          Consumer guidance concerning account fees and financial products.
+        </p>
+        <a class="button"
+           href="https://www.consumerfinance.gov/"
+           target="_blank" rel="noopener">
+          CFPB →
+        </a>
+      </div>
 
+      <div class="source-card">
+        <h3>FFIEC National Information Center</h3>
+        <p>
+          Institutional and ownership information concerning banks and bank
+          holding companies.
+        </p>
+        <a class="button"
+           href="https://www.ffiec.gov/npw"
+           target="_blank" rel="noopener">
+          National Information Center →
+        </a>
+      </div>
 
-  <h2>3. What Does "Member-Owned" Mean?</h2>
+      <div class="source-card">
+        <h3>NCUA Historical Timeline</h3>
+        <p>
+          Historical information concerning the development of the federal
+          credit-union system.
+        </p>
+        <a class="button"
+           href="https://ncua.gov/about/historical-timeline"
+           target="_blank" rel="noopener">
+          Credit Union History →
+        </a>
+      </div>
 
-  <p>
-    Credit unions are organized as cooperative institutions. Instead of
-    becoming merely a customer, an eligible person becomes a member-owner
-    of the credit union.
-  </p>
-
-  <p>
-    This is also why credit-union terminology can look slightly different.
-    What consumers commonly call a savings account may be called a
-    <strong>share account</strong>. A certificate of deposit may be described
-    as a <strong>share certificate</strong>.
-  </p>
-
-  <div class="plain-english">
-    <strong>Translation:</strong>
-    Don't let the vocabulary intimidate you. When comparing accounts,
-    concentrate on what the product actually does, its interest or dividend
-    rate, fees, withdrawal rules, insurance status and other account terms.
-  </div>
-
-
-  <h2>4. FDIC vs. NCUA: Two Different Insurance Systems</h2>
-
-  <p>
-    This is one of the most important distinctions to understand.
-  </p>
-
-  <div class="comparison">
-
-    <section class="comparison-card">
-      <h3>🛡️ FDIC</h3>
-
-      <p>
-        The Federal Deposit Insurance Corporation insures qualifying
-        deposits at FDIC-insured banks.
-      </p>
-
-      <p>
-        The standard insurance amount is $250,000 per depositor, per
-        FDIC-insured bank, for each account ownership category.
-      </p>
-
-      <a class="source-button"
-         href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance"
-         target="_blank"
-         rel="noopener noreferrer">
-        Verify at FDIC →
-      </a>
-    </section>
-
-    <section class="comparison-card">
-      <h3>🛡️ NCUA / NCUSIF</h3>
-
-      <p>
-        The National Credit Union Administration administers the National
-        Credit Union Share Insurance Fund, which insures qualifying accounts
-        at federally insured credit unions.
-      </p>
-
-      <p>
-        Coverage depends on ownership category and applicable NCUA rules,
-        so members should verify their particular accounts rather than
-        relying on a general assumption.
-      </p>
-
-      <a class="source-button"
-         href="https://ncua.gov/consumers/share-insurance-coverage"
-         target="_blank"
-         rel="noopener noreferrer">
-        Verify at NCUA →
-      </a>
-    </section>
-
-  </div>
-
-  <div class="insurance-box">
-    <h3>🔍 The Logo Is Not Enough — Verify</h3>
-
-    <p>
-      Before depositing substantial savings, verify the institution using
-      the federal regulator's official tools.
-    </p>
-
-    <p>
-      Also verify the <strong>product</strong>. An insured institution may
-      offer financial products that are not themselves insured deposits
-      or insured shares.
-    </p>
-
-    <a class="source-button"
-       href="https://banks.data.fdic.gov/bankfind-suite/bankfind"
-       target="_blank"
-       rel="noopener noreferrer">
-      Search FDIC BankFind →
-    </a>
-
-    <a class="source-button"
-       href="https://mapping.ncua.gov/"
-       target="_blank"
-       rel="noopener noreferrer">
-      Search NCUA Credit Union Locator →
-    </a>
-  </div>
-
-
-  <h2>5. Does One Always Pay Better Rates?</h2>
-
-  <p>
-    No rule says a credit union will always pay a higher savings rate,
-    charge a lower loan rate or have fewer fees than every bank.
-  </p>
-
-  <p>
-    Likewise, a bank's size or familiar name does not tell you whether
-    a particular account is competitive.
-  </p>
-
-  <p>
-    Rates, fees, minimum balances, ATM access, branch availability,
-    digital tools and account requirements can vary from institution
-    to institution and can change over time.
-  </p>
-
-  <div class="plain-english">
-    <strong>MoneyTrack rule:</strong>
-    Compare the account, not merely the logo on the building.
-  </div>
-
-
-  <h2>6. What Is a Credit Union's "Field of Membership"?</h2>
-
-  <p>
-    A credit union generally has rules describing who is eligible to join.
-    Eligibility can be connected to employment, an organization, family
-    relationships, military affiliation, geography or another qualifying
-    group permitted under applicable law and the credit union's charter.
-  </p>
-
-  <p>
-    Modern fields of membership vary considerably, so a person who assumes
-    that a credit union is unavailable may discover that they actually
-    qualify.
-  </p>
-
-  <p>
-    The safest approach is simply to check the membership requirements
-    of the specific credit union.
-  </p>
-
-
-  <!-- PRACTICAL CHECKLIST -->
-
-  <section class="checklist">
-
-    <p class="eyebrow">Practical Money Check</p>
-
-    <h2>✅ Before You Open an Account</h2>
-
-    <p>
-      Whether you choose a bank or credit union, check these items before
-      moving your money.
-    </p>
-
-    <div class="check-item">
-      <strong>☐ 1. Verify the institution.</strong><br>
-      Search FDIC BankFind for a bank or the NCUA's official tools for a
-      federally insured credit union.
     </div>
-
-    <div class="check-item">
-      <strong>☐ 2. Identify the exact account.</strong><br>
-      Checking? Savings? Money market deposit account? Certificate?
-      Investment product? The label matters.
-    </div>
-
-    <div class="check-item">
-      <strong>☐ 3. Check the insurance.</strong><br>
-      Determine which federal insurance system applies and whether the
-      product itself qualifies.
-    </div>
-
-    <div class="check-item">
-      <strong>☐ 4. Read the fee schedule.</strong><br>
-      Look for monthly maintenance fees, overdraft fees, ATM fees,
-      wire fees and other charges that could apply.
-    </div>
-
-    <div class="check-item">
-      <strong>☐ 5. Check minimum requirements.</strong><br>
-      Find out whether the account requires a minimum opening deposit,
-      minimum balance or particular activity.
-    </div>
-
-    <div class="check-item">
-      <strong>☐ 6. Compare APY — not just advertising.</strong><br>
-      When comparing savings products, look at the annual percentage yield
-      and any conditions required to receive an advertised rate.
-    </div>
-
-    <div class="check-item">
-      <strong>☐ 7. Check access.</strong><br>
-      Consider branches, ATMs, mobile banking, customer service, transfers
-      and how easily you can reach your money when you need it.
-    </div>
-
-    <div class="check-item">
-      <strong>☐ 8. Keep the account disclosures.</strong><br>
-      Save a copy of the terms, fee schedule and disclosures that apply
-      when you open the account.
-    </div>
-
   </section>
 
 
-  <!-- HISTORY -->
+  <section class="section">
+    <h2>Cite This Research</h2>
 
-  <section class="law-trail">
+    <h3>Citing this MoneyTrackTemplates article</h3>
 
-    <p class="eyebrow">Follow the Law</p>
+    <p>A starting point in Modern Language Association style:</p>
 
-    <h2>🏛️ Policy &amp; Legislative Trail</h2>
+    <div class="callout">
+      “Banks vs. Credit Unions: What's Actually Different?”
+      <em>MoneyTrackTemplates</em>, 26 Sept. 2026,
+      moneytracktemplates.github.io/banks-vs-credit-unions.html.
+    </div>
+
+    <h3>Citing the evidence</h3>
 
     <p>
-      Credit unions did not simply appear as an alternative to banks.
-      Their development involved a broader cooperative movement, state
-      legislation and eventually federal legislation.
+      For academic research, students and researchers should generally cite
+      the underlying National Credit Union Administration, Federal Deposit
+      Insurance Corporation, Consumer Financial Protection Bureau, Federal
+      Financial Institutions Examination Council, statute, dataset, or
+      regulatory record directly when that source provides the evidence being
+      used.
     </p>
 
-    <div class="trail-step">
-      <strong>1900s–1920s — The Credit Union Movement Expands</strong>
-      Credit-union advocates worked to establish cooperative financial
-      institutions and state laws authorizing them.
+    <div class="callout">
+      <strong>MoneyTrackTemplates is the trail map.</strong>
+      <br><br>
+      <strong>The original document is the evidence.</strong>
     </div>
-
-    <div class="trail-step">
-      <strong>1921 — Credit Union National Extension Bureau</strong>
-      Edward Filene and Roy Bergengren organized the Credit Union National
-      Extension Bureau to promote credit unions and credit-union legislation.
-    </div>
-
-    <div class="trail-step">
-      <strong>1932 — A Federal Law Is Discussed</strong>
-      According to the NCUA's historical timeline, Roy Bergengren met with
-      U.S. Senator Morris Sheppard of Texas to discuss the need for federal
-      credit-union legislation.
-    </div>
-
-    <div class="trail-step">
-      <strong>1934 — Federal Credit Union Act</strong>
-      President Franklin D. Roosevelt signed the Federal Credit Union Act
-      on June 26, 1934. The law established a federal system for chartering
-      credit unions.
-    </div>
-
-    <div class="trail-step">
-      <strong>1970 — Federal Share Insurance</strong>
-      Federal legislation established the National Credit Union
-      Administration and created the National Credit Union Share Insurance
-      Fund, adding a federal insurance system for qualifying credit-union
-      member accounts.
-    </div>
-
   </section>
 
 
-  <h2>7. Who Helped Shape the Federal Credit Union System?</h2>
+  <section class="section">
+    <h2>About This Article</h2>
 
-  <p>
-    MoneyTrackTemplates does not assume that a law was the work of one
-    person merely because one person's name is associated with it.
-    We identify documented roles whenever the historical record supports
-    them.
-  </p>
-
-  <p>
-    The NCUA's historical account identifies Massachusetts businessman
-    <strong>Edward Filene</strong> as an important early supporter of the
-    American credit-union movement and credits
-    <strong>Roy Bergengren</strong> with helping develop the modern
-    credit-union system.
-  </p>
-
-  <p>
-    The same NCUA history records Bergengren's 1932 meeting with
-    <strong>Senator Morris Sheppard of Texas</strong> concerning federal
-    credit-union legislation.
-  </p>
-
-  <p>
-    <strong>President Franklin D. Roosevelt</strong> signed the Federal
-    Credit Union Act into law on June 26, 1934.
-  </p>
-
-  <div class="source-note">
-    <strong>Why we describe roles this way:</strong>
-    Sponsoring a bill, advocating for an idea, drafting provisions,
-    serving on a committee, voting on legislation and signing a bill into
-    law are different historical actions. Where the evidence permits,
-    MoneyTrackTemplates will tell you which role the historical record
-    documents rather than collapsing all of them into the word "created."
-  </div>
-
-
-  <!-- ARCHIVES -->
-
-  <section class="archive">
-
-    <p class="archive-label">From the Archives</p>
-
-    <h2>📜 Follow the Credit Union Story Back to the Records</h2>
+    <p><strong>Research &amp; drafting:</strong> OpenAI's ChatGPT</p>
+    <p><strong>Editing &amp; publication:</strong> MoneyTrackTemplates</p>
+    <p><strong>Research reviewed:</strong> September 26, 2026</p>
 
     <p>
-      One of the most useful ways to understand today's financial system
-      is to examine how its institutions developed.
+      This article was created with artificial intelligence assistance and
+      reviewed by a human editor.
     </p>
 
-    <div class="document-card">
+    <p>
+      Quantitative information is identified by source and observation period
+      wherever practical. Institutional ownership, governance, insurance, and
+      regulatory information should be interpreted according to the underlying
+      public record and its effective date.
+    </p>
 
-      <h3>Federal Credit Union Act — 1934</h3>
+    <div class="research-note">
+      <h3>Our Evidence Standard</h3>
 
       <p>
-        <strong>Signed:</strong> June 26, 1934<br>
-        <strong>Congress:</strong> 73rd Congress<br>
-        <strong>Subject:</strong> Federal chartering of credit unions
+        A documented relationship, ownership interest, board connection,
+        business relationship, or regulatory action does not by itself
+        establish misconduct by every person or organization connected to the
+        institution.
       </p>
 
       <p>
-        The NCUA's historical timeline traces the events leading to the
-        federal law and continues through the later development of the
-        modern federal credit-union regulatory and insurance system.
+        Where an authoritative body has made a finding, MoneyTrackTemplates
+        will identify that finding and direct readers to the underlying
+        record.
       </p>
-
-      <a class="archive-button"
-         href="https://ncua.gov/about/historical-timeline"
-         target="_blank"
-         rel="noopener noreferrer">
-        📜 Explore the NCUA Historical Timeline →
-      </a>
-
-      <a class="archive-button"
-         href="https://www.govinfo.gov/"
-         target="_blank"
-         rel="noopener noreferrer">
-        🔎 Search GovInfo for Original Records →
-      </a>
-
     </div>
-
-    <p style="margin-top:20px;">
-      <strong>Our archive rule:</strong>
-      When we locate a digitized original document with clear rights
-      information, we may display an image or excerpt here. When reproduction
-      rights are uncertain, we will link readers directly to the institution
-      preserving the original.
-    </p>
-
   </section>
 
 
-  <h2>8. So Which One Should You Choose?</h2>
-
-  <p>
-    That depends on what you need from the particular account.
-  </p>
-
-  <p>
-    Instead of choosing solely because an institution is called a bank
-    or a credit union, compare the things that affect you: account terms,
-    fees, APY, loan rates, eligibility, branch and ATM access, digital
-    services, customer support and federal insurance.
-  </p>
-
-  <p>
-    Two banks can be very different from each other. Two credit unions
-    can also be very different from each other.
-  </p>
-
-  <div class="plain-english">
-    <strong>The useful question isn't:</strong>
-    "Are banks or credit unions better?"<br><br>
-
-    <strong>It is:</strong>
-    "What does this particular institution offer, what does it cost,
-    how is my money protected, and does it fit what I need?"
-  </div>
-
-
-  <!-- SOURCES -->
-
-  <section class="sources-section">
-
-    <p class="eyebrow">Research Library</p>
-
-    <h2>📚 Original &amp; Authoritative Sources</h2>
+  <section class="section">
+    <h2>Educational &amp; Research Purpose</h2>
 
     <p>
-      Don't simply take our word for it. These sources allow you to
-      check the information and continue researching for yourself.
+      MoneyTrackTemplates provides educational and research information.
+      It does not provide individualized financial, investment, tax, or legal
+      advice.
     </p>
 
+    <p>
+      Financial institutions, rates, fees, membership requirements, ownership
+      structures, insurance status, and regulations can change.
+    </p>
 
-    <div class="source-item">
-      <h3>National Credit Union Administration — Historical Timeline</h3>
-
-      <p>
-        Official NCUA history covering the development of the American
-        credit-union movement, the Federal Credit Union Act, creation of
-        the NCUA and federal share insurance.
-      </p>
-
-      <a class="source-button"
-         href="https://ncua.gov/about/historical-timeline"
-         target="_blank"
-         rel="noopener noreferrer">
-        Read the NCUA History →
-      </a>
+    <div class="closing-rule">
+      Don't choose by the logo.<br>
+      Identify the institution.<br>
+      Understand who owns or governs it.<br>
+      Verify the insurance.<br>
+      Compare the actual numbers.<br>
+      Check the public record.<br>
+      Then decide what works for you.
     </div>
-
-
-    <div class="source-item">
-      <h3>NCUA — Share Insurance Coverage</h3>
-
-      <p>
-        Official information about the National Credit Union Share
-        Insurance Fund and coverage of qualifying accounts at federally
-        insured credit unions.
-      </p>
-
-      <a class="source-button"
-         href="https://ncua.gov/consumers/share-insurance-coverage"
-         target="_blank"
-         rel="noopener noreferrer">
-        Read NCUA Insurance Information →
-      </a>
-    </div>
-
-
-    <div class="source-item">
-      <h3>FDIC — Understanding Deposit Insurance</h3>
-
-      <p>
-        Official FDIC explanation of deposit insurance, ownership
-        categories and current coverage rules.
-      </p>
-
-      <a class="source-button"
-         href="https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance"
-         target="_blank"
-         rel="noopener noreferrer">
-        Read FDIC Deposit Insurance →
-      </a>
-    </div>
-
-
-    <div class="source-item">
-      <h3>FDIC — Your Insured Deposits</h3>
-
-      <p>
-        Detailed official information about covered deposit products,
-        ownership categories and products that are not FDIC insured.
-      </p>
-
-      <a class="source-button"
-         href="https://www.fdic.gov/resources/deposit-insurance/brochures/insured-deposits"
-         target="_blank"
-         rel="noopener noreferrer">
-        Read Your Insured Deposits →
-      </a>
-    </div>
-
-
-    <div class="source-item">
-      <h3>FDIC BankFind Suite</h3>
-
-      <p>
-        Use the FDIC's database to check whether a bank is FDIC insured
-        and research information about the institution.
-      </p>
-
-      <a class="source-button"
-         href="https://banks.data.fdic.gov/bankfind-suite/bankfind"
-         target="_blank"
-         rel="noopener noreferrer">
-        Search BankFind →
-      </a>
-    </div>
-
-
-    <div class="source-item">
-      <h3>NCUA Credit Union Locator</h3>
-
-      <p>
-        Search for credit unions and research federally insured
-        credit-union institutions.
-      </p>
-
-      <a class="source-button"
-         href="https://mapping.ncua.gov/"
-         target="_blank"
-         rel="noopener noreferrer">
-        Search Credit Unions →
-      </a>
-    </div>
-
-
-    <div class="source-item">
-      <h3>GovInfo</h3>
-
-      <p>
-        The U.S. Government Publishing Office provides access to official
-        publications and historical government records useful for tracing
-        federal financial law.
-      </p>
-
-      <a class="source-button"
-         href="https://www.govinfo.gov/"
-         target="_blank"
-         rel="noopener noreferrer">
-        Search GovInfo →
-      </a>
-    </div>
-
   </section>
 
 
-  <!-- CITATION -->
-
-  <section class="citation-box">
-
-    <p class="eyebrow">For Students &amp; Researchers</p>
-
-    <h2>✍️ Cite This Research</h2>
-
-    <p>
-      If you're using this page for school or research, distinguish between
-      our explanation and the original evidence.
-    </p>
-
-    <h3>Citing This MoneyTrackTemplates Article</h3>
-
-    <div class="citation-example">
-      <strong>Article title:</strong>
-      “Banks vs. Credit Unions: What's Actually Different?”<br>
-      <strong>Website:</strong> MoneyTrackTemplates<br>
-      <strong>Research &amp; drafting:</strong> OpenAI's ChatGPT<br>
-      <strong>Editing &amp; publication:</strong> MoneyTrackTemplates<br>
-      <strong>Research reviewed:</strong> September 24, 2026
-    </div>
-
-    <h3>Citing an Original Source</h3>
-
-    <p>
-      If your paper is actually about deposit insurance, the Federal Credit
-      Union Act or another underlying subject, consider citing the applicable
-      government document or agency source directly rather than relying only
-      on this summary.
-    </p>
-
-    <p>
-      Citation requirements differ among schools, instructors, journals and
-      style guides. Follow the requirements that apply to your work,
-      including any rules concerning disclosure or citation of generative AI.
-    </p>
-
-  </section>
-
-
-  <!-- DISCLOSURE -->
-
-  <section class="author-box">
-
-    <h2>🤖 About This Article</h2>
-
-    <p>
-      MoneyTrackTemplates believes readers should know how research material
-      on this site was produced.
-    </p>
-
-    <div class="author-grid">
-
-      <strong>Research &amp; drafting:</strong>
-      <span>OpenAI's ChatGPT</span>
-
-      <strong>Editing &amp; publication:</strong>
-      <span>MoneyTrackTemplates</span>
-
-      <strong>Research reviewed:</strong>
-      <span>September 24, 2026</span>
-
-      <strong>Research approach:</strong>
-      <span>
-        Primary and authoritative government sources were preferred.
-        Readers are given direct links to important underlying sources so
-        they can inspect the evidence themselves.
-      </span>
-
-    </div>
-
-    <p style="margin-top:22px;">
-      AI-assisted research can contain errors. Readers conducting academic,
-      legal, financial or historical research should verify information
-      against the linked original and authoritative sources.
-    </p>
-
-  </section>
-
-
-  <div class="education-note">
-
-    <strong>Educational Purpose</strong>
-
-    <p>
-      This page provides general educational information and is not
-      individualized financial, investment, tax or legal advice.
-      Rates, fees, membership requirements, account terms, insurance rules
-      and financial products can change.
-    </p>
-
-    <p>
-      Verify current information with the financial institution and
-      applicable regulator before making a financial decision.
-    </p>
-
-  </div>
-
-
-  <div class="back-link">
-    <a class="source-button" href="banking-basics.html">
-      ← Back to Banking Basics
-    </a>
-
-    <a class="source-button" href="money-banking.html">
-      Money &amp; Banking Library →
-    </a>
+  <div class="back-links">
+    <a class="button" href="banking-basics.html">← Banking Basics</a>
+    <a class="button" href="money-banking.html">Back to Money &amp; Banking</a>
   </div>
 
 </main>
 
 
 <footer>
-
   <p><strong>MoneyTrackTemplates</strong></p>
-
   <p>Plan Better. Track Smarter. Live More Organized.</p>
 
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="money-banking.html">Money &amp; Banking</a>
-    <a href="resources.html">Resources</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-  </div>
-
-  <div class="footer-links">
-
-    <a href="https://www.pinterest.com/MoneyTrackTemplates/"
-       target="_blank"
-       rel="noopener noreferrer">
-      Pinterest
-    </a>
-
-    <a href="https://x.com/tracktemplates"
-       target="_blank"
-       rel="noopener noreferrer">
-      X
-    </a>
-
-  </div>
+  <p>
+    <a href="https://www.pinterest.com/MoneyTrackTemplates/" target="_blank" rel="noopener">Pinterest</a>
+    &nbsp; | &nbsp;
+    <a href="https://x.com/tracktemplates" target="_blank" rel="noopener">X</a>
+  </p>
 
   <p>&copy; 2026 MoneyTrackTemplates. All rights reserved.</p>
-
 </footer>
 
 
 <script>
-  const shareButton = document.getElementById('share-page-button');
-  const shareStatus = document.getElementById('share-status');
-
-  shareButton.addEventListener('click', async function () {
-
-    const shareData = {
-      title: document.title,
-      text: 'Banks vs. Credit Unions — a plain-English guide from MoneyTrackTemplates.',
-      url: window.location.href
-    };
-
+  function sharePage() {
     if (navigator.share) {
-
-      try {
-        await navigator.share(shareData);
-        shareStatus.textContent = '';
-      } catch (error) {
-        shareStatus.textContent = '';
-      }
-
+      navigator.share({
+        title: document.title,
+        text: "Banks vs. Credit Unions: What's Actually Different?",
+        url: window.location.href
+      }).catch(function() {});
     } else {
-
-      try {
-        await navigator.clipboard.writeText(window.location.href);
-
-        shareStatus.textContent =
-          'Page link copied! You can now share it anywhere.';
-
-      } catch (error) {
-
-        shareStatus.textContent =
-          'Copy the page address from your browser to share this page.';
-      }
-
+      navigator.clipboard.writeText(window.location.href)
+        .then(function() {
+          alert("Page link copied!");
+        })
+        .catch(function() {
+          alert("Copy this page address from your browser to share it.");
+        });
     }
-  });
+  }
 </script>
 
 </body>
