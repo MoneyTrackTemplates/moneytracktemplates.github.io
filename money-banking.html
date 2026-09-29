@@ -1104,19 +1104,35 @@
 </div>
 
           <div class="data-box">
-            <span class="data-label">Treasury</span>
+    <span class="data-label">Treasury</span>
 
-            <h3>Treasury Data</h3>
+    <h3>Treasury Data</h3>
 
-            <p class="data-placeholder">
-              Current Treasury information will appear here with
-              the source and observation date clearly identified.
-            </p>
+    <div id="treasury-data">
+        <p>
+            <strong>3-Month Treasury:</strong>
+            <span id="treasury-3-month">Loading...</span>
+        </p>
 
-            <p class="data-date">
-              Status: Live connection not yet activated.
-            </p>
-          </div>
+        <p>
+            <strong>2-Year Treasury:</strong>
+            <span id="treasury-2-year">Loading...</span>
+        </p>
+
+        <p>
+            <strong>10-Year Treasury:</strong>
+            <span id="treasury-10-year">Loading...</span>
+        </p>
+
+        <p class="data-date" id="treasury-data-date">
+            Awaiting latest data...
+        </p>
+
+        <p class="data-date">
+            Source: U.S. Department of the Treasury
+        </p>
+    </div>
+</div>
 
           <div class="data-box">
             <span class="data-label">Digital Assets</span>
@@ -1363,11 +1379,16 @@
     });
   </script>
 <script>
-async function loadFederalBankingData() {
+async function loadFinancialData() {
     const fedFunds = document.getElementById('fed-funds-rate');
     const primeRate = document.getElementById('prime-rate');
     const reserveRate = document.getElementById('reserve-rate');
-    const dataDate = document.getElementById('federal-data-date');
+    const federalDataDate = document.getElementById('federal-data-date');
+
+    const treasury3Month = document.getElementById('treasury-3-month');
+    const treasury2Year = document.getElementById('treasury-2-year');
+    const treasury10Year = document.getElementById('treasury-10-year');
+    const treasuryDataDate = document.getElementById('treasury-data-date');
 
     try {
         const response = await fetch(
@@ -1380,7 +1401,6 @@ async function loadFederalBankingData() {
         }
 
         const data = await response.json();
-        const banking = data.federal_banking;
 
         function displayRate(element, item) {
             if (item && item.value !== null) {
@@ -1392,6 +1412,9 @@ async function loadFederalBankingData() {
                 element.textContent = 'Unavailable';
             }
         }
+
+        // Federal Reserve / FRED
+        const banking = data.federal_banking;
 
         displayRate(
             fedFunds,
@@ -1411,17 +1434,46 @@ async function loadFederalBankingData() {
         if (banking.last_updated) {
             const updated = new Date(banking.last_updated);
 
-            dataDate.textContent =
+            federalDataDate.textContent =
                 'Data checked: ' +
                 updated.toLocaleString();
         } else {
-            dataDate.textContent =
+            federalDataDate.textContent =
+                'Update time unavailable.';
+        }
+
+        // U.S. Treasury
+        const treasury = data.treasury;
+
+        displayRate(
+            treasury3Month,
+            treasury.three_month_rate
+        );
+
+        displayRate(
+            treasury2Year,
+            treasury.two_year_rate
+        );
+
+        displayRate(
+            treasury10Year,
+            treasury.ten_year_rate
+        );
+
+        if (treasury.last_updated) {
+            const updated = new Date(treasury.last_updated);
+
+            treasuryDataDate.textContent =
+                'Data checked: ' +
+                updated.toLocaleString();
+        } else {
+            treasuryDataDate.textContent =
                 'Update time unavailable.';
         }
 
     } catch (error) {
         console.error(
-            'Federal banking data error:',
+            'Financial data error:',
             error
         );
 
@@ -1429,12 +1481,19 @@ async function loadFederalBankingData() {
         primeRate.textContent = 'Temporarily unavailable';
         reserveRate.textContent = 'Temporarily unavailable';
 
-        dataDate.textContent =
+        treasury3Month.textContent = 'Temporarily unavailable';
+        treasury2Year.textContent = 'Temporarily unavailable';
+        treasury10Year.textContent = 'Temporarily unavailable';
+
+        federalDataDate.textContent =
+            'Live data temporarily unavailable.';
+
+        treasuryDataDate.textContent =
             'Live data temporarily unavailable.';
     }
 }
 
-loadFederalBankingData();
+loadFinancialData();
 </script>
 </body>
 </html>
