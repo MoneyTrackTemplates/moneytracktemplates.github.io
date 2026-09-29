@@ -1076,19 +1076,32 @@
         <div class="data-grid">
 
           <div class="data-box">
-            <span class="data-label">Interest Rates</span>
+    <span class="data-label">Interest Rates</span>
 
-            <h3>Federal &amp; Banking Data</h3>
+    <h3>Federal &amp; Banking Data</h3>
 
-            <p class="data-placeholder">
-              Current rate information will be connected to an
-              authoritative data source.
-            </p>
+    <div id="federal-banking-data">
+        <p><strong>Federal Funds Rate:</strong>
+            <span id="fed-funds-rate">Loading...</span>
+        </p>
 
-            <p class="data-date">
-              Status: Live connection not yet activated.
-            </p>
-          </div>
+        <p><strong>Bank Prime Loan Rate:</strong>
+            <span id="prime-rate">Loading...</span>
+        </p>
+
+        <p><strong>Interest on Reserve Balances:</strong>
+            <span id="reserve-rate">Loading...</span>
+        </p>
+
+        <p class="data-date" id="federal-data-date">
+            Awaiting latest data...
+        </p>
+
+        <p class="data-date">
+            Source: Federal Reserve / FRED
+        </p>
+    </div>
+</div>
 
           <div class="data-box">
             <span class="data-label">Treasury</span>
