@@ -1362,6 +1362,79 @@
       }
     });
   </script>
+<script>
+async function loadFederalBankingData() {
+    const fedFunds = document.getElementById('fed-funds-rate');
+    const primeRate = document.getElementById('prime-rate');
+    const reserveRate = document.getElementById('reserve-rate');
+    const dataDate = document.getElementById('federal-data-date');
 
+    try {
+        const response = await fetch(
+            'financial-data.json?ts=' + Date.now(),
+            { cache: 'no-store' }
+        );
+
+        if (!response.ok) {
+            throw new Error('Unable to load financial-data.json');
+        }
+
+        const data = await response.json();
+        const banking = data.federal_banking;
+
+        function displayRate(element, item) {
+            if (item && item.value !== null) {
+                element.textContent =
+                    Number(item.value).toFixed(2) +
+                    '% — as of ' +
+                    item.observation_date;
+            } else {
+                element.textContent = 'Unavailable';
+            }
+        }
+
+        displayRate(
+            fedFunds,
+            banking.federal_funds_rate
+        );
+
+        displayRate(
+            primeRate,
+            banking.bank_prime_loan_rate
+        );
+
+        displayRate(
+            reserveRate,
+            banking.interest_on_reserve_balances
+        );
+
+        if (banking.last_updated) {
+            const updated = new Date(banking.last_updated);
+
+            dataDate.textContent =
+                'Data checked: ' +
+                updated.toLocaleString();
+        } else {
+            dataDate.textContent =
+                'Update time unavailable.';
+        }
+
+    } catch (error) {
+        console.error(
+            'Federal banking data error:',
+            error
+        );
+
+        fedFunds.textContent = 'Temporarily unavailable';
+        primeRate.textContent = 'Temporarily unavailable';
+        reserveRate.textContent = 'Temporarily unavailable';
+
+        dataDate.textContent =
+            'Live data temporarily unavailable.';
+    }
+}
+
+loadFederalBankingData();
+</script>
 </body>
 </html>
