@@ -21,14 +21,19 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Download latest Federal Reserve data
+      - name: Download Federal Reserve and Treasury data
         run: |
           python <<'PY'
           import csv
           import io
           import json
           import urllib.request
+          import xml.etree.ElementTree as ET
           from datetime import datetime, timezone
+
+          # ----------------------------------------
+          # Federal Reserve / FRED
+          # ----------------------------------------
 
           SERIES = {
               "federal_funds_rate": "DFF",
@@ -36,12 +41,7 @@ jobs:
               "interest_on_reserve_balances": "IORB"
           }
 
-          def latest_observation(series_id):
-              url = (
-                  "https://fred.stlouisfed.org/graph/"
-                  f"fredgraph.csv?id={series_id}"
-              )
-
+          def fetch_url(url):
               request = urllib.request.Request(
                   url,
                   headers={
@@ -54,7 +54,15 @@ jobs:
                   request,
                   timeout=30
               ) as response:
-                  text = response.read().decode("utf-8-sig")
+                  return response.read()
+
+          def latest_fred_observation(series_id):
+              url = (
+                  "https://fred.stlouisfed.org/graph/"
+                  f"fredgraph.csv?id={series_id}"
+              )
+
+              text = fetch_url(url).decode("utf-8-sig")
 
               reader = csv.DictReader(io.StringIO(text))
 
@@ -63,9 +71,6 @@ jobs:
                       f"No CSV columns returned for {series_id}"
                   )
 
-              # FRED's date-column label can vary.
-              # The series value is identified by its series ID,
-              # so the remaining column is treated as the date.
               date_columns = [
                   column
                   for column in reader.fieldnames
@@ -74,12 +79,12 @@ jobs:
 
               if not date_columns:
                   raise RuntimeError(
-                      f"Could not identify date column for {series_id}. "
+                      f"Could not identify date column "
+                      f"for {series_id}. "
                       f"Columns returned: {reader.fieldnames}"
                   )
 
               date_column = date_columns[0]
-
               rows = list(reader)
 
               for row in reversed(rows):
@@ -99,22 +104,156 @@ jobs:
           federal_banking = {}
 
           for name, series_id in SERIES.items():
-              federal_banking[name] = latest_observation(
-                  series_id
+              federal_banking[name] = (
+                  latest_fred_observation(series_id)
               )
-
-          federal_banking["last_updated"] = (
-              datetime.now(timezone.utc)
-              .replace(microsecond=0)
-              .isoformat()
-          )
 
           federal_banking["source"] = (
               "Federal Reserve / FRED"
           )
 
+          # ----------------------------------------
+          # U.S. Treasury
+          # Daily Treasury Par Yield Curve Rates
+          # ----------------------------------------
+
+          def latest_treasury_rates():
+              current_year = datetime.now(
+                  timezone.utc
+              ).year
+
+              url = (
+                  "https://home.treasury.gov/"
+                  "resource-center/data-chart-center/"
+                  "interest-rates/pages/xml"
+                  "?data=daily_treasury_yield_curve"
+                  f"&field_tdr_date_value={current_year}"
+              )
+
+              xml_bytes = fetch_url(url)
+              root = ET.fromstring(xml_bytes)
+
+              namespaces = {
+                  "atom":
+                      "http://www.w3.org/2005/Atom",
+                  "m":
+                      "http://schemas.microsoft.com/"
+                      "ado/2007/08/dataservices/metadata",
+                  "d":
+                      "http://schemas.microsoft.com/"
+                      "ado/2007/08/dataservices"
+              }
+
+              observations = []
+
+              for entry in root.findall(
+                  "atom:entry",
+                  namespaces
+              ):
+                  properties = entry.find(
+                      "atom:content/m:properties",
+                      namespaces
+                  )
+
+                  if properties is None:
+                      continue
+
+                  def get_text(field):
+                      element = properties.find(
+                          f"d:{field}",
+                          namespaces
+                      )
+
+                      if element is None:
+                          return None
+
+                      return element.text
+
+                  date_text = get_text("NEW_DATE")
+
+                  three_month = get_text(
+                      "BC_3MONTH"
+                  )
+
+                  two_year = get_text(
+                      "BC_2YEAR"
+                  )
+
+                  ten_year = get_text(
+                      "BC_10YEAR"
+                  )
+
+                  if (
+                      date_text
+                      and three_month
+                      and two_year
+                      and ten_year
+                  ):
+                      observations.append({
+                          "date": date_text[:10],
+                          "three_month":
+                              float(three_month),
+                          "two_year":
+                              float(two_year),
+                          "ten_year":
+                              float(ten_year)
+                      })
+
+              if not observations:
+                  raise RuntimeError(
+                      "No valid Treasury yield "
+                      "curve observations returned."
+                  )
+
+              observations.sort(
+                  key=lambda item: item["date"]
+              )
+
+              latest = observations[-1]
+
+              return {
+                  "three_month_rate": {
+                      "value":
+                          latest["three_month"],
+                      "observation_date":
+                          latest["date"]
+                  },
+                  "two_year_rate": {
+                      "value":
+                          latest["two_year"],
+                      "observation_date":
+                          latest["date"]
+                  },
+                  "ten_year_rate": {
+                      "value":
+                          latest["ten_year"],
+                      "observation_date":
+                          latest["date"]
+                  },
+                  "source":
+                      "U.S. Department of the Treasury"
+              }
+
+          treasury = latest_treasury_rates()
+
+          # ----------------------------------------
+          # Save combined data
+          # ----------------------------------------
+
+          updated = (
+              datetime.now(timezone.utc)
+              .replace(microsecond=0)
+              .isoformat()
+          )
+
+          federal_banking["last_updated"] = updated
+          treasury["last_updated"] = updated
+
           data = {
-              "federal_banking": federal_banking
+              "federal_banking":
+                  federal_banking,
+              "treasury":
+                  treasury
           }
 
           with open(
@@ -122,11 +261,23 @@ jobs:
               "w",
               encoding="utf-8"
           ) as file:
-              json.dump(data, file, indent=2)
+              json.dump(
+                  data,
+                  file,
+                  indent=2
+              )
               file.write("\n")
 
-          print("Financial data retrieved successfully:")
-          print(json.dumps(data, indent=2))
+          print(
+              "Financial data retrieved successfully:"
+          )
+
+          print(
+              json.dumps(
+                  data,
+                  indent=2
+              )
+          )
           PY
 
       - name: Commit updated financial data
@@ -140,6 +291,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Financial data is already current."
           else
-            git commit -m "Update Federal banking data"
+            git commit -m "Update financial data"
             git push
           fi
