@@ -1,0 +1,18 @@
+{
+  "federal_banking": {
+    "federal_funds_rate": {
+      "value": null,
+      "observation_date": null
+    },
+    "bank_prime_loan_rate": {
+      "value": null,
+      "observation_date": null
+    },
+    "interest_on_reserve_balances": {
+      "value": null,
+      "observation_date": null
+    },
+    "last_updated": null,
+    "source": "Federal Reserve / FRED"
+  }
+}
