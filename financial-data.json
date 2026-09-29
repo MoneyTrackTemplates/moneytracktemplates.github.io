@@ -12,7 +12,23 @@
       "value": 3.9,
       "observation_date": "2026-09-29"
     },
-    "last_updated": "2026-09-29T04:28:53+00:00",
-    "source": "Federal Reserve / FRED"
+    "source": "Federal Reserve / FRED",
+    "last_updated": "2026-09-29T05:02:36+00:00"
+  },
+  "treasury": {
+    "three_month_rate": {
+      "value": 4.28,
+      "observation_date": "2026-09-28"
+    },
+    "two_year_rate": {
+      "value": 4.92,
+      "observation_date": "2026-09-28"
+    },
+    "ten_year_rate": {
+      "value": 5.24,
+      "observation_date": "2026-09-28"
+    },
+    "source": "U.S. Department of the Treasury",
+    "last_updated": "2026-09-29T05:02:36+00:00"
   }
 }
