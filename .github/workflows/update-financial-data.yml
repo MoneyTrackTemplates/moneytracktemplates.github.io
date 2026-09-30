@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Download Federal Reserve and Treasury data
+      - name: Download financial data
         run: |
           python <<'PY'
           import csv
@@ -32,14 +32,8 @@ jobs:
           from datetime import datetime, timezone
 
           # ----------------------------------------
-          # Federal Reserve / FRED
+          # Shared download helper
           # ----------------------------------------
-
-          SERIES = {
-              "federal_funds_rate": "DFF",
-              "bank_prime_loan_rate": "DPRIME",
-              "interest_on_reserve_balances": "IORB"
-          }
 
           def fetch_url(url):
               request = urllib.request.Request(
@@ -56,7 +50,20 @@ jobs:
               ) as response:
                   return response.read()
 
-          def latest_fred_observation(series_id):
+
+          # ========================================
+          # ROBOT #1
+          # Federal Reserve / FRED Interest Rates
+          # ========================================
+
+          SERIES = {
+              "federal_funds_rate": "DFF",
+              "bank_prime_loan_rate": "DPRIME",
+              "interest_on_reserve_balances": "IORB"
+          }
+
+
+          def fred_observations(series_id):
               url = (
                   "https://fred.stlouisfed.org/graph/"
                   f"fredgraph.csv?id={series_id}"
@@ -64,7 +71,9 @@ jobs:
 
               text = fetch_url(url).decode("utf-8-sig")
 
-              reader = csv.DictReader(io.StringIO(text))
+              reader = csv.DictReader(
+                  io.StringIO(text)
+              )
 
               if not reader.fieldnames:
                   raise RuntimeError(
@@ -85,21 +94,38 @@ jobs:
                   )
 
               date_column = date_columns[0]
-              rows = list(reader)
 
-              for row in reversed(rows):
+              observations = []
+
+              for row in reader:
                   value = row.get(series_id)
 
-                  if value and value.strip() not in ("", "."):
-                      return {
+                  if (
+                      value
+                      and value.strip() not in ("", ".")
+                  ):
+                      observations.append({
                           "value": float(value),
                           "observation_date":
                               row.get(date_column)
-                      }
+                      })
 
-              raise RuntimeError(
-                  f"No valid observations found for {series_id}"
+              if not observations:
+                  raise RuntimeError(
+                      f"No valid observations found "
+                      f"for {series_id}"
+                  )
+
+              return observations
+
+
+          def latest_fred_observation(series_id):
+              observations = fred_observations(
+                  series_id
               )
+
+              return observations[-1]
+
 
           federal_banking = {}
 
@@ -112,10 +138,12 @@ jobs:
               "Federal Reserve / FRED"
           )
 
-          # ----------------------------------------
+
+          # ========================================
+          # ROBOT #2
           # U.S. Treasury
           # Daily Treasury Par Yield Curve Rates
-          # ----------------------------------------
+          # ========================================
 
           def latest_treasury_rates():
               current_year = datetime.now(
@@ -170,18 +198,9 @@ jobs:
                       return element.text
 
                   date_text = get_text("NEW_DATE")
-
-                  three_month = get_text(
-                      "BC_3MONTH"
-                  )
-
-                  two_year = get_text(
-                      "BC_2YEAR"
-                  )
-
-                  ten_year = get_text(
-                      "BC_10YEAR"
-                  )
+                  three_month = get_text("BC_3MONTH")
+                  two_year = get_text("BC_2YEAR")
+                  ten_year = get_text("BC_10YEAR")
 
                   if (
                       date_text
@@ -234,11 +253,120 @@ jobs:
                       "U.S. Department of the Treasury"
               }
 
+
           treasury = latest_treasury_rates()
 
-          # ----------------------------------------
-          # Save combined data
-          # ----------------------------------------
+
+          # ========================================
+          # ROBOT #3
+          # Consumer Debt Watch
+          # Federal Reserve / FRED
+          #
+          # TOTALSL:
+          # Total Consumer Credit Owned and
+          # Securitized, Outstanding
+          #
+          # REVOLSL:
+          # Revolving Consumer Credit Owned and
+          # Securitized, Outstanding
+          #
+          # NONREVSL:
+          # Nonrevolving Consumer Credit Owned and
+          # Securitized, Outstanding
+          #
+          # FRED reports these series in
+          # millions of dollars.
+          # ========================================
+
+          CONSUMER_CREDIT_SERIES = {
+              "total_consumer_credit": "TOTALSL",
+              "revolving_credit": "REVOLSL",
+              "nonrevolving_credit": "NONREVSL"
+          }
+
+
+          def latest_two_fred_observations(
+              series_id
+          ):
+              observations = fred_observations(
+                  series_id
+              )
+
+              if len(observations) < 2:
+                  raise RuntimeError(
+                      f"Fewer than two observations "
+                      f"returned for {series_id}"
+                  )
+
+              return (
+                  observations[-1],
+                  observations[-2]
+              )
+
+
+          consumer_credit = {}
+
+          for (
+              name,
+              series_id
+          ) in CONSUMER_CREDIT_SERIES.items():
+
+              latest, previous = (
+                  latest_two_fred_observations(
+                      series_id
+                  )
+              )
+
+              consumer_credit[name] = {
+                  "value_millions":
+                      latest["value"],
+                  "value_trillions":
+                      round(
+                          latest["value"]
+                          / 1_000_000,
+                          3
+                      ),
+                  "observation_date":
+                      latest["observation_date"],
+                  "previous_value_millions":
+                      previous["value"],
+                  "previous_value_trillions":
+                      round(
+                          previous["value"]
+                          / 1_000_000,
+                          3
+                      ),
+                  "previous_observation_date":
+                      previous["observation_date"],
+                  "change_millions":
+                      round(
+                          latest["value"]
+                          - previous["value"],
+                          3
+                      ),
+                  "change_billions":
+                      round(
+                          (
+                              latest["value"]
+                              - previous["value"]
+                          )
+                          / 1000,
+                          3
+                      )
+              }
+
+          consumer_credit["source"] = (
+              "Federal Reserve / FRED"
+          )
+
+          consumer_credit["release"] = (
+              "Consumer Credit (G.19)"
+          )
+
+
+          # ========================================
+          # Update timestamps
+          # ========================================
 
           updated = (
               datetime.now(timezone.utc)
@@ -248,12 +376,20 @@ jobs:
 
           federal_banking["last_updated"] = updated
           treasury["last_updated"] = updated
+          consumer_credit["last_updated"] = updated
+
+
+          # ========================================
+          # Write the website data file
+          # ========================================
 
           data = {
               "federal_banking":
                   federal_banking,
               "treasury":
-                  treasury
+                  treasury,
+              "consumer_credit":
+                  consumer_credit
           }
 
           with open(
@@ -266,10 +402,17 @@ jobs:
                   file,
                   indent=2
               )
+
               file.write("\n")
 
+
+          # ========================================
+          # Bot report
+          # ========================================
+
           print(
-              "Financial data retrieved successfully:"
+              "Financial data retrieved "
+              "successfully:"
           )
 
           print(
@@ -278,6 +421,21 @@ jobs:
                   indent=2
               )
           )
+
+          print()
+          print(
+              "Robot #1: Federal Reserve "
+              "interest rates retrieved."
+          )
+          print(
+              "Robot #2: Treasury yields "
+              "retrieved."
+          )
+          print(
+              "Robot #3: Consumer credit "
+              "retrieved."
+          )
+
           PY
 
       - name: Commit updated financial data
