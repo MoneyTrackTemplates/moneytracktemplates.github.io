@@ -1150,7 +1150,50 @@
               Status: Live connection not yet activated.
             </p>
           </div>
+<div class="data-box">
+    <span class="data-label">Consumer Debt Watch</span>
 
+    <h3>U.S. Consumer Credit Debt</h3>
+
+    <div id="consumer-credit-data">
+
+        <p>
+            <strong>Total Consumer Credit Debt:</strong>
+            <span id="total-consumer-credit">Loading...</span>
+        </p>
+
+        <p>
+            <strong>Revolving Credit Debt:</strong>
+            <span id="revolving-credit">Loading...</span>
+        </p>
+
+        <p>
+            <strong>Nonrevolving Credit Debt:</strong>
+            <span id="nonrevolving-credit">Loading...</span>
+        </p>
+
+        <p>
+            <strong>Change From Previous Month:</strong>
+            <span id="consumer-credit-change">Loading...</span>
+        </p>
+
+        <p class="data-date" id="consumer-credit-date">
+            Awaiting latest data...
+        </p>
+
+        <p class="data-date">
+            Source: Federal Reserve / FRED — Consumer Credit (G.19)
+        </p>
+
+        <p class="data-date">
+            Federal Reserve data use the terms
+            “consumer credit,” “revolving credit,” and
+            “nonrevolving credit.” MoneyTrackTemplates adds
+            “debt” to the display labels for clarity.
+        </p>
+
+    </div>
+</div>
         </div>
       </div>
 
@@ -1379,8 +1422,7 @@
         }
       }
     });
-  </script>
-<script>
+  <script>
 async function loadFinancialData() {
     const fedFunds = document.getElementById('fed-funds-rate');
     const primeRate = document.getElementById('prime-rate');
@@ -1392,6 +1434,21 @@ async function loadFinancialData() {
     const treasury10Year = document.getElementById('treasury-10-year');
     const treasuryDataDate = document.getElementById('treasury-data-date');
 
+    const totalConsumerCredit =
+        document.getElementById('total-consumer-credit');
+
+    const revolvingCredit =
+        document.getElementById('revolving-credit');
+
+    const nonrevolvingCredit =
+        document.getElementById('nonrevolving-credit');
+
+    const consumerCreditChange =
+        document.getElementById('consumer-credit-change');
+
+    const consumerCreditDate =
+        document.getElementById('consumer-credit-date');
+
     try {
         const response = await fetch(
             'financial-data.json?ts=' + Date.now(),
@@ -1399,78 +1456,191 @@ async function loadFinancialData() {
         );
 
         if (!response.ok) {
-            throw new Error('Unable to load financial-data.json');
+            throw new Error(
+                'Unable to load financial-data.json'
+            );
         }
 
         const data = await response.json();
 
+        // ----------------------------------------
+        // Federal Reserve interest rates
+        // ----------------------------------------
+
         function displayRate(element, item) {
-            if (item && item.value !== null) {
+            if (
+                element &&
+                item &&
+                item.value !== null &&
+                item.value !== undefined
+            ) {
                 element.textContent =
                     Number(item.value).toFixed(2) +
                     '% — as of ' +
                     item.observation_date;
-            } else {
+            } else if (element) {
                 element.textContent = 'Unavailable';
             }
         }
 
-        // Federal Reserve / FRED
         const banking = data.federal_banking;
 
-        displayRate(
-            fedFunds,
-            banking.federal_funds_rate
-        );
+        if (banking) {
+            displayRate(
+                fedFunds,
+                banking.federal_funds_rate
+            );
 
-        displayRate(
-            primeRate,
-            banking.bank_prime_loan_rate
-        );
+            displayRate(
+                primeRate,
+                banking.bank_prime_loan_rate
+            );
 
-        displayRate(
-            reserveRate,
-            banking.interest_on_reserve_balances
-        );
+            displayRate(
+                reserveRate,
+                banking.interest_on_reserve_balances
+            );
 
-        if (banking.last_updated) {
-            const updated = new Date(banking.last_updated);
+            if (banking.last_updated) {
+                const updated =
+                    new Date(banking.last_updated);
 
-            federalDataDate.textContent =
-                'Data checked: ' +
-                updated.toLocaleString();
-        } else {
-            federalDataDate.textContent =
-                'Update time unavailable.';
+                federalDataDate.textContent =
+                    'Data checked: ' +
+                    updated.toLocaleString();
+            } else {
+                federalDataDate.textContent =
+                    'Update time unavailable.';
+            }
         }
 
+        // ----------------------------------------
         // U.S. Treasury
+        // ----------------------------------------
+
         const treasury = data.treasury;
 
-        displayRate(
-            treasury3Month,
-            treasury.three_month_rate
-        );
+        if (treasury) {
+            displayRate(
+                treasury3Month,
+                treasury.three_month_rate
+            );
 
-        displayRate(
-            treasury2Year,
-            treasury.two_year_rate
-        );
+            displayRate(
+                treasury2Year,
+                treasury.two_year_rate
+            );
 
-        displayRate(
-            treasury10Year,
-            treasury.ten_year_rate
-        );
+            displayRate(
+                treasury10Year,
+                treasury.ten_year_rate
+            );
 
-        if (treasury.last_updated) {
-            const updated = new Date(treasury.last_updated);
+            if (treasury.last_updated) {
+                const updated =
+                    new Date(treasury.last_updated);
 
-            treasuryDataDate.textContent =
-                'Data checked: ' +
-                updated.toLocaleString();
-        } else {
-            treasuryDataDate.textContent =
-                'Update time unavailable.';
+                treasuryDataDate.textContent =
+                    'Data checked: ' +
+                    updated.toLocaleString();
+            } else {
+                treasuryDataDate.textContent =
+                    'Update time unavailable.';
+            }
+        }
+
+        // ----------------------------------------
+        // Consumer Debt Watch
+        // Robot #3
+        // ----------------------------------------
+
+        const consumerCredit = data.consumer_credit;
+
+        function displayTrillions(element, item) {
+            if (
+                element &&
+                item &&
+                item.value_trillions !== null &&
+                item.value_trillions !== undefined
+            ) {
+                element.textContent =
+                    '$' +
+                    Number(
+                        item.value_trillions
+                    ).toFixed(3) +
+                    ' trillion';
+            } else if (element) {
+                element.textContent = 'Unavailable';
+            }
+        }
+
+        if (consumerCredit) {
+            displayTrillions(
+                totalConsumerCredit,
+                consumerCredit.total_consumer_credit
+            );
+
+            displayTrillions(
+                revolvingCredit,
+                consumerCredit.revolving_credit
+            );
+
+            displayTrillions(
+                nonrevolvingCredit,
+                consumerCredit.nonrevolving_credit
+            );
+
+            const total =
+                consumerCredit.total_consumer_credit;
+
+            if (
+                total &&
+                total.change_billions !== null &&
+                total.change_billions !== undefined
+            ) {
+                const change =
+                    Number(total.change_billions);
+
+                const sign =
+                    change > 0 ? '+' :
+                    change < 0 ? '−' : '';
+
+                consumerCreditChange.textContent =
+                    sign +
+                    '$' +
+                    Math.abs(change).toFixed(1) +
+                    ' billion';
+            } else {
+                consumerCreditChange.textContent =
+                    'Unavailable';
+            }
+
+            if (
+                total &&
+                total.observation_date
+            ) {
+                const observationDate =
+                    new Date(
+                        total.observation_date +
+                        'T00:00:00'
+                    );
+
+                const formattedDate =
+                    observationDate.toLocaleDateString(
+                        'en-US',
+                        {
+                            year: 'numeric',
+                            month: 'long'
+                        }
+                    );
+
+                consumerCreditDate.textContent =
+                    'Observation period: ' +
+                    formattedDate;
+            } else {
+                consumerCreditDate.textContent =
+                    'Observation date unavailable.';
+            }
         }
 
     } catch (error) {
@@ -1479,18 +1649,43 @@ async function loadFinancialData() {
             error
         );
 
-        fedFunds.textContent = 'Temporarily unavailable';
-        primeRate.textContent = 'Temporarily unavailable';
-        reserveRate.textContent = 'Temporarily unavailable';
+        fedFunds.textContent =
+            'Temporarily unavailable';
 
-        treasury3Month.textContent = 'Temporarily unavailable';
-        treasury2Year.textContent = 'Temporarily unavailable';
-        treasury10Year.textContent = 'Temporarily unavailable';
+        primeRate.textContent =
+            'Temporarily unavailable';
+
+        reserveRate.textContent =
+            'Temporarily unavailable';
+
+        treasury3Month.textContent =
+            'Temporarily unavailable';
+
+        treasury2Year.textContent =
+            'Temporarily unavailable';
+
+        treasury10Year.textContent =
+            'Temporarily unavailable';
+
+        totalConsumerCredit.textContent =
+            'Temporarily unavailable';
+
+        revolvingCredit.textContent =
+            'Temporarily unavailable';
+
+        nonrevolvingCredit.textContent =
+            'Temporarily unavailable';
+
+        consumerCreditChange.textContent =
+            'Temporarily unavailable';
 
         federalDataDate.textContent =
             'Live data temporarily unavailable.';
 
         treasuryDataDate.textContent =
+            'Live data temporarily unavailable.';
+
+        consumerCreditDate.textContent =
             'Live data temporarily unavailable.';
     }
 }
