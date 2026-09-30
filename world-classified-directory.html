@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZP3T0LXM1C');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5959578710115297"
+    crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The World's Classified Directory | MoneyTrackTemplates</title>
+
+  <meta
+    name="description"
+    content="The World's Classified Directory by MoneyTrackTemplates. Search free classified ads and business listings from around the world. Post free. Search free. Worldwide."
+  >
+
+  <style>
+    :root {
+      --blue: #3278b8;
+      --dark-blue: #174a75;
+      --deep-blue: #103a5e;
+      --light-blue: #eaf4fc;
+      --pale-blue: #f5faff;
+      --ivory: #fbf8f1;
+      --white: #ffffff;
+      --text: #174a75;
+      --muted: #5e7181;
+      --border: #c9dceb;
+      --gold: #d9a441;
+      --soft-gold: #fff7df;
+      --green: #4e7b5b;
+      --soft-green: #eef7ef;
+      --shadow: 0 8px 24px rgba(23, 74, 117, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 18px 20px 16px;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2.15rem;
+      line-height: 1.15;
+    }
+
+    .site-header p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+    }
+
+    /* NAV */
+
+    .main-nav {
+      background: var(--dark-blue);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 12px;
+    }
+
+    .main-nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 14px 11px;
+      display: block;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      background: rgba(255,255,255,0.10);
+    }
+
+    .main-nav a.active {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* HERO */
+
+    .directory-hero {
+      padding: 68px 20px 58px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234,244,252,0.92),
+          rgba(251,248,241,0.96)
+        );
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .presents {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .directory-hero h2 {
+      max-width: 900px;
+      margin: 0 auto 10px;
+      color: var(--dark-blue);
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: 1.08;
+    }
+
+    .tagline {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #486a82;
+      font-size: 1.06rem;
+    }
+
+    /* SEARCH */
+
+    .search-panel {
+      max-width: 1040px;
+      margin: 34px auto 0;
+      padding: 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .search-panel h3 {
+      margin: 0 0 16px;
+      color: var(--dark-blue);
+      font-size: 1.2rem;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr auto;
+      gap: 10px;
+    }
+
+    .search-grid input,
+    .search-grid select {
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 12px;
+      border: 1px solid #b9cedf;
+      border-radius: 8px;
+      background: var(--white);
+      color: #294f69;
+    }
+
+    .search-button {
+      min-height: 48px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .search-button:hover {
+      background: var(--dark-blue);
+    }
+
+    .prototype-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* HERO ACTIONS */
+
+    .hero-actions {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid var(--blue);
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .button-secondary {
+      background: var(--white);
+      color: var(--dark-blue);
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 58px 20px;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-blue {
+      background: var(--pale-blue);
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 10px;
+      color: var(--dark-blue);
+      font-size: 2rem;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* TWO MAIN DOORS */
+
+    .main-directory-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .directory-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .classified-card {
+      background: var(--dark-blue);
+      color: var(--white);
+    }
+
+    .business-card {
+      background: var(--soft-gold);
+      color: #5b491f;
+      border-color: #e6cf94;
+    }
+
+    .directory-icon {
+      font-size: 2.6rem;
+      margin-bottom: 5px;
+    }
+
+    .directory-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.65rem;
+    }
+
+    .classified-card h3 {
+      color: var(--white);
+    }
+
+    .business-card h3 {
+      color: #654e18;
+    }
+
+    .classified-card p {
+      color: #e4eff7;
+    }
+
+    .directory-card .button {
+      margin-top: 8px;
+    }
+
+    .classified-card .button {
+      background: var(--white);
+      color: var(--dark-blue);
+      border-color: var(--white);
+    }
+
+    .business-card .button {
+      background: #725a20;
+      color: var(--white);
+      border-color: #725a20;
+    }
+
+    /* CATEGORIES */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .category-card {
+      min-height: 140px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(23, 74, 117, 0.07);
+    }
+
+    .category-card .icon {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    .category-card strong {
+      display: block;
+      color: var(--dark-blue);
+      margin-bottom: 5px;
+    }
+
+    .category-card span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* BUSINESS CATEGORIES */
+
+    .business-category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .business-category {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 15px 17px;
+      font-weight: 700;
+      color: var(--dark-blue);
+    }
+
+    /* WORLDWIDE */
+
+    .world-box {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 38px;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, var(--deep-blue), #286fa7);
+      color: var(--white);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .world-box h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .world-box p {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      color: #e5f1f8;
+    }
+
+    .location-path {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .location-item {
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 700;
+    }
+
+    .location-arrow {
+      color: #cde2f1;
+      font-weight: 800;
+    }
+
+    /* POSTING OPTIONS */
+
+    .posting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .posting-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .posting-card .icon {
+      font-size: 2.2rem;
+    }
+
+    .posting-card h3 {
+      color: var(--dark-blue);
+      margin: 8px 0;
+    }
+
+    .posting-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--light-blue);
+      color: var(--dark-blue);
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* FREE PROMISE */
+
+    .free-promise {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px;
+      background: var(--soft-green);
+      border: 1px solid #bad6c0;
+      border-radius: 14px;
+      text-align: center;
+      color: #31573a;
+    }
+
+    .free-promise h2 {
+      margin-top: 0;
+      color: #31573a;
+    }
+
+    .free-promise p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* SAFETY */
+
+    .safety-box {
+      max-width: 900px;
+      margin: 0 auto;
+      border-left: 6px solid var(--gold);
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .safety-box h3 {
+      margin-top: 0;
+      color: var(--dark-blue);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 34px 20px;
+      background: var(--dark-blue);
+      color: var(--white);
+      text-align: center;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    .footer-links {
+      margin: 14px 0;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      margin: 0 8px;
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .search-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .business-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-header h1 {
+        font-size: 1.7rem;
+      }
+
+      .main-nav a {
+        padding: 10px 8px;
+        font-size: 0.78rem;
+      }
+
+      .directory-hero {
+        padding-top: 45px;
+      }
+
+      .main-directory-grid,
+      .posting-grid,
+      .search-grid,
+      .category-grid,
+      .business-category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .directory-card,
+      .world-box {
+        padding: 25px 21px;
+      }
+
+      .location-arrow {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <h1>MoneyTrackTemplates</h1>
+    <p>Plan Better. Track Smarter. Live More Organized.</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="money-templates.html">Money Templates</a>
+      <a href="planners.html">Planners</a>
+      <a href="holiday-planners.html">Holiday Planners</a>
+      <a href="free-downloads.html">Free Downloads</a>
+      <a href="money-banking.html">Money &amp; Banking</a>
+      <a href="world-classified-directory.html" class="active">World Classifieds</a>
+      <a href="resources.html">Resources</a>
+      <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="directory-hero">
+    <div class="hero-inner">
+
+      <p class="presents">MoneyTrackTemplates Presents</p>
+
+      <h2>🌎 The World's Classified Directory</h2>
+
+      <p class="tagline">
+        Post Free. Search Free. Worldwide.
+      </p>
+
+      <p class="hero-description">
+        Find classified advertisements, services and businesses
+        from around the corner or around the world.
+        No subscription required to search.
+      </p>
+
+      <!-- WORLD SEARCH -->
+      <div class="search-panel">
+
+        <h3>🔎 What are you looking for?</h3>
+
+        <form id="world-search-form">
+
+          <div class="search-grid">
+
+            <input
+              type="search"
+              id="search-keyword"
+              placeholder="Search ads, businesses or services"
+              aria-label="Search keyword"
+            >
+
+            <select id="search-country" aria-label="Country">
+              <option value="">🌎 Anywhere in the World</option>
+              <option value="United States">United States</option>
+              <option value="Canada">Canada</option>
+              <option value="Mexico">Mexico</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Australia">Australia</option>
+              <option value="India">India</option>
+              <option value="Japan">Japan</option>
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+              <option value="Spain">Spain</option>
+              <option value="Brazil">Brazil</option>
+              <option value="South Africa">South Africa</option>
+              <option value="Other">Other Country</option>
+            </select>
+
+            <input
+              type="text"
+              id="search-location"
+              placeholder="Region or city"
+              aria-label="Region or city"
+            >
+
+            <button
+              type="submit"
+              class="search-button"
+            >
+              SEARCH
+            </button>
+
+          </div>
+
+        </form>
+
+        <p class="prototype-note" id="search-message">
+          Worldwide search is being prepared for the public directory.
+        </p>
+
+      </div>
+
+      <div class="hero-actions">
+
+        <a href="#browse" class="button button-primary">
+          Search Ads
+        </a>
+
+        <a href="#post-ad" class="button button-secondary">
+          Post a Free Ad
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TWO MAIN DIRECTORY AREAS -->
+  <section class="section section-white">
+    <div class="section-inner">
+
+      <div class="section-heading">
+        <p class="eyebrow">Choose Your Directory</p>
+
+        <h2>What Would You Like to Find?</h2>
+
+        <p>
+          Browse temporary classified advertisements or find
+          businesses and professional services.
+        </p>
+      </div>
+
+      <div class="main-directory-grid">
+
+        <article class="directory-card classified-card">
+
+          <div class="directory-icon">📣</div>
+
+          <h3>Free Classified Ads</h3>
+
+          <p>
+            Buy or sell something, advertise a service, look for work,
+            post housing, advertise an event, give something away,
+            or tell the world what you're looking for.
+          </p>
+
+          <a href="#browse" class="button">
+            Browse Free Ads →
+          </a>
+
+        </article>
+
+        <article class="directory-card business-card">
+
+          <div class="directory-icon">🏪</div>
+
+          <h3>Business Directory</h3>
+
+          <p>
+            Find restaurants, contractors, plumbers, electricians,
+            auto repair shops, attorneys, accountants, salons,
+            cleaners and other businesses anywhere in the world.
+          </p>
+
+          <a href="#business-directory" class="button">
+            Find a Business →
+          </a>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSIFIED CATEGORIES -->
+  <section class="section section-blue" id="browse">
+    <div class="section-inner">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Free Classified Ads</p>
+
+        <h2>Browse by Category</h2>
+
+        <p>
+          The directory will grow as advertisers begin posting.
+          These categories give us our worldwide starting structure.
+        </p>
+
+      </div>
+
+      <div class="category-grid">
+
+        <div class="category-card">
+          <span class="icon">🛍️</span>
+          <strong>For Sale</strong>
+          <span>Household goods, electronics, clothing, collectibles and more.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">🛠️</span>
+          <strong>Services</strong>
+          <span>Local and worldwide services offered by individuals and businesses.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">💼</span>
+          <strong>Jobs</strong>
+          <span>Employment opportunities, help wanted and independent work.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">🏠</span>
+          <strong>Housing</strong>
+          <span>Housing, rentals, rooms and other property advertisements.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">🚗</span>
+          <strong>Vehicles</strong>
+          <span>Cars, trucks, motorcycles and other vehicles.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">💻</span>
+          <strong>Digital Products</strong>
+          <span>Templates, downloads, digital creations and online products.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">🎨</span>
+          <strong>Creative Services</strong>
+          <span>Designers, writers, photographers, artists and creators.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">📅</span>
+          <strong>Community &amp; Events</strong>
+          <span>Events, groups, activities and community announcements.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">🔎</span>
+          <strong>Wanted</strong>
+          <span>Looking for an item, service, opportunity or hard-to-find treasure?</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">🎁</span>
+          <strong>Free Stuff</strong>
+          <span>Items being given away at no charge.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">📚</span>
+          <strong>Education &amp; Tutoring</strong>
+          <span>Tutors, lessons, educational services and learning opportunities.</span>
+        </div>
+
+        <div class="category-card">
+          <span class="icon">📌</span>
+          <strong>Other</strong>
+          <span>Advertisements that don't fit neatly into another category.</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS DIRECTORY -->
+  <section class="section section-white" id="business-directory">
+    <div class="section-inner">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Business Directory</p>
+
+        <h2>Find a Business Anywhere</h2>
+
+        <p>
+          Search local businesses when you're close to home,
+          or explore businesses in another city or country.
+        </p>
+
+      </div>
+
+      <div class="business-category-grid">
+
+        <div class="business-category">🍽️ Restaurants &amp; Food</div>
+        <div class="business-category">🔨 Contractors</div>
+        <div class="business-category">🔧 Plumbers</div>
+        <div class="business-category">💡 Electricians</div>
+        <div class="business-category">🚘 Auto Repair</div>
+        <div class="business-category">⚖️ Lawyers &amp; Legal Services</div>
+        <div class="business-category">🧾 Accountants &amp; Tax Services</div>
+        <div class="business-category">💇 Hair Salons &amp; Barbers</div>
+        <div class="business-category">🧹 Cleaning Services</div>
+        <div class="business-category">🌿 Landscaping &amp; Gardening</div>
+        <div class="business-category">🏡 Real Estate Services</div>
+        <div class="business-category">🐾 Pet Services</div>
+        <div class="business-category">🖥️ Technology &amp; Computer Services</div>
+        <div class="business-category">🎓 Education &amp; Tutoring</div>
+        <div class="business-category">📷 Photography &amp; Creative Services</div>
+        <div class="business-category">🛒 Retail &amp; Shops</div>
+        <div class="business-category">🏨 Travel &amp; Lodging</div>
+        <div class="business-category">📦 Other Businesses</div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WORLDWIDE STRUCTURE -->
+  <section class="section section-blue">
+    <div class="section-inner">
+
+      <div class="world-box">
+
+        <h2>🌎 One Directory. The Whole World.</h2>
+
+        <p>
+          The World's Classified Directory is being designed from the
+          beginning for international use. Listings will be organized
+          by country, administrative region and locality rather than
+          assuming every advertiser uses the same geographic system.
+        </p>
+
+        <div class="location-path">
+
+          <div class="location-item">🌎 World</div>
+
+          <div class="location-arrow">→</div>
+
+          <div class="location-item">Country</div>
+
+          <div class="location-arrow">→</div>
+
+          <div class="location-item">Region / State / Province</div>
+
+          <div class="location-arrow">→</div>
+
+          <div class="location-item">City / Locality</div>
+
+          <div class="location-arrow">→</div>
+
+          <div class="location-item">Advertisement</div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POST AD -->
+  <section class="section section-white" id="post-ad">
+    <div class="section-inner">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Advertise With Us</p>
+
+        <h2>Already Have Something to Advertise?</h2>
+
+        <p>
+          Advertisers will be able to create a new advertisement
+          or bring advertising material they already own.
+        </p>
+
+      </div>
+
+      <div class="posting-grid">
+
+        <article class="posting-card">
+
+          <div class="icon">✏️</div>
+
+          <h3>Create New Ad</h3>
+
+          <p>
+            Write a new classified advertisement or business listing
+            directly in The World's Classified Directory.
+          </p>
+
+          <span class="status">Coming Soon</span>
+
+        </article>
+
+        <article class="posting-card">
+
+          <div class="icon">🔗</div>
+
+          <h3>Import My Ad</h3>
+
+          <p>
+            Already advertising somewhere else? Future import tools
+            will help advertisers bring eligible advertising material
+            they own into the directory.
+          </p>
+
+          <span class="status">Planned Feature</span>
+
+        </article>
+
+        <article class="posting-card">
+
+          <div class="icon">⬆️</div>
+
+          <h3>Upload My Ad</h3>
+
+          <p>
+            Upload advertising material you own, such as a flyer,
+            promotional image or other advertisement, and add the
+            information needed to make it searchable.
+          </p>
+
+          <span class="status">Planned Feature</span>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FREE PROMISE -->
+  <section class="section section-blue">
+    <div class="section-inner">
+
+      <div class="free-promise">
+
+        <h2>Free Means Free</h2>
+
+        <p>
+          The goal is simple:
+          ordinary classified advertisements can be posted free,
+          businesses can create a basic listing free,
+          and visitors can search the directory free.
+        </p>
+
+        <p>
+          <strong>
+            No subscription required just to look for an advertisement
+            or find a business.
+          </strong>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAFETY / MODERATION -->
+  <section class="section section-white">
+    <div class="section-inner">
+
+      <div class="safety-box">
+
+        <h3>🛡️ A Free Directory Still Needs Rules</h3>
+
+        <p>
+          Before public posting opens, MoneyTrackTemplates will establish
+          posting rules, prohibited-item policies, reporting tools,
+          advertiser verification and moderation procedures.
+        </p>
+
+        <p>
+          Advertisers will be responsible for having the right to use
+          the text, photographs and other materials they submit or import.
+        </p>
+
+        <p>
+          The directory is being designed to connect people with
+          advertisements and businesses. MoneyTrackTemplates does not
+          currently process purchases or payments between directory users.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>MoneyTrackTemplates</strong>
+    </p>
+
+    <p>
+      Plan Better. Track Smarter. Live More Organized.
+    </p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="money-banking.html">Money &amp; Banking</a>
+      <a href="resources.html">Resources</a>
+      <a href="free-downloads.html">Free Downloads</a>
+    </div>
+
+    <p>
+      &copy; 2026 MoneyTrackTemplates. All rights reserved.
+    </p>
+
+  </footer>
+
+  <!-- PROTOTYPE SEARCH MESSAGE -->
+  <script>
+    const searchForm =
+      document.getElementById('world-search-form');
+
+    const searchMessage =
+      document.getElementById('search-message');
+
+    searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const keyword =
+        document.getElementById('search-keyword').value.trim();
+
+      const country =
+        document.getElementById('search-country').value;
+
+      const location =
+        document.getElementById('search-location').value.trim();
+
+      let message =
+        '🌎 Search prototype ready.';
+
+      if (keyword) {
+        message += ' Looking for: "' + keyword + '".';
+      }
+
+      if (country) {
+        message += ' Country: ' + country + '.';
+      }
+
+      if (location) {
+        message += ' Location: ' + location + '.';
+      }
+
+      message +=
+        ' Live directory searching will be connected when the listings database is added.';
+
+      searchMessage.textContent = message;
+    });
+  </script>
+
+</body>
+</html>
