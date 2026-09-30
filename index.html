@@ -263,7 +263,81 @@ nav a:hover {
     color: var(--blue-dark);
     font-weight: 700;
 }
+/* WORLD CLASSIFIED DIRECTORY FEATURE */
 
+.world-directory-feature {
+    padding: 28px 20px;
+    background: linear-gradient(135deg, #153f68, #2f6fae);
+    border-top: 1px solid #c9dbea;
+    border-bottom: 1px solid #c9dbea;
+}
+
+.world-directory-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+}
+
+.world-directory-icon {
+    width: 82px;
+    height: 82px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: white;
+    font-size: 2.7rem;
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+}
+
+.world-directory-label {
+    display: block;
+    color: #d9ecfb;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.world-directory-copy h2 {
+    margin: 3px 0 5px;
+    color: white;
+    font-size: 1.85rem;
+}
+
+.world-directory-copy p {
+    margin: 0;
+    color: #edf6fc;
+}
+
+.world-directory-button {
+    background: white;
+    color: #153f68;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.world-directory-button:hover {
+    background: #e7f0f8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+    .world-directory-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .world-directory-icon {
+        margin: auto;
+    }
+
+    .world-directory-button {
+        white-space: normal;
+    }
+}
 /* SHOWCASE */
 
 .showcase {
@@ -861,8 +935,43 @@ View on Payhip
 </div>
 </section>
 
-<!-- SHOWCASE -->
+    <!-- WORLD CLASSIFIED DIRECTORY FEATURE -->
 
+<section class="world-directory-feature">
+
+    <div class="world-directory-inner">
+
+        <div class="world-directory-icon">
+            🌎
+        </div>
+
+        <div class="world-directory-copy">
+
+            <span class="world-directory-label">
+                New Worldwide Directory
+            </span>
+
+            <h2>
+                The World's Classified Directory
+            </h2>
+
+            <p>
+                <strong>Post Free. Search Free. Worldwide.</strong>
+                Find classified advertisements, services, and businesses
+                anywhere in the world.
+            </p>
+
+        </div>
+
+        <a href="world-classified-directory.html"
+           class="button world-directory-button">
+            Explore the Directory →
+        </a>
+
+    </div>
+
+</section>
+<!-- SHOWCASE -->
 <section class="showcase">
 
 <div class="showcase-inner">
