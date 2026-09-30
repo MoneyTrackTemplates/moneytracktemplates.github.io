@@ -2,7 +2,7 @@
   "federal_banking": {
     "federal_funds_rate": {
       "value": 3.88,
-      "observation_date": "2026-09-28"
+      "observation_date": "2026-09-29"
     },
     "bank_prime_loan_rate": {
       "value": 7.0,
@@ -10,26 +10,26 @@
     },
     "interest_on_reserve_balances": {
       "value": 3.9,
-      "observation_date": "2026-09-30"
+      "observation_date": "2026-10-01"
     },
     "source": "Federal Reserve / FRED",
-    "last_updated": "2026-09-30T01:01:28+00:00"
+    "last_updated": "2026-09-30T22:39:53+00:00"
   },
   "treasury": {
     "three_month_rate": {
-      "value": 4.25,
-      "observation_date": "2026-09-29"
+      "value": 4.2,
+      "observation_date": "2026-09-30"
     },
     "two_year_rate": {
-      "value": 4.89,
-      "observation_date": "2026-09-29"
+      "value": 4.88,
+      "observation_date": "2026-09-30"
     },
     "ten_year_rate": {
-      "value": 5.26,
-      "observation_date": "2026-09-29"
+      "value": 5.29,
+      "observation_date": "2026-09-30"
     },
     "source": "U.S. Department of the Treasury",
-    "last_updated": "2026-09-30T01:01:28+00:00"
+    "last_updated": "2026-09-30T22:39:53+00:00"
   },
   "consumer_credit": {
     "total_consumer_credit": {
@@ -64,6 +64,6 @@
     },
     "source": "Federal Reserve / FRED",
     "release": "Consumer Credit (G.19)",
-    "last_updated": "2026-09-30T01:01:28+00:00"
+    "last_updated": "2026-09-30T22:39:53+00:00"
   }
 }
