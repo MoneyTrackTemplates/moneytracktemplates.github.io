@@ -2282,8 +2282,54 @@
 
       return locationText.includes(location);
     }
+async function fetchEbayListings(keyword) {
+  const searchTerm = keyword.trim();
 
-    function runWorldSearch() {
+  if (searchTerm.length < 2) {
+    return [];
+  }
+
+  const endpoint =
+    "https://yswydkopxhgvsysanxus.supabase.co/functions/v1/ebay-search";
+
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      keyword: searchTerm
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      "eBay search failed: " + response.status
+    );
+  }
+
+  const data = await response.json();
+
+  return (data.listings || []).map(function(item) {
+    return {
+      id: item.id,
+      source_name: "eBay",
+      source_type: "external",
+      title: item.title || "",
+      description: "",
+      listing_type: "For Sale",
+      category: "",
+      country: item.location?.country || "",
+      region: item.location?.stateOrProvince || "",
+      locality: item.location?.city || "",
+      price: item.price,
+      currency: item.currency,
+      listed_at: item.listed_at,
+      original_url: item.url
+    };
+  });
+}
+    async function runWorldSearch() {
       const keyword =
         normalizeText(searchKeyword.value);
 
@@ -2293,8 +2339,25 @@
       const location =
         normalizeText(searchLocation.value);
 
-      const matches =
-        moneyTrackListings.filter(
+      let ebayListings = [];
+
+if (keyword) {
+  try {
+    ebayListings = await fetchEbayListings(
+      searchKeyword.value.trim()
+    );
+  } catch (error) {
+    console.error("eBay search unavailable:", error);
+  }
+}
+
+const allListings = [
+  ...moneyTrackListings,
+  ...ebayListings
+];
+
+const matches =
+  allListings.filter(
           function(listing) {
             return (
               listingMatchesKeyword(
