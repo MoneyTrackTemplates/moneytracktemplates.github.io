@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP3T0LXM1C"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,15 +15,16 @@
   <!-- Google AdSense -->
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5959578710115297"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The World's Classified Directory | MoneyTrackTemplates</title>
+  <title>MoneyTrack World Search | Worldwide Classified Directory</title>
 
   <meta
     name="description"
-    content="The World's Classified Directory by MoneyTrackTemplates. Search free classified ads and business listings from around the world. Post free. Search free. Worldwide."
+    content="MoneyTrack World Search is a free worldwide classified discovery directory. Search chronologically with no paid placement and no preferred sources."
   >
 
   <style>
@@ -67,7 +68,8 @@
 
     button,
     input,
-    select {
+    select,
+    textarea {
       font: inherit;
     }
 
@@ -91,7 +93,7 @@
       font-size: 0.95rem;
     }
 
-    /* NAV */
+    /* NAVIGATION */
 
     .main-nav {
       background: var(--dark-blue);
@@ -170,7 +172,7 @@
     }
 
     .hero-description {
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto;
       color: #486a82;
       font-size: 1.06rem;
@@ -186,12 +188,14 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       box-shadow: var(--shadow);
+      text-align: left;
     }
 
     .search-panel h3 {
       margin: 0 0 16px;
       color: var(--dark-blue);
       font-size: 1.2rem;
+      text-align: center;
     }
 
     .search-grid {
@@ -200,8 +204,7 @@
       gap: 10px;
     }
 
-    .search-grid input,
-    .search-grid select {
+    .search-grid input {
       width: 100%;
       min-height: 48px;
       padding: 10px 12px;
@@ -226,13 +229,12 @@
       background: var(--dark-blue);
     }
 
-    .prototype-note {
+    .search-message {
       margin: 12px 0 0;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.85rem;
+      text-align: center;
     }
-
-    /* HERO ACTIONS */
 
     .hero-actions {
       margin-top: 22px;
@@ -249,6 +251,7 @@
       text-decoration: none;
       font-weight: 800;
       border: 1px solid var(--blue);
+      cursor: pointer;
     }
 
     .button-primary {
@@ -261,7 +264,40 @@
       color: var(--dark-blue);
     }
 
-    /* SECTIONS */
+    /* SEARCH PHILOSOPHY */
+
+    .search-principle-section {
+      padding: 38px 20px;
+      background: var(--deep-blue);
+      color: var(--white);
+    }
+
+    .search-principle {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .search-principle h2 {
+      margin: 0 0 12px;
+      font-size: 1.9rem;
+    }
+
+    .search-principle .big-rule {
+      max-width: 900px;
+      margin: 0 auto 12px;
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .search-principle .explanation {
+      max-width: 850px;
+      margin: 0 auto;
+      color: #dcecf7;
+    }
+
+    /* GENERAL SECTIONS */
 
     .section {
       padding: 58px 20px;
@@ -281,7 +317,7 @@
     }
 
     .section-heading {
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto 34px;
       text-align: center;
     }
@@ -306,7 +342,156 @@
       color: var(--muted);
     }
 
-    /* TWO MAIN DOORS */
+    /* LIVE SEARCH RESULTS */
+
+    .results-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .results-count {
+      font-weight: 800;
+      color: var(--dark-blue);
+    }
+
+    .sort-notice {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .listing-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 5px 15px rgba(23, 74, 117, 0.07);
+    }
+
+    .listing-card h3 {
+      margin: 7px 0 8px;
+      color: var(--dark-blue);
+      font-size: 1.3rem;
+    }
+
+    .listing-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .source-badge {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--light-blue);
+      color: var(--dark-blue);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .listing-date {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .listing-description {
+      color: #405f73;
+      white-space: pre-line;
+    }
+
+    .listing-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 14px 0;
+    }
+
+    .meta-pill {
+      padding: 5px 9px;
+      border-radius: 7px;
+      background: var(--pale-blue);
+      border: 1px solid #dceaf4;
+      color: #365e79;
+      font-size: 0.8rem;
+    }
+
+    .listing-price {
+      margin: 10px 0;
+      color: var(--green);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .listing-contact {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .listing-contact strong {
+      color: var(--dark-blue);
+    }
+
+    .external-link {
+      display: inline-block;
+      margin-top: 13px;
+      padding: 9px 13px;
+      border-radius: 7px;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+
+    .empty-results,
+    .loading-results,
+    .error-results {
+      grid-column: 1 / -1;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .error-results {
+      border-color: #d8aaaa;
+      color: #7a3535;
+    }
+
+    .source-explanation {
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding: 18px;
+      background: var(--soft-green);
+      border: 1px solid #bad6c0;
+      border-radius: 10px;
+      color: #31573a;
+      text-align: center;
+    }
+
+    /* MAIN DIRECTORY DOORS */
 
     .main-directory-grid {
       display: grid;
@@ -346,11 +531,12 @@
       color: var(--white);
     }
 
+    .classified-card p {
+      color: #e4eff7;
+    }
+
     .business-card h3 {
       color: #654e18;
-    }
-        .classified-card p {
-      color: #e4eff7;
     }
 
     .directory-card .button {
@@ -385,6 +571,12 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 5px 15px rgba(23, 74, 117, 0.07);
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
 
     .category-card .icon {
@@ -399,12 +591,12 @@
       margin-bottom: 5px;
     }
 
-    .category-card span {
+    .category-card span:last-child {
       color: var(--muted);
       font-size: 0.85rem;
     }
 
-    /* BUSINESS CATEGORIES */
+    /* BUSINESS DIRECTORY */
 
     .business-category-grid {
       display: grid;
@@ -421,6 +613,17 @@
       color: var(--dark-blue);
     }
 
+    .coming-soon {
+      max-width: 850px;
+      margin: 25px auto 0;
+      padding: 18px;
+      background: var(--soft-gold);
+      border: 1px solid #e6cf94;
+      border-radius: 10px;
+      text-align: center;
+      color: #654e18;
+    }
+
     /* WORLDWIDE */
 
     .world-box {
@@ -428,8 +631,7 @@
       margin: 0 auto;
       padding: 38px;
       border-radius: 18px;
-      background:
-        linear-gradient(135deg, var(--deep-blue), #286fa7);
+      background: linear-gradient(135deg, var(--deep-blue), #286fa7);
       color: var(--white);
       box-shadow: var(--shadow);
       text-align: center;
@@ -468,47 +670,40 @@
       font-weight: 800;
     }
 
-    /* POSTING OPTIONS */
+    /* POST FORM */
 
-    .posting-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+    .form-wrap {
+      max-width: 760px;
+      margin: 0 auto;
     }
 
-    .posting-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 26px;
-      text-align: center;
-      box-shadow: var(--shadow);
+    .form-group {
+      margin-bottom: 18px;
     }
 
-    .posting-card .icon {
-      font-size: 2.2rem;
-    }
-
-    .posting-card h3 {
-      color: var(--dark-blue);
-      margin: 8px 0;
-    }
-
-    .posting-card p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .status {
-      display: inline-block;
-      margin-top: 7px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: var(--light-blue);
-      color: var(--dark-blue);
-      font-size: 0.74rem;
+    .form-group label {
+      display: block;
       font-weight: 800;
-      text-transform: uppercase;
+      color: var(--dark-blue);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #b9cedf;
+      border-radius: 7px;
+      background: var(--white);
+      color: #294f69;
+    }
+
+    .submission-note {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      color: var(--muted);
     }
 
     /* FREE PROMISE */
@@ -527,10 +722,6 @@
     .free-promise h2 {
       margin-top: 0;
       color: #31573a;
-    }
-
-    .free-promise p:last-child {
-      margin-bottom: 0;
     }
 
     /* SAFETY */
@@ -582,6 +773,10 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
       .category-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -606,7 +801,6 @@
       }
 
       .main-directory-grid,
-      .posting-grid,
       .search-grid,
       .category-grid,
       .business-category-grid {
@@ -627,7 +821,7 @@
 
 <body>
 
-  <!-- SITE HEADER -->
+  <!-- HEADER -->
   <header class="site-header">
     <h1>MoneyTrackTemplates</h1>
     <p>Plan Better. Track Smarter. Live More Organized.</p>
@@ -655,16 +849,16 @@
 
       <p class="presents">MoneyTrackTemplates Presents</p>
 
-      <h2>🌎 The World's Classified Directory</h2>
+      <h2>🌎 MoneyTrack World Search</h2>
 
       <p class="tagline">
-        Post Free. Search Free. Worldwide.
+        Search Free. Post Free. Discover Worldwide.
       </p>
 
       <p class="hero-description">
-        Find classified advertisements, services and businesses
-        from around the corner or around the world.
-        No subscription required to search.
+        A worldwide discovery directory designed to help people find
+        classified advertisements, services, businesses and opportunities
+        while clearly identifying where each result comes from.
       </p>
 
       <!-- WORLD SEARCH -->
@@ -679,26 +873,16 @@
             <input
               type="search"
               id="search-keyword"
-              placeholder="Search ads, businesses or services"
+              placeholder="What are you looking for?"
               aria-label="Search keyword"
             >
 
-            <select id="search-country" aria-label="Country">
-              <option value="">🌎 Anywhere in the World</option>
-              <option value="United States">United States</option>
-              <option value="Canada">Canada</option>
-              <option value="Mexico">Mexico</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="Australia">Australia</option>
-              <option value="India">India</option>
-              <option value="Japan">Japan</option>
-              <option value="Germany">Germany</option>
-              <option value="France">France</option>
-              <option value="Spain">Spain</option>
-              <option value="Brazil">Brazil</option>
-              <option value="South Africa">South Africa</option>
-              <option value="Other">Other Country</option>
-            </select>
+            <input
+              type="text"
+              id="search-country"
+              placeholder="Country"
+              aria-label="Country"
+            >
 
             <input
               type="text"
@@ -718,16 +902,17 @@
 
         </form>
 
-        <p class="prototype-note" id="search-message">
-          Worldwide search is being prepared for the public directory.
+        <p class="search-message" id="search-message">
+          Showing approved MoneyTrack listings now. Additional outside
+          sources will be added as they are connected.
         </p>
 
       </div>
 
       <div class="hero-actions">
 
-        <a href="#browse" class="button button-primary">
-          Search Ads
+        <a href="#search-results" class="button button-primary">
+          Browse Results
         </a>
 
         <a href="#post-ad" class="button button-secondary">
@@ -739,19 +924,89 @@
     </div>
   </section>
 
-  <!-- TWO MAIN DIRECTORY AREAS -->
+  <!-- SEARCH PHILOSOPHY -->
+  <section class="search-principle-section">
+    <div class="search-principle">
+
+      <h2>A Search Engine Without Favorites</h2>
+
+      <p class="big-rule">
+        No paid placement. No preferred sources. No algorithms telling you what to buy.
+      </p>
+
+      <p class="explanation">
+        Search results are displayed chronologically, with the newest matching
+        listings first. Filters narrow the results; they don't determine who
+        gets favored.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- LIVE SEARCH RESULTS -->
+  <section class="section section-blue" id="search-results">
+    <div class="section-inner">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">Worldwide Discovery</p>
+
+        <h2>Search Results</h2>
+
+        <p>
+          Every result identifies its source. MoneyTrack does not sell
+          placement or move one source ahead of another.
+        </p>
+
+      </div>
+
+      <div class="results-toolbar">
+
+        <div class="results-count" id="results-count">
+          Loading listings...
+        </div>
+
+        <div class="sort-notice">
+          ↕ Default order: Newest → Oldest
+        </div>
+
+      </div>
+
+      <div class="results-grid" id="results-grid">
+
+        <div class="loading-results">
+          Loading approved advertisements...
+        </div>
+
+      </div>
+
+      <div class="source-explanation">
+        <strong>Source Transparency:</strong>
+        Listings submitted directly to this directory are labeled
+        <strong>MoneyTrack Direct</strong>. As outside sources are connected,
+        their results will identify the original source and direct visitors
+        to the original listing.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TWO DIRECTORY AREAS -->
   <section class="section section-white">
     <div class="section-inner">
 
       <div class="section-heading">
-        <p class="eyebrow">Choose Your Directory</p>
+
+        <p class="eyebrow">Explore</p>
 
         <h2>What Would You Like to Find?</h2>
 
         <p>
-          Browse temporary classified advertisements or find
-          businesses and professional services.
+          Browse classified advertisements now. Additional worldwide
+          directories and outside sources can join the same search system
+          as they are connected.
         </p>
+
       </div>
 
       <div class="main-directory-grid">
@@ -760,16 +1015,15 @@
 
           <div class="directory-icon">📣</div>
 
-          <h3>Free Classified Ads</h3>
+          <h3>Worldwide Classified Ads</h3>
 
           <p>
-            Buy or sell something, advertise a service, look for work,
-            post housing, advertise an event, give something away,
-            or tell the world what you're looking for.
+            Find items for sale, services, jobs, housing, events,
+            giveaways, wanted advertisements and other listings.
           </p>
 
-          <a href="#browse" class="button">
-            Browse Free Ads →
+          <a href="#search-results" class="button">
+            Browse Results →
           </a>
 
         </article>
@@ -778,115 +1032,117 @@
 
           <div class="directory-icon">🏪</div>
 
-          <h3>Business Directory</h3>
+          <h3>Business Discovery</h3>
 
           <p>
-            Find restaurants, contractors, plumbers, electricians,
-            auto repair shops, attorneys, accountants, salons,
-            cleaners and other businesses anywhere in the world.
+            The search engine is being structured to eventually include
+            businesses and professional services from connected sources
+            around the world.
           </p>
 
           <a href="#business-directory" class="button">
-            Find a Business →
+            Explore Categories →
           </a>
 
         </article>
 
       </div>
+
     </div>
   </section>
-    <!-- CLASSIFIED CATEGORIES -->
+
+  <!-- CLASSIFIED CATEGORIES -->
   <section class="section section-blue" id="browse">
     <div class="section-inner">
 
       <div class="section-heading">
 
-        <p class="eyebrow">Free Classified Ads</p>
+        <p class="eyebrow">Classified Search</p>
 
         <h2>Browse by Category</h2>
 
         <p>
-          The directory will grow as advertisers begin posting.
-          These categories give us our worldwide starting structure.
+          Select a category to search current approved listings.
         </p>
 
       </div>
 
       <div class="category-grid">
 
-        <div class="category-card">
+        <div class="category-card" data-search="For Sale">
           <span class="icon">🛍️</span>
           <strong>For Sale</strong>
           <span>Household goods, electronics, clothing, collectibles and more.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Service">
           <span class="icon">🛠️</span>
           <strong>Services</strong>
-          <span>Local and worldwide services offered by individuals and businesses.</span>
+          <span>Services offered by individuals and businesses.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Employment">
           <span class="icon">💼</span>
           <strong>Jobs</strong>
           <span>Employment opportunities, help wanted and independent work.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Housing">
           <span class="icon">🏠</span>
           <strong>Housing</strong>
-          <span>Housing, rentals, rooms and other property advertisements.</span>
+          <span>Housing, rentals, rooms and property advertisements.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Vehicles">
           <span class="icon">🚗</span>
           <strong>Vehicles</strong>
           <span>Cars, trucks, motorcycles and other vehicles.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Digital Products">
           <span class="icon">💻</span>
           <strong>Digital Products</strong>
           <span>Templates, downloads, digital creations and online products.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Creative">
           <span class="icon">🎨</span>
           <strong>Creative Services</strong>
           <span>Designers, writers, photographers, artists and creators.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Event">
           <span class="icon">📅</span>
           <strong>Community &amp; Events</strong>
           <span>Events, groups, activities and community announcements.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Wanted">
           <span class="icon">🔎</span>
           <strong>Wanted</strong>
-          <span>Looking for an item, service, opportunity or hard-to-find treasure?</span>
+          <span>Items, services and opportunities people are seeking.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Free">
           <span class="icon">🎁</span>
           <strong>Free Stuff</strong>
           <span>Items being given away at no charge.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Education">
           <span class="icon">📚</span>
           <strong>Education &amp; Tutoring</strong>
-          <span>Tutors, lessons, educational services and learning opportunities.</span>
+          <span>Tutors, lessons and educational opportunities.</span>
         </div>
 
-        <div class="category-card">
+        <div class="category-card" data-search="Other">
           <span class="icon">📌</span>
           <strong>Other</strong>
-          <span>Advertisements that don't fit neatly into another category.</span>
+          <span>Advertisements that don't fit another category.</span>
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -896,13 +1152,13 @@
 
       <div class="section-heading">
 
-        <p class="eyebrow">Business Directory</p>
+        <p class="eyebrow">Future Search Sources</p>
 
-        <h2>Find a Business Anywhere</h2>
+        <h2>Business Discovery</h2>
 
         <p>
-          Search local businesses when you're close to home,
-          or explore businesses in another city or country.
+          Business and service sources can be added to World Search
+          without changing its chronological, source-neutral philosophy.
         </p>
 
       </div>
@@ -930,6 +1186,12 @@
 
       </div>
 
+      <div class="coming-soon">
+        <strong>Coming as sources are connected:</strong>
+        Business results will join the same worldwide search rather than
+        being placed ahead of ordinary listings.
+      </div>
+
     </div>
   </section>
 
@@ -939,13 +1201,12 @@
 
       <div class="world-box">
 
-        <h2>🌎 One Directory. The Whole World.</h2>
+        <h2>🌎 One Search. The Whole World.</h2>
 
         <p>
-          The World's Classified Directory is being designed from the
-          beginning for international use. Listings will be organized
-          by country, administrative region and locality rather than
-          assuming every advertiser uses the same geographic system.
+          MoneyTrack World Search is designed for international discovery.
+          Results can be narrowed by country, administrative region and
+          locality without assuming every country uses the same geographic system.
         </p>
 
         <div class="location-path">
@@ -966,7 +1227,7 @@
 
           <div class="location-arrow">→</div>
 
-          <div class="location-item">Advertisement</div>
+          <div class="location-item">Original Listing</div>
 
         </div>
 
@@ -980,21 +1241,24 @@
     <div class="section-inner">
 
       <div class="section-heading">
-        <p class="eyebrow">Post a Classified Advertisement</p>
+
+        <p class="eyebrow">MoneyTrack Direct</p>
+
         <h2>Post a Free Ad</h2>
 
         <p>
-          Have something to sell, a service to offer, work to advertise,
-          housing to list, or something else people should be able to find?
-          Create your listing below.
+          Advertisements submitted here become MoneyTrack Direct listings.
+          They remain pending until reviewed and approved.
         </p>
+
       </div>
 
-      <div style="max-width: 760px; margin: 0 auto;">
+      <div class="form-wrap">
+
         <form id="classified-ad-form">
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-title"><strong>Ad Title *</strong></label>
+          <div class="form-group">
+            <label for="ad-title">Ad Title *</label>
             <input
               type="text"
               id="ad-title"
@@ -1002,12 +1266,11 @@
               required
               maxlength="120"
               placeholder="Example: Vintage Oak Writing Desk"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-description"><strong>Description *</strong></label>
+          <div class="form-group">
+            <label for="ad-description">Description *</label>
             <textarea
               id="ad-description"
               name="description"
@@ -1015,17 +1278,15 @@
               rows="6"
               maxlength="2000"
               placeholder="Describe what you are selling, offering, seeking or advertising."
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             ></textarea>
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-listing-type"><strong>Listing Type *</strong></label>
+          <div class="form-group">
+            <label for="ad-listing-type">Listing Type *</label>
             <select
               id="ad-listing-type"
               name="listing_type"
               required
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
               <option value="">Choose one</option>
               <option value="For Sale">For Sale</option>
@@ -1039,8 +1300,8 @@
             </select>
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-category"><strong>Category *</strong></label>
+          <div class="form-group">
+            <label for="ad-category">Category *</label>
             <input
               type="text"
               id="ad-category"
@@ -1048,12 +1309,11 @@
               required
               maxlength="80"
               placeholder="Example: Furniture"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-country"><strong>Country *</strong></label>
+          <div class="form-group">
+            <label for="ad-country">Country *</label>
             <input
               type="text"
               id="ad-country"
@@ -1061,35 +1321,33 @@
               required
               maxlength="80"
               placeholder="Example: United States"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-region"><strong>State, Province or Region</strong></label>
+          <div class="form-group">
+            <label for="ad-region">State, Province or Region</label>
             <input
               type="text"
               id="ad-region"
               name="region"
               maxlength="100"
               placeholder="Example: California"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-locality"><strong>City or Locality</strong></label>
+          <div class="form-group">
+            <label for="ad-locality">City or Locality</label>
             <input
               type="text"
               id="ad-locality"
               name="locality"
               maxlength="100"
-              placeholder="Example: Modesto"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+              placeholder="Example: City or locality"
             >
           </div>
-                    <div style="margin-bottom: 18px;">
-            <label for="ad-price"><strong>Price</strong></label>
+
+          <div class="form-group">
+            <label for="ad-price">Price</label>
             <input
               type="number"
               id="ad-price"
@@ -1097,16 +1355,14 @@
               min="0"
               step="0.01"
               placeholder="Example: 175"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-currency"><strong>Currency</strong></label>
+          <div class="form-group">
+            <label for="ad-currency">Currency</label>
             <select
               id="ad-currency"
               name="currency"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
               <option value="">Choose currency</option>
               <option value="USD">USD — U.S. Dollar</option>
@@ -1115,29 +1371,31 @@
               <option value="GBP">GBP — British Pound</option>
               <option value="AUD">AUD — Australian Dollar</option>
               <option value="MXN">MXN — Mexican Peso</option>
+              <option value="JPY">JPY — Japanese Yen</option>
+              <option value="INR">INR — Indian Rupee</option>
+              <option value="BRL">BRL — Brazilian Real</option>
+              <option value="ZAR">ZAR — South African Rand</option>
               <option value="Other">Other</option>
             </select>
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-payment-methods"><strong>Accepted Payment Methods</strong></label>
+          <div class="form-group">
+            <label for="ad-payment-methods">Accepted Payment Methods</label>
             <input
               type="text"
               id="ad-payment-methods"
               name="payment_methods"
               maxlength="200"
               placeholder="Example: Cash, PayPal"
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <div style="margin-bottom: 18px;">
-            <label for="ad-contact-method"><strong>Contact Method *</strong></label>
+          <div class="form-group">
+            <label for="ad-contact-method">Contact Method *</label>
             <select
               id="ad-contact-method"
               name="contact_method"
               required
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
               <option value="">Choose one</option>
               <option value="Email">Email</option>
@@ -1147,8 +1405,8 @@
             </select>
           </div>
 
-          <div style="margin-bottom: 22px;">
-            <label for="ad-contact-value"><strong>Contact Information *</strong></label>
+          <div class="form-group">
+            <label for="ad-contact-value">Contact Information *</label>
             <input
               type="text"
               id="ad-contact-value"
@@ -1156,11 +1414,10 @@
               required
               maxlength="250"
               placeholder="Enter the contact information visitors should use."
-              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
             >
           </div>
 
-          <p style="font-size:0.9rem; line-height:1.5; margin-bottom:18px;">
+          <p class="submission-note">
             Submitted advertisements enter the directory as
             <strong>pending</strong> and will not appear publicly until approved.
             Please do not include passwords, financial account information,
@@ -1182,6 +1439,7 @@
           ></p>
 
         </form>
+
       </div>
 
     </div>
@@ -1196,16 +1454,14 @@
         <h2>Free Means Free</h2>
 
         <p>
-          The goal is simple:
-          ordinary classified advertisements can be posted free,
-          businesses can create a basic listing free,
-          and visitors can search the directory free.
+          MoneyTrack World Search is being built as a free discovery directory.
+          Visitors do not pay to search, and ordinary MoneyTrack Direct
+          classified advertisements can be submitted free.
         </p>
 
         <p>
           <strong>
-            No subscription required just to look for an advertisement
-            or find a business.
+            No paid placement. No payment required just to search.
           </strong>
         </p>
 
@@ -1220,23 +1476,24 @@
 
       <div class="safety-box">
 
-        <h3>🛡️ A Free Directory Still Needs Rules</h3>
+        <h3>🛡️ Source Transparency &amp; Directory Rules</h3>
 
         <p>
-          Before public posting opens, MoneyTrackTemplates will establish
-          posting rules, prohibited-item policies, reporting tools,
-          advertiser verification and moderation procedures.
+          MoneyTrack Direct advertisements are reviewed before appearing
+          publicly. Advertisers are responsible for having the right to use
+          the text, photographs and other materials they submit.
         </p>
 
         <p>
-          Advertisers will be responsible for having the right to use
-          the text, photographs and other materials they submit or import.
+          External search results will identify their original source.
+          MoneyTrackTemplates does not claim ownership of advertisements
+          originating from outside sources.
         </p>
 
         <p>
-          The directory is being designed to connect people with
-          advertisements and businesses. MoneyTrackTemplates does not
-          currently process purchases or payments between directory users.
+          MoneyTrackTemplates currently does not process purchases or payments
+          between directory users. Visitors should review the terms, safety
+          information and transaction procedures of the original listing source.
         </p>
 
       </div>
@@ -1268,64 +1525,597 @@
 
   </footer>
 
-  <!-- PROTOTYPE SEARCH MESSAGE -->
-  <script>
-    const searchForm =
-      document.getElementById('world-search-form');
-
-    const searchMessage =
-      document.getElementById('search-message');
-
-    searchForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const keyword =
-        document.getElementById('search-keyword').value.trim();
-
-      const country =
-        document.getElementById('search-country').value;
-
-      const location =
-        document.getElementById('search-location').value.trim();
-
-      let message =
-        '🌎 Search prototype ready.';
-
-      if (keyword) {
-        message += ' Looking for: "' + keyword + '".';
-      }
-
-      if (country) {
-        message += ' Country: ' + country + '.';
-      }
-
-      if (location) {
-        message += ' Location: ' + location + '.';
-      }
-
-      message +=
-        ' Live directory searching will be connected when the listings database is added.';
-
-      searchMessage.textContent = message;
-    });
-  </script>
-
-  <!-- Supabase connection -->
+  <!-- SUPABASE -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <script>
-    const SUPABASE_URL = 'https://yswydkopxhgvsysanxus.supabase.co';
-    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_Ji1J1yQC4yPBYkVqxBLdWg_WV939mXF';
+    const SUPABASE_URL =
+      'https://yswydkopxhgvsysanxus.supabase.co';
+
+    const SUPABASE_PUBLISHABLE_KEY =
+      'sb_publishable_Ji1J1yQC4yPBYkVqxBLdWg_WV939mXF';
 
     const moneyTrackSupabase = supabase.createClient(
       SUPABASE_URL,
       SUPABASE_PUBLISHABLE_KEY
     );
-
-    console.log('MoneyTrack Classified Directory database connection loaded.');
   </script>
 
-  <!-- Submit classified ad to Supabase -->
+  <!-- WORLD SEARCH ENGINE -->
+  <script>
+    const searchForm =
+      document.getElementById('world-search-form');
+
+    const searchKeyword =
+      document.getElementById('search-keyword');
+
+    const searchCountry =
+      document.getElementById('search-country');
+
+    const searchLocation =
+      document.getElementById('search-location');
+
+    const searchMessage =
+      document.getElementById('search-message');
+
+    const resultsGrid =
+      document.getElementById('results-grid');
+
+    const resultsCount =
+      document.getElementById('results-count');
+
+    let moneyTrackListings = [];
+
+    /*
+      FUTURE WORLD SEARCH ARCHITECTURE
+
+      moneyTrackListings = first-party MoneyTrack Direct results.
+
+      Future connected sources can be normalized into the same
+      result format and added to a combined array.
+
+      Example:
+
+      const combinedResults = [
+        ...moneyTrackListings,
+        ...ebayResults,
+        ...jobResults,
+        ...otherPermittedSourceResults
+      ];
+
+      All results can then be sorted chronologically.
+
+      No source receives an artificial ranking advantage.
+    */
+
+    function normalizeText(value) {
+      return String(value || '')
+        .toLowerCase()
+        .trim();
+    }
+
+    function formatListingDate(dateValue) {
+      if (!dateValue) {
+        return 'Date unavailable';
+      }
+
+      const date = new Date(dateValue);
+
+      if (Number.isNaN(date.getTime())) {
+        return 'Date unavailable';
+      }
+
+      return date.toLocaleDateString(
+        undefined,
+        {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }
+      );
+    }
+
+    function formatPrice(price, currency) {
+      if (
+        price === null ||
+        price === undefined ||
+        price === ''
+      ) {
+        return '';
+      }
+
+      const numericPrice = Number(price);
+
+      if (Number.isNaN(numericPrice)) {
+        return String(price);
+      }
+
+      if (currency && currency !== 'Other') {
+        try {
+          return new Intl.NumberFormat(
+            undefined,
+            {
+              style: 'currency',
+              currency: currency
+            }
+          ).format(numericPrice);
+        } catch (error) {
+          return numericPrice.toLocaleString() + ' ' + currency;
+        }
+      }
+
+      return numericPrice.toLocaleString();
+    }
+
+    function buildLocation(listing) {
+      return [
+        listing.locality,
+        listing.region,
+        listing.country
+      ]
+      .filter(Boolean)
+      .join(', ');
+    }
+
+    function createTextElement(tag, className, text) {
+      const element = document.createElement(tag);
+
+      if (className) {
+        element.className = className;
+      }
+
+      element.textContent = text;
+
+      return element;
+    }
+
+    function createMetaPill(text) {
+      return createTextElement(
+        'span',
+        'meta-pill',
+        text
+      );
+    }
+
+    function createListingCard(listing) {
+      const card =
+        document.createElement('article');
+
+      card.className = 'listing-card';
+
+      const topLine =
+        document.createElement('div');
+
+      topLine.className = 'listing-topline';
+
+      const source =
+        createTextElement(
+          'span',
+          'source-badge',
+          listing.source_name || 'MoneyTrack Direct'
+        );
+
+      const date =
+        createTextElement(
+          'span',
+          'listing-date',
+          'Listed: ' + formatListingDate(listing.listed_at)
+        );
+
+      topLine.appendChild(source);
+      topLine.appendChild(date);
+
+      card.appendChild(topLine);
+
+      const title =
+        createTextElement(
+          'h3',
+          '',
+          listing.title || 'Untitled Listing'
+        );
+
+      card.appendChild(title);
+
+      if (listing.description) {
+        const description =
+          createTextElement(
+            'p',
+            'listing-description',
+            listing.description
+          );
+
+        card.appendChild(description);
+      }
+
+      const meta =
+        document.createElement('div');
+
+      meta.className = 'listing-meta';
+
+      if (listing.listing_type) {
+        meta.appendChild(
+          createMetaPill(listing.listing_type)
+        );
+      }
+
+      if (listing.category) {
+        meta.appendChild(
+          createMetaPill(listing.category)
+        );
+      }
+
+      const location =
+        buildLocation(listing);
+
+      if (location) {
+        meta.appendChild(
+          createMetaPill('📍 ' + location)
+        );
+      }
+
+      if (listing.payment_methods) {
+        meta.appendChild(
+          createMetaPill(
+            'Payment: ' + listing.payment_methods
+          )
+        );
+      }
+
+      if (meta.children.length > 0) {
+        card.appendChild(meta);
+      }
+
+      const formattedPrice =
+        formatPrice(
+          listing.price,
+          listing.currency
+        );
+
+      if (formattedPrice) {
+        const price =
+          createTextElement(
+            'div',
+            'listing-price',
+            formattedPrice
+          );
+
+        card.appendChild(price);
+      }
+
+      /*
+        External sources will use original_url.
+
+        MoneyTrack Direct listings use the approved contact
+        information submitted to our own database.
+      */
+
+      if (listing.original_url) {
+        const link =
+          document.createElement('a');
+
+        link.className = 'external-link';
+        link.href = listing.original_url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'View Original Listing →';
+
+        card.appendChild(link);
+
+      } else if (
+        listing.contact_method &&
+        listing.contact_value
+      ) {
+        const contact =
+          document.createElement('div');
+
+        contact.className = 'listing-contact';
+
+        const contactLabel =
+          document.createElement('strong');
+
+        contactLabel.textContent =
+          listing.contact_method + ': ';
+
+        const contactValue =
+          document.createTextNode(
+            listing.contact_value
+          );
+
+        contact.appendChild(contactLabel);
+        contact.appendChild(contactValue);
+
+        card.appendChild(contact);
+      }
+
+      return card;
+    }
+
+    function renderResults(listings) {
+      resultsGrid.replaceChildren();
+
+      if (!listings.length) {
+        resultsCount.textContent =
+          '0 matching listings';
+
+        const empty =
+          document.createElement('div');
+
+        empty.className = 'empty-results';
+
+        empty.textContent =
+          'No matching approved listings were found. Try a broader keyword or location.';
+
+        resultsGrid.appendChild(empty);
+
+        return;
+      }
+
+      const sortedListings =
+        [...listings].sort(
+          (a, b) =>
+            new Date(b.listed_at || 0) -
+            new Date(a.listed_at || 0)
+        );
+
+      resultsCount.textContent =
+        sortedListings.length +
+        (sortedListings.length === 1
+          ? ' matching listing'
+          : ' matching listings');
+
+      sortedListings.forEach(function(listing) {
+        resultsGrid.appendChild(
+          createListingCard(listing)
+        );
+      });
+    }
+
+    function normalizeMoneyTrackListing(ad) {
+      return {
+        id: 'moneytrack-' + ad.id,
+        source_name: 'MoneyTrack Direct',
+        source_type: 'direct',
+        title: ad.title,
+        description: ad.description,
+        listing_type: ad.listing_type,
+        category: ad.category,
+        country: ad.country,
+        region: ad.region,
+        locality: ad.locality,
+        price: ad.price,
+        currency: ad.currency,
+        payment_methods: ad.payment_methods,
+        contact_method: ad.contact_method,
+        contact_value: ad.contact_value,
+        listed_at: ad.created_at,
+        original_url: null
+      };
+    }
+
+    async function loadApprovedListings() {
+      resultsCount.textContent =
+        'Loading listings...';
+
+      resultsGrid.replaceChildren();
+
+      const loading =
+        document.createElement('div');
+
+      loading.className = 'loading-results';
+
+      loading.textContent =
+        'Loading approved advertisements...';
+
+      resultsGrid.appendChild(loading);
+
+      try {
+        const { data, error } =
+          await moneyTrackSupabase
+            .from('classified_ads')
+            .select(
+              'id, created_at, title, description, listing_type, category, country, region, locality, price, currency, payment_methods, contact_method, contact_value, status, expires_at'
+            )
+            .eq('status', 'approved')
+            .order('created_at', { ascending: false })
+            .limit(100);
+
+        if (error) {
+          throw error;
+        }
+
+        moneyTrackListings =
+          (data || []).map(
+            normalizeMoneyTrackListing
+          );
+
+        renderResults(moneyTrackListings);
+
+        searchMessage.textContent =
+          'Approved MoneyTrack Direct listings loaded. Search by keyword, country, region or city.';
+
+      } catch (error) {
+        console.error(
+          'World Search loading error:',
+          error
+        );
+
+        resultsCount.textContent =
+          'Listings unavailable';
+
+        resultsGrid.replaceChildren();
+
+        const errorBox =
+          document.createElement('div');
+
+        errorBox.className = 'error-results';
+
+        errorBox.textContent =
+          'The directory could not load listings right now. Please try again later.';
+
+        resultsGrid.appendChild(errorBox);
+
+        searchMessage.textContent =
+          'The search database could not be reached.';
+      }
+    }
+
+    function listingMatchesKeyword(
+      listing,
+      keyword
+    ) {
+      if (!keyword) {
+        return true;
+      }
+
+      const searchableText =
+        [
+          listing.title,
+          listing.description,
+          listing.listing_type,
+          listing.category,
+          listing.payment_methods
+        ]
+        .map(normalizeText)
+        .join(' ');
+
+      return searchableText.includes(keyword);
+    }
+
+    function listingMatchesCountry(
+      listing,
+      country
+    ) {
+      if (!country) {
+        return true;
+      }
+
+      return normalizeText(
+        listing.country
+      ).includes(country);
+    }
+
+    function listingMatchesLocation(
+      listing,
+      location
+    ) {
+      if (!location) {
+        return true;
+      }
+
+      const locationText =
+        [
+          listing.region,
+          listing.locality
+        ]
+        .map(normalizeText)
+        .join(' ');
+
+      return locationText.includes(location);
+    }
+
+    function runWorldSearch() {
+      const keyword =
+        normalizeText(searchKeyword.value);
+
+      const country =
+        normalizeText(searchCountry.value);
+
+      const location =
+        normalizeText(searchLocation.value);
+
+      const matches =
+        moneyTrackListings.filter(
+          function(listing) {
+            return (
+              listingMatchesKeyword(
+                listing,
+                keyword
+              ) &&
+              listingMatchesCountry(
+                listing,
+                country
+              ) &&
+              listingMatchesLocation(
+                listing,
+                location
+              )
+            );
+          }
+        );
+
+      renderResults(matches);
+
+      let description =
+        'Showing ' +
+        matches.length +
+        (matches.length === 1
+          ? ' matching listing.'
+          : ' matching listings.');
+
+      if (keyword) {
+        description +=
+          ' Keyword: "' +
+          searchKeyword.value.trim() +
+          '".';
+      }
+
+      if (country) {
+        description +=
+          ' Country: ' +
+          searchCountry.value.trim() +
+          '.';
+      }
+
+      if (location) {
+        description +=
+          ' Location: ' +
+          searchLocation.value.trim() +
+          '.';
+      }
+
+      searchMessage.textContent =
+        description +
+        ' Results remain newest first.';
+
+      document
+        .getElementById('search-results')
+        .scrollIntoView({
+          behavior: 'smooth'
+        });
+    }
+
+    searchForm.addEventListener(
+      'submit',
+      function(event) {
+        event.preventDefault();
+        runWorldSearch();
+      }
+    );
+
+    document
+      .querySelectorAll('.category-card[data-search]')
+      .forEach(function(card) {
+
+        card.addEventListener(
+          'click',
+          function() {
+
+            searchKeyword.value =
+              card.dataset.search || '';
+
+            searchCountry.value = '';
+            searchLocation.value = '';
+
+            runWorldSearch();
+          }
+        );
+
+      });
+
+    loadApprovedListings();
+  </script>
+
+  <!-- SUBMIT CLASSIFIED AD -->
   <script>
     const classifiedAdForm =
       document.getElementById('classified-ad-form');
@@ -1336,61 +2126,95 @@
     const submitClassifiedAdButton =
       document.getElementById('submit-classified-ad');
 
-    classifiedAdForm.addEventListener('submit', async function(event) {
-      event.preventDefault();
+    classifiedAdForm.addEventListener(
+      'submit',
+      async function(event) {
 
-      classifiedAdStatus.textContent =
-        'Submitting your advertisement...';
+        event.preventDefault();
 
-      submitClassifiedAdButton.disabled = true;
+        classifiedAdStatus.textContent =
+          'Submitting your advertisement...';
 
-      const formData = new FormData(classifiedAdForm);
+        submitClassifiedAdButton.disabled = true;
 
-      const adData = {
-        title: formData.get('title'),
-        description: formData.get('description'),
-        listing_type: formData.get('listing_type'),
-        category: formData.get('category'),
-        country: formData.get('country'),
-        region: formData.get('region') || null,
-        locality: formData.get('locality') || null,
-        price: formData.get('price')
-          ? Number(formData.get('price'))
-          : null,
-        currency: formData.get('currency') || null,
-        payment_methods: formData.get('payment_methods') || null,
-        contact_method: formData.get('contact_method'),
-        contact_value: formData.get('contact_value'),
-        status: 'pending'
-      };
+        const formData =
+          new FormData(classifiedAdForm);
 
-      try {
-        const { error } = await moneyTrackSupabase
-          .from('classified_ads')
-          .insert([adData]);
+        const adData = {
+          title:
+            formData.get('title'),
 
-        if (error) {
-          throw error;
+          description:
+            formData.get('description'),
+
+          listing_type:
+            formData.get('listing_type'),
+
+          category:
+            formData.get('category'),
+
+          country:
+            formData.get('country'),
+
+          region:
+            formData.get('region') || null,
+
+          locality:
+            formData.get('locality') || null,
+
+          price:
+            formData.get('price')
+              ? Number(formData.get('price'))
+              : null,
+
+          currency:
+            formData.get('currency') || null,
+
+          payment_methods:
+            formData.get('payment_methods') || null,
+
+          contact_method:
+            formData.get('contact_method'),
+
+          contact_value:
+            formData.get('contact_value'),
+
+          status:
+            'pending'
+        };
+
+        try {
+          const { error } =
+            await moneyTrackSupabase
+              .from('classified_ads')
+              .insert([adData]);
+
+          if (error) {
+            throw error;
+          }
+
+          classifiedAdStatus.textContent =
+            '✓ Advertisement submitted! It will appear in the directory after review.';
+
+          classifiedAdForm.reset();
+
+        } catch (error) {
+
+          console.error(
+            'Classified ad submission error:',
+            error
+          );
+
+          classifiedAdStatus.textContent =
+            'We could not submit the advertisement. Please try again.';
+
+        } finally {
+
+          submitClassifiedAdButton.disabled = false;
+
         }
-
-        classifiedAdStatus.textContent =
-          '✓ Advertisement submitted! It will appear in the directory after review.';
-
-        classifiedAdForm.reset();
-
-      } catch (error) {
-        console.error(
-          'Classified ad submission error:',
-          error
-        );
-
-        classifiedAdStatus.textContent =
-          'We could not submit the advertisement. Please try again.';
-
-      } finally {
-        submitClassifiedAdButton.disabled = false;
       }
-    });
+    );
   </script>
 
 </body>
