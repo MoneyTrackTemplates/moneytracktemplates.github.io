@@ -414,7 +414,22 @@
       font-weight: 800;
       color: var(--dark-blue);
     }
+.new-search-button {
+  padding: 7px 13px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--dark-blue);
+  font-weight: 800;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
 
+.new-search-button:hover,
+.new-search-button:focus {
+  background: var(--blue);
+  color: var(--white);
+}
     .sort-notice {
       color: var(--muted);
       font-size: 0.88rem;
@@ -1103,12 +1118,20 @@
       <div class="results-toolbar">
 
         <div class="results-count" id="results-count">
-          Loading listings...
-        </div>
+  Loading listings...
+</div>
 
-        <div class="sort-notice">
-          ↕ Default order: Newest → Oldest
-        </div>
+<button
+  type="button"
+  class="new-search-button"
+  id="new-search-button"
+>
+  ← New Search
+</button>
+
+<div class="sort-notice">
+  ↕ Default order: Newest → Oldest
+</div>
 
       </div>
 
@@ -2330,7 +2353,27 @@
           behavior: 'smooth'
         });
     }
+const newSearchButton =
+  document.getElementById('new-search-button');
 
+newSearchButton.addEventListener(
+  'click',
+  function() {
+
+    document
+      .querySelector('.search-panel')
+      .scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+    setTimeout(function() {
+      searchKeyword.focus();
+      searchKeyword.select();
+    }, 500);
+
+  }
+);
     searchForm.addEventListener(
       'submit',
       function(event) {
