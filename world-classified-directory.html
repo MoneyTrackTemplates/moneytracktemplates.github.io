@@ -349,8 +349,7 @@
     .business-card h3 {
       color: #654e18;
     }
-
-    .classified-card p {
+        .classified-card p {
       color: #e4eff7;
     }
 
@@ -796,8 +795,7 @@
       </div>
     </div>
   </section>
-
-  <!-- CLASSIFIED CATEGORIES -->
+    <!-- CLASSIFIED CATEGORIES -->
   <section class="section section-blue" id="browse">
     <div class="section-inner">
 
@@ -982,67 +980,208 @@
     <div class="section-inner">
 
       <div class="section-heading">
-
-        <p class="eyebrow">Advertise With Us</p>
-
-        <h2>Already Have Something to Advertise?</h2>
+        <p class="eyebrow">Post a Classified Advertisement</p>
+        <h2>Post a Free Ad</h2>
 
         <p>
-          Advertisers will be able to create a new advertisement
-          or bring advertising material they already own.
+          Have something to sell, a service to offer, work to advertise,
+          housing to list, or something else people should be able to find?
+          Create your listing below.
         </p>
-
       </div>
 
-      <div class="posting-grid">
+      <div style="max-width: 760px; margin: 0 auto;">
+        <form id="classified-ad-form">
 
-        <article class="posting-card">
+          <div style="margin-bottom: 18px;">
+            <label for="ad-title"><strong>Ad Title *</strong></label>
+            <input
+              type="text"
+              id="ad-title"
+              name="title"
+              required
+              maxlength="120"
+              placeholder="Example: Vintage Oak Writing Desk"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
 
-          <div class="icon">✏️</div>
+          <div style="margin-bottom: 18px;">
+            <label for="ad-description"><strong>Description *</strong></label>
+            <textarea
+              id="ad-description"
+              name="description"
+              required
+              rows="6"
+              maxlength="2000"
+              placeholder="Describe what you are selling, offering, seeking or advertising."
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            ></textarea>
+          </div>
 
-          <h3>Create New Ad</h3>
+          <div style="margin-bottom: 18px;">
+            <label for="ad-listing-type"><strong>Listing Type *</strong></label>
+            <select
+              id="ad-listing-type"
+              name="listing_type"
+              required
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+              <option value="">Choose one</option>
+              <option value="For Sale">For Sale</option>
+              <option value="Service">Service</option>
+              <option value="Wanted">Wanted</option>
+              <option value="Housing">Housing</option>
+              <option value="Employment">Employment</option>
+              <option value="Event">Event</option>
+              <option value="Free">Free / Giveaway</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-          <p>
-            Write a new classified advertisement or business listing
-            directly in The World's Classified Directory.
+          <div style="margin-bottom: 18px;">
+            <label for="ad-category"><strong>Category *</strong></label>
+            <input
+              type="text"
+              id="ad-category"
+              name="category"
+              required
+              maxlength="80"
+              placeholder="Example: Furniture"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label for="ad-country"><strong>Country *</strong></label>
+            <input
+              type="text"
+              id="ad-country"
+              name="country"
+              required
+              maxlength="80"
+              placeholder="Example: United States"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label for="ad-region"><strong>State, Province or Region</strong></label>
+            <input
+              type="text"
+              id="ad-region"
+              name="region"
+              maxlength="100"
+              placeholder="Example: California"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label for="ad-locality"><strong>City or Locality</strong></label>
+            <input
+              type="text"
+              id="ad-locality"
+              name="locality"
+              maxlength="100"
+              placeholder="Example: Modesto"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+                    <div style="margin-bottom: 18px;">
+            <label for="ad-price"><strong>Price</strong></label>
+            <input
+              type="number"
+              id="ad-price"
+              name="price"
+              min="0"
+              step="0.01"
+              placeholder="Example: 175"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label for="ad-currency"><strong>Currency</strong></label>
+            <select
+              id="ad-currency"
+              name="currency"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+              <option value="">Choose currency</option>
+              <option value="USD">USD — U.S. Dollar</option>
+              <option value="CAD">CAD — Canadian Dollar</option>
+              <option value="EUR">EUR — Euro</option>
+              <option value="GBP">GBP — British Pound</option>
+              <option value="AUD">AUD — Australian Dollar</option>
+              <option value="MXN">MXN — Mexican Peso</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label for="ad-payment-methods"><strong>Accepted Payment Methods</strong></label>
+            <input
+              type="text"
+              id="ad-payment-methods"
+              name="payment_methods"
+              maxlength="200"
+              placeholder="Example: Cash, PayPal"
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label for="ad-contact-method"><strong>Contact Method *</strong></label>
+            <select
+              id="ad-contact-method"
+              name="contact_method"
+              required
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+              <option value="">Choose one</option>
+              <option value="Email">Email</option>
+              <option value="Phone">Phone</option>
+              <option value="Website">Website</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom: 22px;">
+            <label for="ad-contact-value"><strong>Contact Information *</strong></label>
+            <input
+              type="text"
+              id="ad-contact-value"
+              name="contact_value"
+              required
+              maxlength="250"
+              placeholder="Enter the contact information visitors should use."
+              style="width:100%; padding:12px; margin-top:6px; box-sizing:border-box;"
+            >
+          </div>
+
+          <p style="font-size:0.9rem; line-height:1.5; margin-bottom:18px;">
+            Submitted advertisements enter the directory as
+            <strong>pending</strong> and will not appear publicly until approved.
+            Please do not include passwords, financial account information,
+            Social Security numbers or other sensitive personal information.
           </p>
 
-          <span class="status">Coming Soon</span>
+          <button
+            type="submit"
+            class="button button-primary"
+            id="submit-classified-ad"
+          >
+            Submit Free Ad
+          </button>
 
-        </article>
+          <p
+            id="classified-ad-status"
+            aria-live="polite"
+            style="margin-top:16px; font-weight:700;"
+          ></p>
 
-        <article class="posting-card">
-
-          <div class="icon">🔗</div>
-
-          <h3>Import My Ad</h3>
-
-          <p>
-            Already advertising somewhere else? Future import tools
-            will help advertisers bring eligible advertising material
-            they own into the directory.
-          </p>
-
-          <span class="status">Planned Feature</span>
-
-        </article>
-
-        <article class="posting-card">
-
-          <div class="icon">⬆️</div>
-
-          <h3>Upload My Ad</h3>
-
-          <p>
-            Upload advertising material you own, such as a flyer,
-            promotional image or other advertisement, and add the
-            information needed to make it searchable.
-          </p>
-
-          <span class="status">Planned Feature</span>
-
-        </article>
-
+        </form>
       </div>
 
     </div>
@@ -1168,6 +1307,89 @@
         ' Live directory searching will be connected when the listings database is added.';
 
       searchMessage.textContent = message;
+    });
+  </script>
+
+  <!-- Supabase connection -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    const SUPABASE_URL = 'https://yswydkopxhgvsysanxus.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_Ji1J1yQC4yPBYkVqxBLdWg_WV939mXF';
+
+    const moneyTrackSupabase = supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_PUBLISHABLE_KEY
+    );
+
+    console.log('MoneyTrack Classified Directory database connection loaded.');
+  </script>
+
+  <!-- Submit classified ad to Supabase -->
+  <script>
+    const classifiedAdForm =
+      document.getElementById('classified-ad-form');
+
+    const classifiedAdStatus =
+      document.getElementById('classified-ad-status');
+
+    const submitClassifiedAdButton =
+      document.getElementById('submit-classified-ad');
+
+    classifiedAdForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      classifiedAdStatus.textContent =
+        'Submitting your advertisement...';
+
+      submitClassifiedAdButton.disabled = true;
+
+      const formData = new FormData(classifiedAdForm);
+
+      const adData = {
+        title: formData.get('title'),
+        description: formData.get('description'),
+        listing_type: formData.get('listing_type'),
+        category: formData.get('category'),
+        country: formData.get('country'),
+        region: formData.get('region') || null,
+        locality: formData.get('locality') || null,
+        price: formData.get('price')
+          ? Number(formData.get('price'))
+          : null,
+        currency: formData.get('currency') || null,
+        payment_methods: formData.get('payment_methods') || null,
+        contact_method: formData.get('contact_method'),
+        contact_value: formData.get('contact_value'),
+        status: 'pending'
+      };
+
+      try {
+        const { error } = await moneyTrackSupabase
+          .from('classified_ads')
+          .insert([adData]);
+
+        if (error) {
+          throw error;
+        }
+
+        classifiedAdStatus.textContent =
+          '✓ Advertisement submitted! It will appear in the directory after review.';
+
+        classifiedAdForm.reset();
+
+      } catch (error) {
+        console.error(
+          'Classified ad submission error:',
+          error
+        );
+
+        classifiedAdStatus.textContent =
+          'We could not submit the advertisement. Please try again.';
+
+      } finally {
+        submitClassifiedAdButton.disabled = false;
+      }
     });
   </script>
 
