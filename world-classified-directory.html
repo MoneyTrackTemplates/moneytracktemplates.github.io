@@ -263,7 +263,60 @@
       background: var(--white);
       color: var(--dark-blue);
     }
+/* SHARE WORLD SEARCH */
 
+.share-world-search {
+  padding: 22px 20px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.share-world-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.share-world-inner > strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--dark-blue);
+  font-size: 1.05rem;
+}
+
+.share-world-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.share-world-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.share-world-button:hover,
+.share-world-button:focus {
+  background: var(--blue);
+  color: var(--white);
+}
+
+#share-world-status {
+  min-height: 20px;
+  margin: 9px 0 0;
+  color: var(--green);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
     /* SEARCH PHILOSOPHY */
 
     .search-principle-section {
@@ -923,7 +976,94 @@
 
     </div>
   </section>
+<!-- SHARE WORLD SEARCH -->
+<section class="share-world-search" aria-label="Share MoneyTrack World Search">
+  <div class="share-world-inner">
 
+    <strong>🌎 Share World Search</strong>
+
+    <div class="share-world-buttons">
+
+      <a
+        href="#"
+        class="share-world-button"
+        id="share-facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Facebook
+      </a>
+
+      <a
+        href="#"
+        class="share-world-button"
+        id="share-x"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        X
+      </a>
+
+      <a
+        href="#"
+        class="share-world-button"
+        id="share-linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="#"
+        class="share-world-button"
+        id="share-reddit"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reddit
+      </a>
+
+      <a
+        href="#"
+        class="share-world-button"
+        id="share-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
+
+      <a
+        href="#"
+        class="share-world-button"
+        id="share-email"
+      >
+        Email
+      </a>
+
+      <button
+        type="button"
+        class="share-world-button"
+        id="copy-world-link"
+      >
+        Copy Link
+      </button>
+
+      <button
+        type="button"
+        class="share-world-button"
+        id="native-world-share"
+      >
+        Share…
+      </button>
+
+    </div>
+
+    <p id="share-world-status" aria-live="polite"></p>
+
+  </div>
+</section>
   <!-- SEARCH PHILOSOPHY -->
   <section class="search-principle-section">
     <div class="search-principle">
@@ -1524,7 +1664,114 @@
     </p>
 
   </footer>
+<!-- SHARE WORLD SEARCH -->
+<script>
+  const worldSearchURL =
+    'https://moneytracktemplates.github.io/world-classified-directory.html';
 
+  const worldSearchTitle =
+    'MoneyTrack World Search';
+
+  const worldSearchText =
+    'Search free. Post free. Discover worldwide. No paid placement or preferred sources.';
+
+  const encodedWorldURL =
+    encodeURIComponent(worldSearchURL);
+
+  const encodedWorldTitle =
+    encodeURIComponent(worldSearchTitle);
+
+  const encodedWorldText =
+    encodeURIComponent(worldSearchText);
+
+  document.getElementById('share-facebook').href =
+    'https://www.facebook.com/sharer/sharer.php?u=' +
+    encodedWorldURL;
+
+  document.getElementById('share-x').href =
+    'https://twitter.com/intent/tweet?text=' +
+    encodedWorldText +
+    '&url=' +
+    encodedWorldURL;
+
+  document.getElementById('share-linkedin').href =
+    'https://www.linkedin.com/sharing/share-offsite/?url=' +
+    encodedWorldURL;
+
+  document.getElementById('share-reddit').href =
+    'https://www.reddit.com/submit?url=' +
+    encodedWorldURL +
+    '&title=' +
+    encodedWorldTitle;
+
+  document.getElementById('share-whatsapp').href =
+    'https://wa.me/?text=' +
+    encodeURIComponent(
+      worldSearchText + ' ' + worldSearchURL
+    );
+
+  document.getElementById('share-email').href =
+    'mailto:?subject=' +
+    encodedWorldTitle +
+    '&body=' +
+    encodeURIComponent(
+      worldSearchText +
+      '\n\n' +
+      worldSearchURL
+    );
+
+  const shareWorldStatus =
+    document.getElementById('share-world-status');
+
+  document
+    .getElementById('copy-world-link')
+    .addEventListener('click', async function () {
+
+      try {
+        await navigator.clipboard.writeText(worldSearchURL);
+
+        shareWorldStatus.textContent =
+          '✓ Link copied!';
+
+      } catch (error) {
+        shareWorldStatus.textContent =
+          'Copy this link: ' + worldSearchURL;
+      }
+
+    });
+
+  const nativeWorldShare =
+    document.getElementById('native-world-share');
+
+  if (!navigator.share) {
+    nativeWorldShare.style.display = 'none';
+  }
+
+  nativeWorldShare.addEventListener(
+    'click',
+    async function () {
+
+      if (!navigator.share) {
+        return;
+      }
+
+      try {
+        await navigator.share({
+          title: worldSearchTitle,
+          text: worldSearchText,
+          url: worldSearchURL
+        });
+
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          shareWorldStatus.textContent =
+            'Use one of the sharing buttons above.';
+        }
+      }
+
+    }
+  );
+</script>
   <!-- SUPABASE -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
