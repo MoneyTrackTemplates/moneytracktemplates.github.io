@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>The Price of Looking Rich | MoneyTrackTemplates</title>
+
+<meta name="description" content="A fictional designer handbag, the real mathematics of borrowing, and Federal Reserve research on buy now, pay later.">
+
+<style>
+:root {
+  --blue: #183f68;
+  --navy: #102c4b;
+  --ivory: #fffdf6;
+  --line: #d7e1e9;
+  --ink: #203a52;
+  --muted: #516678;
+  --gold: #d8a64e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font: 17px/1.78 Georgia, "Times New Roman", serif;
+}
+
+a { color: #165887; }
+a:hover { text-decoration-thickness: 2px; }
+
+.top {
+  background: var(--blue);
+  color: white;
+  padding: 22px max(22px, calc((100vw - 1060px)/2));
+  font: 700 25px/1.2 Georgia, serif;
+}
+
+.top small {
+  display: block;
+  font: 13px/1.5 Arial, sans-serif;
+  letter-spacing: .06em;
+  margin-top: 5px;
+}
+
+.nav {
+  background: var(--navy);
+  padding: 12px max(22px, calc((100vw - 1060px)/2));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font: 600 14px Arial, sans-serif;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover { text-decoration: underline; }
+
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 45px 22px 75px;
+}
+
+.eyebrow {
+  font: 700 12px Arial, sans-serif;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #48657c;
+}
+
+.headline {
+  font-size: clamp(35px, 6vw, 55px);
+  line-height: 1.12;
+  color: var(--navy);
+  margin: 15px 0;
+}
+
+.deck {
+  font-size: 21px;
+  line-height: 1.55;
+  color: #526576;
+}
+
+.rule {
+  height: 4px;
+  width: 82px;
+  background: var(--gold);
+  margin: 27px 0;
+}
+
+.byline {
+  font: 13px Arial, sans-serif;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.article h2 {
+  font-size: 29px;
+  line-height: 1.3;
+  color: var(--blue);
+  margin: 45px 0 14px;
+}
+
+.article p { margin: 0 0 21px; }
+.article em { color: #42576c; }
+
+.data {
+  margin: 38px 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  padding: 23px;
+  box-shadow: 0 4px 18px #163d6410;
+}
+
+.data h3 {
+  font: 700 22px/1.35 Georgia, serif;
+  color: var(--navy);
+  margin: 0 0 5px;
+}
+
+.sub, .note {
+  font: 13px/1.65 Arial, sans-serif;
+  color: var(--muted);
+}
+
+.bars { margin: 24px 0 12px; }
+
+.barrow {
+  display: grid;
+  grid-template-columns: 170px 1fr 45px;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+  font: 14px Arial, sans-serif;
+}
+
+.track {
+  height: 19px;
+  background: #eaf0f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--blue);
+  border-radius: 4px;
+}
+
+.barrow strong { text-align: right; }
+
+.linechart {
+  width: 100%;
+  height: auto;
+  margin-top: 18px;
+  overflow: visible;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font: 13px Arial, sans-serif;
+  margin: 12px 0;
+}
+
+.swatch {
+  display: inline-block;
+  width: 18px;
+  height: 4px;
+  vertical-align: middle;
+  margin-right: 6px;
+  background: #225c87;
+}
+
+.swatch.gold { background: #bd812b; }
+
+.tablewrap { overflow-x: auto; }
+
+.research-table {
+  width: 100%;
+  border-collapse: collapse;
+  font: 14px/1.5 Arial, sans-serif;
+  margin: 15px 0;
+}
+
+.research-table th,
+.research-table td {
+  padding: 9px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.research-table th { background: #edf3f7; }
+
+.sources {
+  border-top: 2px solid var(--blue);
+  margin-top: 52px;
+  padding-top: 18px;
+}
+
+.sources h2 { font-size: 26px; }
+
+.sources li {
+  margin-bottom: 13px;
+  overflow-wrap: anywhere;
+}
+
+.share {
+  margin: 35px 0;
+  padding: 20px;
+  background: #eaf1f6;
+  border-radius: 10px;
+  font: 14px Arial, sans-serif;
+}
+
+.share h3 { margin: 0 0 12px; }
+
+.sharebuttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.share button,
+.share a {
+  border: 1px solid #bacbd8;
+  background: white;
+  color: var(--blue);
+  border-radius: 6px;
+  padding: 9px 12px;
+  font: 600 13px Arial, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.share button:hover,
+.share a:hover { background: #dbe9f3; }
+
+.disclaimer {
+  font: 13px/1.6 Arial, sans-serif;
+  color: var(--muted);
+  border-left: 3px solid var(--gold);
+  padding-left: 13px;
+  margin-top: 30px;
+}
+
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 22px;
+  text-align: center;
+  font: 13px Arial, sans-serif;
+}
+
+footer a { color: white; }
+
+@media (max-width: 550px) {
+  .barrow {
+    grid-template-columns: 112px 1fr 34px;
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .data { padding: 14px; }
+  main { padding-top: 29px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+  MoneyTrackTemplates
+  <small>PLAN BETTER. TRACK SMARTER. LIVE MORE ORGANIZED.</small>
+</header>
+
+<nav class="nav" aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <a href="money-banking.html">Money &amp; Banking</a>
+  <a href="resources.html">Resources</a>
+  <a href="free-downloads.html">Free Downloads</a>
+  <a href="https://payhip.com/MoneyTrackTemplates">Shop</a>
+</nav>
+
+<main>
+
+<div class="eyebrow">
+  Money &amp; Banking · Consumer Credit and Spending
+</div>
+
+<h1 class="headline">
+  The Price of Looking Rich:
+  When Shopping Becomes a Financial Investment in Nonsense
+</h1>
+
+<p class="deck">
+  A fictional handbag, a very real financial problem, and the
+  extraordinary ability of modern marketing to turn debt into a lifestyle.
+</p>
+
+<div class="rule"></div>
+
+<div class="byline">
+  MoneyTrackTemplates · Research-based editorial · October 2026
+</div>
+
+<article class="article">
+
+<h2>Madison's Magnificent Investment</h2>
+
+<p>Madison is 23, employed, ambitious and determined to build wealth.
+Unfortunately, her financial adviser is a woman on TikTok whose
+principal qualification is owning seventeen designer handbags.</p>
+
+<p>One afternoon, Madison discovers an extraordinary financial
+opportunity: a $2,000 designer handbag.</p>
+
+<p>According to her digital adviser, the handbag is an investment.
+Its timeless design, prestigious label and limited availability
+practically guarantee financial sophistication.</p>
+
+<p>Madison is delighted. Finally, an investment she can carry to brunch.</p>
+
+<p>There's just one inconvenience. Madison doesn't have $2,000.</p>
+
+<p>Fortunately, she has a credit card.</p>
+
+<p>Problem solved.</p>
+
+<p>Within minutes, Madison has joined the distinguished ranks of
+people who believe purchasing something expensive is the same as
+acquiring an appreciating asset.</p>
+
+<p>Her handbag arrives beautifully packaged.</p>
+
+<p>Her credit card statement arrives somewhat less beautifully packaged.</p>
+
+
+<h2>The Mathematics of Magnificence</h2>
+
+<p>Let's examine Madison's investment portfolio, which currently
+consists of one handbag and an impressive amount of optimism.</p>
+
+<p>Suppose she charges the $2,000 purchase to a credit card with a
+24% annual percentage rate (APR). She makes monthly payments of
+$100, incurs no additional charges and makes every payment on time.</p>
+
+<p>Under these simplified assumptions, she'll need approximately
+26 months to eliminate the balance and pay roughly $580 in interest.</p>
+
+<p>Her magnificent $2,000 handbag has cost approximately $2,580.</p>
+
+<p>Two years later, Madison decides to sell it. Unfortunately, her
+particular handbag hasn't become a collector's treasure.
+Suppose a buyer offers her $900.</p>
+
+<p>Madison accepts.</p>
+
+<p>Her approximate financial loss: $1,680.</p>
+
+<p>Naturally, not every luxury handbag depreciates. Some rare models
+appreciate, and some collectors earn substantial resale profits.
+Madison, however, purchased an ordinary retail product without
+researching its resale market, transaction costs or financing expenses.</p>
+
+<p>She didn't conduct an investment analysis.</p>
+
+<p>She watched a video.</p>
+
+<p><em>
+Madison and her handbag are fictional. The borrowing calculation is
+illustrative, not a prediction of actual resale values or credit
+card terms. It assumes monthly interest of 2% and no other transactions.
+</em></p>
+
+
+<h2>When Four Easy Payments Become Twelve Financial Obligations</h2>
+
+<p>Madison's story may be fictional, but installment borrowing
+is widespread.</p>
+
+<p>Buy now, pay later (BNPL) services allow customers to divide
+purchases into installments, frequently four payments and often
+without interest.</p>
+
+<p>There are legitimate reasons to use these services. They can
+help consumers manage cash flow, particularly when an expense
+is necessary and repayment is affordable.</p>
+
+<p>The difficulty begins when the affordability of each individual
+payment disguises the total amount a person has promised to repay.</p>
+
+<p>A $200 purchase becomes four payments of $50.</p>
+
+<p>Another $200 purchase becomes another four payments.</p>
+
+<p>Add three more purchases, and suddenly the shopper has committed
+$1,000 without ever feeling as though they spent $1,000 in a single
+transaction.</p>
+
+<p>The arithmetic remains stubbornly unimpressed by the marketing.</p>
+
+<p>Research published by the Federal Reserve in May 2026 found that
+16% of U.S. adults used BNPL during 2025. Among those users, 26%
+reported making at least one late payment.
+<a href="#source-fed">[1]</a></p>
+
+<p>The Consumer Financial Protection Bureau's January 2025 research
+offers another perspective. Examining 2022 borrowing records from
+six major lenders, researchers found that approximately 63% of the
+BNPL borrowers studied originated multiple simultaneous loans
+at some point during the year.
+<a href="#source-cfpb">[2]</a></p>
+
+<p>These findings do not establish that BNPL causes financial
+difficulties. They do illustrate why tracking outstanding
+commitments matters.</p>
+
+
+<!-- RESEARCH GRAPH 1 -->
+
+<section class="data" aria-labelledby="chart-one">
+
+<h3 id="chart-one">
+  Research graph 1: What Americans finance with BNPL
+</h3>
+
+<div class="sub">
+  Federal Reserve · Purchases made by U.S. adults who used
+  BNPL during 2025
+</div>
+
+<div class="bars" role="img"
+aria-label="Clothing or accessories 49 percent; electronics 32 percent;
+furniture or appliances 26 percent; groceries or food delivery
+20 percent; travel 19 percent.">
+
+<div class="barrow">
+  <span>Clothing / accessories</span>
+  <div class="track"><div class="fill" style="width:49%"></div></div>
+  <strong>49%</strong>
+</div>
+
+<div class="barrow">
+  <span>Electronics</span>
+  <div class="track"><div class="fill" style="width:32%"></div></div>
+  <strong>32%</strong>
+</div>
+
+<div class="barrow">
+  <span>Furniture / appliances</span>
+  <div class="track"><div class="fill" style="width:26%"></div></div>
+  <strong>26%</strong>
+</div>
+
+<div class="barrow">
+  <span>Groceries / food</span>
+  <div class="track"><div class="fill" style="width:20%"></div></div>
+  <strong>20%</strong>
+</div>
+
+<div class="barrow">
+  <span>Travel</span>
+  <div class="track"><div class="fill" style="width:19%"></div></div>
+  <strong>19%</strong>
+</div>
+
+</div>
+
+<div class="note">
+  Respondents could select multiple categories; percentages
+  do not total 100%. All adult ages.
+  Source: Federal Reserve, figure 34.
+  <a href="#source-fed">[1]</a>
+</div>
+
+</section>
+
+
+<h2>What Are People Financing?</h2>
+
+<p>The Federal Reserve's 2025 household survey provides an
+interesting look at the purchases Americans finance through
+BNPL services.</p>
+
+<p>Clothing and accessories lead the categories, followed by
+electronics, furniture and appliances.</p>
+
+<p>The results offer considerable material for our hypothetical
+Madison. Perhaps the handbag requires matching shoes.
+Perhaps the shoes require a new smartphone for photographing them.</p>
+
+<p>But the data also reveal something considerably more serious.</p>
+
+<p>One in five BNPL users reported financing groceries or
+food delivery.</p>
+
+<p>Financing necessities because household income is insufficient
+is fundamentally different from financing a luxury purchase
+because someone on social media calls it an investment.</p>
+
+<p>We shouldn't confuse the two.</p>
+
+
+<!-- RESEARCH GRAPH 2 -->
+
+<section class="data" aria-labelledby="chart-two">
+
+<h3 id="chart-two">
+  Research graph 2: BNPL use and late payments, 2021–2025
+</h3>
+
+<div class="sub">
+  Federal Reserve · Percentages from annual U.S. household surveys
+</div>
+
+<svg class="linechart"
+     viewBox="0 0 680 300"
+     role="img"
+     aria-labelledby="graph-title graph-desc">
+
+<title id="graph-title">
+  BNPL use and late payments over five years
+</title>
+
+<desc id="graph-desc">
+  Use among all adults: 10, 12, 14, 15 and 16 percent
+  in 2021 through 2025.
+  Late payments among BNPL users: 15, 17, 18, 24
+  and 26 percent.
+</desc>
+
+<g stroke="#dce5ec" stroke-width="1">
+  <path d="M58 240H650 M58 174H650 M58 108H650 M58 42H650"/>
+</g>
+
+<g fill="#516678" font-size="13" font-family="Arial">
+
+  <text x="29" y="244">0%</text>
+  <text x="22" y="178">10%</text>
+  <text x="22" y="112">20%</text>
+  <text x="22" y="46">30%</text>
+
+  <text x="58" y="265" text-anchor="middle">2021</text>
+  <text x="202" y="265" text-anchor="middle">2022</text>
+  <text x="346" y="265" text-anchor="middle">2023</text>
+  <text x="490" y="265" text-anchor="middle">2024</text>
+  <text x="634" y="265" text-anchor="middle">2025</text>
+
+</g>
+
+<!-- BNPL use among all adults -->
+
+<polyline
+  fill="none"
+  stroke="#225c87"
+  stroke-width="3"
+  points="58,174 202,160.8 346,147.6 490,141 634,134.4"
+/>
+
+<!-- Late payments among BNPL users -->
+
+<polyline
+  fill="none"
+  stroke="#bd812b"
+  stroke-width="3"
+  points="58,141 202,127.8 346,121.2 490,81.6 634,68.4"
+/>
+
+<g fill="#225c87">
+  <circle cx="58" cy="174" r="4"/>
+  <circle cx="202" cy="160.8" r="4"/>
+  <circle cx="346" cy="147.6" r="4"/>
+  <circle cx="490" cy="141" r="4"/>
+  <circle cx="634" cy="134.4" r="4"/>
+</g>
+
+<g fill="#bd812b">
+  <circle cx="58" cy="141" r="4"/>
+  <circle cx="202" cy="127.8" r="4"/>
+  <circle cx="346" cy="121.2" r="4"/>
+  <circle cx="490" cy="81.6" r="4"/>
+  <circle cx="634" cy="68.4" r="4"/>
+</g>
+
+</svg>
+
+<div class="legend">
+  <span>
+    <i class="swatch"></i>
+    Used BNPL (all adults)
+  </span>
+  <span>
+    <i class="swatch gold"></i>
+    Paid late (BNPL users)
+  </span>
+</div>
+
+<div class="tablewrap">
+
+<table class="research-table">
+
+<thead>
+<tr>
+  <th>Year</th>
+  <th>Used BNPL</th>
+  <th>Paid late among users</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>2021</td><td>10%</td><td>15%</td></tr>
+<tr><td>2022</td><td>12%</td><td>17%</td></tr>
+<tr><td>2023</td><td>14%</td><td>18%</td></tr>
+<tr><td>2024</td><td>15%</td><td>24%</td></tr>
+<tr><td>2025</td><td>16%</td><td>26%</td></tr>
+</tbody>
+
+</table>
+
+</div>
+
+<div class="note">
+  <strong>Read carefully:</strong>
+  These lines use different denominators.
+  The blue line describes all U.S. adults;
+  the gold line describes only BNPL users.
+  Compare trends within each series, not the two percentages
+  as if they described the same population.
+  Source: Federal Reserve, figure 33.
+  <a href="#source-fed">[1]</a>
+</div>
+
+</section>
+
+
+<h2>The Credit Card Doesn't Care About Your Aesthetic</h2>
+
+<p>Credit cards provide convenience, purchase protections and,
+when managed carefully, useful financial flexibility.</p>
+
+<p>However, interest changes the actual cost of purchases.</p>
+
+<p>Suppose two consumers buy identical $2,000 handbags.</p>
+
+<p>The first pays $2,000 without borrowing.</p>
+
+<p>The second finances the purchase at 24% APR and repays $100
+each month under Madison's simplified repayment assumptions.</p>
+
+<p>Both receive identical handbags.</p>
+
+<p>Only one receives roughly $580 in additional financing costs.</p>
+
+<p>The second consumer has purchased precisely the same object
+at a substantially higher price.</p>
+
+<p>The distinction isn't fashion.</p>
+
+<p>It's mathematics.</p>
+
+
+<h2>The Investment Vocabulary Department</h2>
+
+<p>Modern marketing has developed a remarkable talent for
+borrowing terminology from finance.</p>
+
+<p>A handbag becomes an investment piece.</p>
+
+<p>A sneaker collection becomes an alternative asset portfolio.</p>
+
+<p>An expensive vacation becomes an investment in yourself.</p>
+
+<p>A new smartphone becomes an investment in productivity.</p>
+
+<p>Occasionally, these descriptions have merit. A tool that helps
+someone earn income, training that improves professional skills,
+or a collectible purchased with careful market research may
+provide measurable benefits.</p>
+
+<p>But calling something an investment doesn't automatically
+give it an investment return.</p>
+
+<p>A purchase can be enjoyable, useful, beautiful or personally
+meaningful without being a financial investment.</p>
+
+<p>The distinction becomes especially important when the
+purchase is financed.</p>
+
+<p>Before accepting the investment label, a consumer might
+examine the acquisition cost, financing charges, maintenance
+expenses, resale market and realistic prospects for earning
+a return.</p>
+
+<p>Unfortunately, that analysis is considerably less
+photogenic than an unboxing video.</p>
+
+
+<h2>The Invisible Price Tag</h2>
+
+<p>The greatest danger isn't necessarily one expensive purchase.</p>
+
+<p>It's the accumulation of small financial commitments that
+gradually consume future income.</p>
+
+<p>One installment plan finances the headphones.</p>
+
+<p>Another finances the sneakers.</p>
+
+<p>A credit card finances the handbag.</p>
+
+<p>A subscription maintains access to an assortment of services
+that nobody remembers subscribing to.</p>
+
+<p>Each individual payment appears manageable.</p>
+
+<p>Collectively, they may leave little room for unexpected
+expenses, saving or reducing existing debt.</p>
+
+<p>The Federal Reserve's findings about late payments and
+the CFPB's research on simultaneous loans demonstrate why
+the number and timing of obligations deserve attention.</p>
+
+<p>Financial decisions don't occur independently. Every
+repayment competes with other uses of the same income.</p>
+
+
+<h2>Madison Discovers an Extraordinary New Investment</h2>
+
+<p>Six months after selling her handbag, Madison encounters
+another financial influencer.</p>
+
+<p>This one recommends building an emergency fund, comparing
+borrowing costs and distinguishing assets from ordinary
+consumer purchases.</p>
+
+<p>The influencer has fewer followers.</p>
+
+<p>Her handbags are suspiciously ordinary.</p>
+
+<p>Nevertheless, Madison investigates.</p>
+
+<p>She discovers that money retained rather than spent can
+remain available for emergencies, future opportunities
+and purchases she genuinely values.</p>
+
+<p>She also learns that financial independence doesn't
+require abandoning beautiful things.</p>
+
+<p>It requires understanding what those things cost.</p>
+
+<p>Madison still appreciates designer handbags.</p>
+
+<p>She simply no longer expects them to finance her retirement.</p>
+
+<p>And somewhere on TikTok, a woman with seventeen handbags
+is preparing an important announcement about
+investment-grade sunglasses.</p>
+
+<p><strong>The lesson:</strong>
+Borrowing always has a cost. Sometimes that cost is
+interest or fees. Even when a loan charges neither,
+its payments still commit money you could otherwise
+use in the future.
+</p>
+
+</article>
+
+
+<!-- ORIGINAL RESEARCH SOURCES -->
+
+<section class="sources" aria-labelledby="sources-heading">
+
+<h2 id="sources-heading">
+  Original Sources &amp; Research Notes
+</h2>
+
+<ol>
+
+<li id="source-fed">
+
+<strong>
+  Board of Governors of the Federal Reserve System.
+</strong>
+
+<em>
+  Economic Well-Being of U.S. Households in 2025
+</em>,
+May 2026.
+
+See figures 33 and 34 and the Credit section.
+
+<a
+href="https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-accessible-version.htm"
+target="_blank"
+rel="noopener noreferrer">
+  Accessible data and figures ↗
+</a>
+
+·
+
+<a
+href="https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-credit.htm"
+target="_blank"
+rel="noopener noreferrer">
+  Credit analysis ↗
+</a>
+
+</li>
+
+<li id="source-cfpb">
+
+<strong>
+  Consumer Financial Protection Bureau.
+</strong>
+
+<em>
+  Consumer Use of Buy Now, Pay Later and Other Unsecured Debt
+</em>,
+January 13, 2025.
+
+Research uses 2022 records from six major BNPL firms;
+the 63% figure applies to borrowers studied,
+not all Americans.
+
+<a
+href="https://www.consumerfinance.gov/data-research/research-reports/consumer-use-of-buy-now-pay-later-and-other-unsecured-debt/"
+target="_blank"
+rel="noopener noreferrer">
+  Original research and report ↗
+</a>
+
+</li>
+
+</ol>
+
+<p class="disclaimer">
+
+<strong>Editorial note:</strong>
+
+Madison and her handbag are fictional.
+
+The financial illustration assumes monthly interest at 2%,
+a fixed $100 monthly payment except for a smaller final payment,
+no additional purchases or fees, and an illustrative
+$900 resale price.
+
+Survey results describe the populations and periods identified
+in the sources; they do not show that all young consumers
+behave alike.
+
+Educational content, not individualized financial advice.
+
+</p>
+
+</section>
+
+
+<!-- SOCIAL SHARING -->
+
+<section class="share" aria-label="Share this article">
+
+<h3>Share this article</h3>
+
+<div class="sharebuttons">
+
+<a id="facebook" target="_blank" rel="noopener noreferrer"
+href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoneytracktemplates.github.io%2Fthe-price-of-looking-rich.html">
+  Facebook
+</a>
+
+<a id="twitter" target="_blank" rel="noopener noreferrer"
+href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fthe-price-of-looking-rich.html">
+  X
+</a>
+
+<a id="linkedin" target="_blank" rel="noopener noreferrer"
+href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fthe-price-of-looking-rich.html">
+  LinkedIn
+</a>
+
+<a id="reddit" target="_blank" rel="noopener noreferrer"
+href="https://www.reddit.com/submit?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fthe-price-of-looking-rich.html">
+  Reddit
+</a>
+
+<a id="whatsapp" target="_blank" rel="noopener noreferrer"
+href="https://wa.me/?text=https%3A%2F%2Fmoneytracktemplates.github.io%2Fthe-price-of-looking-rich.html">
+  WhatsApp
+</a>
+
+<a id="email"
+href="mailto:?subject=The%20Price%20of%20Looking%20Rich&amp;body=https%3A%2F%2Fmoneytracktemplates.github.io%2Fthe-price-of-looking-rich.html">
+  Email
+</a>
+
+<button id="copy" type="button">
+  Copy Link
+</button>
+
+<button id="native" type="button" hidden>
+  More Sharing Options
+</button>
+
+</div>
+
+<p id="copy-status"
+   role="status"
+   aria-live="polite"
+   class="note">
+</p>
+
+</section>
+
+<p>
+  <a href="money-banking.html">
+    ← Return to Money &amp; Banking
+  </a>
+</p>
+
+</main>
+
+<footer>
+  © 2026 MoneyTrackTemplates · Research, practical tools,
+  and a little perspective.
+</footer>
+
+
+<!-- SHARING FUNCTIONS -->
+
+<script>
+
+(function () {
+
+  const u = window.location.href;
+  const t = document.title;
+  const encoded = encodeURIComponent(u);
+
+  const links = {
+
+    facebook:
+      "https://www.facebook.com/sharer/sharer.php?u=" + encoded,
+
+    twitter:
+      "https://twitter.com/intent/tweet?text=" +
+      encodeURIComponent(t) + "&url=" + encoded,
+
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=" +
+      encoded,
+
+    reddit:
+      "https://www.reddit.com/submit?url=" +
+      encoded + "&title=" + encodeURIComponent(t),
+
+    whatsapp:
+      "https://wa.me/?text=" +
+      encodeURIComponent(t + " " + u),
+
+    email:
+      "mailto:?subject=" +
+      encodeURIComponent(t) +
+      "&body=" + encoded
+
+  };
+
+  for (const [id, url] of Object.entries(links)) {
+    document.getElementById(id).href = url;
+  }
+
+  document.getElementById("copy").addEventListener(
+    "click",
+    async () => {
+
+      const status = document.getElementById("copy-status");
+
+      try {
+        await navigator.clipboard.writeText(u);
+        status.textContent = "Link copied!";
+      } catch (e) {
+        status.textContent = "Copy this address: " + u;
+      }
+
+    }
+  );
+
+  if (navigator.share) {
+
+    const b = document.getElementById("native");
+
+    b.hidden = false;
+
+    b.addEventListener("click", async () => {
+
+      try {
+        await navigator.share({
+          title: t,
+          url: u
+        });
+      } catch (e) {}
+
+    });
+
+  }
+
+})();
+
+</script>
+
+</body>
+</html>
