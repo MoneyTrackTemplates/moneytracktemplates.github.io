@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cryptocurrency: Money, Investment—or the World's Largest Financial Experiment? | MoneyTrackTemplates</title>
+
+  <meta name="description" content="A mildly ruthless investigation into cryptocurrency, crypto fraud, stablecoins, Bitcoin, the U.S. dollar, FTX, Celsius, OneCoin and BitConnect.">
+
+  <style>
+    :root {
+      --blue: #3278b8;
+      --dark-blue: #174a75;
+      --deeper-blue: #103a5e;
+      --ivory: #fbf8f1;
+      --paper: #fffdf8;
+      --gold: #c89b3c;
+      --text: #263746;
+      --muted: #65727d;
+      --border: #d9e1e7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    header {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 28px 20px 22px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1.1;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+    }
+
+    nav {
+      background: var(--dark-blue);
+      text-align: center;
+      padding: 12px 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      margin: 5px 12px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 38px auto;
+      padding: 0 22px 60px;
+    }
+
+    .article {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: clamp(24px, 5vw, 55px);
+      box-shadow: 0 8px 25px rgba(0,0,0,.06);
+    }
+
+    .category {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-family: Arial, sans-serif;
+      font-size: .82rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    h2.article-title {
+      color: var(--deeper-blue);
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.15;
+      margin: 12px auto;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: #52616d;
+      max-width: 720px;
+      margin: 0 auto 14px;
+    }
+
+    .byline {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      margin-bottom: 35px;
+      font-size: .92rem;
+    }
+
+    h2.section-title {
+      color: var(--dark-blue);
+      margin-top: 44px;
+      line-height: 1.25;
+      font-size: 1.65rem;
+      border-bottom: 2px solid #e2e9ee;
+      padding-bottom: 8px;
+    }
+
+    p {
+      margin: 17px 0;
+    }
+
+    .dialogue {
+      margin: 25px 0;
+      padding: 18px 24px;
+      border-left: 5px solid var(--gold);
+      background: #f7f2e7;
+      font-style: italic;
+    }
+
+    .dialogue p {
+      margin: 7px 0;
+    }
+
+    .big-line {
+      text-align: center;
+      color: var(--deeper-blue);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin: 30px auto;
+    }
+
+    .warning-box {
+      background: #eef5fa;
+      border: 1px solid #c9ddea;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .receipts {
+      background: #f2f5f6;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 45px;
+    }
+
+    .receipts h2 {
+      margin-top: 0;
+      color: var(--dark-blue);
+    }
+
+    .receipts li {
+      margin-bottom: 15px;
+    }
+
+    .receipts a {
+      color: var(--blue);
+      word-break: break-word;
+    }
+
+    .share-box {
+      border-top: 2px solid #e0e6ea;
+      margin-top: 42px;
+      padding-top: 26px;
+      text-align: center;
+    }
+
+    .share-box h3 {
+      color: var(--dark-blue);
+      margin-bottom: 14px;
+    }
+
+    .share-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      justify-content: center;
+    }
+
+    .share-buttons a,
+    .share-buttons button {
+      background: var(--dark-blue);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-decoration: none;
+      font: 700 .86rem Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    .share-buttons a:hover,
+    .share-buttons button:hover {
+      background: var(--blue);
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--deeper-blue);
+      color: white;
+      text-align: center;
+      padding: 24px 15px;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .article {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MoneyTrackTemplates</h1>
+  <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="money-templates.html">Money Templates</a>
+  <a href="planners.html">Planners</a>
+  <a href="free-downloads.html">Free Downloads</a>
+  <a href="resources.html">Resources</a>
+  <a href="money-banking.html">Money &amp; Banking</a>
+</nav>
+
+<main>
+
+<article class="article">
+
+  <div class="category">Money &amp; Banking · Cryptocurrency</div>
+
+  <h2 class="article-title">
+    Cryptocurrency: Money, Investment—or the World's Largest Financial Experiment?
+  </h2>
+
+  <p class="subtitle">
+    You bought something called a coin. There is no coin. The bank is gone.
+    Your password is now part of your retirement plan.
+  </p>
+
+  <div class="byline">
+    MoneyTrackTemplates · October 2026
+  </div>
+
+  <p>Kevin has decided to become an investor.</p>
+
+  <p>This decision occurred at approximately 9:17 p.m. on Tuesday after a coworker named Derek announced that he'd made $18,000 trading cryptocurrency.</p>
+
+  <p>Kevin knows absolutely nothing about cryptocurrency.</p>
+
+  <p>This presents no apparent obstacle.</p>
+
+  <p>By 9:32, Kevin has watched three videos.</p>
+
+  <p>By 9:46, he has opened an account.</p>
+
+  <p>At 10:03, Kevin purchases $5,000 worth of cryptocurrency.</p>
+
+  <p>At 10:11, his investment rises 7%.</p>
+
+  <p>Kevin changes his social-media biography to:</p>
+
+  <div class="dialogue">
+    <p><strong>Investor | Entrepreneur | Digital Assets</strong></p>
+  </div>
+
+  <p>Kevin begins wondering why everybody doesn't do this.</p>
+
+  <p>The following morning, his investment is down 31%.</p>
+
+  <p>Kevin removes "Digital Assets" from his biography and begins researching <em>long-term fundamentals</em>.</p>
+
+  <p class="big-line">Welcome to cryptocurrency.</p>
+
+
+  <h2 class="section-title">1. First Question: What Did Kevin Actually Buy?</h2>
+
+  <p>This is where cryptocurrency immediately becomes peculiar.</p>
+
+  <p>Kevin bought something called a <em>coin</em>.</p>
+
+  <p>There is no coin.</p>
+
+  <p>There isn't even one of those disappointing commemorative coins that arrives in a velvet box after midnight television.</p>
+
+  <p>What Kevin owns is a digital asset recorded through a cryptographically secured distributed ledger, commonly a blockchain.</p>
+
+  <p>Bitcoin, introduced in 2009, demonstrated that people could transfer a scarce digital asset without requiring a traditional bank to maintain the central ledger.</p>
+
+  <p>That was genuinely innovative.</p>
+
+  <p>A network of computers could collectively maintain transaction records according to predetermined rules.</p>
+
+  <p>No Bank of Kevin.</p>
+
+  <p>No Federal Reserve of Kevin.</p>
+
+  <p>No teller asking Kevin whether he'd like to open a savings account while he's standing there holding his paycheck.</p>
+
+  <p>But cryptocurrency eventually expanded far beyond Bitcoin.</p>
+
+  <p>Today the category includes thousands of digital assets, stablecoins, utility tokens, governance tokens, decentralized-finance projects and meme coins.</p>
+
+  <p>Some have serious technological objectives.</p>
+
+  <p>Some are speculative investments.</p>
+
+  <p>And some appear to have been created because somebody discovered that investors respond favorably to cartoon dogs.</p>
+
+  <p>Those distinctions matter.</p>
+
+  <p>Calling all cryptocurrency the same thing is rather like calling a Treasury bond, a casino chip, a dollar bill and a Beanie Baby the same financial instrument because all four can theoretically be exchanged for money.</p>
+
+
+  <h2 class="section-title">2. Why Would Anybody Want This?</h2>
+
+  <p>Before we begin sharpening the knives, cryptocurrency deserves a fair hearing.</p>
+
+  <p>There are legitimate reasons people find the technology attractive.</p>
+
+  <p>Digital assets can be transferred across borders. Some blockchain networks operate continuously rather than closing for weekends and banking holidays. People can hold certain digital assets without maintaining a conventional bank account.</p>
+
+  <p>Distributed-ledger technology may also have useful applications beyond speculative cryptocurrency.</p>
+
+  <p>And then there is Bitcoin's central appeal.</p>
+
+  <p>Its supply rules aren't determined by a government.</p>
+
+  <p>For people worried about inflation, currency instability, capital controls or government monetary policy, that can be attractive.</p>
+
+  <p>Some investors also bought Bitcoin years ago, held it, and made enormous legitimate gains.</p>
+
+  <p>Those people exist.</p>
+
+  <p>Kevin has met several of them on the internet.</p>
+
+  <p>Curiously, he has encountered considerably fewer people announcing:</p>
+
+  <div class="dialogue">
+    <p>"Hello. I bought at the top and lost $38,000."</p>
+  </div>
+
+  <p>Investment conversations have a peculiar survivor bias.</p>
+
+  <p>The yacht photographs tend to circulate more widely than the bankruptcy documents.</p>
+
+
+  <h2 class="section-title">3. Congratulations. You Have Escaped the Bank.</h2>
+
+  <p>One of cryptocurrency's great promises was removing financial intermediaries.</p>
+
+  <p>Why should a bank stand between two people transferring value?</p>
+
+  <p>Fair question.</p>
+
+  <p>With self-custody, cryptocurrency can allow Kevin to control his assets using cryptographic keys.</p>
+
+  <p>Kevin is thrilled.</p>
+
+  <div class="dialogue">
+    <p><strong>Kevin:</strong> "So the bank can't freeze my account?"</p>
+    <p>Potentially, yes.</p>
+    <p><strong>Kevin:</strong> "Nobody controls my password?"</p>
+    <p>Correct.</p>
+    <p><strong>Kevin:</strong> "What happens if I lose it?"</p>
+    <p>Ah.</p>
+  </div>
+
+  <p class="big-line">Welcome to banking, Kevin. You are the bank.</p>
+
+  <p>The bank's cybersecurity department is Kevin.</p>
+
+  <p>The fraud department is Kevin.</p>
+
+  <p>The password-recovery department is Kevin.</p>
+
+  <p>The employee responsible for not sending $17,000 to the wrong digital address is also Kevin.</p>
+
+  <p>Kevin suddenly misses the woman at the credit union.</p>
+
+  <p>Removing an intermediary can remove some costs and restrictions.</p>
+
+  <p>It can also remove some of the protections and services the intermediary provided.</p>
+
+  <p>Decentralization doesn't eliminate responsibility.</p>
+
+  <p>It relocates it.</p>
+
+  <p>Usually directly onto Kevin.</p>
+
+
+  <h2 class="section-title">4. So Kevin Uses a Cryptocurrency Exchange</h2>
+
+  <p>Kevin decides self-custody sounds exhausting.</p>
+
+  <p>He therefore leaves his assets with a cryptocurrency exchange.</p>
+
+  <p>Problem solved.</p>
+
+  <p>Except we have now recreated an intermediary.</p>
+
+  <p>This is where our story meets <strong>Sam Bankman-Fried</strong>.</p>
+
+  <p>Bankman-Fried founded FTX, once one of the world's prominent cryptocurrency exchanges.</p>
+
+  <p>Federal prosecutors proved that Bankman-Fried misappropriated billions of dollars belonging to FTX customers and funneled customer deposits to his affiliated trading firm, Alameda Research.</p>
+
+  <p>He was convicted on seven fraud and conspiracy counts.</p>
+
+  <p>In March 2024, he was sentenced to <strong>25 years in federal prison</strong> and ordered to forfeit more than <strong>$11 billion</strong>.</p>
+
+  <div class="warning-box">
+    <strong>An important distinction:</strong>
+    Bitcoin did not steal FTX customers' money. A cryptocurrency did not commit the fraud. People running a cryptocurrency business did.
+  </div>
+
+  <p>The underlying technology didn't commit fraud.</p>
+
+  <p>Humans discovered that twenty-first-century financial technology remains remarkably compatible with one of humanity's oldest technologies:</p>
+
+  <p class="big-line">Lying.</p>
+
+
+  <h2 class="section-title">5. Escape the Banks! Give Us Your Money Instead.</h2>
+
+  <p>Then we meet <strong>Alexander Mashinsky</strong> and Celsius.</p>
+
+  <p>Celsius marketed cryptocurrency financial services while promoting the idea that customers could "unbank" themselves.</p>
+
+  <p>Which is a marvelous word.</p>
+
+  <p>The traditional bank was apparently obsolete.</p>
+
+  <p>So customers transferred their assets to...</p>
+
+  <p>another company holding their assets.</p>
+
+  <p>Progress!</p>
+
+  <p>Federal prosecutors said Mashinsky misrepresented Celsius's financial condition and manipulated the market for its CEL token. He pleaded guilty to commodities and securities fraud.</p>
+
+  <p>When Celsius halted customer withdrawals in June 2022, hundreds of thousands of customers had approximately <strong>$4.7 billion</strong> in assets inaccessible on the platform.</p>
+
+  <p>Mashinsky was sentenced in May 2025 to <strong>12 years in prison</strong>.</p>
+
+  <div class="dialogue">
+    <p><strong>UNBANK YOURSELF!</strong></p>
+    <p>Stop trusting traditional financial institutions.</p>
+    <p>Instead, trust us.</p>
+    <p>We are a financial institution with a cooler website.</p>
+  </div>
+
+  <p>There is a serious lesson beneath the joke.</p>
+
+  <p>A decentralized asset can still be held through a highly centralized business.</p>
+
+  <p>Once customers surrender custody, their risk is no longer limited to the cryptocurrency.</p>
+
+  <p>They must also evaluate the people holding it.</p>
+
+
+  <h2 class="section-title">6. But Surely Nobody Invented a Fake Cryptocurrency?</h2>
+
+  <p>Allow us to introduce <strong>OneCoin</strong>.</p>
+
+  <p>OneCoin was promoted internationally as a cryptocurrency through a massive multilevel-marketing network.</p>
+
+  <p>According to the United States Department of Justice, victims invested <strong>more than $4 billion</strong> worldwide.</p>
+
+  <p>There was just one rather awkward problem with the revolutionary cryptocurrency.</p>
+
+  <p>The government describes OneCoin as fraudulent.</p>
+
+  <p>Its co-founder, Ruja Ignatova, disappeared and remains a fugitive.</p>
+
+  <div class="dialogue">
+    <p><strong>Investor:</strong> "Excellent presentation. May I examine the blockchain?"</p>
+    <p><strong>Promoter:</strong> "No."</p>
+    <p><strong>Investor:</strong> "Where can I independently verify transactions?"</p>
+    <p><strong>Promoter:</strong> "You're focusing on negativity."</p>
+    <p><strong>Investor:</strong> "How is the price determined?"</p>
+    <p><strong>Promoter:</strong> "Have you considered becoming a Diamond Executive?"</p>
+  </div>
+
+  <p>Apparently, the future of finance occasionally requires fewer questions.</p>
+
+
+  <h2 class="section-title">7. And Then Someone Invented a Magical Trading Robot</h2>
+
+  <p>Our tour would be incomplete without <strong>BitConnect</strong>.</p>
+
+  <p>BitConnect promoters told investors about proprietary technology known as the BitConnect Trading Bot and "Volatility Software," supposedly capable of producing substantial profits and guaranteed returns.</p>
+
+  <p>Guaranteed.</p>
+
+  <p>Returns.</p>
+
+  <p>Two words that should cause every investor's eyebrow to rise approximately four inches.</p>
+
+  <p>Federal prosecutors described BitConnect as a massive cryptocurrency investment scheme. Top U.S. promoter Glenn Arcaro pleaded guilty to conspiracy to commit wire fraud.</p>
+
+  <p>In 2023, a federal court ordered more than <strong>$17 million in restitution</strong> distributed to approximately <strong>800 victims in more than 40 countries</strong>.</p>
+
+  <div class="dialogue">
+    <p>If an investment contains the phrases <strong>"guaranteed returns," "secret algorithm," "proprietary trading bot"</strong> and <strong>"you must act today,"</strong> Kevin will act today.</p>
+    <p>He will leave.</p>
+  </div>
+
+  <p>Kevin is learning.</p>
+
+
+  <h2 class="section-title">8. Is Cryptocurrency Itself a Scam?</h2>
+
+  <p>No.</p>
+
+  <p>And that distinction matters.</p>
+
+  <p>Fraud involving cryptocurrency does not establish that cryptocurrency itself is fraudulent.</p>
+
+  <p>Criminals also use dollars.</p>
+
+  <p>Nobody arrests the twenty-dollar bill.</p>
+
+  <p>But cryptocurrency has characteristics that can be extremely useful to scammers: rapid transfers, global reach, technological complexity, transactions that may be difficult or impossible to reverse, and an investing public that may not understand what it is purchasing.</p>
+
+  <p>The Federal Trade Commission reported approximately <strong>$1.42 billion in reported fraud losses paid through cryptocurrency during 2024</strong>.</p>
+
+  <p>That's enormous.</p>
+
+  <p>But reported fraud losses involving bank transfers and payments were even larger—approximately <strong>$2.09 billion</strong> that year.</p>
+
+  <p>So the evidence does not say:</p>
+
+  <div class="dialogue">
+    <p>Cryptocurrency = fraud.</p>
+  </div>
+
+  <p>It says:</p>
+
+  <div class="dialogue">
+    <p>Wherever people move large amounts of money, criminals eventually arrive carrying PowerPoint presentations.</p>
+  </div>
+
+
+  <h2 class="section-title">9. Kevin Discovers Stablecoins</h2>
+
+  <p>After his volatile cryptocurrency adventure, Kevin wants something safer.</p>
+
+  <p>He discovers <strong>stablecoins</strong>.</p>
+
+  <p>Unlike Bitcoin, a dollar-pegged stablecoin generally aims to maintain a value around one U.S. dollar.</p>
+
+  <p>Kevin is fascinated.</p>
+
+  <p>Finally!</p>
+
+  <p>Digital money without all that troublesome dollar business.</p>
+
+  <p>He purchases $1,000 worth of dollar-denominated stablecoins.</p>
+
+  <p>They are worth approximately...</p>
+
+  <p class="big-line">$1,000.</p>
+
+  <p>Kevin has successfully escaped the dollar.</p>
+
+  <p>By purchasing something designed to imitate the dollar.</p>
+
+  <p>Federal Reserve officials have described dollar stablecoins as essentially synthetic dollars. Dollar-denominated stablecoins represent the overwhelming majority of the stablecoin market.</p>
+
+  <p>This is where our story becomes deliciously strange.</p>
+
+  <p>Cryptocurrency emerged partly from dissatisfaction with conventional monetary systems.</p>
+
+  <p>Yet much of the cryptocurrency marketplace conducts business using digital instruments deliberately attached to the U.S. dollar.</p>
+
+  <p>Kevin has escaped fiat currency.</p>
+
+  <p class="big-line">The dollar has followed him.</p>
+
+
+  <h2 class="section-title">10. Is Cryptocurrency Destroying the Dollar?</h2>
+
+  <p>This is where we should be particularly careful.</p>
+
+  <p>There is no good evidence that cryptocurrency has simply destroyed or replaced the U.S. dollar.</p>
+
+  <p>Bitcoin can compete with conventional money for certain functions. Some investors treat it as a store of value. Cryptocurrency can also facilitate transactions that don't require traditional dollar-payment rails.</p>
+
+  <p>But dollar stablecoins may actually <strong>extend the dollar's international reach</strong>.</p>
+
+  <p>A person living somewhere with an unstable local currency may not have easy access to an American bank account.</p>
+
+  <p>But that person may have a smartphone.</p>
+
+  <p>A dollar-backed digital token potentially provides another route to dollar exposure.</p>
+
+  <p>Crypto was supposed to challenge traditional money.</p>
+
+  <p>Instead, one branch of crypto may be distributing digital dollars around the planet.</p>
+
+  <p class="big-line">The revolution has apparently acquired a U.S. dollar franchise.</p>
+
+
+  <h2 class="section-title">11. The Dollarization Problem</h2>
+
+  <p>That doesn't mean stablecoins are harmless.</p>
+
+  <p>Suppose residents of a country stop trusting their local currency.</p>
+
+  <p>They begin saving and conducting business using dollar-denominated stablecoins instead.</p>
+
+  <p>For the individual, that might appear rational.</p>
+
+  <p>For the country's central bank, however, this could become a serious problem.</p>
+
+  <p>If residents increasingly abandon the domestic currency for digital dollars, the local central bank may have less influence over monetary conditions.</p>
+
+  <p>This resembles traditional <strong>dollarization</strong>, except people no longer necessarily need suitcases full of American banknotes.</p>
+
+  <p>They need phones.</p>
+
+  <p>The potential consequence is almost backwards from the popular fear.</p>
+
+  <p>Cryptocurrency might not weaken the <strong>U.S. dollar</strong> first.</p>
+
+  <p>Dollar-based cryptocurrency could potentially weaken <strong>other currencies</strong> while expanding dollar usage.</p>
+
+  <p>Kevin stares at his stablecoin.</p>
+
+  <p>This was not in the brochure.</p>
+
+
+  <h2 class="section-title">12. And Guess What's Behind Some of Those Digital Dollars?</h2>
+
+  <p>Stablecoins require us to ask a wonderfully old-fashioned question:</p>
+
+  <p class="big-line">What's backing them?</p>
+
+  <p>Depending on the stablecoin and its structure, reserves may include cash and highly liquid financial assets.</p>
+
+  <p>That can include short-term <strong>U.S. Treasury securities</strong>.</p>
+
+  <p>Which means our revolutionary digital financial ecosystem can ultimately lead us back to...</p>
+
+  <p class="big-line">the United States Treasury.</p>
+
+  <p>Remember our previous investigation, <em>Who Holds America's Debt?</em></p>
+
+  <p>Well, look who's back.</p>
+
+  <p>Kevin wanted freedom from traditional finance.</p>
+
+  <p>Kevin bought cryptocurrency.</p>
+
+  <p>Kevin moved into stablecoins.</p>
+
+  <p>The stablecoin system relies substantially on dollars and reserve assets.</p>
+
+  <p>Some reserve structures include Treasury securities.</p>
+
+  <p>Kevin has completed an extraordinary financial journey.</p>
+
+  <p>He left Washington...</p>
+
+  <p>circled the blockchain...</p>
+
+  <p>passed through cyberspace...</p>
+
+  <p>and arrived back at the Treasury market.</p>
+
+
+  <h2 class="section-title">13. The Government Would Also Like a Word</h2>
+
+  <p>Kevin has one final misconception.</p>
+
+  <p>He believes cryptocurrency exists outside the government's tax system.</p>
+
+  <p>The Internal Revenue Service would like Kevin to sit down.</p>
+
+  <p>The IRS treats digital assets as <strong>property</strong> for federal income-tax purposes.</p>
+
+  <p>Selling, exchanging or otherwise disposing of digital assets can create reportable gains or losses.</p>
+
+  <p>Digital-asset broker reporting has also expanded through <strong>Form 1099-DA, Digital Asset Proceeds From Broker Transactions</strong>.</p>
+
+  <p>Kevin looks wounded.</p>
+
+  <p>He thought he had escaped government money.</p>
+
+  <p class="big-line">He has instead acquired government paperwork.</p>
+
+
+  <h2 class="section-title">14. So What Exactly Have We Invented?</h2>
+
+  <p>After several weeks of research, Kevin has learned something important.</p>
+
+  <p>Cryptocurrency isn't one thing.</p>
+
+  <p>Bitcoin isn't FTX.</p>
+
+  <p>FTX isn't a stablecoin.</p>
+
+  <p>A stablecoin isn't OneCoin.</p>
+
+  <p>Blockchain technology isn't Sam Bankman-Fried.</p>
+
+  <p>And a criminal using cryptocurrency doesn't prove that the technology itself is criminal.</p>
+
+  <p>There are legitimate technological innovations here.</p>
+
+  <p>There are legitimate investors.</p>
+
+  <p>There are legitimate payment applications.</p>
+
+  <p>There are also speculative bubbles, dubious tokens, collapsed businesses, breathtaking frauds and enough financial jargon to render an otherwise sensible adult temporarily defenseless.</p>
+
+  <p>That's why the most useful question isn't:</p>
+
+  <p class="big-line">"Is crypto good or bad?"</p>
+
+  <p>That's far too easy.</p>
+
+  <p>Better questions are:</p>
+
+  <div class="warning-box">
+    <p>What exactly am I buying?</p>
+    <p>Who controls it?</p>
+    <p>Who holds it?</p>
+    <p>What gives it value?</p>
+    <p>Can I sell it?</p>
+    <p>Who promises to redeem it?</p>
+    <p>What happens if that company disappears?</p>
+    <p>What happens if I lose my credentials?</p>
+    <p>What laws apply?</p>
+    <p>What taxes apply?</p>
+    <p>What protects me?</p>
+    <p><strong>And where is the money actually coming from?</strong></p>
+  </div>
+
+  <p>If the person selling the investment becomes irritated by those questions, Kevin now understands something.</p>
+
+  <p>Those questions were probably overdue.</p>
+
+
+  <h2 class="section-title">15. Kevin Becomes a Financial Conservative</h2>
+
+  <p>Kevin has not abandoned cryptocurrency.</p>
+
+  <p>That's important.</p>
+
+  <p>He has simply stopped believing that the word <strong>blockchain</strong> suspends the laws of mathematics, economics and human behavior.</p>
+
+  <p>He understands that an asset can contain interesting technology and still be overpriced.</p>
+
+  <p>A legitimate industry can attract criminals.</p>
+
+  <p>A decentralized network can lead users straight into a centralized exchange.</p>
+
+  <p>An investment can produce extraordinary returns and extraordinary losses.</p>
+
+  <p>And an invention designed partly to escape conventional finance can end up depending heavily on the world's dominant conventional currency.</p>
+
+  <p>Kevin looks at his portfolio.</p>
+
+  <p>Bitcoin.</p>
+
+  <p>Stablecoins.</p>
+
+  <p>Dollars.</p>
+
+  <p>A Treasury fund.</p>
+
+  <p>A savings account.</p>
+
+  <p>Kevin smiles.</p>
+
+  <p>His social-media biography now says:</p>
+
+  <div class="dialogue">
+    <p><strong>"I have no idea what happens next."</strong></p>
+  </div>
+
+  <p>Finally.</p>
+
+  <p>Kevin has become an experienced investor.</p>
+
+
+  <h2 class="section-title">The Great Cryptocurrency Paradox</h2>
+
+  <p>Cryptocurrency promised a world in which people could transfer value without traditional banks.</p>
+
+  <p>It delivered that technology.</p>
+
+  <p>Then people built exchanges.</p>
+
+  <p>Cryptocurrency promised an alternative to government currencies.</p>
+
+  <p>Then the crypto economy adopted dollar-pegged stablecoins.</p>
+
+  <p>Cryptocurrency promised transparency through blockchains.</p>
+
+  <p>Then some customers handed billions of dollars to companies whose internal finances they could not see.</p>
+
+  <p>Cryptocurrency promised financial independence.</p>
+
+  <p>Then the Internal Revenue Service introduced digital-asset reporting forms.</p>
+
+  <p>None of this proves cryptocurrency is destined to fail.</p>
+
+  <p>It proves something considerably more interesting.</p>
+
+  <p class="big-line">
+    Technology can reinvent the machinery of finance without reinventing human nature.
+  </p>
+
+  <p>Greed remains compatible with every operating system.</p>
+
+  <p>Fraud has successfully migrated to the cloud.</p>
+
+  <p>And after years of cryptocurrency innovation, the U.S. dollar hasn't quietly packed its belongings and left.</p>
+
+  <p>In parts of the crypto economy, it has simply changed clothes.</p>
+
+  <p>So perhaps the question isn't whether cryptocurrency will destroy the dollar.</p>
+
+  <p>Perhaps the better question is:</p>
+
+  <p class="big-line">
+    Did cryptocurrency escape the financial system—or did the financial system simply learn how to use cryptocurrency?
+  </p>
+
+  <p class="big-line">
+    No political team required. Just the receipts. 🧾
+  </p>
+
+
+  <section class="receipts">
+
+    <h2>Original Sources &amp; Research Receipts</h2>
+
+    <ol>
+
+      <li>
+        <strong>U.S. Department of Justice — Sam Bankman-Fried / FTX</strong><br>
+        Federal criminal case, conviction, sentencing and forfeiture information.<br>
+        <a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes"
+           target="_blank" rel="noopener noreferrer">
+          Department of Justice source
+        </a>
+      </li>
+
+      <li>
+        <strong>U.S. Department of Justice — Alexander Mashinsky / Celsius</strong><br>
+        Federal criminal case and sentencing information.<br>
+        <a href="https://www.justice.gov/usao-sdny/pr/founder-celsius-sentenced-12-years-fraud-and-market-manipulation"
+           target="_blank" rel="noopener noreferrer">
+          Department of Justice source
+        </a>
+      </li>
+
+      <li>
+        <strong>U.S. Department of Justice — OneCoin</strong><br>
+        Information concerning OneCoin fraud victims and recovered funds.<br>
+        <a href="https://www.justice.gov/opa/pr/justice-department-announces-compensation-process-onecoin-fraud-victims-funds-recovered"
+           target="_blank" rel="noopener noreferrer">
+          Department of Justice source
+        </a>
+      </li>
+
+      <li>
+        <strong>U.S. Department of Justice — BitConnect</strong><br>
+        Restitution information concerning the BitConnect cryptocurrency investment scheme.<br>
+        <a href="https://www.justice.gov/archives/opa/pr/crypto-fraud-victims-receive-over-17-million-restitution-bitconnect-scheme"
+           target="_blank" rel="noopener noreferrer">
+          Department of Justice source
+        </a>
+      </li>
+
+      <li>
+        <strong>Federal Trade Commission — Consumer Sentinel Network Data Book 2024</strong><br>
+        Reported fraud losses categorized by payment method.<br>
+        <a href="https://www.ftc.gov/system/files/ftc_gov/pdf/csn-annual-data-book-2024.pdf"
+           target="_blank" rel="noopener noreferrer">
+          Federal Trade Commission report
+        </a>
+      </li>
+
+      <li>
+        <strong>Federal Reserve — Stablecoins and the U.S. Dollar</strong><br>
+        Federal Reserve discussion of stablecoins, dollar denomination and their possible role in payments and international dollar usage.<br>
+        <a href="https://www.federalreserve.gov/newsevents/speech/waller20250212a.htm"
+           target="_blank" rel="noopener noreferrer">
+          Federal Reserve source
+        </a>
+      </li>
+
+      <li>
+        <strong>Internal Revenue Service — Digital Assets</strong><br>
+        Federal tax guidance concerning digital assets.<br>
+        <a href="https://www.irs.gov/filing/digital-assets"
+           target="_blank" rel="noopener noreferrer">
+          IRS digital-assets guidance
+        </a>
+      </li>
+
+      <li>
+        <strong>Internal Revenue Service — Form 1099-DA</strong><br>
+        Digital Asset Proceeds From Broker Transactions.<br>
+        <a href="https://www.irs.gov/forms-pubs/about-form-1099-da"
+           target="_blank" rel="noopener noreferrer">
+          IRS Form 1099-DA information
+        </a>
+      </li>
+
+    </ol>
+
+    <p>
+      <strong>Editorial note:</strong>
+      Kevin and Derek are fictional. The criminal cases discussed above are real and are described according to federal court and government records. Cryptocurrency includes many different technologies and assets; fraud involving cryptocurrency does not establish that every cryptocurrency, blockchain project or digital-asset business is fraudulent.
+    </p>
+
+  </section>
+
+
+  <section class="share-box">
+
+    <h3>Share This Article</h3>
+
+    <div class="share-buttons">
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoneytracktemplates.github.io%2Fcryptocurrency-financial-experiment.html"
+         target="_blank" rel="noopener noreferrer">Facebook</a>
+
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fcryptocurrency-financial-experiment.html&amp;text=Cryptocurrency%3A%20Money%2C%20Investment%E2%80%94or%20the%20World%27s%20Largest%20Financial%20Experiment%3F"
+         target="_blank" rel="noopener noreferrer">X</a>
+
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fcryptocurrency-financial-experiment.html"
+         target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fcryptocurrency-financial-experiment.html&amp;title=Cryptocurrency%3A%20Money%2C%20Investment%E2%80%94or%20the%20World%27s%20Largest%20Financial%20Experiment%3F"
+         target="_blank" rel="noopener noreferrer">Reddit</a>
+
+      <a href="https://api.whatsapp.com/send?text=Cryptocurrency%3A%20Money%2C%20Investment%E2%80%94or%20the%20World%27s%20Largest%20Financial%20Experiment%3F%20https%3A%2F%2Fmoneytracktemplates.github.io%2Fcryptocurrency-financial-experiment.html"
+         target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+      <a href="mailto:?subject=Cryptocurrency%3A%20Money%2C%20Investment%E2%80%94or%20the%20World%27s%20Largest%20Financial%20Experiment%3F&amp;body=https%3A%2F%2Fmoneytracktemplates.github.io%2Fcryptocurrency-financial-experiment.html">
+        Email
+      </a>
+
+      <button onclick="copyArticleLink()">Copy Link</button>
+
+      <button onclick="shareArticle()">Share</button>
+
+    </div>
+
+  </section>
+
+  <div class="back-button">
+    <a href="money-banking.html">← Back to Money &amp; Banking</a>
+  </div>
+
+</article>
+
+</main>
+
+<footer>
+  © 2026 MoneyTrackTemplates · Financial education and independent research.
+</footer>
+
+<script>
+function copyArticleLink() {
+  const url = "https://moneytracktemplates.github.io/cryptocurrency-financial-experiment.html";
+
+  navigator.clipboard.writeText(url)
+    .then(function () {
+      alert("Article link copied!");
+    })
+    .catch(function () {
+      prompt("Copy this link:", url);
+    });
+}
+
+function shareArticle() {
+  const shareData = {
+    title: "Cryptocurrency: Money, Investment—or the World's Largest Financial Experiment?",
+    text: "A MoneyTrackTemplates investigation into cryptocurrency, fraud, stablecoins and the U.S. dollar.",
+    url: "https://moneytracktemplates.github.io/cryptocurrency-financial-experiment.html"
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData);
+  } else {
+    copyArticleLink();
+  }
+}
+</script>
+
+</body>
+</html>
