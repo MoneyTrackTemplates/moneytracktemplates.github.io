@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Who Actually Controls Cryptocurrency? | MoneyTrackTemplates</title>
+
+  <meta name="description" content="Who actually controls cryptocurrency? Follow the public record through Congress, the SEC, CFTC, Treasury, IRS, banking regulators, exchanges, stablecoin issuers and the laws shaping digital assets.">
+
+  <meta name="keywords" content="cryptocurrency regulation, crypto regulation, GENIUS Act, CLARITY Act, SEC cryptocurrency, CFTC cryptocurrency, stablecoin regulation, public administration cryptocurrency, digital asset regulation, MoneyTrackTemplates">
+
+  <meta property="og:title" content="Who Actually Controls Cryptocurrency?">
+  <meta property="og:description" content="Decentralized, apparently. Until Congress, Treasury, the SEC, CFTC, IRS, your exchange, your stablecoin issuer—and somebody with your private key—enter the room.">
+  <meta property="og:type" content="article">
+
+  <style>
+    :root {
+      --blue: #3278b8;
+      --dark-blue: #174a75;
+      --deeper-blue: #103a5e;
+      --ivory: #fbf8f1;
+      --paper: #fffdf8;
+      --gold: #c89b3c;
+      --text: #263746;
+      --muted: #65727d;
+      --border: #d9e1e7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 28px 20px 24px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: .3px;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      font-size: 1rem;
+    }
+
+    nav {
+      background: var(--dark-blue);
+      text-align: center;
+      padding: 12px 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px 12px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 38px auto;
+      padding: 0 18px;
+    }
+
+    article {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 42px 48px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.06);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .article-title {
+      color: var(--deeper-blue);
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+
+    .subtitle {
+      max-width: 800px;
+      margin: 0 auto 14px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.15rem;
+      font-style: italic;
+      line-height: 1.55;
+    }
+
+    .byline {
+      text-align: center;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .93rem;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: var(--dark-blue);
+      margin-top: 42px;
+      margin-bottom: 14px;
+      font-size: 1.65rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      color: var(--deeper-blue);
+      margin-top: 32px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .big-line {
+      color: var(--deeper-blue);
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 28px auto;
+    }
+
+    .dialogue {
+      background: #f4f7fa;
+      border-left: 5px solid var(--blue);
+      margin: 26px 0;
+      padding: 20px 24px;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .dialogue p:last-child {
+      margin-bottom: 0;
+    }
+
+    .warning-box {
+      background: #fff8e8;
+      border: 1px solid #ead6a6;
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+      margin: 28px 0;
+      padding: 20px 24px;
+    }
+
+    .research-box {
+      background: #f5f8fb;
+      border: 1px solid #cddae5;
+      border-radius: 10px;
+      margin: 30px 0;
+      padding: 24px;
+    }
+
+    .research-box h3 {
+      margin-top: 0;
+    }
+
+    .receipts {
+      margin-top: 45px;
+      padding-top: 25px;
+      border-top: 3px solid var(--dark-blue);
+    }
+
+    .receipts a {
+      color: var(--dark-blue);
+      font-weight: bold;
+      word-break: break-word;
+    }
+
+    .receipts li {
+      margin-bottom: 14px;
+    }
+
+    .share-box {
+      margin-top: 40px;
+      padding: 25px;
+      background: #f4f7fa;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .share-box h3 {
+      margin-top: 0;
+    }
+
+    .share-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .share-buttons a,
+    .share-buttons button {
+      border: none;
+      background: var(--dark-blue);
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .9rem;
+    }
+
+    .share-buttons a:hover,
+    .share-buttons button:hover {
+      background: var(--blue);
+    }
+
+    .back-wrap {
+      text-align: center;
+      margin: 35px 0 5px;
+    }
+
+    .back-button {
+      display: inline-block;
+      background: var(--dark-blue);
+      color: white;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .88rem;
+      padding: 25px 15px 40px;
+    }
+
+    @media (max-width: 700px) {
+      article {
+        padding: 28px 22px;
+      }
+
+      .article-title {
+        font-size: 2rem;
+      }
+
+      nav a {
+        margin: 5px 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MoneyTrackTemplates</h1>
+  <p>Plan Better. Track Smarter. Live More Organized.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="money-templates.html">Money Templates</a>
+  <a href="planners.html">Planners</a>
+  <a href="free-downloads.html">Free Downloads</a>
+  <a href="resources.html">Resources</a>
+  <a href="money-banking.html">Money &amp; Banking</a>
+</nav>
+
+<main>
+
+<article>
+
+<h1 class="article-title">Who Actually Controls Cryptocurrency?</h1>
+
+<p class="subtitle">
+Decentralized, apparently. Until Congress, the Treasury, the SEC, the CFTC,
+the IRS, your exchange, your stablecoin issuer—and somebody with your private
+key—enter the room.
+</p>
+
+<p class="byline">MoneyTrackTemplates · October 2026</p>
+
+<p>Kevin has returned.</p>
+
+<p>After surviving his first adventure in cryptocurrency, Kevin has learned an important word:</p>
+
+<p class="big-line">Decentralized.</p>
+
+<p>He likes this word very much.</p>
+
+<p>There will be no banks controlling his money. No government telling him what to do. No financial institution standing between Kevin and economic freedom.</p>
+
+<p>Kevin owns cryptocurrency.</p>
+
+<p>Kevin is sovereign.</p>
+
+<p>Kevin is independent.</p>
+
+<p>Kevin is free.</p>
+
+<p>Then Kevin opens his cryptocurrency exchange.</p>
+
+<p>The exchange asks him to verify his identity.</p>
+
+<p>His stablecoin issuer maintains reserves in conventional financial assets.</p>
+
+<p>His accountant asks for his digital-asset transaction records.</p>
+
+<p>The Internal Revenue Service wants Form 1099-DA information.</p>
+
+<p>The Securities and Exchange Commission has an opinion.</p>
+
+<p>The Commodity Futures Trading Commission has another jurisdiction.</p>
+
+<p>The Treasury Department is writing stablecoin regulations.</p>
+
+<p>Congress is writing legislation.</p>
+
+<p>And somewhere in Washington, a federal agency has published another document containing the word <em>decentralized</em>.</p>
+
+<div class="dialogue">
+  <p><strong>Kevin:</strong> “I thought nobody controlled cryptocurrency.”</p>
+  <p><strong>The crypto system:</strong> “Welcome back, Kevin.”</p>
+</div>
+
+
+<h2>First, What Does “Decentralized” Actually Mean?</h2>
+
+<p>This is where many discussions about cryptocurrency go sideways.</p>
+
+<p>A blockchain such as Bitcoin can operate without a central bank maintaining its transaction ledger. Transactions are verified through a distributed network rather than through one central institution.</p>
+
+<p>That is an extraordinary technological distinction.</p>
+
+<p>It does <strong>not</strong> mean that everything surrounding cryptocurrency is decentralized.</p>
+
+<p>The blockchain may be decentralized.</p>
+
+<p>The exchange where Kevin buys cryptocurrency may not be.</p>
+
+<p>The company issuing his stablecoin may not be.</p>
+
+<p>The wallet provider may not be.</p>
+
+<p>The corporation developing a token may not be.</p>
+
+<p>The investment fund holding enormous quantities of digital assets may not be.</p>
+
+<p>And the government deciding how all of those activities are taxed and regulated certainly isn't.</p>
+
+<div class="warning-box">
+  <strong>Research Rule #1:</strong><br>
+  Decentralized technology does not necessarily produce a decentralized financial system.
+</div>
+
+<p class="big-line">Kevin has eliminated the middleman.<br>He has met seven new middlemen.</p>
+
+
+<h2>Meet the Government</h2>
+
+<p>For public-administration researchers, cryptocurrency offers an unusually revealing case study.</p>
+
+<p>The technology developed faster than the administrative framework surrounding it. Instead of one agency being given complete authority over “crypto,” pieces of jurisdiction have accumulated across numerous institutions.</p>
+
+<p>So let us meet some of Kevin's new acquaintances.</p>
+
+
+<h3>Securities and Exchange Commission (SEC)</h3>
+
+<p>The <strong>Securities and Exchange Commission (SEC)</strong> administers and enforces federal securities laws. Whether particular crypto assets or transactions fall under securities law has therefore been one of the most important regulatory questions surrounding the industry.</p>
+
+<p>As of October 2026, the SEC is chaired by <strong>Paul S. Atkins</strong>.</p>
+
+<p>In March 2026, the SEC issued an interpretation explaining how federal securities laws apply to certain crypto assets and transactions. The Commodity Futures Trading Commission joined that interpretation for purposes of administering the Commodity Exchange Act consistently with it.</p>
+
+<div class="dialogue">
+  <p><strong>Kevin:</strong> “My cryptocurrency is decentralized.”</p>
+  <p><strong>Regulator:</strong> “Excellent. What kind of asset is it?”</p>
+  <p><strong>Kevin:</strong> “Crypto.”</p>
+  <p><strong>Regulator:</strong> “That was not one of the choices.”</p>
+</div>
+
+
+<h3>Commodity Futures Trading Commission (CFTC)</h3>
+
+<p>The <strong>Commodity Futures Trading Commission (CFTC)</strong> regulates U.S. derivatives markets and has long had an important role where digital commodities and derivatives are concerned.</p>
+
+<p>Its chairman is <strong>Michael S. Selig</strong>, who was sworn in on December 22, 2025. Before becoming CFTC chairman, Selig served as chief counsel to the SEC's Crypto Task Force and as a senior adviser to SEC Chairman Atkins.</p>
+
+<p>The SEC and CFTC have been coordinating aspects of crypto regulation.</p>
+
+<p class="big-line">
+Which creates a distinctly Washington version of decentralization:<br>
+two federal regulators trying to decide which decentralized thing belongs to whom.
+</p>
+
+
+<h3>United States Department of the Treasury</h3>
+
+<p>The <strong>United States Department of the Treasury</strong> sits near the center of American financial administration.</p>
+
+<p>The Secretary of the Treasury is <strong>Scott Bessent</strong>.</p>
+
+<p>Treasury's importance to cryptocurrency increased dramatically with the passage of federal stablecoin legislation.</p>
+
+<p>In August 2026, Treasury proposed regulations implementing portions of the new stablecoin framework and opened them for public comment.</p>
+
+<div class="dialogue">
+  <p><strong>Kevin:</strong> “I escaped conventional finance.”</p>
+  <p><strong>Treasury:</strong> “Wonderful. We are currently writing the regulations.”</p>
+</div>
+
+
+<h3>Internal Revenue Service (IRS)</h3>
+
+<p>Then there is the <strong>Internal Revenue Service (IRS)</strong>.</p>
+
+<p>Cryptocurrency enthusiasts occasionally speak as though digital assets exist somewhere beyond conventional financial administration.</p>
+
+<p>The IRS has declined to participate in this fantasy.</p>
+
+<p>Federal digital-asset broker reporting requirements now include <strong>Form 1099-DA, Digital Asset Proceeds From Broker Transactions</strong>. Gross-proceeds reporting applies to covered transactions beginning in 2025, while basis reporting for certain transactions begins in 2026.</p>
+
+<p>There is an unusual administrative detail here. As of October 2026, the IRS Commissioner position is vacant. <strong>Frank J. Bisignano</strong>, the agency's Chief Executive Officer, leads day-to-day operations and reports to the Treasury Secretary.</p>
+
+<p class="big-line">
+Kevin thought he had escaped government money.<br>
+He has acquired government paperwork.
+</p>
+
+
+<h3>Financial Crimes Enforcement Network (FinCEN)</h3>
+
+<p>The <strong>Financial Crimes Enforcement Network (FinCEN)</strong> is a bureau of Treasury charged with safeguarding the financial system from illicit activity, combating money laundering and terrorist financing, and collecting and analyzing financial intelligence.</p>
+
+<p>Its Acting Director is <strong>Jenna Casanova</strong>, who assumed that role in August 2026.</p>
+
+<p>That matters because cryptocurrency does not operate outside the American anti-money-laundering system merely because the underlying technology is new.</p>
+
+<p>On October 5, 2026, FinCEN announced withdrawals of proposed digital-asset-related rules.</p>
+
+<p>This is precisely why researchers should record dates when studying crypto regulation.</p>
+
+<p>The administrative landscape can change before Kevin finishes reading it.</p>
+
+
+<h3>Office of the Comptroller of the Currency (OCC)</h3>
+
+<p>The <strong>Office of the Comptroller of the Currency (OCC)</strong> regulates and supervises national banks and federal savings associations.</p>
+
+<p>The Comptroller is <strong>Jonathan V. Gould</strong>.</p>
+
+<p>In February 2026, the OCC proposed rules to implement portions of the GENIUS Act governing payment stablecoin issuers under its jurisdiction and certain crypto custody activities.</p>
+
+<p>By August, Gould reported that 23 of 40 recent applications for new bank charters involved some form of digital-asset activity.</p>
+
+<div class="dialogue">
+  <p><strong>Kevin:</strong> “Wasn't cryptocurrency supposed to eliminate banks?”</p>
+  <p><strong>The banking system:</strong> “Interesting technology. We'll take a charter application.”</p>
+</div>
+
+
+<h3>Federal Deposit Insurance Corporation (FDIC)</h3>
+
+<p>The <strong>Federal Deposit Insurance Corporation (FDIC)</strong> is chaired by <strong>Travis Hill</strong>.</p>
+
+<p>In April 2026, the FDIC proposed rules implementing portions of the GENIUS Act for stablecoin issuers that are subsidiaries of FDIC-supervised banks.</p>
+
+<p>The proposal addressed reserves, redemption, capital requirements and other prudential questions. It also proposed reaffirming that deposits represented in tokenized form remain deposits under the Federal Deposit Insurance Act.</p>
+
+<p>The technology may change.</p>
+
+<p>Administrative law still wants to know what the thing legally <strong>is</strong>.</p>
+
+
+<h3>Federal Reserve</h3>
+
+<p>The <strong>Board of Governors of the Federal Reserve System</strong> is currently chaired by <strong>Kevin Warsh</strong>.</p>
+
+<p>Yes.</p>
+
+<p>Another Kevin.</p>
+
+<p>Our Kevin is delighted.</p>
+
+<p>The Federal Reserve has been examining stablecoins, digital payments and their implications for the international role of the dollar. Its June 2026 conference on the international role of the U.S. dollar included sessions addressing stablecoins and competing payment networks.</p>
+
+<p>This matters because cryptocurrency is no longer merely a technology story.</p>
+
+<p>It is becoming a <strong>monetary-policy, banking, taxation, national-security and public-administration story simultaneously.</strong></p>
+
+
+<h2>Then Congress Arrived</h2>
+
+<p>For years, American cryptocurrency regulation developed largely through existing statutes, agency interpretations, litigation, enforcement and administrative action.</p>
+
+<p>Then Congress began building crypto-specific legislation.</p>
+
+<p>And this is where things get especially interesting.</p>
+
+
+<h2>The GENIUS Act</h2>
+
+<p>In July 2025, the <strong>Guiding and Establishing National Innovation for U.S. Stablecoins Act</strong>, better known as the <strong>GENIUS Act</strong>, became <strong>Public Law 119-27</strong>.</p>
+
+<p>This distinction matters.</p>
+
+<p>It isn't a proposal.</p>
+
+<p>It isn't a press release.</p>
+
+<p>It isn't a politician announcing what he would like Congress to do.</p>
+
+<p class="big-line">It is federal law.</p>
+
+<p>The law establishes a federal framework for payment stablecoins, including requirements involving permitted issuers, reserves, supervision, foreign issuers and other safeguards.</p>
+
+<p>It also amended existing federal statutes to specify that qualifying payment stablecoins issued by permitted payment stablecoin issuers are excluded from certain definitions of securities and commodities.</p>
+
+<p>The legislation was led in the Senate by Senator Bill Hagerty, with bipartisan cosponsors including Senators Kirsten Gillibrand, Cynthia Lummis and Angela Alsobrooks.</p>
+
+<p>The Senate passed the legislation <strong>68–30</strong>.</p>
+
+<p>The House passed it <strong>308–122</strong>.</p>
+
+<p>That is worth noticing.</p>
+
+<p>Cryptocurrency policy does not divide Congress perfectly along ordinary party lines.</p>
+
+
+<h2>The CLARITY Act</h2>
+
+<p>Then there is the <strong>Digital Asset Market Clarity Act of 2025</strong>, generally called the <strong>CLARITY Act</strong>.</p>
+
+<p>This legislation attempts to address the larger question of digital-asset market structure, including regulatory boundaries between securities regulation and commodities regulation.</p>
+
+<p>The House passed it on July 17, 2025 by <strong>294–134</strong>, including support from members of both major parties.</p>
+
+<div class="warning-box">
+  <strong>Research Rule #2:</strong><br><br>
+
+  Introduced is not passed.<br>
+  Passed one chamber is not passed Congress.<br>
+  Passed Congress is not signed into law.<br>
+  Agency guidance is not statutory law.<br>
+  Proposed regulation is not final regulation.
+</div>
+
+<p>As of this article's publication, broader market-structure legislation has continued moving through Congress, while SEC Chairman Atkins has publicly said legislation remains necessary for durable crypto rules.</p>
+
+<div class="dialogue">
+  <p><strong>Kevin:</strong> “I learned another word.”</p>
+  <p><strong>The crypto system:</strong> “What word?”</p>
+  <p><strong>Kevin:</strong> “Procedure.”</p>
+  <p><strong>The crypto system:</strong> “Do you like it?”</p>
+  <p><strong>Kevin:</strong> “I liked decentralized better.”</p>
+</div>
+
+
+<h2>The President Has Entered the Blockchain</h2>
+
+<p>Congress and regulatory agencies are not the only federal actors.</p>
+
+<p>In January 2025, President Donald Trump issued an executive order establishing a federal policy supporting digital assets and creating a Presidential Working Group on Digital Asset Markets.</p>
+
+<p>The order also revoked a 2022 executive order from the previous administration and directed the working group to recommend a federal regulatory framework.</p>
+
+<p>Then, in March 2025, another executive order established a <strong>Strategic Bitcoin Reserve</strong> and a <strong>United States Digital Asset Stockpile</strong>.</p>
+
+<p>The reserve was designed initially around bitcoin already owned by the federal government through criminal or civil forfeiture proceedings, while Treasury was instructed to examine strategies for managing those assets.</p>
+
+<p>Pause here.</p>
+
+<p>The United States government now has an official Strategic Bitcoin Reserve.</p>
+
+<p>Kevin originally bought Bitcoin because he wanted money independent of government.</p>
+
+<p>The government acquired the initial reserve through law-enforcement forfeiture rather than purchasing those bitcoins from Kevin.</p>
+
+<p class="big-line">History has a sense of humor.</p>
+
+
+<h2>But Does Congress Actually Understand Cryptocurrency?</h2>
+
+<p>Now we arrive at the impolite question.</p>
+
+<p><strong>Do the legislators writing these laws actually understand the technology?</strong></p>
+
+<p>We cannot responsibly answer that by declaring individual lawmakers intelligent or ignorant.</p>
+
+<p>We can do something better.</p>
+
+<p class="big-line">We can inspect the public record.</p>
+
+<p>Congress has conducted hearings involving lawyers, blockchain executives, economists, former regulators, academics and policy specialists.</p>
+
+<p>In February 2025, the Senate Committee on Banking, Housing, and Urban Affairs held a hearing titled <strong>“Exploring Bipartisan Legislative Frameworks for Digital Assets.”</strong></p>
+
+<p>Witnesses included representatives from legal practice, the Kraken Digital Asset Exchange, Lightspark and Harvard's Digital Assets Policy Project.</p>
+
+<p>In June, the Senate held another hearing examining <strong>digital-asset market structure</strong>, featuring representatives from the University of Pennsylvania, Multicoin Capital, Coinbase and former Commodity Futures Trading Commission Chairman Rostin Behnam.</p>
+
+<p>In July came <strong>“From Wall Street to Web3: Building Tomorrow's Digital Asset Markets,”</strong> with testimony from the Blockchain Association, Chainalysis, Paradigm, Ripple, academics and former regulators.</p>
+
+<p>The House conducted its own hearing while considering the CLARITY Act, with testimony from former regulators, academics, lawyers, consumer advocates and industry representatives.</p>
+
+<p>The Senate Finance Committee also examined digital-asset taxation.</p>
+
+<p>So the public record does <strong>not</strong> support the simplistic conclusion that Congress has merely been legislating cryptocurrency without consulting people who understand it.</p>
+
+<p>But consultation raises another question.</p>
+
+
+<h2>Who Gets Invited Into the Room?</h2>
+
+<p>This may be the more interesting public-administration question.</p>
+
+<p>Look again at those witness lists.</p>
+
+<p>Crypto exchanges.</p>
+
+<p>Blockchain companies.</p>
+
+<p>Investment firms.</p>
+
+<p>Lawyers.</p>
+
+<p>Academics.</p>
+
+<p>Former regulators.</p>
+
+<p>Consumer advocates.</p>
+
+<p>Industry associations.</p>
+
+<p>The witnesses appearing before Congress help legislators understand an extraordinarily technical subject.</p>
+
+<p>But witnesses also arrive with different institutional perspectives and interests.</p>
+
+<p>That does not make their testimony invalid.</p>
+
+<p>It makes the composition of the hearing itself a legitimate object of research.</p>
+
+<div class="research-box">
+  <h3>Questions for Public-Administration Researchers</h3>
+
+  <p><strong>Who testified?</strong></p>
+  <p><strong>Who selected the witnesses?</strong></p>
+  <p><strong>Which organizations did they represent?</strong></p>
+  <p><strong>What expertise did they bring?</strong></p>
+  <p><strong>What financial or institutional interests were disclosed?</strong></p>
+  <p><strong>Which arguments appeared in the final legislation?</strong></p>
+  <p><strong>Which arguments disappeared?</strong></p>
+</div>
+
+<p>Now we are doing research.</p>
+
+
+<h2>The Great Crypto Vocabulary Test</h2>
+
+<p>There is another problem.</p>
+
+<p>“Cryptocurrency” has become a convenient umbrella word for technologies and financial arrangements that can be profoundly different.</p>
+
+<p>Bitcoin is not a stablecoin.</p>
+
+<p>A stablecoin is not necessarily a security.</p>
+
+<p>A crypto exchange is not a blockchain.</p>
+
+<p>A blockchain is not a wallet.</p>
+
+<p>A wallet does not necessarily contain cryptocurrency in the way a leather wallet contains cash.</p>
+
+<p>A token is not automatically an investment contract.</p>
+
+<p>Mining is not staking.</p>
+
+<p>Custody is not ownership.</p>
+
+<p>Decentralized finance can contain centralized components.</p>
+
+<p>And saying “Web3” does not magically explain any of the above.</p>
+
+<p>Congress therefore faces a genuine problem.</p>
+
+<p>It must write legal definitions precise enough to regulate technologies that continue changing while the legislation is being written.</p>
+
+<p>Consider the GENIUS Act.</p>
+
+<div class="dialogue">
+  <p><strong>Congress:</strong> “We need to regulate stablecoins.”</p>
+  <p><strong>Administrative law:</strong> “Define stablecoin.”</p>
+  <p><strong>Congress:</strong> “Well...”</p>
+  <p><strong>Administrative law:</strong> “We'll wait.”</p>
+</div>
+
+<p>The enacted law creates definitions and interacts with multiple areas of federal law.</p>
+
+<p>That isn't evidence that every member of Congress understands blockchain engineering.</p>
+
+<p>It <strong>is</strong> evidence that the legislation itself is considerably more technically and legally complicated than the political slogans surrounding it.</p>
+
+
+<h2>So Who Controls Cryptocurrency?</h2>
+
+<p>Now we can answer Kevin's original question.</p>
+
+<p><strong>Nobody controls all of it.</strong></p>
+
+<p>And many people control pieces of it.</p>
+
+<p>A decentralized blockchain may determine how transactions are validated.</p>
+
+<p>Developers may influence software.</p>
+
+<p>Validators or miners may influence network operation.</p>
+
+<p>Large holders can possess substantial economic power.</p>
+
+<p>Exchanges control access to assets held on their platforms.</p>
+
+<p>Stablecoin issuers control issuance and reserve management.</p>
+
+<p>Banks provide connections to conventional money.</p>
+
+<p>The SEC administers securities laws.</p>
+
+<p>The CFTC administers commodities and derivatives laws.</p>
+
+<p>Treasury coordinates major areas of financial policy.</p>
+
+<p>FinCEN administers important anti-money-laundering requirements.</p>
+
+<p>The OCC and FDIC supervise relevant banking activities.</p>
+
+<p>The IRS taxes reportable transactions.</p>
+
+<p>The Department of Justice prosecutes crimes.</p>
+
+<p>Congress writes statutes.</p>
+
+<p>Courts interpret them.</p>
+
+<p>The President directs executive policy within constitutional and statutory limits.</p>
+
+<p>And Kevin controls his private key.</p>
+
+<p><em>Hopefully.</em></p>
+
+
+<h2>The Public-Administration Problem Hiding Inside Crypto</h2>
+
+<p>Cryptocurrency provides a nearly perfect case study in modern governance.</p>
+
+<p>A technology appears.</p>
+
+<p>Citizens adopt it.</p>
+
+<p>Businesses commercialize it.</p>
+
+<p>Fraudsters exploit it.</p>
+
+<p>Investors speculate on it.</p>
+
+<p>Courts encounter it.</p>
+
+<p>Regulators attempt to classify it.</p>
+
+<p>Agencies discover overlapping jurisdictions.</p>
+
+<p>Congress holds hearings.</p>
+
+<p>Lobbyists arrive.</p>
+
+<p>Legislation follows.</p>
+
+<p>Agencies begin rulemaking.</p>
+
+<p>The public is asked for comments.</p>
+
+<p>Courts eventually review some of those rules.</p>
+
+<p>Then the technology changes again.</p>
+
+<p>This is not simply a cryptocurrency story.</p>
+
+<p>It is the administrative state trying to govern an innovation <strong>while the innovation is still evolving.</strong></p>
+
+<p>And that may be the most important lesson for researchers.</p>
+
+
+<h2>Kevin Finally Understands Decentralization</h2>
+
+<p>Kevin closes his exchange.</p>
+
+<p>He opens his wallet.</p>
+
+<p>He checks his Bitcoin.</p>
+
+<p>It is still there.</p>
+
+<p>No central bank approved the transaction.</p>
+
+<p>No single corporation maintains Bitcoin's ledger.</p>
+
+<p>No Treasury employee entered his balance into a government database.</p>
+
+<p>That part really is different.</p>
+
+<p>But surrounding that decentralized network is an enormous ecosystem of corporations, exchanges, investors, developers, regulators, tax authorities, lawmakers, courts and financial institutions.</p>
+
+<p>Kevin considers everything he has learned.</p>
+
+<div class="dialogue">
+  <p><strong>Kevin:</strong> “So cryptocurrency is decentralized?”</p>
+  <p><strong>The crypto system:</strong> “Yes.”</p>
+
+  <p><strong>Kevin:</strong> “And regulated?”</p>
+  <p><strong>The crypto system:</strong> “Yes.”</p>
+
+  <p><strong>Kevin:</strong> “And connected to banks?”</p>
+  <p><strong>The crypto system:</strong> “Frequently.”</p>
+
+  <p><strong>Kevin:</strong> “And taxed?”</p>
+  <p><strong>The crypto system:</strong> “Kevin.”</p>
+
+  <p><strong>Kevin:</strong> “Right. Stupid question.”</p>
+
+  <p><strong>Kevin:</strong> “So I eliminated the middleman?”</p>
+  <p><strong>The crypto system:</strong> “Not exactly.”</p>
+
+  <p><strong>Kevin:</strong> “What did I do?”</p>
+  <p><strong>The crypto system:</strong> <strong>“You diversified him.”</strong></p>
+</div>
+
+
+<section class="receipts">
+
+<h2>Researcher's File: Follow the Primary Records</h2>
+
+<p>For students, researchers and policy writers, don't stop with commentary about cryptocurrency. Go to the records themselves.</p>
+
+<ol>
+
+<li>
+<strong>GENIUS Act — Public Law 119-27</strong><br>
+<a href="https://www.govinfo.gov/app/details/PLAW-119publ27" target="_blank" rel="noopener noreferrer">
+U.S. Government Publishing Office
+</a>
+</li>
+
+<li>
+<strong>GENIUS Act — Congressional Record and Legislative Information</strong><br>
+<a href="https://www.congress.gov/" target="_blank" rel="noopener noreferrer">
+Congress.gov
+</a>
+</li>
+
+<li>
+<strong>House Roll Call Votes</strong><br>
+<a href="https://clerk.house.gov/Votes" target="_blank" rel="noopener noreferrer">
+Office of the Clerk, U.S. House of Representatives
+</a>
+</li>
+
+<li>
+<strong>Senate Banking Committee — Digital Asset Hearings</strong><br>
+<a href="https://www.banking.senate.gov/hearings" target="_blank" rel="noopener noreferrer">
+U.S. Senate Committee on Banking, Housing, and Urban Affairs
+</a>
+</li>
+
+<li>
+<strong>House Financial Services Committee — Hearings</strong><br>
+<a href="https://financialservices.house.gov/calendar/" target="_blank" rel="noopener noreferrer">
+U.S. House Committee on Financial Services
+</a>
+</li>
+
+<li>
+<strong>Securities and Exchange Commission — Crypto Assets</strong><br>
+<a href="https://www.sec.gov/" target="_blank" rel="noopener noreferrer">
+U.S. Securities and Exchange Commission
+</a>
+</li>
+
+<li>
+<strong>Commodity Futures Trading Commission</strong><br>
+<a href="https://www.cftc.gov/" target="_blank" rel="noopener noreferrer">
+U.S. Commodity Futures Trading Commission
+</a>
+</li>
+
+<li>
+<strong>Department of the Treasury</strong><br>
+<a href="https://home.treasury.gov/" target="_blank" rel="noopener noreferrer">
+U.S. Department of the Treasury
+</a>
+</li>
+
+<li>
+<strong>Financial Crimes Enforcement Network</strong><br>
+<a href="https://www.fincen.gov/" target="_blank" rel="noopener noreferrer">
+FinCEN
+</a>
+</li>
+
+<li>
+<strong>Office of the Comptroller of the Currency</strong><br>
+<a href="https://www.occ.gov/" target="_blank" rel="noopener noreferrer">
+OCC
+</a>
+</li>
+
+<li>
+<strong>Federal Deposit Insurance Corporation</strong><br>
+<a href="https://www.fdic.gov/" target="_blank" rel="noopener noreferrer">
+FDIC
+</a>
+</li>
+
+<li>
+<strong>Federal Reserve</strong><br>
+<a href="https://www.federalreserve.gov/" target="_blank" rel="noopener noreferrer">
+Board of Governors of the Federal Reserve System
+</a>
+</li>
+
+<li>
+<strong>IRS Digital Assets</strong><br>
+<a href="https://www.irs.gov/filing/digital-assets" target="_blank" rel="noopener noreferrer">
+Internal Revenue Service
+</a>
+</li>
+
+<li>
+<strong>IRS Form 1099-DA</strong><br>
+<a href="https://www.irs.gov/forms-pubs/about-form-1099-da" target="_blank" rel="noopener noreferrer">
+Digital Asset Proceeds From Broker Transactions
+</a>
+</li>
+
+<li>
+<strong>Executive Order — Strengthening American Leadership in Digital Financial Technology</strong><br>
+<a href="https://www.whitehouse.gov/presidential-actions/2025/01/strengthening-american-leadership-in-digital-financial-technology/" target="_blank" rel="noopener noreferrer">
+The White House
+</a>
+</li>
+
+<li>
+<strong>Executive Order — Strategic Bitcoin Reserve and United States Digital Asset Stockpile</strong><br>
+<a href="https://www.whitehouse.gov/presidential-actions/2025/03/establishment-of-the-strategic-bitcoin-reserve-and-united-states-digital-asset-stockpile/" target="_blank" rel="noopener noreferrer">
+The White House
+</a>
+</li>
+
+</ol>
+
+</section>
+
+
+<h2>The Question We Should Be Asking</h2>
+
+<p>The cryptocurrency debate is often reduced to two camps.</p>
+
+<p><strong>Crypto will replace traditional finance.</strong></p>
+
+<p>Or:</p>
+
+<p><strong>Crypto is nonsense.</strong></p>
+
+<p>The public record suggests something much more interesting is happening.</p>
+
+<p>Cryptocurrency is not simply replacing the traditional financial system.</p>
+
+<p>Parts of it are being <strong>absorbed into that system.</strong></p>
+
+<p>Banks are entering digital assets.</p>
+
+<p>Stablecoins are being placed inside federal regulatory frameworks.</p>
+
+<p>Tax reporting is expanding.</p>
+
+<p>Securities and commodities regulators are defining jurisdiction.</p>
+
+<p>Congress is constructing statutory frameworks.</p>
+
+<p>The Treasury Department is writing rules.</p>
+
+<p>And the federal government itself maintains a Strategic Bitcoin Reserve.</p>
+
+<p class="big-line">
+The revolution didn't exactly overthrow the financial establishment.<br><br>
+It appears to have scheduled a meeting with it.
+</p>
+
+<p>And somewhere in America, Kevin is filling out a tax form for his decentralized money.</p>
+
+<p class="big-line">
+No political team required.<br>
+Just the receipts. 🧾
+</p>
+
+
+<div class="share-box">
+
+<h3>Share This Research</h3>
+
+<p>If this article made you laugh, think—or check your crypto wallet—share it.</p>
+
+<div class="share-buttons">
+
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoneytracktemplates.github.io%2Fwho-controls-cryptocurrency.html"
+   target="_blank" rel="noopener noreferrer">
+Facebook
+</a>
+
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fwho-controls-cryptocurrency.html&text=Who%20actually%20controls%20cryptocurrency%3F"
+   target="_blank" rel="noopener noreferrer">
+X
+</a>
+
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fwho-controls-cryptocurrency.html"
+   target="_blank" rel="noopener noreferrer">
+LinkedIn
+</a>
+
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fmoneytracktemplates.github.io%2Fwho-controls-cryptocurrency.html&title=Who%20Actually%20Controls%20Cryptocurrency%3F"
+   target="_blank" rel="noopener noreferrer">
+Reddit
+</a>
+
+<a href="https://api.whatsapp.com/send?text=Who%20Actually%20Controls%20Cryptocurrency%3F%20https%3A%2F%2Fmoneytracktemplates.github.io%2Fwho-controls-cryptocurrency.html"
+   target="_blank" rel="noopener noreferrer">
+WhatsApp
+</a>
+
+<a href="mailto:?subject=Who%20Actually%20Controls%20Cryptocurrency%3F&body=https%3A%2F%2Fmoneytracktemplates.github.io%2Fwho-controls-cryptocurrency.html">
+Email
+</a>
+
+<button onclick="copyArticleLink()">Copy Link</button>
+
+<button onclick="shareArticle()">Share</button>
+
+</div>
+
+</div>
+
+
+<div class="back-wrap">
+  <a class="back-button" href="money-banking.html">
+    ← Back to Money &amp; Banking
+  </a>
+</div>
+
+</article>
+
+</main>
+
+
+<footer>
+  © 2026 MoneyTrackTemplates · Financial education and independent research.
+</footer>
+
+
+<script>
+
+function copyArticleLink() {
+  const url = "https://moneytracktemplates.github.io/who-controls-cryptocurrency.html";
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url)
+      .then(function() {
+        alert("Article link copied!");
+      })
+      .catch(function() {
+        prompt("Copy this link:", url);
+      });
+  } else {
+    prompt("Copy this link:", url);
+  }
+}
+
+
+function shareArticle() {
+  const shareData = {
+    title: "Who Actually Controls Cryptocurrency?",
+    text: "Decentralized, apparently. Follow the government agencies, laws and institutions surrounding cryptocurrency.",
+    url: "https://moneytracktemplates.github.io/who-controls-cryptocurrency.html"
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch(function() {});
+  } else {
+    copyArticleLink();
+  }
+}
+
+</script>
+
+</body>
+</html>
