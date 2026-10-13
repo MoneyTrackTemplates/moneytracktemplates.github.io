@@ -13,7 +13,7 @@
       "observation_date": "2026-10-13"
     },
     "source": "Federal Reserve / FRED",
-    "last_updated": "2026-10-10T01:50:43+00:00"
+    "last_updated": "2026-10-13T03:06:04+00:00"
   },
   "treasury": {
     "three_month_rate": {
@@ -29,7 +29,7 @@
       "observation_date": "2026-10-09"
     },
     "source": "U.S. Department of the Treasury",
-    "last_updated": "2026-10-10T01:50:43+00:00"
+    "last_updated": "2026-10-13T03:06:04+00:00"
   },
   "consumer_credit": {
     "total_consumer_credit": {
@@ -64,6 +64,6 @@
     },
     "source": "Federal Reserve / FRED",
     "release": "Consumer Credit (G.19)",
-    "last_updated": "2026-10-10T01:50:43+00:00"
+    "last_updated": "2026-10-13T03:06:04+00:00"
   }
 }
