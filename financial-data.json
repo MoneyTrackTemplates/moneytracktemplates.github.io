@@ -2,7 +2,7 @@
   "federal_banking": {
     "federal_funds_rate": {
       "value": 3.88,
-      "observation_date": "2026-11-04"
+      "observation_date": "2026-11-05"
     },
     "bank_prime_loan_rate": {
       "value": 7.0,
@@ -10,60 +10,60 @@
     },
     "interest_on_reserve_balances": {
       "value": 3.9,
-      "observation_date": "2026-11-06"
+      "observation_date": "2026-11-09"
     },
     "source": "Federal Reserve / FRED",
-    "last_updated": "2026-11-06T02:40:14+00:00"
+    "last_updated": "2026-11-07T02:07:59+00:00"
   },
   "treasury": {
     "three_month_rate": {
-      "value": 4.17,
-      "observation_date": "2026-11-05"
+      "value": 4.19,
+      "observation_date": "2026-11-06"
     },
     "two_year_rate": {
-      "value": 4.46,
-      "observation_date": "2026-11-05"
+      "value": 4.51,
+      "observation_date": "2026-11-06"
     },
     "ten_year_rate": {
-      "value": 4.84,
-      "observation_date": "2026-11-05"
+      "value": 4.86,
+      "observation_date": "2026-11-06"
     },
     "source": "U.S. Department of the Treasury",
-    "last_updated": "2026-11-06T02:40:14+00:00"
+    "last_updated": "2026-11-07T02:07:59+00:00"
   },
   "consumer_credit": {
     "total_consumer_credit": {
-      "value_millions": 5196778.44,
-      "value_trillions": 5.197,
-      "observation_date": "2026-08-01",
-      "previous_value_millions": 5188497.83,
-      "previous_value_trillions": 5.188,
-      "previous_observation_date": "2026-07-01",
-      "change_millions": 8280.61,
-      "change_billions": 8.281
+      "value_millions": 5224415.99,
+      "value_trillions": 5.224,
+      "observation_date": "2026-09-01",
+      "previous_value_millions": 5196577.36,
+      "previous_value_trillions": 5.197,
+      "previous_observation_date": "2026-08-01",
+      "change_millions": 27838.63,
+      "change_billions": 27.839
     },
     "revolving_credit": {
-      "value_millions": 1352414.0,
-      "value_trillions": 1.352,
-      "observation_date": "2026-08-01",
-      "previous_value_millions": 1357200.7,
-      "previous_value_trillions": 1.357,
-      "previous_observation_date": "2026-07-01",
-      "change_millions": -4786.7,
-      "change_billions": -4.787
+      "value_millions": 1368452.96,
+      "value_trillions": 1.368,
+      "observation_date": "2026-09-01",
+      "previous_value_millions": 1352154.35,
+      "previous_value_trillions": 1.352,
+      "previous_observation_date": "2026-08-01",
+      "change_millions": 16298.61,
+      "change_billions": 16.299
     },
     "nonrevolving_credit": {
-      "value_millions": 3844364.44,
-      "value_trillions": 3.844,
-      "observation_date": "2026-08-01",
-      "previous_value_millions": 3831297.14,
-      "previous_value_trillions": 3.831,
-      "previous_observation_date": "2026-07-01",
-      "change_millions": 13067.3,
-      "change_billions": 13.067
+      "value_millions": 3855963.04,
+      "value_trillions": 3.856,
+      "observation_date": "2026-09-01",
+      "previous_value_millions": 3844423.02,
+      "previous_value_trillions": 3.844,
+      "previous_observation_date": "2026-08-01",
+      "change_millions": 11540.02,
+      "change_billions": 11.54
     },
     "source": "Federal Reserve / FRED",
     "release": "Consumer Credit (G.19)",
-    "last_updated": "2026-11-06T02:40:14+00:00"
+    "last_updated": "2026-11-07T02:07:59+00:00"
   }
 }
